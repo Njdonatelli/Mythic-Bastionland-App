@@ -1,0 +1,70 @@
+{
+  "id": "00",
+  "table": {
+    "title": "TABLE_TITLE",
+    "columns": [
+      "COLUMN_HEADER_1",
+      "COLUMN_HEADER_2"
+    ],
+    "rows": [
+      [
+        "ROW_CONTENT_1",
+        "ROW_CONTENT_2"
+      ],
+      [
+        "ROW_CONTENT_1",
+        "ROW_CONTENT_2"
+      ],
+      [
+        "ROW_CONTENT_1",
+        "ROW_CONTENT_2"
+      ],
+      [
+        "ROW_CONTENT_1",
+        "ROW_CONTENT_2"
+      ],
+      [
+        "ROW_CONTENT_1",
+        "ROW_CONTENT_2"
+      ],
+      [
+        "ROW_CONTENT_1",
+        "ROW_CONTENT_2"
+      ]
+    ]
+  },
+  "ability": {
+    "name": "ABILITY_NAME",
+    "text": "ABILITY_DESCRIPTION"
+  },
+  "passion": {
+    "name": "PASSION_NAME",
+    "text": "Restore <span class=\"virtue\">SPI</span> when..."
+  },
+  "property": [
+    "ITEM_1_DESCRIPTION",
+    "ITEM_2_DESCRIPTION",
+    "STEED_DESCRIPTION (<span class=\"virtue\">VIG</span> X, <span class=\"virtue\">CLA</span> X, <span class=\"virtue\">SPI</span> X, X<span class=\"virtue\">GD</span>)"
+  ],
+  "title": "KNIGHT_TITLE",
+  "poem": [
+    "POEM_LINE_1",
+    "POEM_LINE_2"
+  ],
+  "idx": "00",
+  "_id": "UUID_STRING",
+  "type": "knight",
+  "seer": {
+    "id": "00",
+    "title": "SEER_TITLE",
+    "attributes": "<span class=\"virtue\">VIG</span> X, <span class=\"virtue\">CLA</span> X, <span class=\"virtue\">SPI</span> X, X<span class=\"virtue\">GD</span>",
+    "traits": [
+      "TRAIT_1",
+      "TRAIT_2",
+      "TRAIT_3"
+    ],
+    "idx": "00",
+    "_id": "UUID_STRING",
+    "type": "seer"
+  }
+}

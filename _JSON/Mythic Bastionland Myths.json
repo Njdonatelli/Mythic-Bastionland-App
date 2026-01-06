@@ -1,0 +1,825 @@
+[
+    {
+        "id": "01",
+        "omens": [
+            "An old coot proclaims their dreams, where foul air was choking people in their sleep. Pleads for help spreading the word.",
+            "Moaning in the mist. An ivy-cloaked shack, home to a dying old couple. Their daughter left to search for treatment.",
+            "Jolly hunter and his son with mild symptoms, chasing a smiling fox up a tree. They don't believe in the Plague, but claim the fox is a harbinger of death. The smiling fox wants to witness a death.",
+            "A self-important Knight and two Squires, returning to report the Plague to the Seat of Power. Demands escort from other Knights. They carry a grey lantern, its light only visible to the carrier.",
+            "A clearing, bonfire embers. An infected crowd, close to death, full of anger. They swear a blood oath on the stump of a red oak, seeing visions of revenge. They attack any caught watching.",
+            "An infected village, the root of the Plague. All are visibly infected. Two Purging Knights, charging to cleanse with flame."
+        ],
+        "cast": [
+            {
+                "name": "The Angry Infected",
+                "attributes": "<span class=\"virtue\">VIG</span> 8, <span class=\"virtue\">CLA</span> 6, <span class=\"virtue\">SPI</span> 5, 2<span class=\"virtue\">GD</span>",
+                "description": "Logging axe ([[/r d8]] long)\nThose directly exposed must pass a <span class=\"virtue\">VIG</span> Save\nto avoid infection. Causes [[/r d6]] VIG loss daily.\nThere are treatments but no cures."
+            },
+            {
+                "name": "Jolly Hunter, Maccan",
+                "attributes": "<span class=\"virtue\">VIG</span> 14, <span class=\"virtue\">CLA</span> 12, <span class=\"virtue\">SPI</span> 15, 4<span class=\"virtue\">GD</span>",
+                "description": "Shortbow ([[/r d6]] long), handaxe ([[/r d6]])"
+            },
+            {
+                "name": "Purging Knights, Dirmad & Duncas",
+                "attributes": "<span class=\"virtue\">VIG</span> 12, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 7, 5<span class=\"virtue\">GD</span>",
+                "description": "A3 (mail, helm, shield)\nFlail ([[/r d8]] hefty), shield ([[/r d4]])\n3 firepots ([[/r d6]] blast, sets area alight)\nTwins, hate each other.\nBirthed in air, spread by stream, lurking in the blood\nThe terror of our time will see us all stuck in the mud"
+            }
+        ],
+        "poem": [
+            "Birthed in air, spread by stream, lurking in the blood",
+            "The terror of our time will see us all stuck in the mud"
+        ],
+        "title": "Plague",
+        "table": {
+            "title": "THE DEATHLY MALADY",
+            "columns": [
+                "Fatal Symptom",
+                "Transmission"
+            ],
+            "rows": [
+                [
+                    "Bleeding",
+                    "Skin contact"
+                ],
+                [
+                    "Choking",
+                    "Breath"
+                ],
+                [
+                    "Swelling",
+                    "Bodily fluids"
+                ],
+                [
+                    "Wasting",
+                    "Ingestion"
+                ],
+                [
+                    "Lethargy",
+                    "Rats"
+                ],
+                [
+                    "Convulsion",
+                    "Flies"
+                ]
+            ]
+        },
+        "idx": "01",
+        "_id": "e5106d02-b3ff-46ac-acbc-4587dad73ad4",
+        "type": "myth"
+    },
+    {
+        "id": "02",
+        "omens": [
+            "Crumbling outpost. A band of labourers sharing a meal on their way to begin work repairing the Wall. They think Knights are being sent to stop them.",
+            "Two giant magpies, stealing shiny things. They nest in the trees that root among the Wall's oldest stones.",
+            "Lonesome Wall Knight sat among colossal tree roots. She's strayed from the Wall, bored, in search of a little company.",
+            "Pair of wardens, stuck at the bottom of a muddy slope. They search for a bandit who climbed the Wall. One is paranoid, eating from a pot of moonlit honey known to protect against illusions.",
+            "A pair of furious refugees, heading to break the wall after being driven out of their home. They drank oil from the hidden giant's well, granting a terrible strength. They don’t trust Knights.",
+            "A distant army lies beyond the wall. A mercenary Warband heads to break an opening for them."
+        ],
+        "cast": [
+            {
+                "name": "Wall Wardens, Brin, Catrona & Elish",
+                "attributes": "<span class=\"virtue\">VIG</span> 11, <span class=\"virtue\">CLA</span> 8, <span class=\"virtue\">SPI</span> 7, 4<span class=\"virtue\">GD</span>",
+                "description": "A1 (visored helm)\nWallerhook ([[/r d8]] long, +[[/r d10]] vs targets below)"
+            },
+            {
+                "name": "Wall Knight, Annick",
+                "attributes": "<span class=\"virtue\">VIG</span> 13, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 8, 5<span class=\"virtue\">GD</span>",
+                "description": "A2 (old mail, helm)\nLongaxe ([[/r d10]] long), excessive curiosity"
+            },
+            {
+                "name": "Giant Magpie, Silverseeker",
+                "attributes": "<span class=\"virtue\">VIG</span> 6, <span class=\"virtue\">CLA</span> 14, <span class=\"virtue\">SPI</span> 5, 3<span class=\"virtue\">GD</span>",
+                "description": "Beak and talons ([[/r 2d6]], wounded targets are\nblinded until they rest)"
+            },
+            {
+                "name": "Empowered Refugees, Mohan & Orla",
+                "attributes": "<span class=\"virtue\">VIG</span> 18, <span class=\"virtue\">CLA</span> 8, <span class=\"virtue\">SPI</span> 9, 2<span class=\"virtue\">GD</span>",
+                "description": "Giant punches ([[/r 2d10]])\nCutting through the land, a wonder two storms tall\nGuarding from invasion, or built to cage us all\nWall"
+            }
+        ],
+        "poem": [
+            "Cutting through the land, a wonder two storms tall",
+            "Guarding from invasion, or built to cage us all"
+        ],
+        "title": "Wall",
+        "table": {
+            "title": "STRETCHES OF WALL",
+            "columns": [
+                "Condition",
+                "Watch Post"
+            ],
+            "rows": [
+                [
+                    "Crumbling",
+                    "Isolated"
+                ],
+                [
+                    "Reinforced",
+                    "Overstaffed"
+                ],
+                [
+                    "Under repair",
+                    "In the clouds"
+                ],
+                [
+                    "Overgrown",
+                    "Leaning"
+                ],
+                [
+                    "Mid-inspection",
+                    "Hostile"
+                ],
+                [
+                    "Breached",
+                    "Abandoned Dwelling: Verdant treehouse ~ Sanctum: Tranquil vista ~ Monument: Ancient obelisk Hazard: Stinging leaves ~ Curse: Shifting pit ~ Ruin: Defiled totem"
+                ]
+            ]
+        },
+        "idx": "02",
+        "_id": "847983c2-cae7-4f12-9b74-8ecf53b0f059",
+        "type": "myth"
+    },
+    {
+        "id": "03",
+        "omens": [
+            "Huge flatstones marbled with moss. Weeping winds. Tears from the skies, trees, some forming on your cheek.",
+            "Ornate well, now stagnant. Sorrowful Knight, inconsolable, lashing at anyone who doesn't give him sympathy.",
+            "Idealistic young alchemist collecting wind-tears found in the weeping winds. Tries to invoke sadness in all he meets.",
+            "A strange nasal-toned flute, left with scraps of cloth. Playing stimulates sudden grief. Lose [[/r d6]] <span class=\"virtue\">SPI</span>, dream of the Shadow.",
+            "The Shadow, still, by a drowning-lake. They torment trespassers with visions of past sorrows. The water whispers, answering one question on behalf of the dead each day. At morning, a herd of grey deer visit the lake to show their respects.",
+            "The Company find themselves in the Shadow's world. Islands in the mist of time. The mourned past can be seen as clear as the now. None can die here, but all who leave lose [[/r d12]] <span class=\"virtue\">SPI</span>. The Shadows are only appeased by displays of grief."
+        ],
+        "cast": [
+            {
+                "name": "Mourning Shadow, Vestige of Sorrow",
+                "attributes": "<span class=\"virtue\">VIG</span> 3, <span class=\"virtue\">CLA</span> 15, <span class=\"virtue\">SPI</span> 17, 2<span class=\"virtue\">GD</span>",
+                "description": "Despair-of-flesh ([[/r d8]] blast, wounds cause <span class=\"virtue\">SPI</span>\nloss in place of <span class=\"virtue\">VIG</span>)\nCan only be harmed by weapons forged by a\ncreator mourned by the wielder.\nRepelled by earth from a burial mound, or\nfunerary imagery. Destroyed if entombed."
+            },
+            {
+                "name": "Sorrowful Knight, Orwan",
+                "attributes": "<span class=\"virtue\">VIG</span> 12, <span class=\"virtue\">CLA</span> 8, <span class=\"virtue\">SPI</span> 6, 2<span class=\"virtue\">GD</span>",
+                "description": "A3 (mail, greencloaked plate, helm)\nHooked greatsword ([[/r 2d10]] long), oak necklace"
+            },
+            {
+                "name": "Roaming Alchemist, Coalin",
+                "attributes": "<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 11, 1<span class=\"virtue\">GD</span>",
+                "description": "Dagger ([[/r d6]]), alchemical tools\nThey wandered over here and there, groan and grief their guide\nKnowing in the strongest one a timid child does hide\nShadow"
+            }
+        ],
+        "poem": [
+            "They wandered over here and there, groan and grief their guide",
+            "Knowing in the strongest one a timid child does hide"
+        ],
+        "title": "Shadow",
+        "table": {
+            "title": "MOURNFUL FORMS",
+            "columns": [
+                "Shape",
+                "Matter"
+            ],
+            "rows": [
+                [
+                    "Robed",
+                    "Glow"
+                ],
+                [
+                    "Skeletal",
+                    "Frost"
+                ],
+                [
+                    "Rotund",
+                    "Fire"
+                ],
+                [
+                    "Knightly",
+                    "Mist"
+                ],
+                [
+                    "Childish",
+                    "Shadow"
+                ],
+                [
+                    "Amorphous",
+                    "Water Dwelling: Traveller's inn ~ Sanctum: Mirrored grotto ~ Monument: Runic cairn Hazard: Forgotten traps ~ Curse: Illusory paths ~ Ruin: Skull heap"
+                ]
+            ]
+        },
+        "idx": "03",
+        "_id": "d8bce347-c294-4aa2-9d5e-94713b8e4502",
+        "type": "myth"
+    },
+    {
+        "id": "04",
+        "omens": [
+            "Six monks, appeasing the River with offerings of bread. Their apparent leader is annoyingly vivacious and optimistic about their work tending to the River.",
+            "Lost fisherman washed up on the riverbank. A mighty newt is sniffing around the shaken man.",
+            "A rocky outcropping, a lone dead tree at its peak. Three monks seek a blood offering for the River. They need an innocent animal or a sinful person.",
+            "Pilgrims arguing with a Bridge Knight chasing a toll. The Knight knows one of the pilgrims has a coin from the City and will take it by force if necessary.",
+            "The River bursts into a new stream. If travelling, the route is cut off. For the first few moments, water from the newborn stream can heal any ailment.",
+            "A great flood as the River gives birth to a new lake. It claims the entire Hex and spreads to neighbouring Hexes tomorrow. A spawning of mighty newts bursts forth the next day."
+        ],
+        "cast": [
+            {
+                "name": "Mighty Newt, Slippery Starback",
+                "attributes": "<span class=\"virtue\">VIG</span> 16, <span class=\"virtue\">CLA</span> 14, <span class=\"virtue\">SPI</span> 5, 5<span class=\"virtue\">GD</span>",
+                "description": "Crushing toothless bite ([[/r d8]], drag into water)\nFlees if Wounded, regenerating quickly\nbefore seeking petty revenge.\nFeared by all venomous beasts."
+            },
+            {
+                "name": "River Monks, led by Refton",
+                "attributes": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 12, 2<span class=\"virtue\">GD</span>",
+                "description": "Cudgels ([[/r d8]] hefty), bread, mead barrels"
+            },
+            {
+                "name": "Bridge Knight, Tog",
+                "attributes": "<span class=\"virtue\">VIG</span> 15, <span class=\"virtue\">CLA</span> 15, <span class=\"virtue\">SPI</span> 6, 6<span class=\"virtue\">GD</span>",
+                "description": "A2 (ringmail, redshield)\nHooksword ([[/r 2d6]] hefty), redshield ([[/r d4]]),\nheavy coffer of toll money\nStream, fall, brook, and creek, flow along as one\nFamine, flood, friend and foe, all things beneath the sun"
+            }
+        ],
+        "poem": [
+            "Stream, fall, brook, and creek, flow along as one",
+            "Famine, flood, friend and foe, all things beneath the sun"
+        ],
+        "title": "River",
+        "table": {
+            "title": "RIVERBOATS",
+            "columns": [
+                "Travellers",
+                "Intent"
+            ],
+            "rows": [
+                [
+                    "Family",
+                    "Raiding"
+                ],
+                [
+                    "Elder",
+                    "Trade"
+                ],
+                [
+                    "Youths",
+                    "Adventure"
+                ],
+                [
+                    "Soldiers",
+                    "Safety"
+                ],
+                [
+                    "Acolytes",
+                    "Hunting"
+                ],
+                [
+                    "Knight",
+                    "Pilgrimage"
+                ]
+            ]
+        },
+        "idx": "04",
+        "_id": "8303e628-82c4-419c-8c38-d2d9cddc9878",
+        "type": "myth"
+    },
+    {
+        "id": "05",
+        "omens": [
+            "Crowned stag, crawling, poisoned. Its antlers are known to burn scaled beasts.",
+            "A burial mound surrounded by a low stone wall. Much of it has been dug up, petty treasures scattered. The Wyvern screeches in the distance.",
+            "The bloated body of a poisoned Knight, adoring Squire weeping at their side.",
+            "Two foul eggs laid among battle carrion. The air feels sour. The poisonous young hatch at dark, share a feast, then lurch in opposite directions. A serrated blade forged with pain ([[/r 2d6]]) lies with the dead.",
+            "The Wyvern soars low, seeking revenge for a failed attack on its nest. The attackers have already fled. It clutches one of their silver shields ([[/r d6]], A1), blessed by the iron willow.",
+            "Fearing for its nest, the Wyvern lands to fight. If the situation is hopeless it flies to a neighbouring Realm, plotting revenge."
+        ],
+        "cast": [
+            {
+                "name": "The Wyvern, That Foul Twisted Reptile",
+                "attributes": "<span class=\"virtue\">VIG</span> 17, <span class=\"virtue\">CLA</span> 17, <span class=\"virtue\">SPI</span> 5, 12<span class=\"virtue\">GD</span>",
+                "description": "A2 in flight, A4 on ground (cowering wings)\nBite & throw ([[/r 3d10]], slow when grounded) or\nsting ([[/r d10]], wound causes bloating death\nwithin an hour unless thoroughly washed\nout with fresh milk)\nDisgusted by the sound of a baby's cry.\nFast but clumsy flyer."
+            },
+            {
+                "name": "Its Poisonous Young",
+                "attributes": "<span class=\"virtue\">VIG</span> 5, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 2, 3<span class=\"virtue\">GD</span>",
+                "description": "A1 (cold hide)\nThrash ([[/r d8]], carries its mother's poison)\nAll jack-a-jaw and neck a knot’d string\nAll fess-a-wing and tail a bane’d sting"
+            }
+        ],
+        "poem": [
+            "All jack-a-jaw and neck a knot'd string",
+            "All fess-a-wing and tail a bane'd sting"
+        ],
+        "title": "Wyvern",
+        "table": {
+            "title": "THE POISONOUS YOUNG",
+            "columns": [
+                "Form",
+                "Abomination"
+            ],
+            "rows": [
+                [
+                    "Adder",
+                    "Barbed scales"
+                ],
+                [
+                    "Newt",
+                    "Unhinged jaw"
+                ],
+                [
+                    "Frog",
+                    "Prehensile tongue"
+                ],
+                [
+                    "Weasel",
+                    "Bloated stomach"
+                ],
+                [
+                    "Scorpion",
+                    "Twin tails"
+                ],
+                [
+                    "Swan",
+                    "Horned snout"
+                ]
+            ]
+        },
+        "idx": "05",
+        "_id": "388cbc8f-b8c0-4bd7-b46a-bce1746b1bbf",
+        "type": "myth"
+    },
+    {
+        "id": "06",
+        "omens": [
+            "Weeping huntsman, cursing everyone. Looking for his lost bloodhound who tended to him during injury.",
+            "A lost lad, full of stories. Claims a little old man called him into the woods.",
+            "Oppressive branches, tripping roots. A cloaked old man calls out, lost. If alerted he cries out just before he is dragged into the ground, taken to the lost realm.",
+            "The lost pets are running wild. If spotted they immediately run back toward the secret door to the lost realm. One drops a strange metallic bone, repellent to birds.",
+            "A dark clearing. Any deals made here are bound by fate. The Goblin offers a trade. A valuable lost thing in return for a favour he can call in later.",
+            "Suddenly dragged to the realm of lost things. Tunnels under piles of bric-a-brac. The Goblin gloats from atop his pile. Freedom is only granted for a binding favour, which the Goblin will enforce."
+        ],
+        "cast": [
+            {
+                "name": "Their Cleverness, the Goblin",
+                "attributes": "Lord of all Lost Things",
+                "description": "<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 16, <span class=\"virtue\">SPI</span> 15, 9<span class=\"virtue\">GD</span>\nBony needle ([[/r d6]] +[[/r d10]] to anybody indebted to\nthe wielder), sack of favourite lost things\nCan only be harmed by objects that have\nlain lost for at least ninety-nine years.\nCan Focus."
+            },
+            {
+                "name": "Lost Pets",
+                "attributes": "<span class=\"virtue\">VIG</span> 5, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 5, 2<span class=\"virtue\">GD</span>",
+                "description": "Yapping, biting, and scratching ([[/r d6]])"
+            },
+            {
+                "name": "Lost Lad, Roth",
+                "attributes": "<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 9, <span class=\"virtue\">SPI</span> 9, 3<span class=\"virtue\">GD</span>",
+                "description": "Practice bow ([[/r d4]], long)\nOn toes it crept just out o' sight\nThe petty hoarder full o’ spite"
+            }
+        ],
+        "poem": [
+            "On toes it crept just out o' sight",
+            "The petty hoarder full o' spite"
+        ],
+        "title": "Goblin",
+        "table": {
+            "title": "TRADING THE LOST",
+            "columns": [
+                "Selling",
+                "Seeking"
+            ],
+            "rows": [
+                [
+                    "Keys",
+                    "Silver"
+                ],
+                [
+                    "Letters",
+                    "Dogs"
+                ],
+                [
+                    "Rings",
+                    "Needles"
+                ],
+                [
+                    "Memories",
+                    "Hats"
+                ],
+                [
+                    "Birds",
+                    "Knives"
+                ],
+                [
+                    "Scarves",
+                    "Shoes"
+                ]
+            ]
+        },
+        "idx": "06",
+        "_id": "beb581e3-7688-4b79-bfb4-b16943626443",
+        "type": "myth"
+    },
+    {
+        "id": "07",
+        "omens": [
+            "A Seer, beloved by her village, now trapped, inert in ironwood. Only the Fearmonger can break their binds.",
+            "A winding path beneath blue songbirds. They sing so fiercely that some lie breathless on the ground. The winding path leads to a distant forest Hex.",
+            "The mother tree. Six woodland guardians attack anybody who looks upon it. Foxes, wolves, and wildcats fight as one.",
+            "The Fearmonger in horrific form, parts of owl, boar, and mouse. Lurking in the mist, they hurl a thorn spear ([[/r d10]] hefty, cannot be taken from the Forest) before retreating to the branches.",
+            "A circle of blackened tree stumps. Inside, metal weapons roar with burning heat unless dropped. Then come the three great guardians: stag, boar, and bear. The Fearmonger preys from within the mist.",
+            "The Fearmonger shows their true, terrible form as live, writhing wood. If they cannot be subdued the Forest bursts forth into the rest of the Realm."
+        ],
+        "cast": [
+            {
+                "name": "The Fearmonger in Wood, Glaiburn",
+                "attributes": "<span class=\"virtue\">VIG</span> 17, <span class=\"virtue\">CLA</span> 16, <span class=\"virtue\">SPI</span> 12, 8<span class=\"virtue\">GD</span>",
+                "description": "A2, A4 vs forged arms (rune-carved wood)\nSlash ([[/r d10]] vs two targets) or grasp ([[/r 2d10]]\nslow) or spores (everyone in Blast loses their\nspeech until they leave the Forest)\nCan Smite humans."
+            },
+            {
+                "name": "Woodland Guardians",
+                "attributes": ", Fox, Wolf & Cat",
+                "description": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 13, <span class=\"virtue\">SPI</span> 5, 3<span class=\"virtue\">GD</span>\nTooth and claw ([[/r 2d6]])"
+            },
+            {
+                "name": "Great Guardians, Stag, Boar & Bear",
+                "attributes": "<span class=\"virtue\">VIG</span> 14, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 5, 5<span class=\"virtue\">GD</span>.",
+                "description": "A1 (thick hides)\nTusk and maul ([[/r 2d8]])\nRoots deeper than soil, farther than sea\nNo passage is swift, no figments believed"
+            }
+        ],
+        "poem": [
+            "Roots deeper than soil, farther than sea",
+            "No passage is swift, no figments believed"
+        ],
+        "title": "Forest",
+        "table": {
+            "title": "THE VERDY MAZE",
+            "columns": [
+                "Place",
+                "Threat"
+            ],
+            "rows": [
+                [
+                    "Entwined wall of trunks and roots",
+                    "Riders approaching"
+                ],
+                [
+                    "Descent into damp earth",
+                    "Frantic movement in the branches"
+                ],
+                [
+                    "Mossy stone pile",
+                    "Twisting in the roots"
+                ],
+                [
+                    "Leafy clearing",
+                    "Fading light"
+                ],
+                [
+                    "Tree bridge",
+                    "Rising mist"
+                ],
+                [
+                    "Trailway",
+                    "Watching eyes"
+                ]
+            ]
+        },
+        "idx": "07",
+        "_id": "88a23ee1-3967-44cb-bc56-814364722d99",
+        "type": "myth"
+    },
+    {
+        "id": "08",
+        "omens": [
+            "Drunken worshippers of the Child, rejoicing that the first sign has arrived. Mistrustful of anybody that won't join in.",
+            "3 Seeker Knights and their redmaw wolf, escorting a Seer in the hunt for the Child, who they believe to be the key to the City.",
+            "Fog shrouded lake, no deeper than a foot throughout. A rogue Seeker Knight searches for the Child, who they believe must be sacrificed to an awful creature in order to put it to rest for good. You're either with them or against them.",
+            "An abandoned shack, empty cradle. A snake fang rattle, known to repel the wicked dead. The Burning Mother cries out in the distance. Any who look upon her are attacked on sight.",
+            "A silvery waterfall. Metal placed within is repaired. Distant cheering and crying as the second sign comes into effect.",
+            "At last they are here. A cradle of mist, the Child within. [[/r d6]] Seeker Knights are here to kill them, another [[/r d6]] here to protect and take them back to their Realm."
+        ],
+        "cast": [
+            {
+                "name": "The Promised Child",
+                "attributes": "<span class=\"virtue\">VIG</span> 2, <span class=\"virtue\">CLA</span> 2, <span class=\"virtue\">SPI</span> 18, 1<span class=\"virtue\">GD</span>",
+                "description": "No human can wilfully cause them harm."
+            },
+            {
+                "name": "Seeker Knights, Feliz, Gornig & Tayley",
+                "attributes": "<span class=\"virtue\">VIG</span> 14, <span class=\"virtue\">CLA</span> 12, <span class=\"virtue\">SPI</span> 12, 5<span class=\"virtue\">GD</span>",
+                "description": "A3 (halfshield, mail, helm)\nMorningstar ([[/r d8]] hefty), halfshield ([[/r d4]])"
+            },
+            {
+                "name": "Redmaw Wolf, Greymender, Scartooth",
+                "attributes": "<span class=\"virtue\">VIG</span> 14, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 5, 5<span class=\"virtue\">GD</span>",
+                "description": "A1 (matted fur)\nStalk and bite ([[/r 2d8]])\nCan bite out a wound to restore [[/r d6]] <span class=\"virtue\">VIG</span>"
+            },
+            {
+                "name": "The Burning Mother",
+                "attributes": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 16, <span class=\"virtue\">SPI</span> 17, 7<span class=\"virtue\">GD</span>",
+                "description": "Body aflame (ignores metal and wood)\nFire ([[/r d8]] blast) or grasp ([[/r 3d8]], slow)\nWhen night met day, where water flame\nThey saw the child, rejoiced in name"
+            }
+        ],
+        "poem": [
+            "When night met day, where water flame",
+            "They saw the child, rejoiced in name"
+        ],
+        "title": "Child",
+        "table": {
+            "title": "THE SIGNS",
+            "columns": [
+                "First Sign",
+                "Second Sign"
+            ],
+            "rows": [
+                [
+                    "Golden flowers",
+                    "Harvest of snakes"
+                ],
+                [
+                    "Violet sunrise",
+                    "Sudden winter"
+                ],
+                [
+                    "Singing swans",
+                    "Night terrors"
+                ],
+                [
+                    "Milk to honey",
+                    "Sleeping mist"
+                ],
+                [
+                    "Chimes from below",
+                    "Earthquake"
+                ],
+                [
+                    "Miraculous cures",
+                    "Burning graves"
+                ]
+            ]
+        },
+        "idx": "08",
+        "_id": "dd987800-3216-4056-a461-d5c48a79abb6",
+        "type": "myth"
+    },
+    {
+        "id": "09",
+        "omens": [
+            "A forge carved into the rock. Blacksmiths complaining about the Order's mistreatment of them. They want justice.",
+            "A Company of the Order, seizing supplies from local farmers. A frightened draft horse is bolting. The froth from its mouth causes a great frenzy if touched. A fight is about to break out.",
+            "A dry clearing among boggy willow wood. The Order hold council, stood in a circle. Each must justify themselves to their peers, who can challenge any weakness. No spectators allowed.",
+            "They are transporting a thief. The thief knows the burial place of a suit of silver plate (A1, immunity to weapons of inferior metal) and reveals this if freed.",
+            "A Company rides on the trail of a monstrous beast. You're in their way.",
+            "A Company leads an attack toward the nearest Holding. They have 3 Warbands alongside their retinue. They will lead the Realm into misrule or be driven beyond its borders."
+        ],
+        "cast": [
+            {
+                "name": "Scholar-Knight of the Order",
+                "attributes": "<span class=\"virtue\">VIG</span> 16, <span class=\"virtue\">CLA</span> 16, <span class=\"virtue\">SPI</span> 8, 9<span class=\"virtue\">GD</span>",
+                "description": "A4 (mail, plate, towerhelm, shield)\nThicksword ([[/r 2d6]] hefty), shield ([[/r d4]])\nCrusher steed (4<span class=\"virtue\">GD</span>, A1, [[/r d10]] trample)"
+            },
+            {
+                "name": "Frightened Draft Horse",
+                "attributes": "<span class=\"virtue\">VIG</span> 15, <span class=\"virtue\">CLA</span> 6, <span class=\"virtue\">SPI</span> 2, 2<span class=\"virtue\">GD</span>",
+                "description": "Kick ([[/r d6]])\nCannot be calmed by any carrying a weapon.\nThey were six in the circle, no first among them\nEach a knight and scholar, master and student"
+            }
+        ],
+        "poem": [
+            "They were six in the circle, no first among them",
+            "Each a knight and scholar, master and student"
+        ],
+        "title": "Order",
+        "table": {
+            "title": "COMPANY OF THE ORDER",
+            "columns": [
+                "Scholar-Knights",
+                "Retinue"
+            ],
+            "rows": [
+                [
+                    "A lone Scholar-Knight",
+                    "None"
+                ],
+                [
+                    "2 Scholar-Knights",
+                    "2 riders"
+                ],
+                [
+                    "A Scholar-Knight on foot, their steed slain",
+                    "8 conscripts"
+                ],
+                [
+                    "3 Scholar-Knights",
+                    "6 archers"
+                ],
+                [
+                    "1 Scholar-Knight and their apprentice 5<span class=\"virtue\">GD</span>, blade ([[/r d6]])",
+                    "4 mercenaries"
+                ],
+                [
+                    "5 Scholar-Knights",
+                    "3 scouts"
+                ]
+            ]
+        },
+        "idx": "09",
+        "_id": "0f8b32b5-f1a6-458f-8977-b98263b94075",
+        "type": "myth"
+    },
+    {
+        "id": "10",
+        "omens": [
+            "Children playing “the skeleton game”, wearing wooden skull-masks and throwing bones at passers-by.",
+            "Terrified scout sisters, reporting wandering corpses on their patrol. Won't rest until taken seriously.",
+            "Under Seer's orders, a graveyard is being burned as a precaution against the restless dead. Acolytes scatter dried herbs. Five great red vultures circle.",
+            "A rotting corpse, mimicking its life as a forager. It is tethered to a nearby tree by a steel rope of impossible construction.",
+            "Five skeletons, mocking bones, powered by hatred for the living, tormenting defenceless travellers. The travellers are artisans, known for their ability to make fine weapons out of certain woods.",
+            "3 Warbands of rotting corpses and mocking bones, rising under a black banner, marching on the nearest Holding."
+        ],
+        "cast": [
+            {
+                "name": "A Rotting Corpse, Denied their Rest",
+                "attributes": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 2, <span class=\"virtue\">SPI</span> 1, 1<span class=\"virtue\">GD</span>",
+                "description": "A1 (tattered mail)\nRusted glaive ([[/r d10]] slow)\nKeeps fighting even after a Mortal Wound.\nRunning water causes [[/r d12]] Damage."
+            },
+            {
+                "name": "Mocking Bones Conjured into Service",
+                "attributes": "<span class=\"virtue\">VIG</span> 6, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 1, 3<span class=\"virtue\">GD</span>",
+                "description": "A1 (brass shield), Impair piercing attacks\nHook falx ([[/r d6]]), brass shield ([[/r d4]])\nRunning water causes [[/r d12]] Damage."
+            },
+            {
+                "name": "Great Red Vulture, Grizzlebird",
+                "attributes": "<span class=\"virtue\">VIG</span> 15, <span class=\"virtue\">CLA</span> 6, <span class=\"virtue\">SPI</span> 5, 3<span class=\"virtue\">GD</span>",
+                "description": "Rip and tear ([[/r d8]])\nBurned and ground feathers are known to\ncharm vermin into obedience.\nCompletely silent under moonlight.\nCorpses wrent of soul, their resting spirit torn\nPulled by malice from their sleep to serve anew, unborn"
+            }
+        ],
+        "poem": [
+            "Corpses wrent of soul, their resting spirit torn",
+            "Pulled by malice from their sleep to serve anew, unborn"
+        ],
+        "title": "Dead",
+        "table": {
+            "title": "THE COST OF UNLIFE",
+            "columns": [
+                "Raised by",
+                "The Cost"
+            ],
+            "rows": [
+                [
+                    "Noble intentions",
+                    "Intolerance of sunlight"
+                ],
+                [
+                    "A paranoid castellan",
+                    "Hatred of plant life"
+                ],
+                [
+                    "An ambitious bandit",
+                    "Putrid stink"
+                ],
+                [
+                    "A deal with death",
+                    "Vulnerability to fire"
+                ],
+                [
+                    "A curious Seer",
+                    "Craven cowardice"
+                ],
+                [
+                    "A lonely apothecary",
+                    "Insatiable hunger"
+                ]
+            ]
+        },
+        "idx": "10",
+        "_id": "ed93b3e1-a096-485a-80dc-413ffaa690dc",
+        "type": "myth"
+    },
+    {
+        "id": "11",
+        "omens": [
+            "A huge stone archway, former temple. Stars flicker in the shadows. White ravens caw from the trees. An opening appears in the arch, dark but light at once. Then all is normal again.",
+            "Lost Knight from a distant place. She claims to have fallen through a shadow. A Shrouded Guide follows, seeking the toll.",
+            "Narrow, twisted cave. Clanging within. A shrouded smith is forging a coldsword ([[/r 2d8]] hefty, ignores metal armour). It shatters if unsheathed in daylight.",
+            "Heavy black cloth woven with indigo. If hung, opens to a place you want to be. Within, a dozen hands in the darkness require a toll of silver or blood. They will take either by force if needed.",
+            "Broad, lilac-leaved trees. No artificial light can shine beneath. Five Shrouded Guides seeking to claim an owed toll.",
+            "A creeping darkness, then suddenly within the Underworld. A dark reflection of our world. Without a Shrouded Guide the only exit is into a distant Realm."
+        ],
+        "cast": [
+            {
+                "name": "Shrouded Guides, Hooded Ones",
+                "attributes": "<span class=\"virtue\">VIG</span> 5, <span class=\"virtue\">CLA</span> 18, <span class=\"virtue\">SPI</span> 15, 4<span class=\"virtue\">GD</span>",
+                "description": "Coldsword ([[/r 2d6]] hefty, ignores metal\narmour), pale lantern ([[/r 2d8]] blast if thrown)\nIf slain, two more emerge from the dark."
+            },
+            {
+                "name": "Grasping Hands from the Dark",
+                "attributes": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 2, 1<span class=\"virtue\">GD</span>",
+                "description": "Cold grasp ([[/r d6]], on a Wound lose [[/r d8]] <span class=\"virtue\">SPI</span>)"
+            },
+            {
+                "name": "Lost Knight, Valenta",
+                "attributes": "<span class=\"virtue\">VIG</span> 13, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 10, 5<span class=\"virtue\">GD</span>",
+                "description": "A3 (mail, helm, shield)\nJagged sword ([[/r 2d8]] hefty), religious symbol\nA place beneath our living world, but neither grave nor tomb\nA different path to places far, for those who brave the gloom"
+            }
+        ],
+        "poem": [
+            "A place beneath our living world, but neither grave nor tomb",
+            "A different path to places far, for those who brave the gloom"
+        ],
+        "title": "Underworld",
+        "table": {
+            "title": "A VOICE IN THE DARKNESS",
+            "columns": [
+                "Origin",
+                "Purpose"
+            ],
+            "rows": [
+                [
+                    "Whispering from violet fungi",
+                    "Scare them back to the surface"
+                ],
+                [
+                    "Singing from drifting lights",
+                    "Lure them deeper"
+                ],
+                [
+                    "Murmuring from mirrored pools",
+                    "Show them things they cannot take home"
+                ],
+                [
+                    "Taunting from deep shadows",
+                    "Provide a little comfort"
+                ],
+                [
+                    "Beckoning from distant dark",
+                    "Wear them down"
+                ],
+                [
+                    "Chattering in the cold",
+                    "Sow discontent"
+                ]
+            ]
+        },
+        "idx": "11",
+        "_id": "b61b1291-4e41-4498-80c7-1274ba890811",
+        "type": "myth"
+    },
+    {
+        "id": "12",
+        "omens": [
+            "A leech-collector weeps. In a nearby swamp the colossal thing snatched her sister away with a bite. That bone- grinding noise haunts her.",
+            "An argumentative sage complains. The balance of nature has been tipped. The birds aren't behaving correctly and there’s not enough prey in the woods.",
+            "A logging camp, crushed. Barrels of limeweed, a pungent appetite suppressor, left untouched. A Wurmshield surveys their master's work with unearned pride.",
+            "A stinking grey salt-bog. Grinding laughter can be heard on the wind as the Wurm sleeps below, dreaming of the next feast. Two Wurmshields keep watch, arguing over who is more loyal.",
+            "The Wurm lounges on smashed burial mounds of Seers. It speaks with four Wurmshields, loyal but poor company.",
+            "The Wurm bursts from the ground, giving one opportunity for stimulating conversation before its great feast begins. It will not stop until bloated or dead."
+        ],
+        "cast": [
+            {
+                "name": "The Wurm, the Colossal Spite-Glutton",
+                "attributes": "<span class=\"virtue\">VIG</span> 18, <span class=\"virtue\">CLA</span> 8, <span class=\"virtue\">SPI</span> 5, 10<span class=\"virtue\">GD</span>",
+                "description": "A3 (craggy hide)\nWrithe ([[/r d10]] blast) or chew ([[/r 3d10]] slow) or\nshower with debris ([[/r d8]] blast)"
+            },
+            {
+                "name": "Wurmshields, Kermac, Cado, Zune,",
+                "attributes": "Shena, Marlo, Yazakel",
+                "description": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 12, <span class=\"virtue\">SPI</span> 8, 2<span class=\"virtue\">GD</span>\nA2 (helm, red halfshield)\nSpike mace ([[/r d8]] hefty), red halfshield ([[/r d4]])\nRepugnant personalities, always trying to\nmake themselves even worse by mimicking\nthe Wurm.\nCallous, cruel, awful, and long\nFeasting far beyond its hunger, only happy in bloated rest"
+            }
+        ],
+        "poem": [
+            "Callous, cruel, awful, and long",
+            "Feasting far beyond its hunger, only happy in bloated rest"
+        ],
+        "title": "Wurm",
+        "table": {
+            "title": "WURM BEHAVIOUR",
+            "columns": [
+                "Conversation",
+                "Combat"
+            ],
+            "rows": [
+                [
+                    "Spout hatred",
+                    "Cut off escape"
+                ],
+                [
+                    "Spread fear",
+                    "Trap them and leave"
+                ],
+                [
+                    "Aggrandise self",
+                    "Target the weak"
+                ],
+                [
+                    "Insult enemies",
+                    "Break their arms"
+                ],
+                [
+                    "Seek submission",
+                    "Flee to better ground"
+                ],
+                [
+                    "Entice fealty",
+                    "Blunt assault"
+                ]
+            ]
+        },
+        "idx": "12",
+        "_id": "59bd66e6-235b-4e3d-b0bd-5f091aba9423",
+        "type": "myth"
+    }
+]

@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Bastionland: The Oath</title>
+    <style>
+        :root {
+            --bg-parchment: #f4e4bc;
+            --ink-primary: #2b2b2b;
+            --ink-secondary: #4a4a4a;
+            --accent-red: #8a2be2; 
+            --accent-gold: #c5a059;
+            --font-header: 'Cinzel', 'Georgia', serif;
+            --font-body: 'EB Garamond', 'Times New Roman', serif;
+            /* Added for better legibility on interactive elements */
+            --font-ui: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+        body {
+            background-color: var(--bg-parchment);
+            color: var(--ink-primary);
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        #app {
+            width: 100%;
+            max-width: 700px;
+            padding: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.4);
+            border: 2px solid var(--ink-secondary);
+            padding: 3rem;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 4px; left: 4px; right: 4px; bottom: 4px;
+            border: 1px solid var(--ink-secondary);
+            pointer-events: none;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-header);
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 0.1em;
+            margin-top: 0;
+        }
+
+        h1 { font-size: 2.5rem; border-bottom: 2px solid var(--ink-primary); padding-bottom: 1rem; }
+        h2 { font-size: 1.8rem; color: var(--ink-secondary); margin-bottom: 2rem; }
+        
+        p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            margin: 0.8rem 0;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid var(--ink-primary);
+            color: var(--ink-primary);
+            font-family: var(--font-ui); /* Improved readability */
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+            text-transform: none; /* Removed uppercase for easier phrase reading */
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
+
+        .btn:hover {
+            background: var(--ink-primary);
+            color: var(--bg-parchment);
+            transform: scale(1.02);
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+        }
+
+        /* Hero button still keeps the thematic header font */
+        .btn-hero {
+            font-family: var(--font-header);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.3rem;
+        }
+
+        .hidden { display: none; }
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-detail {
+            text-align: left;
+            margin-top: 1.5rem;
+            border-top: 1px solid var(--ink-secondary);
+            padding-top: 1rem;
+        }
+        
+        .result-label {
+            font-family: var(--font-header);
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #555;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .keyword-cloud {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            #app { padding: 1rem; }
+            .card { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+            .btn { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <!-- Screen 1: Intro -->
+    <div id="screen-intro" class="card fade-in">
+        <h1>Mythic Bastionland</h1>
+        <p>The mists part. A realm of myths and fading seasons lies ahead. You are a Knight, but which Knight?</p>
+        <p>Swear your oath and discover your burden.</p>
+        <button class="btn btn-hero" onclick="app.startQuiz()">Begin Oath</button>
+    </div>
+
+    <!-- Screen 2: Quiz -->
+    <div id="screen-quiz" class="card hidden">
+        <h2 id="question-text">Question Text</h2>
+        <div id="options-container">
+            <!-- Options injected here -->
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; font-family: var(--font-ui); opacity: 0.6;">
+            <span id="question-progress">1 / 7</span>
+        </div>
+    </div>
+
+    <!-- Screen 3: Result -->
+    <div id="screen-result" class="card hidden">
+        <h2>Your Knight Is</h2>
+        <h1 id="result-name">The True Knight</h1>
+        <div class="keyword-cloud" id="result-archetype">Arbiter of Veracity</div>
+        
+        <p id="result-desc">A pact to uphold truth. The false slung broken upon their lies.</p>
+
+        <div class="result-detail">
+            <span class="result-label">Passion</span>
+            <span id="result-passion"><strong>Honesty:</strong> Restore SPI when you tell the truth where a lie might be more convenient.</span>
+        </div>
+
+        <div class="result-detail">
+            <span class="result-label">Ability</span>
+            <span id="result-ability"><strong>Punitive Stroke:</strong> Make a melee attack against a known liar. Get +d12 to damage.</span>
+        </div>
+
+        <button class="btn btn-hero" style="margin-top: 2rem;" onclick="app.reset()">Swear New Oath</button>
+    </div>
+</div>
+
+<script>
+    const KNIGHTS = [
+        {
+            name: "The True Knight",
+            archetype: "Arbiter of Veracity",
+            keywords: ["Truth-bound", "Petulant-steed", "Punitive", "Mace-wielder", "Dogmatic", "Golden-glow", "Honest", "Stern", "Law"],
+            description: "A pact to uphold truth. The false slung broken upon their lies.",
+            passion: "Honesty: Restore SPI when you tell the truth where a lie might be more beneficial.",
+            ability: "Punitive Stroke: Make a melee attack against a known liar. Get +d10 to the attack, ignoring armour."
+        },
+        {
+            name: "The Snare Knight",
+            archetype: "Warden of the Wilds",
+            keywords: ["Sylvan", "Trapper", "Tattered-steed", "Beast-bond", "Empathetic", "Wild-eyed", "Exiled", "Foliage-clad", "Nature"],
+            description: "Bound to the tangled roots and the hunter's art.",
+            passion: "Empathy: Restore SPI when you spare the life of a hostile animal.",
+            ability: "Wild Eye: Observe a beast in secret. Learn a useful truth about their habitat."
+        },
+        {
+            name: "The Tourney Knight",
+            archetype: "Glory Seeker",
+            keywords: ["Competitive", "Horned-stallion", "Heraldic", "Greatlance", "Resentful", "Showman", "Lion-helmed", "Champion", "Glory"],
+            description: "A calling brought a life of combat. Nay a protector, in fact a competitor.",
+            passion: "Hatred: Restore SPI when you refuse a plea for forgiveness.",
+            ability: "Champion Vow: Use immediately before a combat where there is a prize at stake. +d6 to melee attacks for the whole combat."
+        },
+        {
+            name: "The Bloody Knight",
+            archetype: "Sanguine Berserker",
+            keywords: ["Visceral", "Bullish-mount", "Intoxicated", "Justiciar", "Longaxe", "Rage-fueled", "Blast-striker", "Blood-born", "Violence"],
+            description: "Some were born to fight. This one birthed from the very blood of battle.",
+            passion: "Justice: Restore SPI when you restore the balance of justice.",
+            ability: "Bloody Echo: Use immediately after defeating an opponent. Your next melee attack in this combat gains Blast."
+        },
+        {
+            name: "The Moss Knight",
+            archetype: "Lithic Druid",
+            keywords: ["Ancient", "Pale-steed", "Tattooed", "Stone-speaker", "Naturalist", "Cudgel-bearer", "Thorned", "Blue-thorned", "Nature", "Quiet"],
+            description: "The tree and stone had no need to be taught. The wisest knew to study beneath them.",
+            passion: "Naturality: Restore SPI when you reject an opportunity to sleep indoors, sleeping in nature instead.",
+            ability: "Mosstongue: Speak with uncut stones and particularly old trees."
+        },
+        {
+            name: "The War Knight",
+            archetype: "Gritty Tactician",
+            keywords: ["Veteran", "Stocky-steed", "Regimental", "Polearm-master", "Dutiful", "Mud-forged", "Bucket-helmed", "Strategist", "War"],
+            description: "Forged and broken in the bloodied mud. Won some, lost some, ever survived.",
+            passion: "Duty: Restore SPI when you answer the call for martial service under a superior.",
+            ability: "Battle Awareness: When fighting in a combat with at least 3 combatants on each side all your Gambits count as Strong Gambits."
+        },
+        {
+            name: "The Willow Knight",
+            archetype: "Storm-Born Youth",
+            keywords: ["Resilient", "Cautious-steed", "Flexible", "Doubtful", "Wind-bent", "Disaster-born", "Youthful", "Old-soul", "Sorrow"],
+            description: "The giants fought the storm, falling, all broken bones. The youth, thrown about, arose in the calm.",
+            passion: "Doubt: Restore SPI when you defer to somebody more senior than you, even though you disagree.",
+            ability: "Bend with the Wind: When you use a Gambit to Move you count as having Armour 4 until your next turn."
+        },
+        {
+            name: "The Gilded Knight",
+            archetype: "Auric Martyr",
+            keywords: ["Opulent", "Majestic-charger", "Prideful", "Gold-masked", "Sacrificial", "Sunnen-gold", "Haunted-victory", "Radiant", "Wealth"],
+            description: "A beacon of the brave and bold. All cloaked and masked in sunnen gold.",
+            passion: "Pride: Restore SPI when you take personal credit for a great victory.",
+            ability: "Martyr-in-Waiting: Use as a reaction to being Mortally Wounded. Allies fighting with you regain d6 GD and get +d12 damage against your attacker."
+        },
+        {
+            name: "The Saddle Knight",
+            archetype: "Centaurian Rider",
+            keywords: ["Equestrian", "Beloved-steed", "Certain", "Tack-master", "Mounted", "Plaited", "Swift", "Symbiotic", "Speed"],
+            description: "Within a blink they were atop their steed. Knight and beast at one, a red streak in the green.",
+            passion: "Certainty: Restore SPI when you prove somebody wrong.",
+            ability: "Song of the Steed: Speak in a voice comprehensible to horses. They need reasoning with rather than commanding."
+        },
+        {
+            name: "The Riddle Knight",
+            archetype: "Enigmatic Inquisitor",
+            keywords: ["Curious", "Secret", "Puzzle", "Twisted", "Moon", "Trickster", "Bow"],
+            description: "The right words say everything and nothing. A different truth to each ear.",
+            passion: "Integrity: Restore SPI when you discredit somebody unworthy of their position.",
+            ability: "Twisted Words: Speak, but choose two different meanings. Choose which meaning each listener takes from the words."
+        },
+        {
+            name: "The Talon Knight",
+            archetype: "Sky Hunter",
+            keywords: ["Hunter", "Bird", "Flight", "Sky", "Sharp", "Regret", "Hammer"],
+            description: "The claw is nothing without the eye. The eye is nothing without the wing.",
+            passion: "Regret: Restore SPI when you burn a part of your past.",
+            ability: "Flockbond: See through the eyes of your bird, and learn the local knowledge of any prey it eats."
+        },
+        {
+            name: "The Barbed Knight",
+            archetype: "Cruel Warden",
+            keywords: ["Visceral", "Spike", "Thorn", "Blood", "Hunter", "Apathy", "Cruel"],
+            description: "Cruelty can bring a peace. Stone and spikes split into bloom.",
+            passion: "Apathy: Restore SPI when you reject a call for comfort.",
+            ability: "The Red Hunt: Once each day, infuse a target’s spilt blood into an arrow to give it +d12 damage against the target."
+        },
+        {
+            name: "The Trail Knight",
+            archetype: "Pathfinder",
+            keywords: ["Track", "Travel", "Wanderer", "Fear", "Axe", "Sanguine", "Transient"],
+            description: "More than foxes leave trails in their stead. Comings and goings laid plain as a thread.",
+            passion: "Fear: Restore SPI when refusing to go into the dark.",
+            ability: "Strands of Past: By studying the ground for a whole Phase you can ask a single yes or no question about what happened here."
+        },
+        {
+            name: "The Amber Knight",
+            archetype: "Ancient Sentinel",
+            keywords: ["Slow", "Heavy", "Time", "Preserved", "Avarice", "Blade", "Ancient"],
+            description: "Their wait has been longer than we could imagine. Their blade slow but unstoppable.",
+            passion: "Avarice: Restore SPI when you gain significant wealth.",
+            ability: "Patient Strike: Make a melee Attack when you have not moved this turn. +d10 to the Attack. Ignore Armour."
+        },
+        {
+            name: "The Horde Knight",
+            archetype: "Pack Leader",
+            keywords: ["Swarm", "Chaos", "Group", "Prestige", "Violence", "Aggressive", "Sword"],
+            description: "In fury’s reign afore the rav’ning throng. In chaos born as knight where beast belong.",
+            passion: "Prestige: Restore SPI when you take credit for the deeds of another.",
+            ability: "Pack Tactics: Use before attacking with at least one ally. You may combine any number of dice into larger dice."
+        },
+        {
+            name: "The Emerald Knight",
+            archetype: "Verdant Shadow",
+            keywords: ["Nature", "Hidden", "Green", "Foliage-clad", "Elegance", "Spear", "Silent"],
+            description: "A verdant cloak on sable steed. Neath nature’s veil, yond sight and heed.",
+            passion: "Elegance: Restore SPI when you leave a place more beautiful than you found it.",
+            ability: "Fade to Green: Use when hiding still and silent in greenery. You cannot be found by any means."
+        },
+        {
+            name: "The Chain Knight",
+            archetype: "Abyssal Jailor",
+            keywords: ["Underground", "Dark", "Chain", "Heavy", "Punitive", "Abyss", "Mace-wielder"],
+            description: "Born below the soil, below the stone, below all thought. Down, down, further down.",
+            passion: "Abyss: Restore SPI when sleeping underground in complete darkness.",
+            ability: "Will of the Irons: Move a single chain that you touch as if it was a limb."
+        },
+        {
+            name: "The Banner Knight",
+            archetype: "Rallying Captain",
+            keywords: ["Heraldic", "Commanding", "Noble", "Sensitivity", "War", "Pike-wielder", "Social"],
+            description: "Beware of those festooning the flag. Their blade may be idle but their comrades are sharpened.",
+            passion: "Sensitivity: Restore SPI when receiving social approval.",
+            ability: "Rousing Presence: Use once per Attack when you are part of a group Attack. You may reroll the entire pool of Attack dice."
+        },
+        {
+            name: "The Pigeon Knight",
+            archetype: "Urban Wayfinder",
+            keywords: ["Travel", "Home", "Inquisition", "Transient", "Bird", "Simple", "Glaive"],
+            description: "The humble know no home in place. For such wanderers, the horizon is their hearth.",
+            passion: "Inquisition: Restore SPI when you wrangle the truth out of an uncooperative person.",
+            ability: "Wayfinder Sense: Sense the direction in which a particular goal lies, but not the best route to travel there."
+        },
+        {
+            name: "The Shield Knight",
+            archetype: "Stalwart Defender",
+            keywords: ["Protection", "Defense", "Shield", "Duty", "Mortality", "Sword", "Hefty"],
+            description: "In wood, hide, or iron, as armour meek or grand. No greater shield for the weak than the oath-sworn Knight.",
+            passion: "Mortality: Restore SPI when you see an ally suffer a Mortal Wound.",
+            ability: "Death Ward: Use when a nearby ally would take a Mortal Wound. You take a Mortal Wound instead."
+        },
+        {
+            name: "The Whip Knight",
+            archetype: "Tormentor",
+            keywords: ["Pain", "Control", "Reverence", "Cruel", "Whip", "Mace-wielder", "Punitive"],
+            description: "Some draw screams from wrent flesh and bone. Others have ways to make very soul moan.",
+            passion: "Reverence: Restore SPI when offering respectful homage to the dead.",
+            ability: "Pain Strike: Make a melee Attack. Damage is applied to GD as normal, but then to SPI in place of VIG."
+        },
+        {
+            name: "The Seal Knight",
+            archetype: "Oathkeeper",
+            keywords: ["Law", "Order", "Modesty", "Halberd", "Door", "Lock", "Dutiful"],
+            description: "A Knight’s sworn oath outlasts the stone wall. Yet Seers say in time even words must fall.",
+            passion: "Modesty: Restore SPI when refusing a reward.",
+            ability: "Seal of Authority: Mark an object. It cannot be opened or moved by anyone but you or a Seer."
+        },
+        {
+            name: "The Horn Knight",
+            archetype: "Wild Caller",
+            keywords: ["Sound", "Wild", "Beast-bond", "Bluntness", "Spear", "Nature", "Call"],
+            description: "Horn cried, hearts asank, blood awoke. In its wail our fates all sealed as the feast for death.",
+            passion: "Bluntness: Restore SPI when you move the conversation in a way that somebody is avoiding.",
+            ability: "Carnage Fanfare: Blow the wild horn in battle. For the rest of this battle any VIG lost through Damage is doubled."
+        },
+        {
+            name: "The Dove Knight",
+            archetype: "Vengeful Peacekeeper",
+            keywords: ["Peace", "Hope", "Vengeance", "Blade", "Flying", "Light", "Mercy"],
+            description: "In serenous moon the best of us can rest in docile light. That quietest bird in impure times must soar in bloody flight.",
+            passion: "Vengeance: Restore SPI when achieving a worthy revenge.",
+            ability: "Strike of Serenity: Make a melee Attack against a wounded target. Get +d8 to the Attack. If this defeats the target then all allies restore SPI."
+        },
+        {
+            name: "The Story Knight",
+            archetype: "Chronicler",
+            keywords: ["Showman", "Knowledge", "Book", "Blade", "Tale", "Memory", "Social"],
+            description: "At last, I’m here! The one you were waiting for, the one behind the words.",
+            passion: "Showmanship: Restore SPI when you deliberately draw unwanted attention.",
+            ability: "Weaver of Fate: Just before night falls, tell a story related to a nearby place. The Referee secretly chooses one detail to become truth."
+        },
+        {
+            name: "The Turtle Knight",
+            archetype: "Shellguard",
+            keywords: ["Defense", "Shell", "Slow", "Water", "Hammer", "Wellrestedness", "Heavy"],
+            description: "I stand inclad in shelldy stead. Nawone of you will see me dead!",
+            passion: "Wellrestedness: Restore SPI when you sleep for two consecutive Phases.",
+            ability: "Unbreakable Shell: Use at the start of your turn. You cannot move, but double your Armour and gain +d6 damage with shields."
+        },
+        {
+            name: "The Key Knight",
+            archetype: "Gatekeeper",
+            keywords: ["Unlock", "Secret", "Urban", "Access", "Distraction", "Axe", "Thief"],
+            description: "Sure as sky and sea. For every lock a key.",
+            passion: "Distraction: Restore SPI when you abandon a set plan.",
+            ability: "Retroactive Forethought: Once per day, produce a common item from your backpack that you could have reasonably acquired."
+        },
+        {
+            name: "The Moat Knight",
+            archetype: "Swamp Sentinel",
+            keywords: ["Water", "Filth", "Mud", "Defense", "Flail", "Barbed", "Grim"],
+            description: "There they stood, awashed in soddled loam. A grottling dance, the dusky sky agloam.",
+            passion: "Filth: Restore SPI when you become utterly filthy.",
+            ability: "Wading Stance: Gain 1 Armour and +d6 damage when fighting in at least waist-high water."
+        },
+        {
+            name: "The Boulder Knight",
+            archetype: "Unstoppable Force",
+            keywords: ["Heavy", "Stone", "Strength", "Hammer", "Crush", "Siege", "Hard"],
+            description: "A fated charge in mail and stalward plate. Abaited foes await that thundring gait.",
+            passion: "Strength: Restore SPI when you complete a physical task that somebody else was struggling with.",
+            ability: "Unstoppable Dash: When you are in motion you cannot be stopped, but sustain d12 Damage if breaking through a solid wall."
+        },
+        {
+            name: "The Tankard Knight",
+            archetype: "Reveler",
+            keywords: ["Revelry", "Drink", "Social", "Axe", "Simple", "Glory", "Party"],
+            description: "Abrash and bold, renowned and rued. Their presence cheered on one breath, damned anext.",
+            passion: "Revelry: Restore SPI when socially overindulging.",
+            ability: "Humble Glamourie: After eating and drinking with somebody they consider you trustworthy enough to speak openly."
+        },
+        {
+            name: "The Owl Knight",
+            archetype: "Night Watcher",
+            keywords: ["Knowledge", "Night", "Watcher", "Alertness", "Staff", "Tree", "Wise"],
+            description: "A fat one indeed who feasts on the fruits of fact. The nut of knowing nourishes from nog to nosh.",
+            passion: "Alertness: Restore SPI when you spot an ambush, trap, or surprise attack.",
+            ability: "Arboreal Archive: Spend a Phase running hands over a tree to access its memory."
+        },
+        {
+            name: "The Hooded Knight",
+            archetype: "Forgotten Wanderer",
+            keywords: ["Anonymity", "Hidden", "Secret", "Urban", "Glaive", "Shadow", "Forgotten"],
+            description: "As deeds abound in history's script. More slip from time’s forgetful grip.",
+            passion: "Anonymity: Restore SPI when somebody believes in a false identity you are portraying.",
+            ability: "Unnoticed Deed: Once per day you can retroactively declare an action that you took earlier that day."
+        },
+        {
+            name: "The Lance Knight",
+            archetype: "Seeing Lancer",
+            keywords: ["Charging", "War", "Adventure", "Lance", "Noble-steed", "Sight", "Blind"],
+            description: "Steed agasp, spear agroan, strike agore. Sharp afrail, sight ablind, then no more.",
+            passion: "Adventure: Restore SPI when you enter a Myth Hex.",
+            ability: "Shattering Charge: Once per day, make a solo mounted charging Attack. The Attack gains +d12 damage and Blast. The lance is shattered."
+        },
+        {
+            name: "The Questing Knight",
+            archetype: "Eternal Seeker",
+            keywords: ["Quest", "Duty", "Sword", "Impetuosity", "Travel", "Goal", "Noble"],
+            description: "Dream of the commoner, tragedy of the knight. To die at rest, at peace, at quiet.",
+            passion: "Impetuosity: Restore SPI when you are first to fight.",
+            ability: "Pledge Quest: Swear a quest to somebody who cares. Get +d12 damage on all attacks against those who stand in your way."
+        },
+        {
+            name: "The Ring Knight",
+            archetype: "Bound Guardian",
+            keywords: ["Order", "Circle", "Magic", "Respectfulness", "Mace-wielder", "Bond", "Protection"],
+            description: "With ring a’lone, head dreams of home. With rings o’two, heart fills with rue.",
+            passion: "Respectfulness: Restore SPI when returning something to its rightful owner.",
+            ability: "Unbreakable Circle: Draw a circle in the ground. Until you leave the circle, no other living being can enter or leave it."
+        },
+        {
+            name: "The Forge Knight",
+            archetype: "Iron Smith",
+            keywords: ["Fire", "Craft", "Burning", "Heavy", "Metal", "Blade", "Creation"],
+            description: "Gravid beats on ferrous slab, thick air a crimson sheen. Each mallenstroke leaves scars aworn.",
+            passion: "Burning: Restore SPI when you are wounded by fire.",
+            ability: "Tempering Strike: When you cause a Wound with a melee weapon, that weapon receives +d6 damage until the end of combat."
+        },
+        {
+            name: "The Rune Knight",
+            archetype: "Fate Scribe",
+            keywords: ["Magic", "Foresight", "Star", "Stone", "Heavy", "Scroll", "Fate"],
+            description: "Under gleam of lumenlight, in skin or stone ascratch. Strands of faten path unveiled.",
+            passion: "Foresight: Restore SPI when your prediction is proven to be correct.",
+            ability: "Destinous Sigil: Etch a cosmic rune. Choose a number. When a die rolls that number you may adjust it to any other value."
+        },
+        {
+            name: "The Gallows Knight",
+            archetype: "Grim Executioner",
+            keywords: ["Death", "Misery", "Grim", "Urban", "Fear", "Hook", "Scavenger"],
+            description: "In dregs of dawn the damnlings sway. For famine’s brood a gifted prey.",
+            passion: "Misery: Restore SPI when you meet somebody new and complain to them about something.",
+            ability: "Carrion’s Call: Speak with scavenger creatures, and summon them to you."
+        },
+        {
+            name: "The Tome Knight",
+            archetype: "Silent Scholar",
+            keywords: ["Knowledge", "Introversion", "Book", "Staff", "Study", "Quiet", "History"],
+            description: "A loom of wisdom spun at dawn. Laid to rest til coming morn.",
+            passion: "Introversion: Restore SPI when you refuse a formal social gathering, or leave early.",
+            ability: "Dawn Contemplation: At sunrise each day, ask the Referee three questions within a chosen area of knowledge."
+        },
+        {
+            name: "The Meteor Knight",
+            archetype: "Starfall Sentinel",
+            keywords: ["Star", "Impact", "Authenticity", "Sky", "Trident", "Heavy", "Destruction"],
+            description: "A star of truth, fell from ahigh. Such lumous ones should wear no lie.",
+            passion: "Authenticity: Restore SPI when you reveal your identity or intentions at an inconvenient moment.",
+            ability: "Star Fall: You never suffer Damage from falling. When you land from a fall of at least 12ft you may release a shockwave."
+        },
+        {
+            name: "The Gazer Knight",
+            archetype: "Visionary",
+            keywords: ["Vision", "Respect", "Eye", "Magic", "Blade", "Fate", "Future"],
+            description: "The blood sees through time aflow. To certain souls, a glimpse they show.",
+            passion: "Respect: Restore SPI when you yield to a Seer.",
+            ability: "Glimpse of Fate: Once per day you can undo a single action performed by you or your Company."
+        },
+        {
+            name: "The Mule Knight",
+            archetype: "Stubborn Laborer",
+            keywords: ["Simple", "Kindness", "Humble", "Labor", "Staff", "Load", "Explosive"],
+            description: "A humble beast, no roar or flight. Beneath the grey a show of might.",
+            passion: "Kindness: Restore SPI when you stop an act of cruelty.",
+            ability: "Lowly Shroud: At any time you may choose to have somebody observing you be utterly convinced that you are just a humble peasant."
+        },
+        {
+            name: "The Halo Knight",
+            archetype: "Luminous Hope",
+            keywords: ["Light", "Valour", "Hope", "Axe", "Holy", "Blind", "Good"],
+            description: "A trail of hope across the land. In sorrow’s face, bright reprimand.",
+            passion: "Valour: Restore SPI when you engage in combat against the odds.",
+            ability: "Luminous Eruption: Use once per Phase. A light source you are holding briefly illuminates the entire Hex and causes damage to dark beings."
+        },
+        {
+            name: "The Iron Knight",
+            archetype: "Ferrous Warrior",
+            keywords: ["Metal", "Diligence", "Blade", "Strong", "Sharp", "War", "Heavy"],
+            description: "As sword abend, as plate afold. As shield asplint, a tale atold.",
+            passion: "Diligence: Restore SPI when refusing a shortcut.",
+            ability: "Heightened Sharpness: When you perform a Strong Gambit with a bladed weapon you may choose to take a limb or head."
+        },
+        {
+            name: "The Mirror Knight",
+            archetype: "Reflective Duelist",
+            keywords: ["Reflect", "Egality", "Copy", "Axe", "Glass", "Self", "Twin"],
+            description: "In eyes ajust, the given got. Blow for blow, from one shared lot.",
+            passion: "Egality: Restore SPI when you give somebody else their fair share.",
+            ability: "Reflection of Blood: When you are Wounded or Scarred, the attacker suffers the same effect."
+        },
+        {
+            name: "The Dusk Knight",
+            archetype: "Memory Reaper",
+            keywords: ["Darkness", "Temperance", "Memory", "Hammer", "Loss", "Time", "End"],
+            description: "Each touch of iron takes a price, in breath or blood or bone. A nasty cut takes something worse, the warmth of distant home.",
+            passion: "Temperance: Restore SPI when you refuse a luxury.",
+            ability: "Sunder Memory: When you Wound a target you can rob them of a single specific memory."
+        },
+        {
+            name: "The Coin Knight",
+            archetype: "Mercenary Gambler",
+            keywords: ["Wealth", "Generosity", "Chance", "Greed", "Mace-wielder", "Trade", "City"],
+            description: "In arg or aur, decisions spun. A prize, a life, lost or won.",
+            passion: "Generosity: Restore SPI when you give generously to somebody in need.",
+            ability: "Thrown to Chance: Flip a coin instead of attacking. Heads the target is killed, tails you are killed."
+        },
+        {
+            name: "The Mock Knight",
+            archetype: "Living Construct",
+            keywords: ["Artificial", "Imitation", "False", "Wood", "Flail", "Construct", "Toy"],
+            description: "Sycamore, leather, felt and strings. In heartless chest a soul still sings.",
+            passion: "Imitation: Restore SPI when you pass for human while under scrutiny.",
+            ability: "Impression of Life: You do not need to breathe, eat, drink, sleep, or love, but still feel the drives."
+        },
+        {
+            name: "The Mask Knight",
+            archetype: "Faceless Actor",
+            keywords: ["Deception", "Vigilance", "Hidden", "Face", "Axe", "Performance", "Identity"],
+            description: "You call for the truth from me? I will not offer you that which cannot be found.",
+            passion: "Vigilance: Restore SPI when you prevent a betrayal.",
+            ability: "Thousand Faces: You can assume the face of anybody you have touched."
+        },
+        {
+            name: "The Bone Knight",
+            archetype: "Skeletal Merchant",
+            keywords: ["Bone", "Acumen", "Death", "Trade", "Dagger", "Structure", "Grim"],
+            description: "Ribble rabble, ronky donk, they bounce a duckle dine. Clatter clink, clanky tank, a rib, a skull, a spine.",
+            passion: "Acumen: Restore SPI when you come out better from a bargain.",
+            ability: "Bone Magnate: When you make a genuine trade, a bone for a bone, learn something about the individual that the bone came from."
+        },
+        {
+            name: "The Salt Knight",
+            archetype: "Brine Walker",
+            keywords: ["Sea", "Mettle", "Water", "Bitter", "Mace-wielder", "Preserve", "Endurance"],
+            description: "Saline stink adwells in every depth. No matter how calm the surface.",
+            passion: "Mettle: Restore SPI when accepting a non-combat challenge with the odds set against you.",
+            ability: "Inspire Ire: Activate at the end of your turn. Enemies that Attack targets other than you lose SPI."
+        },
+        {
+            name: "The Violet Knight",
+            archetype: "Dream Walker",
+            keywords: ["Light", "Positivity", "Beauty", "Hidden", "Mace-wielder", "Dream", "Color"],
+            description: "A glow unseen, from neath a dream. Illuminates the fabric’s seam.",
+            passion: "Positivity: Restore SPI when you raise somebody’s mood.",
+            ability: "Light Beyond Light: You can cause any metal object you hold to emit a bright light that only you can see."
+        },
+        {
+            name: "The Cosmic Knight",
+            archetype: "Star Watcher",
+            keywords: ["Star", "Constellations", "Space", "Void", "Distance", "Crossbow", "Alien"],
+            description: "Countless stars dotted in the night. To the eyes of one, each a stain of failure amid purest black.",
+            passion: "Constellations: Restore SPI when you get tell somebody new about the stars as you point to them.",
+            ability: "Celestial Retreat: While you can see the sky you can instantly vanish to a distant sanctuary."
+        },
+        {
+            name: "The Temple Knight",
+            archetype: "Sanctuary Guardian",
+            keywords: ["Holy", "Quietude", "Peace", "Structure", "Spear", "Order", "Safety"],
+            description: "No blood or cry. Not here, not today.",
+            passion: "Quietude: Restore SPI when bringing peaceful order to a chaotic place.",
+            ability: "Site of Respite: You may declare a building that you occupy as peaceful ground. Nobody within can attack."
+        },
+        {
+            name: "The Fox Knight",
+            archetype: "Cunning Trickster",
+            keywords: ["Wits", "Trickster", "Blade", "Hidden", "Animal", "Smart", "Wild"],
+            description: "A whimsied whirl, a crafty guise. The truth revealed as sour surprise.",
+            passion: "Wits: Restore SPI when you avoid being tricked or outwitted.",
+            ability: "Cunning Ploy: Once per day, declare your current self to be an illusion, dispersing into smoke."
+        },
+        {
+            name: "The Gull Knight",
+            archetype: "Wind Rider",
+            keywords: ["Flight", "Joy", "Sea", "Bird", "Freedom", "Blade", "Scavenger"],
+            description: "Tattered wing, loath’ed cry, ugly bill. And yet what heights.",
+            passion: "Joy: Restore SPI when you deliver good news.",
+            ability: "Guiding Gust: Ascend to the top of a vertical surface you are touching, lifted on a burst of wind."
+        },
+        {
+            name: "The Magpie Knight",
+            archetype: "Collector",
+            keywords: ["Heraldry", "Thief", "Shiny", "Bird", "Cudgel-bearer", "Collector", "Eye"],
+            description: "Keen eyes see what cold heart seeks. No empty handed fool, this bird.",
+            passion: "Heraldry: Restore SPI when you announce the owner of a banner, crest, or coat of arms.",
+            ability: "Scourer’s Sense: If you are searching for something specific you always know for sure whether it is in your immediate surroundings."
+        },
+        {
+            name: "The Reliquary Knight",
+            archetype: "Spirit Keeper",
+            keywords: ["Tradition", "Death", "History", "Bone", "Sickle", "Holy", "Spirit"],
+            description: "Final rest, earned in life. The echos linger on.",
+            passion: "Tradition: Restore SPI when you ensure a tradition is thoroughly honoured.",
+            ability: "Spirit Call: Once per day, release the invisible spirit from your reliquary to follow a command."
+        },
+        {
+            name: "The Vulture Knight",
+            archetype: "Carrion Seer",
+            keywords: ["Thrift", "Death", "Scavenger", "Patience", "Axe", "Grim", "Gut"],
+            description: "Gutly ribbons, blood’s sweet dance. The future calls in gory trance.",
+            passion: "Thrift: Restore SPI when you make good use of something you found discarded.",
+            ability: "Carrion Casting: Spread the innards of the recently dead. Ask a single question, they point you in a direction that would help."
+        },
+        {
+            name: "The Free Knight",
+            archetype: "Chain Breaker",
+            keywords: ["Liberty", "Freedom", "Unbound", "Flail", "Wild", "Break", "Open"],
+            description: "No body, no mind, should live acaged. Yet freedom rarely comes with a whisper.",
+            passion: "Liberty: Restore SPI when you release somebody from an unwanted bond.",
+            ability: "Bond Breaker: Strike a chain or lock with a metal weapon. Both shatter loudly."
+        },
+        {
+            name: "The Silk Knight",
+            archetype: "Gossamer Weaver",
+            keywords: ["Mercy", "Soft", "Weaver", "Halberd", "Luxury", "Spider", "Creation"],
+            description: "Judge not a knight on might and favour. Where silk endures, a heart can waver.",
+            passion: "Mercy: Restore SPI when you accept a surrender or plea for forgiveness.",
+            ability: "Adamant Gossamer: You can draw thin strands of silky string from your mouth. Unbreakable, but burn to ash in an instant."
+        },
+        {
+            name: "The Tiger Knight",
+            archetype: "Primal Apex",
+            keywords: ["Closure-seeking", "Bestial", "Hunter", "Blade", "Tattooed-steed", "Aggressive", "Wild"],
+            description: "The ignorant deem beastly realms as mere anarchy. In truth, the structure runs much deeper.",
+            passion: "Closure: Restore SPI when you get an answer that you’ve been seeking for some time.",
+            ability: "Bestial Renown: Each time you defeat an animal in a contest befitting its strengths, all animals of that type will react favourably."
+        },
+        {
+            name: "The Leaf Knight",
+            archetype: "Arboreal Forager",
+            keywords: ["Gourmet", "Rustic", "Branch-wielder", "Nature", "Green", "Forest", "Simple"],
+            description: "No greater gift than bough and bush. What more could we ask from this bountiful land?",
+            passion: "Gourmet: Restore SPI when you eat a new type of fruit or vegetable.",
+            ability: "Nature’s Vault: You can wield branches as javelins or greatspears and eat leaves as a satisfying meal."
+        },
+        {
+            name: "The Glass Knight",
+            archetype: "Transparent Judge",
+            keywords: ["Curiosity", "Revealing", "See-through", "Pike-wielder", "Fragile", "Truth", "Glass"],
+            description: "Revealer of all secrets, in stark, judgemental light. In cold and sharpened heart lies no deceitful curse.",
+            passion: "Curiosity: Restore SPI when looking somewhere you really shouldn’t.",
+            ability: "Touch of Glass: You can see through any surface that you place your hand upon."
+        },
+        {
+            name: "The Hive Knight",
+            archetype: "Insectoid Rebirth",
+            keywords: ["Community", "Swarm-bound", "Bug", "Rootbow", "Chrysalis-born", "Hive", "Growth"],
+            description: "A bed of gluous, parchly cloth, a coat of stickly sleen. Emerged in morning good as new, chirurgery unseen.",
+            passion: "Community: Restore SPI when you leave a community better off than when you arrived.",
+            ability: "Chrysaline Rebirth: At night you may immerse yourself in a cocoon. After a full day you emerge cured."
+        },
+        {
+            name: "The Ghoul Knight",
+            archetype: "Undead Lazarus",
+            keywords: ["Acceptance", "Deathless", "Resurrected", "Axe", "Rot", "Grave", "Home"],
+            description: "Arise! Arise! But, for what? For whom?",
+            passion: "Acceptance: Restore SPI when warmly welcomed into somebody’s home.",
+            ability: "Rebuked by Death: Use when you are dead. Return to life."
+        },
+        {
+            name: "The Weaver Knight",
+            archetype: "Textile Transposer",
+            keywords: ["Detachment", "Displacement", "Axe", "Warp-weft", "Craft", "Change", "Swap"],
+            description: "This and that, might just be that and this. As today were tomorrow, soon yesterday, no truth lies set in stone.",
+            passion: "Detachment: Restore SPI when you discard something that you want.",
+            ability: "Warp & Weft: Swap the positions of an object you are holding and another object you can see."
+        },
+        {
+            name: "The Thunder Knight",
+            archetype: "Sonic Herald",
+            keywords: ["Discord", "Booming", "Loud", "Spear", "Voice-shout", "Storm", "Noise"],
+            description: "Thunder! Should be felt, not heard, else call it a whimper!",
+            passion: "Discord: Restore SPI when you disrupt a place of order.",
+            ability: "Voice of the Skies: While outdoors, you can shout loud enough to be heard clearly throughout the whole Hex."
+        },
+        {
+            name: "The Dust Knight",
+            archetype: "Arid Repulsor",
+            keywords: ["Entitlement", "Hydrophobic", "Dry", "Hammer", "Water-pusher", "Wasteland", "Salt"],
+            description: "Lust and loathing, desire and ire. The two great forces, perhaps just one.",
+            passion: "Entitlement: Restore SPI when you get something that you were promised but initially denied.",
+            ability: "Aqueous Repulsion: You can forcefully repel liquids with an outstretched hand, enough to hold a river at bay."
+        },
+        {
+            name: "The Fanged Knight",
+            archetype: "Parasitic Noble",
+            keywords: ["Melancholy", "Vampiric", "Bite", "Blade", "Blood", "Noble", "Darkness"],
+            description: "I can show you why I cannot bare the false smile. Now bare your skin and harden your heart.",
+            passion: "Melancholy: Restore SPI when you dampen the mood.",
+            ability: "Sink Teeth: You can bite someone to regain VIG, put them to sleep, or show them a memory."
+        },
+        {
+            name: "The Pearl Knight",
+            archetype: "Abyssal Merchant",
+            keywords: ["Gossip", "Sea", "Wealth", "Hidden", "Blade", "Secret", "Shell"],
+            description: "Why lurk shellbound in abyssal depths, solitary for life? All the best secrets come from the mouths and eyes of others.",
+            passion: "Gossip: Restore SPI when you share or receive gossip.",
+            ability: "Gift from the Deep: Produce one pearl each morning. You can see through the eyes of anybody carrying one."
+        },
+        {
+            name: "The Rat Knight",
+            archetype: "Vermintide Scion",
+            keywords: ["Trust", "Squeaking", "Small", "Scavenger", "Sickle", "Filthy", "Bug"],
+            description: "In squeakling hole I squashed and curled. Amidst my kin, a kinder world.",
+            passion: "Trust: Restore SPI when giving the benefit of the doubt in a way that leaves you vulnerable.",
+            ability: "Verminform: Take the form of a rat to squeeze into any space."
+        }
+    ];
+
+    const QUESTIONS = [
+        {
+            text: "A beast blocks your path. How do you respond?",
+            options: [
+                { text: "I strike it down with primal fury.", tags: ["Visceral", "Rage-fueled", "Aggressive", "Bestial", "Violence", "Hunter"] },
+                { text: "I command it to step aside.", tags: ["Noble", "Commanding", "Voice-shout", "Authority", "Stern", "Truth-bound"] },
+                { text: "I study it, looking for a weakness.", tags: ["Curious", "Strategist", "Knowledge", "Watcher", "Wise"] },
+                { text: "I offer it food and try to pass peacefully.", tags: ["Empathetic", "Nature", "Beast-bond", "Peace", "Hospitality"] }
+            ]
+        },
+        {
+            text: "What is your weapon of choice?",
+            options: [
+                { text: "A heavy mace or hammer to crush armor.", tags: ["Mace-wielder", "Old-hammer", "Punitive", "Cudgel-bearer", "Heavy", "Strong"] },
+                { text: "A long spear or pike to keep foes at bay.", tags: ["Pike-wielder", "Forked-spear", "Longaxe", "Greatlance", "Reach", "Distance"] },
+                { text: "A finely crafted sword, sharp and reliable.", tags: ["Blade", "Sword", "Steel", "Sharp", "Noble"] },
+                { text: "Whatever is at hand—branch, bone, or stone.", tags: ["Improvised", "Rustic", "Simple", "Branch-wielder", "Bone", "Scavenger"] }
+            ]
+        },
+        {
+            text: "Where do you feel most at home?",
+            options: [
+                { text: "In the deep, silent woods.", tags: ["Sylvan", "Foliage-clad", "Arboreal", "Green", "Forest", "Nature"] },
+                { text: "Amidst the noise and stone of the City.", tags: ["Urban", "Wall", "Brick", "Crowd", "Trade", "Civilization"] },
+                { text: "On the open road, under the stars.", tags: ["Transient", "Wanderer", "Travel", "Sky", "Star", "Distance"] },
+                { text: "In the damp dark, where others fear to tread.", tags: ["Underground", "Dark", "Rot", "Cave", "Hidden", "Secret"] }
+            ]
+        },
+        {
+            text: "What drives you forward?",
+            options: [
+                { text: "The pursuit of Glory and Renown.", tags: ["Glory", "Prideful", "Showman", "Heraldic", "Champion", "Gold"] },
+                { text: "A solemn Duty to a higher cause.", tags: ["Dutiful", "Truth-bound", "Justiciar", "Law", "Order", "Protection"] },
+                { text: "The thrill of the Hunt.", tags: ["Hunter", "Chasing", "Predator", "Swift", "Aggressive", "Track"] },
+                { text: "A hunger for forbidden Knowledge.", tags: ["Curious", "Secret", "Magic", "Book", "Scroll", "Study"] }
+            ]
+        },
+        {
+            text: "How does your steed appear?",
+            options: [
+                { text: "Armoured and disciplined.", tags: ["Majestic-charger", "Stocky-steed", "Noble-steed", "War", "Heavy"] },
+                { text: "Wild, barely tamed, perhaps not even a horse.", tags: ["Tattered-steed", "Petulant-steed", "Beast", "Wild", "Monster"] },
+                { text: "Strange, altered by magic or nature.", tags: ["Hooded-steed", "Pale-steed", "Tattooed-steed", "Spotted-steed", "Mutant"] },
+                { text: "I prefer to walk.", tags: ["Walking", "Ground", "Foot", "Slow", "Steady"] }
+            ]
+        },
+        {
+            text: "What is your greatest flaw?",
+            options: [
+                { text: "I am too rigid and unforgiving.", tags: ["Stern", "Dogmatic", "Punitive", "Cold", "Hard"] },
+                { text: "I am easily distracted by beauty or luxury.", tags: ["Opulent", "Intoxicated", "Greed", "Gold", "Luxury"] },
+                { text: "I trust no one.", tags: ["Doubtful", "Paranoid", "Loner", "Secret", "Hidden"] },
+                { text: "My rage sometimes consumes me.", tags: ["Rage-fueled", "Visceral", "Angry", "Violence", "Fire"] }
+            ]
+        },
+        {
+            text: "The mists close in. What do you see?",
+            options: [
+                { text: "The faces of the dead.", tags: ["Ghost", "Death", "Skull", "Bone", "Memory", "Grave"] },
+                { text: "The geometry of the world.", tags: ["Structure", "Map", "Plan", "Logic", "Order"] },
+                { text: "A swarm of tiny lives.", tags: ["Bug", "Swarm", "Insect", "Small", "Hive"] },
+                { text: "Only the path ahead.", tags: ["Focus", "Road", "Travel", "Simple", "Determination"] }
+            ]
+        }
+    ];
+
+    const app = {
+        currentQuestion: 0,
+        scores: {},
+
+        init: function() {
+            KNIGHTS.forEach(k => this.scores[k.name] = 0);
+        },
+
+        startQuiz: function() {
+            this.init();
+            document.getElementById('screen-intro').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+            document.getElementById('screen-quiz').classList.add('fade-in');
+            this.renderQuestion();
+        },
+
+        renderQuestion: function() {
+            const q = QUESTIONS[this.currentQuestion];
+            document.getElementById('question-text').innerText = q.text;
+            document.getElementById('question-progress').innerText = `${this.currentQuestion + 1} / ${QUESTIONS.length}`;
+            
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            q.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'btn';
+                btn.innerText = opt.text;
+                btn.onclick = () => this.handleAnswer(opt.tags);
+                container.appendChild(btn);
+            });
+        },
+
+        handleAnswer: function(tags) {
+            KNIGHTS.forEach(knight => {
+                let matchCount = 0;
+                tags.forEach(tag => {
+                    if (knight.keywords.includes(tag)) matchCount += 3;
+                    const partialMatch = knight.keywords.some(k => k.toLowerCase().includes(tag.toLowerCase()));
+                    if (partialMatch) matchCount += 1;
+                });
+                this.scores[knight.name] += matchCount;
+            });
+
+            this.currentQuestion++;
+            
+            if (this.currentQuestion < QUESTIONS.length) {
+                setTimeout(() => this.renderQuestion(), 50);
+            } else {
+                this.showResult();
+            }
+        },
+
+        showResult: function() {
+            let maxScore = -1;
+            let winners = [];
+
+            for (const [name, score] of Object.entries(this.scores)) {
+                if (score > maxScore) {
+                    maxScore = score;
+                    winners = [name];
+                } else if (score === maxScore) {
+                    winners.push(name);
+                }
+            }
+
+            const winnerName = winners[Math.floor(Math.random() * winners.length)];
+            const winnerData = KNIGHTS.find(k => k.name === winnerName);
+
+            document.getElementById('screen-quiz').classList.add('hidden');
+            const resScreen = document.getElementById('screen-result');
+            resScreen.classList.remove('hidden');
+            resScreen.classList.add('fade-in');
+
+            document.getElementById('result-name').innerText = winnerData.name;
+            document.getElementById('result-archetype').innerText = winnerData.archetype;
+            document.getElementById('result-desc').innerText = winnerData.description;
+            document.getElementById('result-passion').innerHTML = `<strong>${winnerData.passion.split(':')[0]}:</strong> ${winnerData.passion.split(':')[1] || ''}`;
+            document.getElementById('result-ability').innerHTML = `<strong>${winnerData.ability.split(':')[0]}:</strong> ${winnerData.ability.split(':')[1] || ''}`;
+        },
+
+        reset: function() {
+            this.currentQuestion = 0;
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-intro').classList.remove('hidden');
+            document.getElementById('screen-intro').classList.add('fade-in');
+        }
+    };
+
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+</script>
+</body>
+</html>

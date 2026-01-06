@@ -1,0 +1,158 @@
+[
+    {
+        "id": "01",
+        "title": "Rotted Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 5, <span class=\"virtue\">SPI</span> 11, 2<span class=\"virtue\">GD</span>",
+        "traits": [
+            "Their withered touch is only contagious if they will it.",
+            "Sees the way to live on through any amount of physical decay.",
+            "Wants to become even more rotten, filthy, and diseased."
+        ],
+        "idx": "01",
+        "_id": "2efc0cd9-42f7-485b-9859-d8ac261a0fd6",
+        "type": "seer"
+    },
+    {
+        "id": "02",
+        "title": "Swollen Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 15, <span class=\"virtue\">CLA</span> 5, <span class=\"virtue\">SPI</span> 4, 1<span class=\"virtue\">GD</span>",
+        "traits": [
+            "Can only be moved by feats of engineering usually reserved for siegery.",
+            "Sees within the minds of huge beings.",
+            "Wants to grow ever bigger."
+        ],
+        "idx": "02",
+        "_id": "68f62bf0-55fd-4483-80e7-f2e7b2e95fd5",
+        "type": "seer"
+    },
+    {
+        "id": "03",
+        "title": "Entombed Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 5, <span class=\"virtue\">SPI</span> 11, 2<span class=\"virtue\">GD</span>",
+        "traits": [
+            "Now entombed in white stone, their voice answers visitors only rarely.",
+            "Always guarded by a Knight, mourned by an apprentice.",
+            "Sees beyond the veil of death."
+        ],
+        "idx": "03",
+        "_id": "aa7336dd-a989-481d-a960-4f711222e254",
+        "type": "seer"
+    },
+    {
+        "id": "04",
+        "title": "Reed Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 8, <span class=\"virtue\">CLA</span> 15, <span class=\"virtue\">SPI</span> 10, 4<span class=\"virtue\">GD</span>",
+        "traits": [
+            "Knows they will lose their sight if they pass over a river.",
+            "Sees the near future in the patterns of reeds chopped in a very specific way.",
+            "Wants to live in the protection of a worthy master, serving a righteous cause."
+        ],
+        "idx": "04",
+        "_id": "be727438-c9dd-41da-a7fb-282b702a793f",
+        "type": "seer"
+    },
+    {
+        "id": "05",
+        "title": "Loathed Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 8, <span class=\"virtue\">CLA</span> 11, <span class=\"virtue\">SPI</span> 5, 6<span class=\"virtue\">GD</span>",
+        "traits": [
+            "Long, twisted face and body, like she's been pulled around a cart wheel.",
+            "Sees into a person's hate with a touch, sharing and fuelling their contempt.",
+            "Physically pained by admiration or love. Wants to become even more loathed."
+        ],
+        "idx": "05",
+        "_id": "ef9903ba-a3ce-4880-8a6e-185c4508c67b",
+        "type": "seer"
+    },
+    {
+        "id": "06",
+        "title": "Lost Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 9, <span class=\"virtue\">SPI</span> 7, 2<span class=\"virtue\">GD</span>",
+        "traits": [
+            "Constantly being rubbed with psychotropic tinctures, parts of their body seeming to dissipate from reality.",
+            "Sees things that have been lost in a hazy vision of their current location.",
+            "Knows they will lose their sight if they advise directly how to find something."
+        ],
+        "idx": "06",
+        "_id": "97fa302e-51a0-47f6-9dc5-5e2292a2d950",
+        "type": "seer"
+    },
+    {
+        "id": "07",
+        "title": "Carved Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 5, <span class=\"virtue\">SPI</span> 11, 2<span class=\"virtue\">GD</span>",
+        "traits": [
+            "Requires constant treatment, acolytes tending to their runic flesh carvings.",
+            "Sees the outcome of battles in their own healing wounds.",
+            "Wants to drive the land toward a climactic war that will bring peace."
+        ],
+        "idx": "07",
+        "_id": "3c09eafa-c8fd-4e05-be03-1b346fa01fb9",
+        "type": "seer"
+    },
+    {
+        "id": "08",
+        "title": "Enthroned Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 11, <span class=\"virtue\">CLA</span> 8, <span class=\"virtue\">SPI</span> 16, 2<span class=\"virtue\">GD</span>",
+        "traits": [
+            "They are a twisted heap of flesh, bone, and spikes of precious metal.",
+            "Sees glimpses of the ultimate fate of anybody taking up a Seat of Power.",
+            "Demands a humiliating level of reverence from visitors. Wants to manipulate loyal contacts into positions of authority."
+        ],
+        "idx": "08",
+        "_id": "79b7ff04-0c7a-4a55-8e33-8d27bc756a86",
+        "type": "seer"
+    },
+    {
+        "id": "09",
+        "title": "Jewelled Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 6, <span class=\"virtue\">CLA</span> 6, <span class=\"virtue\">SPI</span> 16, 1<span class=\"virtue\">GD</span>",
+        "traits": [
+            "No body is visible, just layers and layers of jewelled silk and glittering lace.",
+            "Can see the history of jewelled items, and the locations of their own jewels.",
+            "Wants to send their jewels out to remote places, watching from afar."
+        ],
+        "idx": "09",
+        "_id": "de80146e-f3a7-4783-bd06-2f8863b65599",
+        "type": "seer"
+    },
+    {
+        "id": "10",
+        "title": "Jawbone Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 15, <span class=\"virtue\">CLA</span> 15, <span class=\"virtue\">SPI</span> 3, 2<span class=\"virtue\">GD</span>",
+        "traits": [
+            "Hunched, pale, huge jawbone grafted onto their own, speaks like a wolf.",
+            "Sees with the senses of a beast while clutching an object made from the bone or horn of their species.",
+            "Wants to return the land to the beasts."
+        ],
+        "idx": "10",
+        "_id": "1984acd0-f8a6-4af2-9be8-27e094a322c7",
+        "type": "seer"
+    },
+    {
+        "id": "11",
+        "title": "Veiled Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 5, <span class=\"virtue\">SPI</span> 11, 2<span class=\"virtue\">GD</span>",
+        "traits": [
+            "Hanging folds of flesh and horse-like hair hide any semblance of a face.",
+            "Sees nothing, but hears all within a Hex. Speaks just once each day, giving a single word of advice to the most worthy visitor.",
+            "Genuinely wants to uphold peace."
+        ],
+        "idx": "11",
+        "_id": "6ea94b17-0d04-42c4-ac6d-7c0d33e0bcee",
+        "type": "seer"
+    },
+    {
+        "id": "12",
+        "title": "Serpent Seer",
+        "attributes": "<span class=\"virtue\">VIG</span> 16, <span class=\"virtue\">CLA</span> 14, <span class=\"virtue\">SPI</span> 14, 3<span class=\"virtue\">GD</span>",
+        "traits": [
+            "A writhing pile of serpents, speaking as one through a choir of hisses.",
+            "Grants visions of dangerous beasts in the wilderness nearby.",
+            "Wants more unusual serpents for their pile, or even just a snack."
+        ],
+        "idx": "12",
+        "_id": "6bb977a8-d6e7-4511-8161-b5f42fdcfc62",
+        "type": "seer"
+    }
+]

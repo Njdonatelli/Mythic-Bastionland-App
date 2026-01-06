@@ -1,0 +1,70 @@
+{
+    "id": "11",
+    "table": {
+      "title": "LOYAL BIRD",
+      "columns": [
+        "Breed",
+        "Special Training"
+      ],
+      "rows": [
+        [
+          "Fisherhawk (can dive into water)",
+          "Singing"
+        ],
+        [
+          "Cave owl (nocturnal)",
+          "Fighting humans (+[[/r d6]] vs humans)"
+        ],
+        [
+          "Grey raven (highly intelligent)",
+          "Silent flight"
+        ],
+        [
+          "Red eagle ([[/r d6]] talons)",
+          "Delivery"
+        ],
+        [
+          "Rock falcon (preys on reptiles)",
+          "Stealing"
+        ],
+        [
+          "Bog vulture (5\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)",
+          "Fighting birds (+[[/r d6]] vs birds)"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Flockbond",
+      "text": "See through the eyes of your bird, and learn the local knowledge of any prey it eats."
+    },
+    "passion": {
+      "name": "Regret",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you burn a part of the past."
+    },
+    "property": [
+      "Hookhammer ([[/r d8]] hefty, +[[/r d8]] dropping from above), shield-gauntlet ([[/r d6]], A1), helm (A1)",
+      "Loyal bird (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 4\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, [[/r d4]] talons, see below)",
+      "Old steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 7, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "Talon Knight",
+    "poem": [
+      "The claw is nothing without the eye",
+      "The eye is nothing without the wing"
+    ],
+    "idx": "11",
+    "_id": "14ccc8a5-4d3f-4ee3-908b-369d6edcedf7",
+    "type": "knight",
+    "seer": {
+      "id": "11",
+      "title": "Veiled Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 7, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 11, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Hanging folds of flesh and horse-like hair hide any semblance of a face.",
+        "Sees nothing, but hears all within a Hex. Speaks just once each day, giving a single word of advice to the most worthy visitor.",
+        "Genuinely wants to uphold peace."
+      ],
+      "idx": "11",
+      "_id": "6ea94b17-0d04-42c4-ac6d-7c0d33e0bcee",
+      "type": "seer"
+    }
+  }

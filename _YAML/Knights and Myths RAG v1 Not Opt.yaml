@@ -1,0 +1,4074 @@
+  
+---
+ID: knight_true
+TITLE: "The True Knight"
+TYPE: entity
+TAGS: [knight, class, truth]
+---
+# The True Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=1).
+**Equipment:** Polished mace (d8 Hefty), mail (A1), plate (A1), helm (A1), Kite shield (d4, A1).
+**Steed:** Petulant steed (VIG 10, CLA 10, SPI 5, 5 GD).
+ 
+### Ability: Punitive Stroke
+**Trigger:** Melee Attack against a known liar.
+**Effect:** Gain +d10 to Attack. Ignore Armour.
+ 
+### Passion: Honesty
+**Trigger:** Tell the truth where a lie might be more beneficial.
+**Effect:** Restore SPI.
+ 
+## Seer: The Rotted Seer
+**Stats:** VIG 7, CLA 5, SPI 11, 2 GD.
+**Nature:** Withered touch is contagious only if willed. Sees way to live through decay. Wants to become more rotten/filthy.
+ 
+## Raw Text
+> A pact to uphold truth and fact
+> On lies the false lay brake and cracked
+ 
+===END_FILE===
+---
+ID: myth_plague
+TITLE: "The Plague"
+TYPE: entity
+TAGS: [myth, disease, hex]
+---
+# The Plague
+ 
+## Omens
+1. **The Dream:** Old coot proclaims dreams of foul air choking people.
+2. **The Shack:** Ivy-cloaked shack, dying couple, moaning in mist.
+3. **The Hunter:** Jolly hunter chasing a smiling fox (harbinger).
+4. **The Herald:** Self-important Knight with grey lantern demands escort.
+5. **The Oath:** Infected crowd swearing blood oath on red oak stump.
+6. **The Source:** Infected village, two Purging Knights charging with flame.
+ 
+## Cast
+**The Angry Infected:** VIG 8, CLA 6, SPI 5, 2 GD. Logging axe (d8 Long). Exposure risks infection (VIG Save or lose d6 VIG daily).
+**Jolly Hunter (Maccan):** VIG 14, CLA 12, SPI 15, 4 GD. Shortbow (d6 Long), handaxe.
+**Purging Knights (Dirmad & Duncas):** VIG 12, CLA 10, SPI 7, 5 GD. A3. Flail (d8 Hefty), shield, firepots.
+ 
+## Raw Text
+> Birthed in air, spread by stream, lurking in the blood
+> The terror of our time will see us all stuck in the mud
+ 
+===END_FILE===
+---
+ID: knight_snare
+TITLE: "The Snare Knight"
+TYPE: entity
+TAGS: [knight, class, nature]
+---
+# The Snare Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=1).
+**Equipment:** Handaxe (d6) on wildrope, gambeson (A1).
+**Companion:** Beast (VIG 5, CLA 10, SPI 7, 4 GD, partially understands speech).
+**Steed:** Tattered steed (VIG 8, CLA 10, SPI 5, 2 GD).
+ 
+### Ability: Wild Eye
+**Trigger:** Observe a beast in secret.
+**Effect:** Learn a useful truth about their habitat.
+ 
+### Passion: Empathy
+**Trigger:** Spare the life of a hostile animal.
+**Effect:** Restore SPI.
+ 
+## Seer: The Swollen Seer
+**Stats:** VIG 15, CLA 5, SPI 4, 1 GD.
+**Nature:** Only moved by siege engineering. Sees minds of huge beings. Wants to grow bigger.
+ 
+## Raw Text
+> Immersed within the woods adeep
+> A sheriff rides from nature's keep
+ 
+===END_FILE===
+---
+ID: myth_wall
+TITLE: "The Wall"
+TYPE: entity
+TAGS: [myth, structure, hex]
+---
+# The Wall
+ 
+## Omens
+1. **The Labourers:** Crumbling outpost, labourers heading to repair Wall.
+2. **The Magpies:** Two giant magpies stealing shiny things near Wall roots.
+3. **The Knight:** Lonesome Wall Knight among tree roots, seeking company.
+4. **The Wardens:** Pair of wardens in mud, hunting bandit, eating moonlit honey.
+5. **The Refugees:** Furious refugees empowered by giant's well oil, heading to break wall.
+6. **The Breach:** Distant army beyond wall. Mercenary Warband breaking opening.
+ 
+## Cast
+**Wall Wardens:** VIG 11, CLA 8, SPI 7, 4 GD. A1. Wallerhook (d8 Long, +d10 vs below).
+**Wall Knight (Annick):** VIG 13, CLA 10, SPI 8, 5 GD. A2. Longaxe (d10 Long).
+**Giant Magpie:** VIG 6, CLA 14, SPI 5, 3 GD. Beak/talons (2d6, blinds Wounded until rest).
+**Empowered Refugees:** VIG 18, CLA 8, SPI 9, 2 GD. Giant punches (2d10).
+ 
+## Raw Text
+> Cutting through the land, a wonder two storms tall
+> Guarding from invasion, or built to cage us all
+ 
+===END_FILE===
+---
+ID: knight_tourney
+TITLE: "The Tourney Knight"
+TYPE: entity
+TAGS: [knight, class, combat]
+---
+# The Tourney Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=1).
+**Equipment:** Greatlance (2d10 Hefty mounted/Slow foot), 2 javelins (d6), Gambeson (A1), Arena Plate (A1), Fancy Helm (A1).
+**Steed:** Horned stallion (VIG 12, CLA 10, SPI 5, 4 GD, d6 trample).
+ 
+### Ability: Champion Vow
+**Trigger:** Immediately before combat with a prize at stake.
+**Effect:** +d6 to melee attacks for entire combat.
+ 
+### Passion: Hatred
+**Trigger:** Refuse a plea for forgiveness.
+**Effect:** Restore SPI.
+ 
+## Seer: The Entombed Seer
+**Stats:** VIG 7, CLA 5, SPI 11, 2 GD.
+**Nature:** Entombed in white stone. Sees beyond veil of death. Guarded by Knight/Apprentice.
+ 
+## Raw Text
+> A calling brought a life of combat, victories amassed
+> Questing for the fame that comes with prowess unsurpassed
+ 
+===END_FILE===
+ 
+---
+ID: myth_shadow
+TITLE: "The Shadow"
+TYPE: entity
+TAGS: [myth, sorrow, hex]
+---
+# The Shadow
+ 
+## Omens
+1. **The Tears:** Huge flatstones, weeping winds. Tears from skies and trees.
+2. **The Knight:** Sorrowful Knight at stagnant well, lashing out for sympathy.
+3. **The Collector:** Idealistic alchemist collecting wind-tears, invoking sadness.
+4. **The Flute:** Nasal-toned flute causing sudden grief (Lose d6 SPI, dream of Shadow).
+5. **The Lake:** Shadow by drowning-lake. Visions of past sorrows. Grey deer pay respects.
+6. **The World:** Islands in mist of time. Mourned past visible. No death here, but leaving costs d12 SPI. Appeased by grief.
+ 
+## Cast
+**Mourning Shadow:** VIG 3, CLA 15, SPI 17, 2 GD. Despair-of-flesh (d8 Blast, wounds Damage SPI instead of VIG). Harmed only by weapons forged by creator mourned by wielder. Repelled by burial earth/funerary imagery.
+**Sorrowful Knight (Orwan):** VIG 12, CLA 8, SPI 6, 2 GD. A3. Hooked greatsword (2d10 Long).
+**Roaming Alchemist (Coalin):** VIG 7, CLA 10, SPI 11, 1 GD. Dagger, alchemy tools.
+ 
+## Raw Text
+> They wandered over here and there, groan and grief their guide
+> Knowing in the strongest one a timid child does hide
+ 
+===END_FILE===
+---
+ID: knight_bloody
+TITLE: "The Bloody Knight"
+TYPE: entity
+TAGS: [knight, class, blood]
+---
+# The Bloody Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=1).
+**Equipment:** Longaxe (d10 Long), mail (A1), brutal plate (A1 only when Wounded), helm (A1).
+**Inventory:** Sacks of strong alcohol (resistant to effects).
+**Steed:** Bullish warhorse (VIG 15, CLA 5, SPI 5, 3 GD, d6 trample).
+ 
+### Ability: Slaughter Echo
+**Trigger:** Immediately after defeating an opponent.
+**Effect:** Next melee Attack in this combat gains Blast.
+ 
+### Passion: Justice
+**Trigger:** Restore the balance.
+**Effect:** Restore SPI.
+ 
+## Seer: The Reed Seer
+**Stats:** VIG 8, CLA 15, SPI 10, 4 GD.
+**Nature:** Will lose sight if passing over a river. Sees near future in chopped reeds. Wants to serve righteous cause.
+ 
+## Raw Text
+> Some were born to fight and fall, forged beneath blade's clash
+> This one birthed from blood of war, stained with corpses' ash
+ 
+===END_FILE===
+---
+ID: myth_river
+TITLE: "The River"
+TYPE: entity
+TAGS: [myth, water, hex]
+---
+# The River
+ 
+## Omens
+1. **The Monks:** Six monks offering bread. Leader is annoyingly vivacious.
+2. **The Beast:** Mighty newt sniffing around a lost fisherman on the bank.
+3. **The Sacrifice:** Three monks seeking blood offering (innocent animal or sinful person) at rocky outcrop.
+4. **The Toll:** Bridge Knight arguing with pilgrims over toll. Knight knows one has a City coin.
+5. **The Burst:** River bursts into new stream. Cuts off route. Water heals ailments for moments.
+6. **The Flood:** New lake forms, claiming entire Hex. Spreads next day. Mighty newts spawn.
+ 
+## Cast
+**Mighty Newt:** VIG 16, CLA 14, SPI 5, 5 GD. Crushing toothless bite (d8, drag into water). Regenerates if fleeing. Feared by venomous beasts.
+**River Monks:** VIG 10, CLA 10, SPI 12, 2 GD. Cudgels (d8 Hefty).
+**Bridge Knight (Tog):** VIG 15, CLA 15, SPI 6, 6 GD. A2. Hooksword (2d6 Hefty), shield (d4).
+ 
+## Raw Text
+> Stream, fall, brook, and creek, flow aLong as one
+> Famine, flood, friend and foe, all things beneath the sun
+ 
+===END_FILE===
+---
+ID: knight_moss
+TITLE: "The Moss Knight"
+TYPE: entity
+TAGS: [knight, class, nature]
+---
+# The Moss Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=1).
+**Equipment:** Branch cudgel (d8 Hefty), buckler (d4, A1), mail coif (A1).
+**Body:** Tattoos (Specific magical effects).
+**Steed:** Pale steed (VIG 8, CLA 12, SPI 5, 3 GD).
+ 
+### Ability: Mosstongue
+**Trigger:** Speak with uncut stones and old trees.
+**Effect:** Learn info. If pushed too hard, they rebuke/shun you for the day.
+ 
+### Passion: Naturality
+**Trigger:** Sleep in nature instead of indoors.
+**Effect:** Restore SPI.
+ 
+## Seer: The Loathed Seer
+**Stats:** VIG 8, CLA 11, SPI 5, 6 GD.
+**Nature:** Twisted face/body. Sees/shares hate. Pained by love. Wants to be loathed.
+ 
+## Raw Text
+> No need for lessons, tree or stone
+> The wisest seek what soil has shown
+ 
+===END_FILE===
+---
+ID: myth_wyvern
+TITLE: "The Wyvern"
+TYPE: entity
+TAGS: [myth, dragon, hex]
+---
+# The Wyvern
+ 
+## Omens
+1. **The Stag:** Crowned stag crawling, poisoned. Antlers burn scaled beasts.
+2. **The Mound:** Dug-up burial mound, scattered treasure. Wyvern screeches distantly.
+3. **The Victim:** Bloated body of poisoned Knight, weeping Squire.
+4. **The Eggs:** Two foul eggs among carrion. Poisonous young hatch at dark. Serrated blade (2d6) found.
+5. **The Avenger:** Wyvern soars low, seeking revenge for attack on nest. Clutches silver shield.
+6. **The Fight:** Fearing for nest, Wyvern lands to fight. Flees to neighbour Realm if hopeless.
+ 
+## Cast
+**The Wyvern:** VIG 17, CLA 17, SPI 5, 12 GD. A2 (Flight) / A4 (Ground). Bite & throw (3d10) or sting (d10, bloating death in 1 hour unless milk wash). Disgusted by baby's cry.
+**Poisonous Young:** VIG 5, CLA 10, SPI 2, 3 GD. A1. Thrash (d8 + mother's poison).
+ 
+## Raw Text
+> All jack-a-jaw and neck a knot'd string
+> All fess-a-wing and tail a bane'd sting
+ 
+===END_FILE===l
+ 
+---
+ID: knight_war
+TITLE: "The War Knight"
+TYPE: entity
+TAGS: [knight, class, combat]
+---
+# The War Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=1).
+**Equipment:** Special polearm (d8 Long, see below), gambeson (A1), splint (A1), helm (A1, see below).
+**Inventory:** Whalebone chess set (and some skill).
+**Steed:** Stocky steed (VIG 15, CLA 8, SPI 5, 2 GD).
+ 
+### Ability: Battle Awareness
+**Trigger:** Fighting in a combat with at least 3 combatants on each side.
+**Effect:** All your Gambits count as Strong Gambits.
+ 
+### Passion: Duty
+**Trigger:** Answer the call for martial service under a superior.
+**Effect:** Restore SPI.
+ 
+### Military Gear Table
+| d6 | Effect | Helm Style || :--- | :--- | :--- || 1 | +d10 vs mounted targets | Veiled leather cowl || 2 | +d10 vs targets with a shield | Long mail hood || 3 | +d10 vs targets in armour | Full heavy bucket || 4 | +d10 vs targets without a shield | Crow-beaked || 5 | +d10 vs beasts and monsters | Caged visor || 6 | +d10 vs anybody attacking you | Kettle cap |
+## Seer: The Lost Seer
+**Stats:** VIG 10, CLA 9, SPI 7, 2 GD.
+**Nature:** Rubbed with psychotropic tinctures, parts of body dissipate. Sees lost things in hazy vision. Loses sight if advising directly how to find something.
+ 
+## Raw Text
+> Forged and broke in goreful plight
+> Won some, lost some, still upright
+ 
+===END_FILE===
+---
+ID: myth_goblin
+TITLE: "The Goblin"
+TYPE: entity
+TAGS: [myth, stealth, hex]
+---
+# The Goblin
+ 
+## Omens
+1. **The Huntsman:** Weeping huntsman cursing everyone, looking for lost bloodhound.
+2. **The Lad:** Lost lad full of stories about a little old man calling him into woods.
+3. **The Trap:** Oppressive branches/roots. Cloaked old man calls out, then dragged into ground.
+4. **The Pets:** Lost pets running wild, returning to secret door. Drop metallic bone repellent to birds.
+5. **The Deal:** Dark clearing. Goblin offers trade: valuable lost thing for binding favour.
+6. **The Lair:** Dragged to realm of lost things (tunnels/bric-a-brac). Goblin gloats. Freedom costs binding favour.
+ 
+## Cast
+**Their Cleverness, the Goblin:** VIG 7, CLA 16, SPI 15, 9 GD. Bony needle (d6, +d10 to indebted targets). Harmed only by objects lost for 99+ years. Can Focus.
+**Lost Pets:** VIG 5, CLA 10, SPI 5, 2 GD. Yapping/biting (d6).
+**Lost Lad (Roth):** VIG 7, CLA 9, SPI 9, 3 GD. Practice bow (d4 Long).
+ 
+### Trading The Lost
+| d6 | Trade Offer | Trade Demand || :--- | :--- | :--- || 1 | Keys | Silver || 2 | Letters | Dogs || 3 | Rings | Needles || 4 | Memories | Hats || 5 | Birds | Knives || 6 | Scarves | Shoes |
+## Raw Text
+> On toes it crept just out o' sight
+> The petty hoarder full o' spite
+ 
+===END_FILE===---
+ID: knight_trail
+TITLE: "The Trail Knight"
+TYPE: entity
+TAGS: [knight, class, tracking]
+---
+# The Trail Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=2).
+**Equipment:** Crow-beak axe (d8 Hefty), beaten gambeson (A1).
+**Item:** Sanguine lens (traces of blood appear obvious when viewed through this).
+**Steed:** Serene steed (VIG 10, CLA 13, SPI 5, 3 GD).
+ 
+### Ability: Strands of Past
+**Trigger:** Study the ground for a whole Phase.
+**Effect:** Ask a single yes or no question about what happened here in the past few days.
+ 
+### Passion: Fear
+**Trigger:** Refuse to go into the dark.
+**Effect:** Restore SPI.
+ 
+## Seer: The Welcomed Seer
+**Stats:** VIG 8, CLA 7, SPI 16, 3 GD.
+**Nature:** Fair features, black voids for eyes. Only gains visions when calm or in rage. Prone to vicious mood changes if not treated as a revered guest.
+ 
+## Raw Text
+> More than foxes leave trails in their stead
+> Comings and goings laid plain as a thread
+ 
+===END_FILE===
+---
+ID: myth_pack
+TITLE: "The Pack"
+TYPE: entity
+TAGS: [myth, beast, hex]
+---
+# The Pack
+ 
+## Omens
+1. **The Shepherd:** Wailing shepherd (Nayl), flock slaughtered by own dogs.
+2. **The Poets:** Band of poets/scribes fighting, unable to speak (snarling/growling). Voices return when Pack leaves.
+3. **The Challenge:** Rival wolf fighting leader (One-ear). Leader toys with him.
+4. **The Howl:** Wind stops, sound of jaws, then rough screeching howl.
+5. **The Blockade:** Trade road blockaded by torn trees and bloody soil.
+6. **The Hunt:** 13 wolf pack howls in den, attacking Dwelling/Holding in dark/mist.
+ 
+## Cast
+**The Pack Leader (One-ear):** VIG 15, CLA 15, SPI 7, 8 GD. A1 (Scarred hide). Great jaws (2d8). Zero tolerance for civility.
+**Pack Wolves:** VIG 10, CLA 12, SPI 3, 4 GD. Jaws (d8). Loving hatred for leader.
+**Glutton Crow (Fatteth Rollybird):** VIG 6, CLA 16, SPI 5, 2 GD. Beak (d6). Insatiable appetite (cannot eat grain/fruit).
+ 
+## Raw Text
+> Woods and moors or paddock and rein
+> Wolves alone chomp at the chains
+ 
+===END_FILE===
+---
+ID: knight_amber
+TITLE: "The Amber Knight"
+TYPE: entity
+TAGS: [knight, class, patience]
+---
+# The Amber Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=2).
+**Equipment:** Ancient greatblade (2d10 Slow), ancient mail (A1).
+**Item:** Amber amulet (carries fire's warmth for a whole day).
+**Steed:** Loyal steed (VIG 10, CLA 10, SPI 5, 3 GD, d6 trample).
+ 
+### Ability: Patient Strike
+**Trigger:** Make melee Attack when you have not moved this turn.
+**Effect:** +d10 to Attack. Ignore Armour and immunities.
+**Risk:** If this fails to defeat opponent, take d6 Damage yourself.
+ 
+### Passion: Avarice
+**Trigger:** Gain significant wealth.
+**Effect:** Restore SPI.
+ 
+## Seer: The Dreaming Seer
+**Stats:** VIG 5, CLA 5, SPI 7, 1 GD.
+**Nature:** Silhouette of starlight. Appears only in dreams of those in Seer's home. Wants to return to waking world or drag others into theirs.
+ 
+## Raw Text
+> Their wait was Longer than stars have glown
+> Their blade is Slow but glaneth stone
+ 
+===END_FILE===
+---
+ID: myth_eye
+TITLE: "The Eye"
+TYPE: entity
+TAGS: [myth, surveillance, hex]
+---
+# The Eye
+ 
+## Omens
+1. **The Dream:** Hollow grunts of moon toads. Shared dream of great eye sprouting from ground.
+2. **The Tanner:** Elderly tanner banished for sowing discord (dreamt/shared embarrassing truths).
+3. **The Birds:** Grey birds watch, fluttering in spiralling circle if scattered.
+4. **The Acolytes:** Five acolytes marching to tear down walls.
+5. **The Parade:** Dozens of acolytes wheeling boulder painted with spiral eye.
+6. **The Ascent:** Eye rises from earth, sprouts legs, marches to devour nearest Seer.
+ 
+## Cast
+**The Eye:** VIG 18, CLA 3, SPI 15, 9 GD. A4 (Stone body). Trample (d10 Blast) or devour (3d10 Slow). Longs to devour the wise.
+**Moon Toad (Silvertongue):** VIG 3, CLA 3, SPI 3, 1 GD. Licking imbues bite with sleeping sickness (lasts until biter sleeps).
+**Acolytes:** VIG 10, CLA 10, SPI 12, 2 GD. Club (d8 Hefty). Blacked-over eyes.
+ 
+## Raw Text
+> The sight of the eye opened my own
+> In its gaze I am never alone
+ 
+===END_FILE===
+---
+ID: knight_horde
+TITLE: "The Horde Knight"
+TYPE: entity
+TAGS: [knight, class, leadership]
+---
+# The Horde Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=2).
+**Equipment:** Blunt sword (d8 Hefty), ringed mail (A1).
+**Item:** A taste of home (consumable).
+**Steed:** Beastly steed (VIG 15, CLA 7, SPI 5, 3 GD, d6 trample).
+ 
+### Ability: Pack Tactics
+**Trigger:** Attack with at least one ally.
+**Effect:** Combine any number of dice into larger dice (sum of dice, max d12).
+ 
+### Passion: Prestige
+**Trigger:** Take credit for the deeds of another.
+**Effect:** Restore SPI.
+ 
+## Seer: The Hanged Seer
+**Stats:** VIG 10, CLA 12, SPI 15, 1 GD.
+**Nature:** Dizzy/distressed unless hanging upside-down. Sees from unusual perspectives. Wants for nothing while suspended.
+ 
+## Raw Text
+> In fury's reign afore the rav'ning throng
+> In chaos born as knight where beast beLong
+ 
+===END_FILE===
+ 
+---
+ID: myth_blade
+TITLE: "The Blade"
+TYPE: entity
+TAGS: [myth, weapon, hex]
+---
+# The Blade
+ 
+## Omens
+1. **The Song:** Booming voice singing of the Blade's tragic past owners (e.g., Erdyg the Shamed, Belwin the Bandit).
+2. **The Altar:** Cliff-side village ruins. Altar inscribed: "Forsake in earth, unbroke by time / Afore first draw, that greedsome war".
+3. **The Cutthroats:** Band of 5 cutthroats suspect Knights have the Blade.
+4. **The Wheel:** Bloodied sharpening wheel screams on wind. Sharpened blades get +d8 but break after first Wound.
+5. **The Scabbard:** Steaming waterfall conceals cave with Scabbard (destroys blades placed within). Waterfall scalds (d10) armed beings.
+6. **The Lure:** Louse-infested dead forest. Travellers lured by visions of desire. Blade lies within.
+ 
+## Cast
+**The Blade (Sifrex, Ilglamvent):** 2d8 Hefty. Wounded targets are utterly destroyed. Wielder loses d6 SPI after each Attack.
+**Cutthroats (Colan, Fia, etc.):** VIG 10, CLA 10, SPI 7, 2 GD. Longknife (d6), javelins. Colan has halfshield (A1), angelic features, can Focus.
+**Granddad Louse (Rollyromple):** VIG 12, CLA 5, SPI 2, 5 GD. A2 (A4 rolled up). Scuttering bite (2d6). Hungers for wooden items (esp. fancy ones).
+ 
+## Raw Text
+> There it gleam'd as glore in meadow's sight
+> That star-forged blade amark of warborne plight
+ 
+===END_FILE===
+---
+ID: knight_emerald
+TITLE: "The Emerald Knight"
+TYPE: entity
+TAGS: [knight, class, stealth]
+---
+# The Emerald Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=2).
+**Equipment:** Branchspear (d8 Hefty, immovable if stabbed into tree by you), Cloaked mail (A1 in verdant environments), Shield (d4, A1).
+**Steed:** Sable steed (VIG 10, CLA 14, SPI 5, 4 GD).
+ 
+### Ability: Fade to Green
+**Trigger:** Hide still and silent in greenery.
+**Effect:** Cannot be found by any means. Can perform specific hidden actions (Strike Wounded, Animal calls, Throw stones, Grab non-alert enemy, Move Slowly, Whisper) while gaining heightened senses (Vision, Hearing, Smell, etc.).
+ 
+### Passion: Elegance
+**Trigger:** Leave a place more beautiful than you found it.
+**Effect:** Restore SPI.
+ 
+## Seer: The Unnamed Seer
+**Stats:** VIG 10, CLA 10, SPI 5, 2 GD.
+**Nature:** Toad-like, covered in shifting tattoos foretelling Myths. Longs to know identity before becoming Seer.
+ 
+## Raw Text
+> A verdant cloak on sable steed
+> Neath nature's veil, yond sight and heed
+ 
+===END_FILE===
+---
+ID: myth_legion
+TITLE: "The Legion"
+TYPE: entity
+TAGS: [myth, war, hex]
+---
+# The Legion
+ 
+## Omens
+1. **The Field:** Littered with martial detritus. Mud grabs passers (groans). Lean horse trying to pull dead rider free.
+2. **The Deserter:** Lone legionnaire deserter, cowardly grunt. 5 legionnaires tracking them.
+3. **The Wounded:** Local militia recovering. Wounds from Legion blades are as fresh as when cut.
+4. **The Horizon:** Legion Warband firing arrows at max range. Retreat if approached.
+5. **The Birth:** New legionnaire pulling self from earth, pained, seeking Legion.
+6. **The Invasion:** 3 Warbands invade nearest Holding. Return in greater numbers if defeated. End only if driven into fire or water.
+ 
+## Cast
+**Legionnaires:** VIG 15, CLA 5, SPI 5, 3 GD. A3 (rusted mail). Barbed blade (d8), shield, bow. Wounds resist natural healing. Fear of death.
+**Graveyard Horse:** VIG 10, CLA 10, SPI 5, 2 GD. Instinctive reverence for dead.
+**Local Militia:** VIG 10, CLA 10, SPI 10, 2 GD. Polearms (d10 Long).
+ 
+## Raw Text
+> Pitly ranks, fought and fell, returning stronger still
+> Their scars nae fade, their fear but grow, their war their only will
+ 
+===END_FILE===
+---
+ID: knight_chain
+TITLE: "The Chain Knight"
+TYPE: entity
+TAGS: [knight, class, underground]
+---
+# The Chain Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=2).
+**Equipment:** Pronged mace (d8 Hefty), Oubliette mail (A1, wrapped in Long iron chain).
+**Steed:** Tired steed (VIG 10, CLA 12, SPI 3, 3 GD).
+ 
+### Ability: Will of the Irons
+**Trigger:** Holding a single chain.
+**Effect:** Move chain as if it were a limb. Lash out (d6), grasp opponents, move to will.
+ 
+### Passion: Abyss
+**Trigger:** Sleep underground in complete darkness.
+**Effect:** Restore SPI.
+ 
+## Seer: The Winged Seer
+**Stats:** VIG 4, CLA 4, SPI 6, 1 GD.
+**Nature:** Frail broken body, tattered useless wings held by acolytes. Sees potential failures. Wants to bask in vicarious glory.
+ 
+## Raw Text
+> Born below the soil, below the stone, below all thought
+> Down, down, further down, of blood and iron wrought
+ 
+===END_FILE===
+---
+ID: myth_imp
+TITLE: "The Imp"
+TYPE: entity
+TAGS: [myth, fire, hex]
+---
+# The Imp
+ 
+## Omens
+1. **The Flash:** Glittering dust on trail. Flash ignites 5 dancing white flames that torment travellers.
+2. **The Heat:** Smouldering heat from tree shadows. Darkness burns (d6 Damage) but does not ignite.
+3. **The Swarm:** Bats descend on Knights. Enthralled by Imp, fly to him after drawing blood.
+4. **The Feast:** Grand table with feast. If partaken, Imp plays pranks (transforms clothes to worms, food to ash, etc.). If refused, attacks.
+5. **The Maze:** Trail turns to maze, smoke, walls of flame. Imp releases victims when frustrated.
+6. **The Court:** Imp argues with 8 foxes. If meeting concludes, he leaves.
+ 
+## Cast
+**The Imp (Scaldris):** VIG 6, CLA 17, SPI 17, 10 GD. Claws (2d4) or black flame (d6 Blast). Feeds on frustration/pain.
+**Foxes:** VIG 5, CLA 15, SPI 6, 4 GD. Bite (d4), smouldering tails.
+**Bat Swarm:** VIG 5, CLA 10, SPI 3, 7 GD. Bites (3d6). Individual attacks Impaired unless Blast.
+**Dancing White Flame:** VIG 3, CLA 10, SPI 6, 2 GD. Burn (d6, ignore armour). Immune to physical attacks.
+ 
+## Raw Text
+> In scaldrine thrall we must endure
+> Neath smoldant flame chained evermore
+ 
+===END_FILE===
+ 
+---
+ID: knight_banner
+TITLE: "The Banner Knight"
+TYPE: entity
+TAGS: [knight, class, leadership]
+---
+# The Banner Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=2).
+**Equipment:** Banner-pike (d10 Long, lose d6 SPI if banner falls in battle), Spikehammer (d6), Ornate mail (A1).
+**Steed:** Fat steed (VIG 10, CLA 8, SPI 5, 3 GD, d6 trample).
+ 
+### Ability: Rousing Presence
+**Trigger:** Part of a group Attack, carrying a banner.
+**Effect:** Reroll the entire pool of Attack dice once. (Use once per Attack).
+ 
+### Passion: Sensitivity
+**Trigger:** Receive social approval.
+**Effect:** Restore SPI.
+ 
+## Seer: The Cured Seer
+**Stats:** VIG 9, CLA 4, SPI 8, 2 GD.
+**Nature:** Preserved in salt, desiccated/immobile. Offers manic visions to those who taste their salt. Wants to live forever.
+ 
+## Raw Text
+> Beware of kindly riders festooning flags in show
+> Where they come in friendship their soldiers rush to go
+ 
+===END_FILE===
+---
+ID: myth_troll
+TITLE: "The Troll"
+TYPE: entity
+TAGS: [myth, monster, hex]
+---
+# The Troll
+ 
+## Omens
+1. **The Arm:** Severed, rubbery arm pulls itself aLong in marsh. Claws interference. Withers if lost.
+2. **The Warning:** Tiny chameleon on crooked branch hisses warning. Troll stirs in trees, flees.
+3. **The Burglar:** Burglar fleeing abandoned cave (carved home). Blood/smashed bones inside. Nothing valuable found.
+4. **The Prey:** Troll drags dying warhorse to new cave. Knight lies dead.
+5. **The Vision:** Bronze shimmering pond in fly-infested reeds. Vision of Troll hacked to bits by soldiers.
+6. **The Rampage:** Split from head to pelvis, Troll holds self together while rampaging. Craves meat to aid regeneration.
+ 
+## Cast
+**The Troll (Cursed to Endure):** VIG 18, CLA 5, SPI 6, 7 GD. A2 (rubbery skin). Flailing limbs (2d10). Regains d12 VIG at start of turn. Regenerates from all harm (burning takes an Age).
+**Troll Arm:** VIG 5, CLA 5, SPI 1, 1 GD. A2. Claw (d6).
+**Clumsy Burglar (Sammesrede):** VIG 12, CLA 7, SPI 16, 4 GD. Baton (d6). Honest/amoral.
+ 
+## Raw Text
+> Each stab, each cut, each severance, regrown in warpsome matter
+> All stretched and swollen, big and bent, a groaning soul atatter
+ 
+===END_FILE===
+---
+ID: knight_pigeon
+TITLE: "The Pigeon Knight"
+TYPE: entity
+TAGS: [knight, class, navigation]
+---
+# The Pigeon Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=2).
+**Equipment:** Bitterglaive (d10 Long, +d8 vs targets within their home), Tattered mail (A1) with hooded cloak (vanish into large crowds).
+**Steed:** Grey steed (VIG 7, CLA 8, SPI 5, 2 GD, unmatched distance).
+ 
+### Ability: Wayfinder Sense
+**Trigger:** Focus on a named destination.
+**Effect:** Sense direction it lies. Cannot assist with finding lost home or the City.
+ 
+### Passion: Inquisition
+**Trigger:** Wrangle the truth out of an uncooperative person.
+**Effect:** Restore SPI.
+ 
+## Seer: The Frozen Seer
+**Stats:** VIG 10, CLA 13, SPI 16, 2 GD.
+**Nature:** Draped in white feather cloak, face concealed by fractal space warping. Reveals futures via mirrors (destroyed after). Wants Knights to succeed after struggle.
+ 
+## Raw Text
+> The humble know no home to call their own
+> Horizon is their hearth, each hill their throne
+ 
+===END_FILE===
+---
+ID: myth_demon
+TITLE: "The Demon"
+TYPE: entity
+TAGS: [myth, horror, hex]
+---
+# The Demon
+ 
+## Omens
+1. **The Goat:** Bloody remains of ivory goat (reincarnated Seer), innards in spiral.
+2. **The Singer:** Singer beating drum, singing cruel lyrics about Knights. Ignores them.
+3. **The Cult:** Drunks feeding bonfire, praising "Writher Within". Claim he eats Seers.
+4. **The Eclipse:** Black sun with gold corona. Animals panic, Seers blinded until sunrise.
+5. **The Possessed:** Once-beloved Knight rampaging. Horn sprouted from head.
+6. **The Birth:** Bloated serf dragged away, bursts in red mist. Demon emerges. Won't rest until 7 Seers eaten.
+ 
+## Cast
+**The Demon (Ul-Huroc):** VIG 15, CLA 15, SPI 15, 8 GD. A4 (twisted hide, bypassed by Seer-blood weapons). Rip (d6, any distance), lash (d8), gore (d10).
+**Drunks:** VIG 10, CLA 4, SPI 9, 2 GD. Awaiting Demon.
+**Possessed Knight (Ethne):** VIG 15, CLA 8, SPI 3, 7 GD. A2. Longsword (2d8 Hefty).
+ 
+## Raw Text
+> Slumber stirred by rising blackened sun
+> A mocking voice conceals the fiendsome one
+ 
+===END_FILE===
+---
+ID: knight_shield
+TITLE: "The Shield Knight"
+TYPE: entity
+TAGS: [knight, class, defense]
+---
+# The Shield Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=2).
+**Equipment:** Dull sword (2d6 Hefty), Tattered gambeson (A1), Cracked shield (d4, A1).
+**Item:** Soothing salve (One use/day, restores VIG).
+**Steed:** Untested steed (VIG 12, CLA 8, SPI 4, 2 GD).
+ 
+### Ability: Death Ward
+**Trigger:** Nearby ally takes Mortal Wound or is killed.
+**Effect:** You take a Mortal Wound instead.
+ 
+### Passion: Mortality
+**Trigger:** See an ally suffer a Mortal Wound.
+**Effect:** Restore SPI.
+ 
+## Seer: The Watched Seer
+**Stats:** VIG 10, CLA 10, SPI 5, 4 GD.
+**Nature:** Tall, blindfolded with gold silk. Gifts glimpses of sight (painful truths). Believes other Seers watch him. Wants them blinded/dead.
+ 
+## Raw Text
+> No greater shield for the weak than the oath-sworn Knight's own hand
+ 
+===END_FILE===
+ 
+---
+ID: myth_sea
+TITLE: "The Sea"
+TYPE: entity
+TAGS: [myth, water, hex]
+---
+# The Sea
+ 
+## Omens
+1. **The Shepherd:** Devout Shepherd attacked by 8 wolfcrabs on glittering rapids.
+2. **The Rain:** Salty rain, web-like weed hanging from trees.
+3. **The Rise:** New sea rises from a pond. Roaring coots honk in protest.
+4. **The Command:** Two-Hearted Knight bellows at Sea, trying to repel it with coral ring.
+5. **The Storm:** Great storm begins, won't stop until wave arrives. Saltwater rises.
+6. **The Wave:** Wave swells on horizon, tall as mountains. Devastates Realm if not stopped.
+ 
+## Cast
+**Devout Shepherd (Ganthyrn):** VIG 12, CLA 7, SPI 7, 1 GD. Crook (d6 Long). Longs to serve a Seer.
+**Wolfcrab (Bluebrine):** VIG 5, CLA 5, SPI 5, 3 GD. A2 (thick shell). Claws (2d6).
+**Two-Hearted Knight (Alahag):** VIG 10, CLA 6, SPI 14, 10 GD. A2 (whitemail, plate). Brightsword (2d6 Hefty, dazzles on match). Coral ring (command Sea if submerged). Wants redemption.
+ 
+### Flotsam & Jetsam
+**Input:** d6.
+1. Ancient Armour.
+2. Preserved Stone Tablet.
+3. Chained Corpse.
+4. Tangled Sword.
+5. Rotted Pendant.
+6. Barnacled Shield.
+ 
+## Raw Text
+> A briny tempest churns, jaden tides all swell
+> The ringen path entwines with looming ocean's spell
+ 
+===END_FILE===
+---
+ID: knight_whip
+TITLE: "The Whip Knight"
+TYPE: entity
+TAGS: [knight, class, pain]
+---
+# The Whip Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=2).
+**Equipment:** Spiny mace (d8 Hefty), whip (d6).
+**Item:** Strange herbs (One dose/day. Effects wear off after hour, virtue loss remains).
+**Steed:** Pampered steed (VIG 10, CLA 8, SPI 5, 2 GD).
+ 
+### Ability: Pain Strike
+**Trigger:** Attack alone in melee.
+**Effect:** Damage applies to **SPI** instead of VIG. IF target loses >= half SPI, they are broken.
+ 
+### Passion: Reverence
+**Trigger:** Offer respectful homage to the dead.
+**Effect:** Restore SPI.
+ 
+### Strange Herbs Table
+| d6 | Benefit | Side Effect || :--- | :--- | :--- || 1 | Heightened hearing | Mild nausea || 2 | Breathe fire once (d8 blast) | Unable to speak || 3 | Speak remotely | Hazy vision || 4 | No pain (A1) | Lose d6 VIG || 5 | Restore one Virtue | Lose d6 CLA || 6 | Restore all Virtues | Lose d6 SPI |
+## Seer: The Prey Seer
+**Stats:** VIG 5, CLA 12, SPI 12, 4 GD.
+**Nature:** Hunched, flea-infested. Sees every hunger. Longs to be eaten.
+ 
+## Raw Text
+> Some draw screams from flesh and bone
+> Others seek to make soul moan
+ 
+===END_FILE===
+---
+ID: myth_elf
+TITLE: "The Elf"
+TYPE: entity
+TAGS: [myth, nature, hex]
+---
+# The Elf
+ 
+## Omens
+1. **The Signs:** Isolated signs of next Season arriving early aLong sheltered stream.
+2. **The Murder:** Two season destroyers killing ironsmith ("tide of seasons requires fresh blood").
+3. **The Rod:** Season scout with rod of upcoming season (ushers in Season early).
+4. **The Bow:** Season scout gifts bow of upcoming season (d8 Long, 2d8 in correct season).
+5. **The Message:** Scout delivering Longly viper to Seat of Power. Viper knows message: Elf is coming.
+6. **The Claim:** Elf emerges to claim Seat of Power with warbands. Prefers duel.
+ 
+## Cast
+**The Elf (Coredis):** VIG 9, CLA 9, SPI 9, 13 GD. Acts first.
+* **Spring:** SPI 19, swiftbow (2d6 Long).
+* **Harvest:** VIG 19, goldfalx (3d6 Long).
+* **Winter:** CLA 19, claws/jaws (4d6).
+**Season Scouts:** VIG 8, CLA 16, SPI 12, 8 GD. Swiftbow (2d6). Flee when Wounded.
+**Season Destroyers:** VIG 10, CLA 12, SPI 12, 8 GD. A2. Goldfalx (3d6 Long).
+ 
+### Quirks of the Elf
+| d6 | Constraint (Cannot) | Compulsion (Must) || :--- | :--- | :--- || 1 | Cannot Harm animals | Must Extinguish fires || 2 | Cannot Harm plants | Must Kill elderly || 3 | Cannot Feel emotion | Must Scare children || 4 | Cannot Speak | Must Steal jewellery || 5 | Cannot Step indoors | Must Consume food seen || 6 | Cannot Tolerate music | Must Punish ugly |
+## Raw Text
+> A steward of seasons, nature's power bestowed
+> Our land bends to their whimsy, our lives no mercy showed
+ 
+===END_FILE===
+---
+ID: knight_seal
+TITLE: "The Seal Knight"
+TYPE: entity
+TAGS: [knight, class, binding]
+---
+# The Seal Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=2).
+**Equipment:** Stout halberd (d10 Long), gambeson (A1), siege plate (A1, brace vs door to make unbreachable).
+**Item:** 3 runic scrolls (Prophecies read only by Seers).
+**Steed:** Dusty steed (VIG 10, CLA 8, SPI 5, 4 GD).
+ 
+### Ability: Seal of Binding
+**Trigger:** Mark item of non-Knight.
+**Effect:** User can use **Smite** or **Deny** once. Seal is then removed.
+ 
+### Passion: Modesty
+**Trigger:** Refuse a reward.
+**Effect:** Restore SPI.
+ 
+### Runic Scrolls Table
+| d6 | Subject | Prophecy || :--- | :--- | :--- || 1 | Seer | Death || 2 | Seal Knight | Torment || 3 | Another Knight | Rebirth || 4 | Another Seer | Treachery || 5 | A Myth | Growth || 6 | The Realm | Glory |
+## Seer: The Drunken Seer
+**Stats:** VIG 14, CLA 6, SPI 10, 1 GD.
+**Nature:** Blur of motion. Presence intoxicates. Wants peace/quiet mornings, company later.
+ 
+## Raw Text
+> A Knight's sworn oath outlasts the stone wall
+> Yet Seers say in time even words must fall
+ 
+===END_FILE===
+---
+ID: myth_axe
+TITLE: "The Axe"
+TYPE: entity
+TAGS: [myth, destruction, hex]
+---
+# The Axe
+ 
+## Omens
+1. **The Stampede:** Cowherd on branch. Rumble. Cattle stampede.
+2. **The Message:** Carved in rock: "All Knights will feel the Axe".
+3. **The Temple:** Ruined hexagonal temple. 7 stone seats with skulls. Flame weasel gnawing.
+4. **The Victim:** Orchard. Knight bleeding, arm severed. Spared by Axebearer.
+5. **The Militia:** Tunnel echos. Militia discussing if Knights should die to appease Axebearer.
+6. **The Chasm:** Axebearer atop crag. Strikes ground: 1. Rumble, 2. Hex Chasm, 3. Realm Canyon.
+ 
+## Cast
+**The Axebearer (Wella Gall):** VIG 14, CLA 12, SPI 15, 11 GD. A1. Axe (d10 Long, +d12 vs Knights). Believes fate is to kill all Knights.
+**Flame Weasel (Embernip):** VIG 5, CLA 10, SPI 5, 2 GD. Jaws (pleasant burn, restore CLA).
+**Relaxed Cowherd (Pasco):** VIG 11, CLA 5, SPI 16, 3 GD. Scrolls, maps, compass.
+ 
+### Song of the Axe
+| d6 | Sound (Arcing) | Sound (Strike) || :--- | :--- | :--- || 1 | Humming | Thunderclap || 2 | Whistling | Deep rumble || 3 | Hissing | Shattering stone || 4 | Buzzing | Bell toll || 5 | Tearing | Echoing boom || 6 | Screaming | Crashing wave |
+## Raw Text
+> As tools of humble lumberwrack they split the log and stone
+> This one made to cleave the knights and castles that they own
+ 
+===END_FILE===
+ 
+---
+ID: knight_story
+TITLE: "The Story Knight"
+TYPE: entity
+TAGS: [knight, class, narrative]
+---
+# The Story Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Crook-blade (d10 Long), mail (A1), bronze-studded brigandine (A1).
+**Item:** Book of stories (contains various tales).
+**Steed:** Sinister steed (VIG 10, CLA 14, SPI 5, 3 GD).
+ 
+### Ability: Weaver of Fate
+**Trigger:** Just before night falls.
+**Logic:**
+1. **Input:** Tell story related to nearby place.
+2. **Variable:** Note 2 details (past, present, or future).
+3. **Process:** Referee secretly selects 1 detail.
+4. **Outcome:** Selected detail becomes **Truth**.
+**Constraint:** Once per location.
+ 
+### Passion: Showmanship
+**Trigger:** Deliberately draw unwanted attention.
+**Effect:** Restore SPI.
+ 
+### Tome of Tales Table
+| d6 | Genre | Twist || :--- | :--- | :--- || 1 | Quest | Ghosts! || 2 | Romance | Long-lost twins! || 3 | Revenge | Memory loss! || 4 | Farce | Reincarnation! || 5 | Nonsense | Talking animals! || 6 | Tragedy | Everybody dies! |
+## Seer: The Silvered Seer
+**Stats:** VIG 9, CLA 19, SPI 13, 2 GD.
+**Nature:** Weighed down by blue candles/silver filigree. Claims not to be a Seer (Lie). Knows more than any other. Wants a normal life.
+ 
+## Raw Text
+> At last, I'm here!
+> The one you were waiting for, the one behind the words
+ 
+===END_FILE===
+---
+ID: myth_chariot
+TITLE: "The Chariot"
+TYPE: entity
+TAGS: [myth, celestial, hex]
+---
+# The Chariot
+ 
+## Omens
+1. **The Wheel:** Stars visible in day, forming a turning wheel.
+2. **The Impact:** Huge crater, destroyed outpost, heavy footprints.
+3. **The Beasts:** Family claims two great tigers attacked farm, fell from sky.
+4. **The Path:** Swathe cut through forest/mountain leading to Myth Hex.
+5. **The Arrival:** Charioteer rides over horizon. Shares triumphs, gathers followers. Seeks revenge on ruler for slight.
+6. **The Charge:** Charioteer charges upstream or into tide to prove superiority. Drives water away, then returns to stars.
+ 
+## Cast
+**The Charioteer (Arayda):** VIG 16, CLA 7, SPI 18, 9 GD. A3 (Emerald skin). Meteor rod (2d8 Hefty, Wounds throw target d6 Hexes + d6 Damage). Driven to avenge slights.
+**The Chariot:** 5 GD, A2. Trample (2d12, unstoppable).
+**Tigers (Frecko & Parafusa):** VIG 15, CLA 15, SPI 5, 6 GD. Rip/Tear (2d8). Faster than horses. Hate horses/mirrors.
+ 
+## Raw Text
+> Bursten forth out shroud o'night
+> Graven wheel and tiger's bite
+ 
+===END_FILE===
+---
+ID: knight_turtle
+TITLE: "The Turtle Knight"
+TYPE: entity
+TAGS: [knight, class, defense]
+---
+# The Turtle Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Beakhammer (d6), battered tower shield (d4, A1).
+**Item:** Drinking horn (makes liquids taste good, imparts specific flavors like Honey or Salt).
+**Steed:** Squat steed (VIG 14, CLA 5, SPI 6, 2 GD).
+ 
+### Ability: Unbreakable Shell
+**Trigger:** Start of Turn.
+**Logic:**
+1. **Constraint:** Cannot Move.
+2. **Effect:** Double Shield Armour Score AND Gain +d6 to Shield Attacks.
+ 
+### Passion: Wellrestedness
+**Trigger:** Sleep for two consecutive Phases.
+**Effect:** Restore SPI.
+ 
+## Seer: The Broken Seer
+**Stats:** VIG 2, CLA 7, SPI 13, 1 GD.
+**Nature:** Pile of loose limbs. Sends body parts on quests. Wants more broken body parts.
+ 
+## Raw Text
+> I stand inclad in shelldy stead
+> Nawone of you will see me dead!
+ 
+===END_FILE===
+---
+ID: myth_desert
+TITLE: "The Desert"
+TYPE: entity
+TAGS: [myth, weather, hex]
+---
+# The Desert
+ 
+## Omens
+1. **The Storm:** Sudden dust storm. Travel impossible. Ends at nightfall.
+2. **The Drought:** Farmer notes still air. No rain until Myth resolved. Land dries, rivers wither.
+3. **The Buzzards:** Oily buzzards circling hunters playing dead.
+4. **The Eye:** Disembodied eye watches. Turns to dust if touched.
+5. **The Flow:** Parched stream, grey dust flowing upstream to Hag's lair.
+6. **The Unleashing:** Hag unleashes Desert. Myth Hex + 3 adjacent Hexes become Desert while she lives.
+ 
+## Cast
+**The Dust Hag (Exiled from Tomorrow):** VIG 8, CLA 13, SPI 11, 13 GD. Claws (2d6), Dust Shroud (Ranged Impaired), Dust Stake (d4, Wounds turn victim to dust until Hag dies). NOT a Seer.
+**Oily Buzzard:** VIG 7, CLA 14, SPI 2, 2 GD. Beak (d8). Oily hide (Wounding weapons reduce die size).
+**Crafty Hunters:** VIG 10, CLA 13, SPI 7, 3 GD. Shortbow (d6).
+ 
+## Raw Text
+> Flesh and stone and grass are nought but falsely forms
+> All are dust, nothing more
+ 
+===END_FILE===
+---
+ID: knight_key
+TITLE: "The Key Knight"
+TYPE: entity
+TAGS: [knight, class, utility]
+---
+# The Key Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Horned axe (d8 Hefty), kite shield (d4, A1).
+**Item:** Ring of keys (1-in-3 chance to fit any lock) and Bag of Ill-Gotten Gains.
+**Steed:** Jittery steed (VIG 12, CLA 10, SPI 3, 3 GD).
+ 
+### Ability: Retroactive Forethought
+**Trigger:** Once per day.
+**Effect:** Produce a common item from backpack that could have reasonably been acquired recently.
+ 
+### Passion: Distraction
+**Trigger:** Abandon a set plan.
+**Effect:** Restore SPI.
+ 
+## Seer: The Unspoken Seer
+**Stats:** VIG 5, CLA 18, SPI 18, 6 GD.
+**Nature:** Locals deny existence. Leaves cryptic symbols near Sanctum/Myth. Wants to cease to exist.
+ 
+## Raw Text
+> Sure as sky and sea
+> For every lock a key
+ 
+===END_FILE===
+---
+ID: myth_mountain
+TITLE: "The Mountain"
+TYPE: entity
+TAGS: [myth, terrain, hex]
+---
+# The Mountain
+ 
+## Omens
+1. **The Monks:** Fur-clad monks praying, scattering stones/water/coals. Warn only worthy can climb.
+2. **The Appearance:** Mountain appears on horizon. 4 Crag Cats descend, laying gem bait.
+3. **The Shadow:** Mountain shadow swells, covers Realm most of day. Crops struggle.
+4. **The Riders:** 7 Peacock Riders approach, claiming nature gives way to them.
+5. **The Squires:** Two Squires return from peak. Knights killed by Crag Cats. Seeking Knighthood.
+6. **The Voice:** At peak, voice asks "Are you worthy?". YES -> Vision of glittering city. Mountain fades after leaving.
+ 
+## Cast
+**The Mountain:** Black crags, white peak. Travel toward causes d6 VIG loss.
+**Peacock Riders (Castian):** VIG 10, CLA 7, SPI 13, 4 GD. A2. Light lance (d8 Hefty), shield.
+**Crag Cat (Gemtongue):** VIG 8, CLA 17, SPI 6, 4 GD. Claws (2d6).
+**Mourning Squires:** VIG 7, CLA 8, SPI 6, 5 GD. Shortsword (2d6), shield.
+ 
+## Raw Text
+> How earth ajoys to lay frailty bare
+> Render us small in its coldstone stare
+ 
+===END_FILE===
+ 
+---
+ID: knight_moat
+TITLE: "The Moat Knight"
+TYPE: entity
+TAGS: [knight, class, water]
+---
+# The Moat Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Spiked flail (d10 Long), barbed mail (A1, grab attempts take d6 Damage), Moat shovel (digs holes that fill with water instantly).
+**Steed:** Difficult steed (VIG 12, CLA 6, SPI 6, 2 GD).
+ 
+### Ability: Wading Stance
+**Trigger:** Fighting in at least waist-high water.
+**Effect:** Gain +1 Armour AND +d6 to all Attacks.
+ 
+### Passion: Filth
+**Trigger:** Become utterly filthy.
+**Effect:** Restore SPI.
+ 
+## Seer: The Brazen Seer
+**Stats:** VIG 10, CLA 3, SPI 10, 1 GD.
+**Nature:** Burning soul inside hollow bronze statue above fire pit. Sees moments of great pain. Wants others to suffer.
+ 
+## Raw Text
+> There they stood, awashed in soddled loam
+> A grottling dance, the dusky sky agloam
+ 
+===END_FILE===
+---
+ID: myth_star
+TITLE: "The Star"
+TYPE: entity
+TAGS: [myth, celestial, hex]
+---
+# The Star
+ 
+## Omens
+1. **The Green Star:** Appears in sky, Slowly circling.
+2. **The Archer:** Archer on rock, pale light trails falling from Star.
+3. **The Barrier:** Dull metal spires block travel. Moving toward causes pain. Pushing through deals d12 Damage (ignores Armour).
+4. **The Patrol:** Silver spire patrolled by Walking Tower. Smaller spires grow.
+5. **The Harvest:** 20 commoners escorted by 3 Walking Towers to be fed to red spire.
+6. **The Launch:** Commoners forced into silver spire. It glows and returns to Star with screaming streak. Star fades.
+ 
+## Cast
+**Walking Tower:** VIG 18, CLA 12, SPI 3, 7 GD. A4 (Structure). Crushing claws (2d10) or starlight bolts (3d8/d10 Blast). Controlled from within.
+**Creature from the Star:** VIG 5, CLA 13, SPI 6, 2 GD. Starlit spear (2d10 Hefty), gelatinous body.
+**Mercenary Archer (Araya):** VIG 13, CLA 11, SPI 10, 1 GD. A2. Longbow (d8 Slow).
+ 
+## Raw Text
+> The symbol of hope
+> The herald of ruin
+ 
+===END_FILE===
+---
+ID: knight_boulder
+TITLE: "The Boulder Knight"
+TYPE: entity
+TAGS: [knight, class, strength]
+---
+# The Boulder Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Siege hammer (d10 Long), mail (A1), fancy plate (A1).
+**Item:** Book "Of Time-Tested Guidance in the Construction and Destruction of Fortresses".
+**Steed:** Well-fed steed (VIG 14, CLA 8, SPI 6, 3 GD).
+ 
+### Ability: Unstoppable Dash
+**Trigger:** You are in motion.
+**Effect:** Cannot be stopped. Break through solid walls/objects (sustain d12 Damage). Limited distance.
+ 
+### Passion: Strength
+**Trigger:** Complete a physical task somebody else was struggling with.
+**Effect:** Restore SPI.
+ 
+### Fancy Armour Table
+| d6 | Appearance | Quality || :--- | :--- | :--- || 1 | Bronze plates | Floats in water || 2 | Flanged iron | Quick to don/remove || 3 | Sharp scales | Silent when moving || 4 | Bright brigandine | Intimidating helm (A1) || 5 | Heavy rings | Spiked gauntlets (d6) || 6 | Sleek brass | Ignore fall damage |
+## Seer: The Weeping Seer
+**Stats:** VIG 7, CLA 7, SPI 6, 2 GD.
+**Nature:** Humble man sobbing in dark corner. Haunted by images of things going wrong leading to his death. Wants to take every precaution.
+ 
+## Raw Text
+> A fated charge in mail and stalward plate
+> Abaited foes await that thundring gait
+ 
+===END_FILE===
+---
+ID: myth_sun
+TITLE: "The Sun"
+TYPE: entity
+TAGS: [myth, weather, hex]
+---
+# The Sun
+ 
+## Omens
+1. **The Flowers:** Golden flowers, moles-a-brightly munching. Sun bright at night.
+2. **The Vagabonds:** Couple with ripe fruit praise Sun for bounty. Flee Knights.
+3. **The Rise:** Sun does not set until Myth resolved. Roll Blessing (e.g., Early harvest, healed sick) at settlements.
+4. **The Raiders:** 5 raiders in shady grotto, frustrated they can't raid at night. Planning attack.
+5. **The Drought:** Wells dry, rivers die. Sun brings only banes.
+6. **The Feaster:** Sun descends as colossal golden man. Eats anything that grows. Terrified of animals.
+ 
+## Cast
+**The Feaster:** VIG 18, CLA 5, SPI 10, 4 GD. A6 (Colossal). Crush (2d12 or d12 Blast).
+**Mole-a-Brightly:** VIG 3, CLA 13, SPI 2, 3 GD. Glows when eating.
+**Raiders (Opal):** VIG 12, CLA 12, SPI 7, 3 GD. Hatchet (d6), bow (d6 Long).
+ 
+## Raw Text
+> Aurant of crown, a sov'reign aflame
+> The blaze of life can reap just the same
+ 
+===END_FILE===
+---
+ID: knight_tankard
+TITLE: "The Tankard Knight"
+TYPE: entity
+TAGS: [knight, class, social]
+---
+# The Tankard Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Eagle axe (d8 Hefty), roundshield (d4, A1), mail shirt (A1).
+**Trait:** Scar from a friend betrayed (e.g., Ruler, Knight, Captain).
+**Steed:** Aggressive charger (VIG 14, CLA 5, SPI 6, 2 GD, d8 trample).
+ 
+### Ability: Humble Glamourie
+**Trigger:** Eat/drink with someone for a few hours.
+**Effect:** They trust you enough to speak openly about anything.
+**Outcome:** Next day they realize if they revealed too much.
+ 
+### Passion: Revelry
+**Trigger:** Socially overindulge.
+**Effect:** Restore SPI.
+ 
+## Seer: The Red Seer
+**Stats:** VIG 8, CLA 15, SPI 15, 10 GD.
+**Nature:** Billowing crimson robes, flashing wet fabric. Favours open desires/fears. Hates dishonesty. Feels one fleeting emotion intensely at a time.
+ 
+## Raw Text
+> Abrash and bold, renowned and rued
+> Their presence cheered in feast or feud
+ 
+===END_FILE===
+---
+ID: myth_moon
+TITLE: "The Moon"
+TYPE: entity
+TAGS: [myth, night, hex]
+---
+# The Moon
+ 
+## Omens
+1. **The Thorns:** Elderly woman gathers thorns on scrubland to ward off the Claw.
+2. **The Claw:** Sharp crescent moon. Claw screeches in dark. Strikes vulnerable targets.
+3. **The Dance:** Revellers breaking bones against stone totem to ward off Bonebreaker.
+4. **The Bonebreaker:** Large crooked moon. Bonebreaker strikes suddenly at night.
+5. **The Sage:** Sage calms congregation (no reptiles to sacrifice for Bloodsucker). Urges arming.
+6. **The Bloodsucker:** Waning pale moon. Bloodsucker strikes when Knights off-guard.
+ 
+## Cast
+**The Claw (Black Lobster):** VIG 14, CLA 14, SPI 5, 6 GD. A2. Pincers (2d10). Repelled by thorns.
+**The Bonebreaker:** VIG 19, CLA 3, SPI 3, 5 GD. A3. Crush (2d10). Repelled by clean bones.
+**The Bloodsucker (Queen of Hungers):** VIG 12, CLA 17, SPI 15, 14 GD. Claws/Fangs (2d8, +d10 at night). Repelled by cold blood.
+ 
+## Raw Text
+> Nasty neth'ren, neyn of night
+> Lain to life in loomer's light
+ 
+===END_FILE===
+ 
+---
+ID: knight_owl
+TITLE: "The Owl Knight"
+TYPE: entity
+TAGS: [knight, class, knowledge]
+---
+# The Owl Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Blade-staff (2d8 Long), ringmail (A1).
+**Item:** Sack of books (1-in-2 chance to have info on specific topic, otherwise find miscellaneous tome).
+**Steed:** Peaceful steed (VIG 10, CLA 10, SPI 6, 4 GD).
+ 
+### Ability: Arboreal Archive
+**Trigger:** Spend a Phase running hands over a tree.
+**Effect:** Access tree's memory. See anything that happened under its shade/roots.
+ 
+### Passion: Alertness
+**Trigger:** Spot an ambush, trap, or surprise attack.
+**Effect:** Restore SPI.
+ 
+## Seer: The Screaming Seer
+**Stats:** VIG 13, CLA 4, SPI 3, 1 GD.
+**Nature:** Screams constantly ("RAAAAAARGH!"). Occasionally scribbles prophetic notes when left alone.
+ 
+## Raw Text
+> A noble one, a lord indeed, who feasts on fruits of fact
+> From nog to nosh the nut of knowing fills with pleasing fat
+ 
+===END_FILE===
+---
+ID: myth_lion
+TITLE: "The Lion"
+TYPE: entity
+TAGS: [myth, beast, hex]
+---
+# The Lion
+ 
+## Omens
+1. **The Tale:** Potter tells children of the Lion, King of Beasts. Claims a potter was his great enemy.
+2. **The Bowing:** Horses refuse to move, bowing toward Lion's Hex.
+3. **The Herald:** Pike in pond cackles "He's here for his crown".
+4. **The Charge:** Steeds throw riders and charge to Seat of Power to await Lion.
+5. **The Arrival:** Lion heads to Seat of Power to peacefully take Domain.
+6. **The King:** Herald declares Lion has taken Seat of Power. Humans replaced with beasts in court.
+ 
+## Cast
+**The Lion (Belliore):** VIG 18, CLA 12, SPI 15, 10 GD. A2 (thick hide). Claws/jaws (2d8, +d10 vs humans). Roar (Refuse to bow -> lose d6 SPI). Terrified of fire, cockerels, stinging beasts. Even weak venom is lethal.
+**Storytelling Potter (Niefib):** VIG 10, CLA 14, SPI 18, 2 GD. A1 (layers of coats). Followed by infuriating children.
+ 
+### Infuriating Children
+**Input:** d6.
+1. Wants: Entertaining / Will Not: Stay still.
+2. Wants: Specific food / Will Not: Use words.
+3. Wants: What you have / Will Not: Stop crying.
+4. Wants: To go home / Will Not: Compromise.
+5. Wants: Another child's item / Will Not: Explain properly.
+6. Wants: Unknown / Will Not: Stop grabbing.
+ 
+## Raw Text
+> With creak and grind of time-worn wheel
+> A king of all is brought to kneel
+ 
+===END_FILE===
+---
+ID: knight_hooded
+TITLE: "The Hooded Knight"
+TYPE: entity
+TAGS: [knight, class, stealth]
+---
+# The Hooded Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Glaive (d10 Long), 3 throwing axes (d6).
+**Item:** Cloak and hood (People see you, but have no memory of you once you pass from sight).
+**Steed:** Modest steed (VIG 10, CLA 9, SPI 5, 4 GD).
+ 
+### Ability: Unnoticed Deed
+**Trigger:** Once per day.
+**Effect:** Retroactively declare an action taken earlier that day (e.g., giving instructions, gathering info). Cannot acquire new items.
+ 
+### Passion: Anonymity
+**Trigger:** Somebody believes in a false identity you are portraying.
+**Effect:** Restore SPI.
+ 
+## Seer: The Endless Seer
+**Stats:** VIG 13, CLA 16, SPI 13, 3 GD.
+**Nature:** Blinks to appear as different people. Voice a congregation. Sees through everyone's eyes at once. Overwhelmed by vision.
+ 
+## Raw Text
+> As deeds abound in history's script
+> More slip from time's forgetful grip
+ 
+===END_FILE===
+---
+ID: myth_wheel
+TITLE: "The Wheel"
+TYPE: entity
+TAGS: [myth, time, hex]
+---
+# The Wheel
+ 
+## Omens
+1. **The Gust:** Groaning wind. Next Season begins suddenly.
+2. **The Skip:** Wind groans. Next morning, Season skips one ahead (e.g., Spring -> Winter).
+3. **The Signs:** Milk finches sing out of season, push milk-filled eggs from nests.
+4. **The Warning:** Grey adder hisses "The Wheel is broken".
+5. **The Freeze:** Intense Winter arrives. Won't end until Wheel repaired. Swirling clouds.
+6. **The Vanishing:** The Wheel vanishes. Can only be found in distant Realm.
+ 
+## Cast
+**The Wheel of Seasons:** Wooden wheel on stone plinth. Stalling. Requires grease (pollen, grain, snow).
+**Guardian of the Wheel (Hewgol):** VIG 18, CLA 8, SPI 8, 10 GD. A3. Greataxe (2d10 Long). Can Deny. Cannot fathom Wheel is broken.
+**Grey Adder:** VIG 6, CLA 18, SPI 5, 4 GD. Bite (d6, poison: mute until forgiven by snake).
+ 
+## Raw Text
+> Dawn, day, then dusk. Blossom, burn, then bite.
+> Green, grown, then grey. Aborn, alive, abyss.
+ 
+===END_FILE===
+---
+ID: knight_lance
+TITLE: "The Lance Knight"
+TYPE: entity
+TAGS: [knight, class, mounted]
+---
+# The Lance Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Lance (d10 Long, Hefty mounted), spiked mace (d8 Hefty), kite shield (d4, A1).
+**Item:** Mystic sight (See Fears, Desires, Hidden things, Regrets, Loyalties, or Injuries).
+**Steed:** Weary charger (VIG 14, CLA 6, SPI 4, 3 GD, d6 trample).
+ 
+### Ability: Shattering Charge
+**Trigger:** Once per day, solo mounted charge with lance.
+**Effect:** Attack gains +d12 AND Blast. All Gambits count as Strong.
+**Cost:** Lance is shattered.
+ 
+### Passion: Adventure
+**Trigger:** Enter a Myth Hex.
+**Effect:** Restore SPI.
+ 
+## Seer: The Shackled Seer
+**Stats:** VIG 10, CLA 16, SPI 13, 3 GD.
+**Nature:** Strange number of limbs (d12), shackled to wall. Sees things that wish to be elsewhere. Pleads for freedom (to be shackled elsewhere).
+ 
+## Raw Text
+> Steed agasp, spear agroan, strike agore
+> Sharp afrail, sight ablind, then no more
+ 
+===END_FILE===
+---
+ID: myth_cudgel
+TITLE: "The Cudgel"
+TYPE: entity
+TAGS: [myth, weapon, hex]
+---
+# The Cudgel
+ 
+## Omens
+1. **The Tower:** Lone guard (cowardly) protecting petty duchess. Wants to seek Cudgel. Hawkleon lives nearby.
+2. **The Swarm:** Corpse of white ox, mauled. Swarm of clawed bees bursts forth.
+3. **The Prowler:** Hawkleon prowls/circles. Wants sport.
+4. **The Thief:** Scheming hedgehog tracks Knights to steal Cudgel.
+5. **The Fake:** Cowardly guard believes branch is the Cudgel.
+6. **The Truth:** True Cudgel embedded in unbreakable green marble. Releases only for one who intends to destroy it.
+ 
+## Cast
+**Clawed Bee Swarm:** VIG 5, CLA 3, SPI 3, 3 GD. Claws/stings (d6, festering).
+**Scheming Hedgehog (Verispa):** VIG 7, CLA 17, SPI 7, 2 GD. A2 (bristles). Bite (d6). Spines can be arrows.
+**Hawkleon:** VIG 15, CLA 15, SPI 7, 9 GD. A1. Pounce (2d8). Desires Cudgel.
+**The Cudgel:** d10 Hefty. Wielder knows location of every enemy, cannot stop fighting until enemy dead.
+ 
+## Raw Text
+> The stick and the city, both worths beyond quill
+> Prized ever and all, their ends empty still
+ 
+===END_FILE===
+ 
+---
+ID: knight_questing
+TITLE: "The Questing Knight"
+TYPE: entity
+TAGS: [knight, class, oath]
+---
+# The Questing Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Ancient sword (see table), kite shield (d4, A1), 3 javelins (d6).
+**Item:** Cold stone (absorbs single ailment then vanishes in burning light).
+**Steed:** Reckless charger (VIG 14, CLA 6, SPI 6, 1 GD, d8 trample).
+ 
+### Ability: Pledge Quest
+**Trigger:** Swear a quest to somebody who cares.
+**Effect:** Gain +d12 on all attacks against those standing in your way.
+**Cost:** Cannot regain lost GD until quest complete. Lose d12 SPI if abandoned.
+ 
+### Passion: Impetuosity
+**Trigger:** Be the first to fight.
+**Effect:** Restore SPI.
+ 
+### Ancient Sword Table
+| d6 | Form | Origin || :--- | :--- | :--- || 1 | Massive (d10 long) | From the tide || 2 | Curved (d8) | From a tomb || 3 | Jagged (2d6 hefty) | From a tree || 4 | Hooked (2d8 long) | From an eagle || 5 | Shining (2d6) | From a hermit || 6 | Cruel (2d8 hefty) | From a mountain |
+## Seer: The Buried Seer
+**Stats:** VIG 4, CLA 3, SPI 14, 1 GD.
+**Nature:** Trapped far beneath ground. Speaks to those at her gravestone. Sees all below ground/hears surface. Blind to water/sky. Wants to hurry inevitable death.
+ 
+## Raw Text
+> Dream of vassal, fear of knight
+> To die at rest, in moonly light
+ 
+===END_FILE===
+---
+ID: myth_lizard
+TITLE: "The Lizard"
+TYPE: entity
+TAGS: [myth, fire, hex]
+---
+# The Lizard
+ 
+## Omens
+1. **The Smoke:** Black smoke. Lizard birthed from fire, blind/confused.
+2. **The Ash:** Forest reduced to ash. Bandit gathering toxic ash.
+3. **The Sludge:** River flows as ash sludge. Dead fish. Knightly salamanders flail in agony.
+4. **The Tail:** Huge detached tail twitching in briar. Blood sparks fire (needs seawater to extinguish).
+5. **The Mound:** Burial mound erupts in burning soil/ash (d8 Damage each turn).
+6. **The Lair:** Heap of melted rocks. Ignites to consume Hex if left alive. Births 4 more Lizards.
+ 
+## Cast
+**The Lizard (Guivregule):** VIG 18, CLA 12, SPI 5, 8 GD. A4 (Scales of un-colour, except belly). Bite (2d10, incinerates victim) or thrash (d8 Blast). Burning blood (sparks fire). Wants gold.
+**Yfran (Bandit):** VIG 12, CLA 15, SPI 13, 6 GD. A1. Dagger/Bow. Wants one last big job.
+**Knightly Salamander:** VIG 10, CLA 4, SPI 5, 4 GD. Claws/bite (d8). Immune to toxins.
+ 
+### Yfran's Big Score
+| d6 | Target | Crime || :--- | :--- | :--- || 1 | Retired Knight | Murder || 2 | Wandering Seer | Identity theft || 3 | Seat of Power | Burglary || 4 | Neighbouring ruler | Blackmail || 5 | Wealthy commoner | Confidence trick || 6 | Rival bandit | Long con |
+## Raw Text
+> scale'd one afernal, portenter o'decay
+> fang o'roaring ruin, sunrise o'final day
+ 
+===END_FILE===
+---
+ID: knight_ring
+TITLE: "The Ring Knight"
+TYPE: entity
+TAGS: [knight, class, magic]
+---
+# The Ring Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Long mace (d10 Long), violet mail (A1).
+**Item:** Pair of rings (Specific magical bond, see table. Can only put on/remove at sunrise).
+**Steed:** Aloof steed (VIG 11, CLA 8, SPI 7, 3 GD, leaves no trail).
+ 
+### Ability: Unbreakable Circle
+**Trigger:** Draw a circle in the ground with yourself in centre.
+**Effect:** No other living being can enter or leave until you leave the circle.
+ 
+### Passion: Respectfulness
+**Trigger:** Return something to rightful owner after lost/taken.
+**Effect:** Restore SPI.
+ 
+### Properties of the Rings
+| d6 | Symbol | Effect || :--- | :--- | :--- || 1 | Snakes | Wearers share vision || 2 | Skulls | Wearers share hearing || 3 | Thorns | Wearers share GD (use total) || 4 | Rubies | Wearers share VIG (use higher) || 5 | Gold | Wearers share CLA (use higher) || 6 | Birds | Wearers share SPI (use higher) |
+## Seer: The Spectral Seer
+**Stats:** VIG 4, CLA 16, SPI 14, 5 GD.
+**Nature:** Immaterial shadow bound to urn. Sees all events including death. Wants to return to physical form.
+ 
+## Raw Text
+> With ring a'lone, head dreams of home
+> With rings o'two, heart Longs to roam
+ 
+===END_FILE===
+---
+ID: myth_ogre
+TITLE: "The Ogre"
+TYPE: entity
+TAGS: [myth, cold, hex]
+---
+# The Ogre
+ 
+## Omens
+1. **The Snow:** Snow flurry turns to veil covering Realm. Vision limited. Lasts until Ogre dies/stops it.
+2. **The Captives:** Elderly weavers stagger through snow. Released from Ogre's castle for working too Slow.
+3. **The Watcher:** Ogre watches from snow. Looking for Knight to capture as guard.
+4. **The Guide:** Stinging crocodile shivering in snow. Leads Knights to castle tunnel.
+5. **The Soul:** Ancient hilltop graveyard. Ogre's soul hidden in first skull buried here.
+6. **The Laugh:** Ogre laughs across Realm. Reluctant Knights gather taxes weekly.
+ 
+## Cast
+**The Ogre:** VIG 18, CLA 10, SPI 2, 8 GD. A2 (gnarled muscles). Knife (d8), horn (d10). Regenerates from any harm while soul is hidden. Hates being looked at.
+**Stinging Crocodile:** VIG 10, CLA 5, SPI 5, 3 GD. Jaws (d8, sting loses d6 SPI). Hates Ogre.
+**Reluctant Knights:** VIG 13, CLA 10, SPI 10, 5 GD. A2. Mace (d8). Serve while Ogre holds kin.
+ 
+### Foul Finery
+| d6 | Garment | Headwear || :--- | :--- | :--- || 1 | Cloak of Skin | Crown of Bones || 2 | Feathers | Twigs || 3 | Moss | Dead birds || 4 | Stomachs | Eyes || 5 | Bark | Teeth || 6 | Matted hair | Rocks |
+## Raw Text
+> From sluggal umbrage knit a gastrell, deck'd in grile, and grim
+> By him the curse'd kings of gloreday seem a way less dim
+ 
+===END_FILE===
+ 
+---
+ID: knight_forge
+TITLE: "The Forge Knight"
+TYPE: entity
+TAGS: [knight, class, crafting]
+---
+# The Forge Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=3).
+**Equipment:** Bolt-guisarme (d10 Long melee / d10 Slow ranged), gambeson (A1), scale (A1).
+**Item:** Pots of forge dust (break to spread irritating gas, Impairs attacks within). Scars from the forge.
+**Steed:** Helmed steed (VIG 14, CLA 4, SPI 5, 4 GD, A1, d6 trample).
+ 
+### Ability: Tempering Strike
+**Trigger:** Cause a Wound with a melee weapon.
+**Effect:** Weapon gains +d8 Damage until end of combat. Effect stacks.
+ 
+### Passion: Burning
+**Trigger:** Be Wounded by fire.
+**Effect:** Restore SPI.
+ 
+### Scars from the Forge Table
+| d6 | Physical Mark | Psychological Mark || :--- | :--- | :--- || 1 | Burnt hands | Fiery nightmares || 2 | Scorched hair | Noise sensitivity || 3 | Faded eyes | Distrust of sky || 4 | Missing teeth | High pain threshold || 5 | Blistered face | Light sensitivity || 6 | Branded arm | Fear of water |
+## Seer: The Worst Seer
+**Stats:** VIG 10, CLA 14, SPI 3, 5 GD.
+**Nature:** Long face, hanging jaw. Sees the worst in everyone and awful possibilities. Knows what to say to make people feel bad. Secretly wants to protect commoners.
+ 
+## Raw Text
+> Gravid beats on ferrous slab, thick air a crimson sheen
+> Each mallenstroke leaves scars aworn, apparent and unseen
+ 
+===END_FILE===
+---
+ID: myth_spider
+TITLE: "The Spider"
+TYPE: entity
+TAGS: [myth, monster, hex]
+---
+# The Spider
+ 
+## Omens
+1. **The Feast:** Six carrion storks picking at webbed corpses (Knight, Squire, steeds).
+2. **The Labyrinth:** Trail gives way to tunnel network leading to Myth Hex.
+3. **The Shadow:** Skittering shadow in clouds, then blanket of webs (VIG Save). Spider attacks (snack only).
+4. **The Warning:** Spider Herald warns passers-by away from egg mound. Interference summons Spider.
+5. **The Offer:** Herald beckons Company. If worthy, declares them "Prey of the Spider".
+6. **The Fight:** Spider bursts from ground. Retreats underground if Wounded to heal.
+ 
+## Cast
+**The Spider (Spinjack):** VIG 18, CLA 19, SPI 9, 10 GD. A3 (bristly carapace). Bite (3d10, paralysis until sunrise). Wants a good hunt.
+**The Spider Herald (Alskip):** VIG 10, CLA 12, SPI 12, 5 GD. A1 (husk). Fang sword (2d6 venom). Different aspect each encounter (Extra eyes/arms, Huge jaw, etc.).
+**Carrion Stork:** VIG 5, CLA 10, SPI 5, 4 GD. Razor beak (d8, ignores armour).
+ 
+## Raw Text
+> Neath stygic veils, a whisp'ring prance
+> In woestich hide and gos'mer lance
+ 
+===END_FILE===
+---
+ID: knight_rune
+TITLE: "The Rune Knight"
+TYPE: entity
+TAGS: [knight, class, magic]
+---
+# The Rune Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Pillar of inscribed stone (2d10 Slow), gambeson (A1), iron chestplate (A1).
+**Item:** Sealed crystal flask (Single use, see table. Restock each Season).
+**Steed:** Muscular charger (VIG 13, CLA 8, SPI 5, 3 GD, d8 trample).
+ 
+### Ability: Destinous Sigil
+**Trigger:** Sunset. Etch cosmic rune.
+**Process:** Choose a number.
+**Effect:** When a die rolls that number, adjust it to any other value on that die.
+**Limit:** Can use a number of times equal to the chosen number. Reset at sunset.
+ 
+### Passion: Foresight
+**Trigger:** Prediction proven correct.
+**Effect:** Restore SPI.
+ 
+### Crystal Flask Table
+| d6 | Effect (Shaken) | Effect (Smashed) || :--- | :--- | :--- || 1 | Warmth | Thunderstorm || 2 | Darkness | Summer || 3 | Night | Gentle light || 4 | Repels birds | Scream || 5 | Ease pain | Locusts || 6 | Freeze water | Soothe canines |
+## Seer: The Drowned Seer
+**Stats:** VIG 3, CLA 3, SPI 5, 2 GD.
+**Nature:** Bottom of deep pond. Soggy acolytes speak intent. Sees from fresh water, blind to sea. Wants to protect Knights.
+ 
+## Raw Text
+> Under gleam of lumenlight, in skin or stone ascratch
+> Strands of faten path unveiled, a starry scrawl to match
+ 
+===END_FILE===
+---
+ID: myth_coven
+TITLE: "The Coven"
+TYPE: entity
+TAGS: [myth, magic, hex]
+---
+# The Coven
+ 
+## Omens
+1. **The Wind:** Cloud Hag descends, bombarding with wind gusts. Leaves when she feels strong.
+2. **The Brew:** Cauldron under knotted trees. Dipped items become invisible/intangible to harm for a day. Living matter summons Coven member.
+3. **The Snails:** Garden Witch eating snails. Offers snails (speak with plants).
+4. **The Circle:** Circle of dead plants. Saltstone planted by Garden Witch kills entering flora.
+5. **The Day:** Wind drops. Achantrix screeches. Next night phase treated as day.
+6. **The Duel:** Coven fight to death. Victor mourns, enters exile.
+ 
+## Cast
+**The Cloud Hag (Nimbrel):** VIG 17, CLA 13, SPI 12, 12 GD. A1 (fog), Flight, Wind orb (d10 Blast). Wants to feel superior.
+**The Garden Witch (Tanselie):** VIG 10, CLA 13, SPI 15, 8 GD. Four arms (d6 each), Petal locket (endless water). Nurtures small, cuts back big.
+**The Achantrix (Scathara):** VIG 15, CLA 13, SPI 18, 10 GD. Bright sickle (2d8), Star ring (d8 SPI loss if command disobeyed). Wants to expel darkness.
+ 
+### Coven Conflicts
+| d6 | Minor Conflict | Major Conflict || :--- | :--- | :--- || 1 | Food | Other member || 2 | Gifts | Physical fight || 3 | Travel | Resentment || 4 | Manners | Alcohol || 5 | Birds | Petty lie || 6 | Property | Heartbreak |
+## Raw Text
+> In mossen whisper, on thundry roar
+> In starry flare, thrice-membered lore
+ 
+===END_FILE===
+---
+ID: knight_gallows
+TITLE: "The Gallows Knight"
+TYPE: entity
+TAGS: [knight, class, death]
+---
+# The Gallows Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Neck-catcher (d10 Long, Wounded targets snared), salvaged armour (see table).
+**Item:** Titan beads (Throw to transform into boulder, d10 Blast. Restock each Season).
+**Steed:** Flea-bitten steed (VIG 9, CLA 7, SPI 4, 3 GD).
+ 
+### Ability: Carrion's Call
+**Trigger:** Provide food.
+**Effect:** Speak with scavenger creatures and summon them.
+ 
+### Passion: Misery
+**Trigger:** Complain to a new person.
+**Effect:** Restore SPI.
+ 
+### Salvaged Armour Table
+| d6 | Base Armour | Condition || :--- | :--- | :--- || 1 | Copper mail (A1) | Embedded arrowheads || 2 | Cracked chestplate (A1) | Patched || 3 | Red brigandine (A1) | Burnt || 4 | Padded cloth (A1) | Claw marks || 5 | Hard leather (A1) | Faded heraldry || 6 | Dented plate (A1) | Dried blood |
+## Seer: The Torn Seer
+**Stats:** (Left Side): VIG 9, CLA 5, SPI 8, 3 GD (Right Side): VIG 6, CLA 6, SPI 6, 2 GD.
+**Nature:** Torn in half vertically. Halves cling together but act as two. Always presents two opinions/predictions.
+ 
+## Raw Text
+> In dregs of dawn the damnlings sway
+> For famine's brood a gifted prey
+ 
+===END_FILE===
+ 
+---
+ID: myth_lich
+TITLE: "The Lich"
+TYPE: entity
+TAGS: [myth, undead, hex]
+---
+# The Lich
+ 
+## Omens
+1. **The Wind:** Grey wind shrieks. Bone items tremble.
+2. **The Ghost:** Ghost of shadow/smoke (Lich's ghost) gathering riches (4 gems).
+3. **The River:** Stream surges with blood toward Myth Hex. Crumbled palace arises.
+4. **The Altar:** Hooded congregation around skull on altar. Lich proclaims return. Robes fall empty if disturbed.
+5. **The Rebirth:** Lich (skull) reassembles body on bone heap. Seeks to rule Realm.
+6. **The Law:** Sky of skull-clouds bellows new law each Season. Law-breakers struck by black bolt (6d12 Damage, ignore Armour).
+ 
+## Cast
+**The Lich, Eternal (Ghost):** VIG 9, CLA 10, SPI 10, 5 GD. Cannot be harmed. Smells of incense/copper. Metal chills/burns nearby.
+**The Lich, Eternal (Skull):** VIG 3, CLA 17, SPI 17, 1 GD. A6 (Force). Immobile. Manipulates objects (Royal dagger 2d6).
+**The Lich, Eternal (King):** VIG 10, CLA 12, SPI 16, 8 GD. A2/A4 vs living. Kingstaff (d10 Long, Mortal Wounds age victim). Can summon dead version of random Knight.
+ 
+### Laws of the Lich
+| d6 | Subject | Command || :--- | :--- | :--- || 1 | All Knights must | Fast for the day || 2 | All horses must | Donate an eyeball || 3 | All commoners must | Be dressed in black || 4 | All Seers must | Donate a bone || 5 | All elders must | Leave the Realm || 6 | All children must | Swear to the Lich |
+## Raw Text
+> From fable’s heart springs fable’s fear, a past within a past
+> From time before our nightmares still, made flesh by sullen mass
+ 
+===END_FILE===
+---
+ID: knight_tome
+TITLE: "The Tome Knight"
+TYPE: entity
+TAGS: [knight, class, knowledge]
+---
+# The Tome Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Heavy staff (d10 Long), gambeson (A1), brass-studded brigandine (A1).
+**Trait:** Perfect recall (remember everything perfectly, subject to limits).
+**Steed:** Small steed (VIG 9, CLA 8, SPI 5, 2 GD).
+ 
+### Ability: Dawn Contemplation
+**Trigger:** Sunrise. Choose area of knowledge.
+**Effect:** Ask Referee 3 questions on topic. Referee answers Yes/No/Maybe.
+ 
+### Passion: Introversion
+**Trigger:** Refuse a formal social gathering or leave early.
+**Effect:** Restore SPI.
+ 
+### Limits of Memory Table
+| d6 | Blind Spot | Trigger Condition || :--- | :--- | :--- || 1 | People’s names | In large gatherings || 2 | Place names | In combat || 3 | Faces | At morning || 4 | Geography | At night || 5 | Relationships | When alone || 6 | Time | After a drink |
+## Seer: The Tangled Seer
+**Stats:** VIG 10, CLA 5, SPI 13, 4 GD.
+**Nature:** Knotted appendages/faces twisting in/out of air. Sees all possibilities but unsure of present location. Wants stability.
+ 
+## Raw Text
+> A loom of wisdom spun at dawn
+> Laid to rest til coming morn
+ 
+===END_FILE===
+---
+ID: myth_wight
+TITLE: "The Wight"
+TYPE: entity
+TAGS: [myth, undead, hex]
+---
+# The Wight
+ 
+## Omens
+1. **The Song:** Young man washing clothes in clean pond. Sings of "Knight that fought death" but forgets words.
+2. **The Challenge:** Wight rides forth. Challenges to single combat. Loser must be stabbed through heart. (Wight knows this won't kill them).
+3. **The Shame:** Wight hunches among jagged rocks. Flees if disturbed.
+4. **The Fire:** Wight challenges again. Loser must be burned. (Fire won't kill Wight).
+5. **The Grave:** Unmarked fresh grave. Wight bursts out and flees if disturbed.
+6. **The Finality:** Final challenge accompanied by Seer. Seer announces they will kill winner in horrible manner.
+ 
+## Cast
+**The Wight (Knight who Defeated Death):** VIG 15, CLA 12, SPI 8, 11 GD. A3 (Black mail/plate/shield). Wightsword (2d10 Hefty, living lose d6 SPI per attack), shield (d4). Knows all Feats. Accepts defeat if Mortally Wounded, but only dies by Seer's hand.
+**Ghostly Steed:** VIG 10, CLA 15, SPI 6, 4 GD. Immaterial.
+**Washer Man (Catfold):** VIG 11, CLA 7, SPI 7, 2 GD. Staff (d8 Long). Can clean anything.
+ 
+### Horrible Deaths
+| d6 | Method A | Method B || :--- | :--- | :--- || 1 | Impaled on ten swords | Sent to the deep || 2 | Pressed under a slab | Burned in a forge || 3 | Taken to pieces | Fed to magpies || 4 | Torn by hounds | Stuffed in a tree || 5 | Filled with salt | Encased in iron || 6 | Drowned in smoke | Taken by the Seer |
+## Raw Text
+> Life itself is no prize
+> Enough is damnation itself
+ 
+===END_FILE===
+---
+ID: knight_meteor
+TITLE: "The Meteor Knight"
+TYPE: entity
+TAGS: [knight, class, celestial]
+---
+# The Meteor Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Elaborate trident (d10 Long, see table), brass mail (A1).
+**Item:** Moon oil (Rub on liftable object to render weightless until washed).
+**Steed:** Limping steed (VIG 12, CLA 8, SPI 5, 4 GD, won't be hurried).
+ 
+### Ability: Star Fall
+**Effect:** Never suffer Falling Damage (unless landing on harmful surface).
+**Trigger:** Land from fall >= 12ft.
+**Optional Effect:** Release shockwave (d8 Blast).
+ 
+### Passion: Authenticity
+**Trigger:** Reveal identity or intentions at inconvenient moment.
+**Effect:** Restore SPI.
+ 
+### Elaborate Trident Table
+| d6 | Appearance | Property || :--- | :--- | :--- || 1 | Silver rings | Can be thrown (d6) || 2 | Blackened iron | Recall to hand when in sight || 3 | Two-headed | +d8 vs aquatic beings || 4 | Faint golden glow | +d8 vs flying beings || 5 | Five prongs | Points to fresh water || 6 | Telescopic shaft | Utterly unbreakable |
+## Seer: The Moonlit Seer
+**Stats:** VIG 5, CLA 16, SPI 15, 5 GD.
+**Nature:** Glow of loose human shape. Only exists under moonlight. Wants everything to happen at correct time.
+ 
+## Raw Text
+> A star of truth, fell from ahigh
+> Such lumous ones should wear no lie
+ 
+===END_FILE===
+ 
+---
+ID: myth_spectre
+TITLE: "The Spectre"
+TYPE: entity
+TAGS: [myth, ghost, hex]
+---
+# The Spectre
+ 
+## Omens
+1. **The Funeral:** Procession carrying Moth Knight (Delsonde). Great Knight, poor ruler.
+2. **The Hawk:** Black hawk perches, howls like wolf, flies off.
+3. **The Poltergeist:** Abandoned cabin, clattering. Spectre manifests (invisible/immaterial), throws objects. Cabin shredded.
+4. **The Ruin:** World appears dead/ruined. Touching things restores normality.
+5. **The Chant:** 3 sages chanting to rest Spectre. Spectre lashes out screaming.
+6. **The Charge:** Spectre leads ghostly horsemen. Form solid (can be harmed). Rest only after victory or second death.
+ 
+## Cast
+**The Spectre (The Moth Knight, Delsonde):** VIG 15, CLA 6, SPI 12, 7 GD. A3 (regal plate). Fang Longsword (2d8 Hefty), shield. Regains form as Myth progresses. Enraged by failure, repelled by success.
+**Ghostly Horsemen:** VIG 12, CLA 6, SPI 10, 5 GD. A2 (shimmering mail). Longaxe (d10 Long). Vanish if Spectre slain.
+**Sages (Kolto, Enc, Agid):** VIG 2, CLA 8, SPI 12, 6 GD. Staffs. Mortal affliction (see table).
+ 
+### Mortal Afflictions
+| d6 | Body Part | Affliction || :--- | :--- | :--- || 1 | Mind | I deserve it || 2 | Lungs | Anger at the world || 3 | Heart | Melancholy || 4 | Back | Fear of death || 5 | Senses | In denial || 6 | Limbs | Oblivious |
+## Raw Text
+> Haunted souls find no sleep
+> In bed or cot or grave so deep
+ 
+===END_FILE===
+---
+ID: knight_gazer
+TITLE: "The Gazer Knight"
+TYPE: entity
+TAGS: [knight, class, time]
+---
+# The Gazer Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Toothed blade (d8 Hefty, +d8 vs Seers), tapestry cloak (see table), mail (A1).
+**Item:** Flickerlamp (warm lantern, shadows cast toward nearest Seer).
+**Steed:** Blueish steed (VIG 12, CLA 10, SPI 5, 3 GD).
+ 
+### Ability: Glimpse of Fate
+**Trigger:** Once per day.
+**Effect:** Undo a single action performed by you or Company. Declare it was a minor vision. Play proceeds as if it never happened.
+ 
+### Passion: Respect
+**Trigger:** Yield to a Seer.
+**Effect:** Restore SPI.
+ 
+### Tapestry Story Table
+| d6 | Subject | Detail || :--- | :--- | :--- || 1 | Birth of... | A random Seer || 2 | Great deeds of... | A random Knight || 3 | Ambitions of... | Yourself || 4 | Shameful death of... | A Company member || 5 | Glorious death of... | The Realm ruler || 6 | Peaceful death of... | An unknown figure |
+## Seer: The Stone Seer
+**Stats:** 6 GD, A3 (Structure).
+**Nature:** 10ft statue. Motionless/silent. Projects feeling of approval/objection. Knows all past, no future/present. Wants to preserve Realm.
+ 
+## Raw Text
+> The blood sees through time aflow
+> To certain souls, a glimpse they show
+ 
+===END_FILE===
+---
+ID: myth_wraith
+TITLE: "The Wraith"
+TYPE: entity
+TAGS: [myth, night, hex]
+---
+# The Wraith
+ 
+## Omens
+1. **The Song:** Dark swan sings reedy song. Advances time (day/night) rapidly. Flees if seen.
+2. **The Order:** Messengers from all Seers: Kill Fallen Seer on sight.
+3. **The Shadow:** Shadowy mass looms over broken body of local Seer.
+4. **The Summons:** Messenger calls Knights to guard nearest Seer. Wraith strikes next night.
+5. **The Dance:** Fallen Seer curses kin in woods. Spouts false prophecies. Wraith attacks Fallen Seer at nightfall.
+6. **The Sacrifice:** Nearest Seer offers self to Wraith. Wraith materializes and attacks. Scream heard across Realm. Wraith returns to void.
+ 
+## Cast
+**The Wraith (Night as Cold Flesh):** VIG 16, CLA 16, SPI 16, 11 GD. Touch of unlife (d12, ignore armour, cannot be Denied). Hunts Seers. Exists only in darkness.
+**The Fallen Seer (Ossoanamme):** VIG 12, CLA 4, SPI 16, 3 GD. A1 (wood). Blade (2d8 Hefty). No knowledge of time.
+**Dark Swan (Netherplume):** VIG 10, CLA 10, SPI 6, 3 GD. Wing/beak (2d6). Song hurries day/night.
+ 
+### False Prophecies
+| d6 | Subject | False Fate || :--- | :--- | :--- || 1 | A Company member | Must kill the Wraith || 2 | A nearby Knight | Is the Fallen Seer || 3 | A nearby commoner | Is the Wraith || 4 | A nearby Seer | Must serve the Wraith || 5 | The Wraith | Must kill a Seer || 6 | A nearby Myth | Must die at next night |
+## Raw Text
+> An unbirthed life, no first breath drawn
+> In dark of night, unlife til morn
+ 
+===END_FILE===
+---
+ID: knight_mule
+TITLE: "The Mule Knight"
+TYPE: entity
+TAGS: [knight, class, deception]
+---
+# The Mule Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Weighted Longstaff (d10 Long), polished chainmail (A1).
+**Item:** 3 explosives (d8 Blast, see table, restock each Season).
+**Steed:** Tall steed (VIG 14, CLA 7, SPI 6, 2 GD).
+ 
+### Ability: Lowly Shroud
+**Trigger:** At any time.
+**Effect:** Observer is convinced you are a humble, unarmed peasant and your steed is a mule.
+ 
+### Passion: Kindness
+**Trigger:** Stop an act of cruelty.
+**Effect:** Restore SPI.
+ 
+### Explosives Table
+| d6 | Appearance | Trigger || :--- | :--- | :--- || 1 | Ashen pinecone | Water || 2 | Vial of red dust | Fire || 3 | Bottle of white oil | Command word || 4 | Hellfire chestnut | Touch of skin || 5 | Preserved drake gizzard | Light || 6 | Firebird egg | Touching ground |
+## Seer: The Green Seer
+**Stats:** VIG 10, CLA 14, SPI 13, 6 GD.
+**Nature:** Pulsing emerald heart in spore cloud. Hears envious thoughts. Wants everyone to get what they envy.
+ 
+## Raw Text
+> A humble beast, no roar or flight
+> Beneath the grey a show of might
+ 
+===END_FILE===
+ 
+---
+ID: myth_beast
+TITLE: "The Beast"
+TYPE: entity
+TAGS: [myth, monster, hex]
+---
+# The Beast
+ 
+## Omens
+1. **The Shadow:** Hulking furred shadow changes form (see table). Burrows if disturbed.
+2. **The Eyes:** Two huge red eyes on horizon. Hot breath. Vanishes.
+3. **The Roar:** Wind, rumble, crackled roar. Animals panic until sunrise.
+4. **The Limbs:** Clawed limbs snatch Knights from undergrowth (up to 6 limbs). No body visible.
+5. **The Rage:** Knights failing SPI Save fly into rage, attacking allies. Ends if Wounded.
+6. **The Dive:** Beast dives into water. Tidal wave floods 2 Hexes radius (smashing buildings).
+ 
+## Cast
+**The Beast:** VIG 19, CLA 17, SPI 5, 14 GD. A3 (Thick hide). Maul/tear (4d10). No need for food/water. Fights for dominance.
+**Clawed Limb:** VIG 15, CLA 5, SPI 5, 6 GD. Claw (d10, grip).
+**Frightened Rider (Fevych):** VIG 11, CLA 16, SPI 6, 6 GD. A2. Javelins/Axe. Abandoned knighthood.
+ 
+### Forms of the Beast
+| d6 | Hybrid | Feature || :--- | :--- | :--- || 1 | Stag & Fish | Countless tails || 2 | Wolf & Beetle | Chitinous plates || 3 | Panther & Ox | Multiple rows of teeth || 4 | Lion & Ram | Six limbs || 5 | Crocodile & Fox | Psychedelic colouring || 6 | Goat & Serpent | Antlers and tusks |
+## Raw Text
+> In cutting coil and snatching horn and crushing limb abound
+> Tameless creature sees no knight, no seer, no king a’found
+ 
+===END_FILE===
+---
+ID: knight_halo
+TITLE: "The Halo Knight"
+TYPE: entity
+TAGS: [knight, class, light]
+---
+# The Halo Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Crescent axe (d8 Hefty), ringmail (A1), kite shield (d4, A1).
+**Item:** Mistvial (Break -> Thick mist covers Hex. Repair requires material + condition, see table).
+**Steed:** Wild steed (VIG 15, CLA 5, SPI 7, 3 GD, only you can ride).
+ 
+### Ability: Luminous Eruption
+**Trigger:** Once per Phase.
+**Effect:** Light source illuminates entire Hex. Deals d12 Damage to nearby beings living in darkness.
+ 
+### Passion: Valour
+**Trigger:** Engage in combat against the odds.
+**Effect:** Restore SPI.
+ 
+### Repairing the Mistvial Table
+| d6 | Material | Condition || :--- | :--- | :--- || 1 | Blood | Midnight ritual || 2 | Sand | Seer's blessing || 3 | Smoke | You must be Wounded || 4 | Milk | Coin sacrifice || 5 | Salt | Light of sunrise || 6 | Silk | Bird nest |
+## Seer: The Painted Seer
+**Stats:** VIG 4, CLA 17, SPI 14, 1 GD.
+**Nature:** Skin like canvas, dyed every colour. Conjures painted visions on walls. Wants an apprentice.
+ 
+## Raw Text
+> A trail of hope across the land
+> In sorrow’s face, bright reprimand
+ 
+===END_FILE===
+---
+ID: myth_judge
+TITLE: "The Judge"
+TYPE: entity
+TAGS: [myth, law, hex]
+---
+# The Judge
+ 
+## Omens
+1. **The Wretch:** Knight sentenced harshly, pleading for charity.
+2. **The Court:** Black and white courtyard. Voices/argument, then silence. Gone if returned to.
+3. **The Summons:** 3 Sergeants deliver scroll to Knight called for judgement.
+4. **The Witness:** Knight vanishes to mist, forced to testify. Returns.
+5. **The Horn:** Clear horn heard across Realm.
+6. **The Trial:** Retriever drags Knight to court. Judge summons witnesses. Verdict at sunset/sunrise.
+ 
+## Cast
+**The Judge (Ambrageft):** VIG 13, CLA 19, SPI 17, 10 GD. A3 (fur plate). Judgementsword (2d10 Long, +d10 vs guilty, causes silence). Can Deny/See lies.
+**Sergeants of Law:** VIG 12, CLA 14, SPI 14, 6 GD. A1 (checkerboard coats). Polehooks (d10 Long, +d10 vs fleeing).
+**Retriever of Justice (Azdart):** VIG 15, CLA 18, SPI 7, 7 GD. A1. Jaws (2d8).
+ 
+### Judgement Table
+| d6 | Verdict | Sentence || :--- | :--- | :--- || 1 | Guilty | Immediate execution || 2 | Guilty (Later) | Stripped of possessions || 3 | Witnesses | Life imprisonment || 4 | Evidence | Stripped of knighthood || 5 | Innocent (For now) | Execution next Season || 6 | Innocent | Just a warning |
+## Raw Text
+> In time she calls for all the knights
+> Upon the best her blade still bites
+ 
+===END_FILE===
+---
+ID: knight_iron
+TITLE: "The Iron Knight"
+TYPE: entity
+TAGS: [knight, class, combat]
+---
+# The Iron Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Cleavingblade (2d8 Long), mail (A1), plate pauldrons (A1).
+**Item:** Inscribed scabbard (Shows scene hinting at nearest Myth, changes daily).
+**Steed:** Dark steed (VIG 11, CLA 7, SPI 6, 3 GD).
+ 
+### Ability: Heightened Sharpness
+**Trigger:** Perform Strong Gambit with bladed weapon.
+**Effect:** Choose: Take a limb OR Take a head (if target at 0 GD). Target gets Save.
+ 
+### Passion: Diligence
+**Trigger:** Refuse a shortcut.
+**Effect:** Restore SPI.
+ 
+### Origin of the Cleavingblade
+| d6 | Scene | Emotion/Theme || :--- | :--- | :--- || 1 | Vibrant forest | Contentment || 2 | High waterfall | Desperation || 3 | Roaring sea | Victory || 4 | Broken boulder | Anger || 5 | Narrow cave | Sorrow || 6 | Dead tree | Transition |
+## Seer: The Celebrated Seer
+**Stats:** VIG 12, CLA 6, SPI 15, 2 GD.
+**Nature:** Clad in shining metal masks (joy). Sees intense positive emotion. Wants praise/celebration.
+ 
+## Raw Text
+> As sword abend, as plate afold,
+> As shield asplint, a tale atold.
+ 
+===END_FILE===
+ 
+---
+ID: myth_crown
+TITLE: "The Crown"
+TYPE: entity
+TAGS: [myth, artifact, hex]
+---
+# The Crown
+ 
+## Omens
+1. **The Proclamation:** Old herald blows horn. Condemns false Crown, promises reward for its destruction.
+2. **The Amnesia:** Herald returns, announcing hunt for Crown. No memory of previous message.
+3. **The Interrogation:** 5 brutal mercenaries interrogating Knights about Crown.
+4. **The Ambush:** Herald beset by d6 tiger spiders (plus d6 lurking).
+5. **The Curfew:** 12 mercenaries enforcing curfew until Crown found.
+6. **The Discovery:** Crown sits on mahogany plinth in well-lit clearing.
+ 
+## Cast
+**The Crown (Twelve-Wood Diadem):** Seers see wearer as ruler; Knights see wearer as fraud. Cannot be removed. Whispers warnings/suggestions (e.g., "Death is coming", "Execute Knights").
+**Old Herald (Alnect):** VIG 6, CLA 7, SPI 13, 2 GD. Mace (d8 Hefty). Fine garb.
+**Brutal Mercenaries (Veyril's Vanguard):** VIG 12, CLA 10, SPI 10, 4 GD. A1 (redmail). Poleaxe (d10 Long). Veyril (A2) has grudges.
+**Tiger Spider (Horrortrix):** VIG 12, CLA 14, SPI 5, 3 GD. Fangs (2d6), Acid spit (d8).
+ 
+## Raw Text
+> No crown brings peace
+> This one least
+ 
+===END_FILE===
+---
+ID: knight_mirror
+TITLE: "The Mirror Knight"
+TYPE: entity
+TAGS: [knight, class, reflection]
+---
+# The Mirror Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Hook-axe (d8 Hefty), 3 throwing axes (d6), round shield (d4, A1).
+**Item:** Hushingbell (hearers hear nothing else).
+**Steed:** Faded steed (VIG 9, CLA 8, SPI 5, 3 GD). Shared memories (e.g., Avenged family, Escaped capture).
+ 
+### Ability: Reflection of Blood
+**Trigger:** You suffer a Wound or Scar.
+**Logic:**
+IF Wounded THEN Apply_VIG_Loss(Attacker, Your_VIG_Loss).
+IF Scarred THEN Apply_Scar(Attacker, Your_Scar).
+ 
+### Passion: Egality
+**Trigger:** Give somebody else their fair share.
+**Effect:** Restore SPI.
+ 
+## Seer: The Giant Seer
+**Stats:** VIG 19, CLA 4, SPI 6, 5 GD. A3 (Huge body). Huge fists (2d10).
+**Nature:** Clumsy menace. Unreliable flashes of present. Wants to be told she is a good Seer.
+ 
+## Raw Text
+> In eyes ojust, the given got
+> Blow for blow, from one shared lot
+ 
+===END_FILE===
+---
+ID: myth_boar
+TITLE: "The Boar"
+TYPE: entity
+TAGS: [myth, beast, hex]
+---
+# The Boar
+ 
+## Omens
+1. **The Bristles:** Grass feels like wiry bristles, ground warm.
+2. **The Hunters:** 3 hooded hunters stalking Boar.
+3. **The Crash:** Boar smashes white-walled vineyard for wine.
+4. **The Attack:** Boar attacks. Targets hooded hunters first if present.
+5. **The Masks:** 3 masked hunters. Mime animals. Vanish to smoke if unmasked.
+6. **The End:** Boar vs Masked Hunters. If Boar dies, hunters vanish. If Boar lives, heads to Holding for feast.
+ 
+## Cast
+**The Boar (Rustigore):** VIG 18, CLA 7, SPI 7, 7 GD. A3 (bristles). Thrash (d10 Blast, +d10 charge) or Impale (3d10 Slow). Hungers for human food. Tusks kill beasts on Wound (but break).
+**Hooded Hunters:** VIG 10, CLA 8, SPI 12, 3 GD. Spear (d8 Hefty). Angry but inexperienced.
+**Masked Hunters:** VIG 10, CLA 15, SPI 15, 5 GD. A2 (fur/mask). Greatspear (d10 Long). Mask grants blessing (e.g., Eagle: A4 vs Boar, Bear: Focus).
+ 
+## Raw Text
+> Guts burst forth in bloody flow
+> About the tusks of nature’s woe
+ 
+===END_FILE===
+---
+ID: knight_dusk
+TITLE: "The Dusk Knight"
+TYPE: entity
+TAGS: [knight, class, memory]
+---
+# The Dusk Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Longhammer (d10 Long), 3 javelins (d6).
+**Item:** Pouch of wolfnuts (canine repellent), Tattered poem (Start/End combination).
+**Steed:** Auburn steed (VIG 12, CLA 8, SPI 6, 2 GD).
+ 
+### Ability: Sunder Memory
+**Trigger:** Wound a target.
+**Logic:**
+IF Wound THEN Remove_Memory(Target, Single_Memory).
+IF Mortal_Wound THEN Remove_Memory(Target, Entire_Concept_Or_Person).
+ 
+### Passion: Temperance
+**Trigger:** Refuse a luxury.
+**Effect:** Restore SPI.
+ 
+## Seer: The Fungal Seer
+**Stats:** VIG 11, CLA 3, SPI 15, 2 GD.
+**Nature:** Luminous, bristling with fungus. Mushrooms cause shared vision quest (death in vision = death). Wants to bring everyone into heavenly vision.
+ 
+## Raw Text
+> Each touch of iron takes a price, in breath or blood or bone
+> A nasty cut takes something worse, the warmth of distant home
+ 
+===END_FILE===
+---
+ID: myth_eagle
+TITLE: "The Eagle"
+TYPE: entity
+TAGS: [myth, beast, hex]
+---
+# The Eagle
+ 
+## Omens
+1. **The Shadow:** Great shadow blots sun.
+2. **The Crash:** Eagle Aflame shrieks, plunges (d8 Blast fire). Flies to water.
+3. **The Bath:** Eagle Smouldering bathing. Crowd protects it.
+4. **The Ascent:** Eagle Rising sends wind gusts (d10 Blast), felling trees/structures.
+5. **The Circle:** Sun swells. Eagle Aflame circles.
+6. **The Offering:** Eagle Aflame dives on Seat of Power to snatch ruler for sun. Failure = Dire harvest.
+ 
+## Cast
+**The Eagle (Aflame):** VIG 15, CLA 15, SPI 15, 8 GD. A2. Talons (2d8), Beak (d12). Wants fire.
+**The Eagle (Smouldering):** VIG 13, CLA 12, SPI 10, 6 GD. A2. Thrashing (d8 Blast). Wants to extinguish wings.
+**The Eagle (Rising):** VIG 15, CLA 18, SPI 18, 12 GD. A2. Wind (d10 Blast). Must dry wings.
+**Protective Victims:** VIG 10, CLA 10, SPI 7, 2 GD. Carrying salvaged belongings.
+ 
+## Raw Text
+> A bird o’flame to claim sun’s toll
+> Crown for crown, gold for gold
+ 
+===END_FILE===
+---
+ID: knight_coin
+TITLE: "The Coin Knight"
+TYPE: entity
+TAGS: [knight, class, chance]
+---
+# The Coin Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** Morningstar (d8 Hefty), roundshield (d4, A1), gambeson (A1), stone-studded brigandine (A1).
+**Item:** Jaunty flute (Music loved by specific group, hated by others).
+**Steed:** Arctic steed (VIG 14, CLA 8, SPI 7, 3 GD, white in winter).
+ 
+### Ability: Thrown to Chance
+**Trigger:** Use instead of attacking normally.
+**Logic:**
+1. Flip Coin.
+2. IF Heads THEN Kill(Target).
+3. IF Tails THEN Kill(Self).
+**Constraint:** Final.
+ 
+### Passion: Generosity
+**Trigger:** Give generously to someone in need.
+**Effect:** Restore SPI.
+ 
+## Seer: The Map Seer
+**Stats:** VIG 14, CLA 10, SPI 6, 2 GD.
+**Nature:** Craggy body, rivers of black blood. Can alter geography with effort. Wants to send Knights to death.
+ 
+## Raw Text
+> In arg or aur, decisions spun
+> A prize, a life, lost or won
+ 
+===END_FILE===
+---
+ID: myth_bat
+TITLE: "The Bat"
+TYPE: entity
+TAGS: [myth, beast, hex]
+---
+# The Bat
+ 
+## Omens
+1. **The Song:** Smug musician drums/sings "the great winged one grows... we are the feast".
+2. **The Flock:** Birds grounded, grovelling toward darkest sky.
+3. **The Feast:** Commoners eating worms (Feast of Worms) to deny Bat food.
+4. **The Sacrifice:** Farmers heading to lake to sacrifice livestock.
+5. **The Smoke:** Crowd lighting fires to smoke out Bat. Bat emerges, fights to flee.
+6. **The Judgment:** Bat dragged in chains to Seat of Power for crimes (e.g., Mass murder, Spoiling crops).
+ 
+## Cast
+**The Bat (Most Wicked):** VIG 15, CLA 15, SPI 3, 7 GD. A2 (huge). Wings (d8 Blast) or Bite (2d10). Wants sweet fruit/darkness.
+**Bat Hunters (Radlef):** VIG 10, CLA 7, SPI 13, 3 GD. Weaponised tools (d8 Long). Batbane arrows (no effect).
+**Musician (Keork):** VIG 11, CLA 11, SPI 16, 4 GD. Drum, dagger.
+ 
+## Raw Text
+> Spoil the loaf, taint the wine
+> To starve a fiend is most divine
+ 
+===END_FILE===
+ 
+---
+ID: knight_mock
+TITLE: "The Mock Knight"
+TYPE: entity
+TAGS: [knight, class, construct]
+---
+# The Mock Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=4).
+**Equipment:** War flail (d10 Long), plate suit (A1) concealing unnatural body.
+**Item:** Unnatural body (Bone/Skin composition, see table).
+**Steed:** Well-groomed steed (VIG 12, CLA 8, SPI 6, 2 GD).
+ 
+### Ability: Impression of Life
+**Trigger:** Deprived of needs (air, food, water, sleep, warmth, love).
+**Effect:** You do not suffer mechanical penalties, but are compelled to play aLong as if you do.
+ 
+### Passion: Imitation
+**Trigger:** Pass for human while under scrutiny.
+**Effect:** Restore SPI.
+ 
+### Unnatural Body Table
+**Input:** d6.
+1. Ivory / Leather.
+2. Bronze / Felt.
+3. Sapling branches / Silk.
+4. String / Wool.
+5. Wooden rods / Parchment.
+6. Iron chain / Clay.
+ 
+## Seer: The Chance Seer
+**Stats:** VIG 10, CLA 10, SPI 6, 3 GD.
+**Nature:** Cloaked in rotating coloured scales. Sees uncertain futures, blind to certainty. Given fully to fate.
+ 
+## Raw Text
+> Sycamore, leather, felt and strings
+> In heartless chest a soul still sings
+ 
+===END_FILE===
+---
+ID: myth_toad
+TITLE: "The Toad"
+TYPE: entity
+TAGS: [myth, nobility, hex]
+---
+# The Toad
+ 
+## Omens
+1. **The Caravan:** 12 warty guards escorting caravan of logs for Toad's castle.
+2. **The Scouts:** Two scouts report Toad's castle is built.
+3. **The Pet:** 6 guards dragging Blotch (monstrous slug) in chains. Toad grateful for help.
+4. **The Scroll:** Scroll in thorns: "Toad commends service". Reader chokes on syrup (lose d8 VIG).
+5. **The Gift:** Lone guard delivers cursed gift (see table). Curse lasts a Season.
+6. **The Demand:** 12 guards demand Knights swear to Toad or die.
+ 
+## Cast
+**The Toad (The Fat Lord):** VIG 12, CLA 5, SPI 16, 5 GD. A4 (blubbersome). Grab/Bite (d10). Charming voice.
+**Warty Guards (Jabeck):** VIG 12, CLA 10, SPI 8, 5 GD. A3 (froghelm, mail, plate). Bow (d6 Long), Halberd (d10 Long).
+**Blotch (Pet Slug):** VIG 17, CLA 5, SPI 2, 5 GD. A4. Maw (3d8). Sad/Hungry.
+ 
+### Baleful Gifts
+**Input:** d6.
+1. Apple pie / Deathly sleep.
+2. Froghelm (A1) / Loss of speech.
+3. Wooden flute / Hideous face.
+4. Silver mirror / Loss of vision.
+5. Woollen scarf / Total memory loss.
+6. Copper mug / Loss of hearing.
+ 
+## Raw Text
+> In honeyed words a fat and charmsome lord
+> In poisoned gifts a bloaty malice stirred
+ 
+===END_FILE===
+---
+ID: knight_mask
+TITLE: "The Mask Knight"
+TYPE: entity
+TAGS: [knight, class, disguise]
+---
+# The Mask Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Splittingaxe (d10 Long), mail (A1), masked helm (A1).
+**Item:** Star ink (writing only visible under starlight).
+**Steed:** Silver steed (VIG 12, CLA 8, SPI 5, 4 GD).
+ 
+### Ability: Thousand Faces
+**Trigger:** Touch a person.
+**Effect:** You can assume their face. Body and voice remain unchanged.
+ 
+### Passion: Vigilance
+**Trigger:** Prevent a betrayal.
+**Effect:** Restore SPI.
+ 
+### Masked Armour Table
+**Input:** d6.
+1. Youthful / Horned.
+2. Beautiful / Two-faced.
+3. Misshapen / Blindfolded.
+4. Abstract / Scarred.
+5. Skull / Roaring.
+6. Elder / Crowned.
+ 
+## Seer: The Abacus Seer
+**Stats:** VIG 9, CLA 19, SPI 3, 3 GD.
+**Nature:** Counting on fingers/toes in unknown numbers. Predictions take time but are certain. Wants to complete calculations.
+ 
+## Raw Text
+> Now you call for truth from me?
+> I'll offer not which cannot be
+ 
+===END_FILE===
+---
+ID: myth_colossus
+TITLE: "The Colossus"
+TYPE: entity
+TAGS: [myth, giant, hex]
+---
+# The Colossus
+ 
+## Omens
+1. **The Carver:** Elderly sculptor carving cliff face. Seeking immortality.
+2. **The Quake:** Earth shakes across Realm as Colossus awakes.
+3. **The Ruins:** Crushed stone house, bombarded with stones.
+4. **The Hunter:** Hammer Knight seeking to stop Colossus.
+5. **The Battle:** Mercenaries fighting Colossus, unable to harm stone body.
+6. **The Rest:** Colossus leans against mountain, collapses into heap, merging with rock. Covered in moss.
+ 
+## Cast
+**The Colossus (Woken from Rock):** VIG 19, CLA 3, SPI 2, 6 GD. A4 (Structure). Crush (2d12) or Sweep (d12 Blast). Driven by strange behaviour (Loves/Hates specific things, e.g., Loves Fire / Hates Darkness).
+**The Hammer Knight (Lansheigh):** VIG 14, CLA 5, SPI 6, 7 GD. A3 (spiked plate). Maul (2d10 Slow), siege bombs (d8 Blast). Sworn to silence on questions.
+**Besieger Mercenary:** VIG 13, CLA 7, SPI 7, 5 GD. A3. Blade (2d6 Hefty), towershield.
+ 
+## Raw Text
+> A legacy hewn in living rock
+> A life that should not be
+ 
+===END_FILE===
+---
+ID: knight_bone
+TITLE: "The Bone Knight"
+TYPE: entity
+TAGS: [knight, class, trade]
+---
+# The Bone Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Needledagger (d6, +d6 vs armoured), jagged buckler (d4, A1).
+**Item:** Box of bones (Sorted by specific criteria, e.g., Age/Size).
+**Steed:** Marsh steed (VIG 12, CLA 8, SPI 5, 3 GD, moves effortlessly on bog).
+ 
+### Ability: Bone Magnate
+**Trigger:** Make a genuine trade (bone for bone).
+**Effect:** Learn something about the bone's origin or owner.
+ 
+### Passion: Acumen
+**Trigger:** Come out better from a bargain.
+**Effect:** Restore SPI.
+ 
+## Seer: The Twilight Seer
+**Stats:** VIG 10, CLA 10, SPI 14, 2 GD.
+**Nature:** Elderly/incoherent by day, Youthful/radiant by night. Sees moments between events (travel/rest). Wants stability (day/night transition).
+ 
+## Raw Text
+> Ribble rabble, ronky donk, they bounce a duckle dine
+> Clatter clink, clanky tank, a rib, a skull, a spine
+ 
+===END_FILE===
+---
+ID: myth_fortress
+TITLE: "The Fortress"
+TYPE: entity
+TAGS: [myth, structure, hex]
+---
+# The Fortress
+ 
+## Omens
+1. **The Prophecy:** Thorn Seer proclaims invasion of scuttling monsters.
+2. **The Claim:** Thorn Seer reclaims lost fortress (Myth Hex) as sanctuary.
+3. **The Scouts:** 3 claw swarm cutters scouting. Scutter underground if seen.
+4. **The Refugees:** Smith and apprentices fleeing Fortress (Seer demanded impossible iron walls).
+5. **The Invasion:** Thorn Seer announces invasion. Hordes attack Fortress (Seer's creations).
+6. **The Demand:** Invasion defeated. Thorn Seer demands to rule Realm from Fortress.
+ 
+## Cast
+**The Thorn Seer:** VIG 9, CLA 16, SPI 14, 3 GD. A2 (thorn body). Spined mace (d8 Hefty). Sees pain.
+**Claw Swarm Cutter:** VIG 9, CLA 9, SPI 3, 3 GD. A1. Claws (2d6), Acid (d8). Cunning instinct (e.g., Burrow, Scatter, Camouflage).
+**Claw Swarm Hulk:** VIG 15, CLA 5, SPI 5, 6 GD. A2. Great claws (2d8). Blunt instinct.
+ 
+## Raw Text
+> A cage in stone, all thorned and vast
+> Disguise a scheme in shadows cast
+ 
+===END_FILE===
+ 
+---
+ID: knight_salt
+TITLE: "The Salt Knight"
+TYPE: entity
+TAGS: [knight, class, sea]
+---
+# The Salt Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Spined mace (d8 Hefty), javelin (d6), coraline mail (A1).
+**Item:** Everflask (Contains endless supply of fresh water, see table).
+**Steed:** Scaled steed (VIG 12, CLA 8, SPI 5, 3 GD).
+ 
+### Ability: Inspire Ire
+**Trigger:** End of your turn.
+**Effect:** Until next turn, enemies attacking targets other than you lose d10 SPI after the Attack resolves.
+ 
+### Passion: Mettle
+**Trigger:** Accept a non-combat challenge with the odds set against you.
+**Effect:** Restore SPI.
+ 
+### The Everflask Table
+**Input:** d6.
+1. Leather pouch / Thirst: A story.
+2. Brass horn / A blade.
+3. Twisted silver / A small creature.
+4. Mottled stone / Delicious fruit.
+5. White wood / Honey.
+6. Frosted glass / Music.
+ 
+## Seer: The Bright Seer
+**Stats:** VIG 12, CLA 14, SPI 14, 3 GD.
+**Nature:** Booming optimism. Controls fire (visions). Wants controlled burning of the world.
+ 
+## Raw Text
+> Saline stink adwells in every depth
+> Matters not how still the mirrow’s breadth
+ 
+===END_FILE===
+---
+ID: myth_citadel
+TITLE: "The Citadel"
+TYPE: entity
+TAGS: [myth, structure, hex]
+---
+# The Citadel
+ 
+## Omens
+1. **The Silhouette:** Teetering Citadel on horizon. Seers warn against it.
+2. **The Fugitive:** Nearest Seer seeking new Sanctum to hide from Watcher.
+3. **The Hounds:** 4 Iron hounds scouring land for Seers.
+4. **The Warning:** Watcher seeks out Seers, warning against interference with destiny.
+5. **The Crash:** Glowing orb explodes. Immolated Seer bursts forth, screaming and burning (d6 VIG loss/round).
+6. **The Light:** Citadel floods Realm with white light. Seers scream. Citadel vanishes.
+ 
+## Cast
+**The Watcher (Setizi):** VIG 12, CLA 17, SPI 15, 8 GD. A1 (silver mail). Glassy Longsword (2d8 Hefty), Crystal lantern (Hazy view of visited location, light pains Seers). Protecting destined future.
+**Iron Hound:** VIG 10, CLA 12, SPI 2, 2 GD. A3 (metal). Forged jaws (d8).
+**Immolated Seer:** VIG 10, CLA 7, SPI 7, 6 GD. Anguished flames (d8 Blast).
+ 
+### Destined Future
+**Input:** d6.
+1. Ruler of the Realm / Must die next Season.
+2. A Seer / Must leave the Realm.
+3. A Company member / Must be imprisoned in Citadel.
+4. A Knight / Must die.
+5. A Vassal / Must find the City.
+6. A courtier / Must rule the Realm.
+ 
+## Raw Text
+> A watcher yond our earthly sight
+> Beyond the reach of falcon’s flight
+ 
+===END_FILE===
+---
+ID: knight_violet
+TITLE: "The Violet Knight"
+TYPE: entity
+TAGS: [knight, class, light]
+---
+# The Violet Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Grand mace (d10 Long), mail (A1), reflective scale (A1).
+**Item:** Flattering handmirror (shows viewer's ideal vision of self).
+**Steed:** Nameless steed (VIG 12, CLA 8, SPI 4, 1 GD, see table).
+ 
+### Ability: Light Beyond Light
+**Trigger:** Hold a metal object.
+**Effect:** Object emits bright light visible only to you and small insects/animals (bees, butterflies, hedgehogs).
+ 
+### Passion: Positivity
+**Trigger:** Raise somebody's mood.
+**Effect:** Restore SPI.
+ 
+### A Steed Without A Name
+**Input:** d6.
+1. Seer's orders / Cannot utter a sound.
+2. It frightens you / Cannot ride through water.
+3. Word forgotten / More comfortable at night.
+4. Can't speak it / Arrows cannot harm it.
+5. Dies when named / Can ride on sea water.
+6. Name has power / Other steeds show fealty.
+ 
+## Seer: The Gut Seer
+**Stats:** VIG 10, CLA 2, SPI 2, 1 GD.
+**Nature:** Pulsing fleshy mass. Entrails form guiding shapes. Wants to do duty.
+ 
+## Raw Text
+> A lightless glow, from neath a dream
+> Illuminates the fabric’s seam
+ 
+===END_FILE===
+---
+ID: myth_catacomb
+TITLE: "The Catacomb"
+TYPE: entity
+TAGS: [myth, undead, hex]
+---
+# The Catacomb
+ 
+## Omens
+1. **The Tree:** Heap of warm, misshapen bones beneath wilting tree.
+2. **The Stair:** Narrow stair under black tree. 3 branches, each with lurking Boneborn.
+3. **The River:** Grinding sound. River of bones rushes toward water.
+4. **The Arena:** Ground opens. Knights trapped in bone arena. Must survive 3 waves of d6 Boneborn.
+5. **The March:** 3 warbands of Bones at Arms march to punish living.
+6. **The Slayer:** Bone Slayer challenges all to duel. Losers banished to bone prison. Defeat releases prisoners.
+ 
+## Cast
+**Boneborn:** VIG 10, CLA 10, SPI 5, 4 GD. A2 (bone form). Jealous of living.
+**Bones at Arms:** VIG 10, CLA 6, SPI 6, 4 GD. A2. Bonehammer (d8 Hefty), shield.
+**The Bone Slayer:** VIG 15, CLA 14, SPI 11, 8 GD. A3. Bonebreaker (2d10 Long, unusable by living).
+ 
+### Boneborn Forms
+**Input:** d6.
+1. Winged (Fly) / Bone maul (d10).
+2. Clawed (Burrow) / Shoulder blade (2d6).
+3. Extra bones (VIG 15) / Deadtouch (2d12 Slow).
+4. Bone shield (A1) / Fire burst (d8 Blast).
+5. Piecemeal (Immune ranged) / Spring slash (d8, free move).
+6. Sprawling (Roll twice on attack) / Spine javelins (d6, 2/turn).
+ 
+## Raw Text
+> Under skarny bough a world beneath
+> Bygone souls acraw in furied grief
+ 
+===END_FILE===
+---
+ID: knight_cosmic
+TITLE: "The Cosmic Knight"
+TYPE: entity
+TAGS: [knight, class, celestial]
+---
+# The Cosmic Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Strange crossbow (see table).
+**Item:** Echostone (Records/repeats one phrase).
+**Steed:** Boneless steed (VIG 10, CLA 8, SPI 5, 3 GD, squeezes through head-sized gaps).
+ 
+### Ability: Celestial Retreat
+**Trigger:** While seeing sky, focus for one minute.
+**Effect:** Vanish to sanctuary beyond reality. Leave glowing stone. Return to stone at any time.
+ 
+### Passion: Constellations
+**Trigger:** Point to stars and tell new person about them.
+**Effect:** Restore SPI.
+ 
+### Strange Crossbow Table
+**Input:** d6.
+1. Handheld (d6) / Cannot shoot in dark.
+2. Lightwood (d8 Hefty) / Only you can shoot it.
+3. Repeating (d8 Long) / Extremely loud clunk.
+4. Double (2d6 Long) / No bolts required.
+5. Bronze (2d8 Slow) / Very painful wounds.
+6. Ironwood (d10 Slow) / Usable in melee.
+ 
+## Seer: The Rose Seer
+**Stats:** VIG 5, CLA 8, SPI 6, 1 GD.
+**Nature:** Head of pink flesh-petals. Whispers guidance as ugly poetry. Wants everyone to suffer just enough to enjoy pleasure.
+ 
+## Raw Text
+> Countless lights dotted in night’s veil
+> To them, each one a glad or shameful tale
+ 
+===END_FILE===
+---
+ID: myth_hound
+TITLE: "The Hound"
+TYPE: entity
+TAGS: [myth, beast, hex]
+---
+# The Hound
+ 
+## Omens
+1. **The Missing:** Search party for missing elderly woman.
+2. **The Remains:** Patch of blood and flesh (remains of woman).
+3. **The Infection:** Heap of deer remains. CLA Save or gain "The Hound Within" (compulsion to sniff/paw).
+4. **The Shadow:** Hound in Shadow attacks those in darkness. Ignores those with Hound Within (unless attacked).
+5. **The Wind:** Hound on the Wind attacks, targeting those with Hound Within.
+6. **The Flesh:** Hound in Flesh bursts from heap. Fights to death.
+ 
+## Cast
+**Hound in Shadow:** VIG 5, CLA 16, SPI 5, 5 GD. A2. Jaws (2d8). Immune to harm in darkness.
+**Hound on the Wind:** VIG 10, CLA 16, SPI 5, 7 GD. A2. Jaws (2d8). Moves/Attacks twice per turn.
+**Hound in Flesh:** VIG 15, CLA 16, SPI 5, 7 GD. A2. Attacks by those with Hound Within Impaired.
+ 
+### The Hound Within
+**Input:** d6.
+1. Day: Enhanced smell / Night: Cannot use hands.
+2. Day: Enhanced hearing / Night: Unable to speak.
+3. Day: Enhanced vision / Night: Fear of fire.
+4. Day: Eat raw/rotten meat / Night: CLA Save or wander wilderness.
+5. Day: Animals respect you / Night: Howl at moon.
+6. Day: Powerful jaws (d8) / Night: Cannot sleep indoors.
+ 
+## Raw Text
+> The eye of a slayer, the nose of a hound
+> In wind and flesh, a hunter unbound
+ 
+===END_FILE===
+ 
+---
+ID: knight_temple
+TITLE: "The Temple Knight"
+TYPE: entity
+TAGS: [knight, class, peace]
+---
+# The Temple Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Spear (d8 Hefty), white cloak, broadshield (d4, A1).
+**Item:** Mummified snake (Reptiles will not attack anyone holding it. Speaks to mind, see table).
+**Steed:** Moorland steed (VIG 11, CLA 9, SPI 6, 3 GD).
+ 
+### Ability: Site of Respite
+**Trigger:** Occupy a building.
+**Effect:** Declare peaceful ground. No being within can attack another until you leave.
+ 
+### Passion: Quietude
+**Trigger:** Bring peaceful order to a chaotic place.
+**Effect:** Restore SPI.
+ 
+### The Snake Speaks Table
+**Input:** d6.
+1. Voice: Pitiful / Agenda: Your death.
+2. Mocking / Order.
+3. Sinister / Bloodshed.
+4. Benevolent / Peace.
+5. Ancient / Chaos.
+6. Loving / Your ambitions.
+ 
+## Seer: The Tapestry Seer
+**Stats:** VIG 9, CLA 17, SPI 4, 1 GD.
+**Nature:** Silken silhouette. Murmurs. Sees all connections. Wants simplicity without disturbing fate.
+ 
+## Raw Text
+> No blood or cry
+> Not here, not today
+ 
+===END_FILE===
+---
+ID: myth_glade
+TITLE: "The Glade"
+TYPE: entity
+TAGS: [myth, nature, hex]
+---
+# The Glade
+ 
+## Omens
+1. **The Trap:** Calm glade, silence. 3 empty plinths (black/grey/white). Cannot leave until offering left on each.
+2. **The Aid:** White Stone Hunter asks "Whom shall I aid?". Performs kind act for donor.
+3. **The Return:** White offering returned.
+4. **The Punishment:** Grey Stone Hunter asks "Whom shall I punish?". Inflicts punishment (see table) until Spring.
+5. **The Return:** Grey offering returned.
+6. **The Kill:** Black Stone Hunter asks "Whom shall I kill?". Attempts to kill target. Offering left on body.
+ 
+## Cast
+**White Stone Hunter (Serephyllea):** VIG 12, CLA 12, SPI 16, 8 GD. A2. Spear (1-3d10).
+**Grey Stone Hunter (Gravok):** VIG 13, CLA 15, SPI 12, 8 GD. A2. Bow (1-3d8).
+**Black Stone Hunter (Therenas):** VIG 13, CLA 16, SPI 17, 8 GD. A2-4. Scythe (2d10/2d8 Blast).
+ 
+### Arbitrary Punishment
+**Input:** d6.
+1. Best clothes stolen / Eyes fall out.
+2. Hiccups / Constant coldness.
+3. Spoiled food / Loss of taste.
+4. Slippery hands / Broken limb.
+5. Hair falls out / Severed hand.
+6. Annoying insects / Teeth fall out.
+ 
+## Raw Text
+> Amid the stillen halt and hush
+> A poison blooms in grove alush
+ 
+===END_FILE===
+---
+ID: knight_fox
+TITLE: "The Fox Knight"
+TYPE: entity
+TAGS: [knight, class, trickster]
+---
+# The Fox Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Jagged blade (d8 Hefty), buckler (d4, A1), foxhelm (A1), hidden blade (d6, see table).
+**Item:** Sealing wax (Renders container watertight/airtight).
+**Steed:** Tunnel steed (VIG 10, CLA 10, SPI 5, 2 GD, darkvision).
+ 
+### Ability: Cunning Ploy
+**Trigger:** Once per day.
+**Effect:** Declare current self an illusion (disperse to smoke). Real self is watching from nearby safe place.
+ 
+### Passion: Wits
+**Trigger:** Avoid being tricked or outwitted.
+**Effect:** Restore SPI.
+ 
+### A Hidden Blade
+| d6 | Appearance | Property || :--- | :--- | :--- || 1 | Twisted ebony | Hidden in shadow || 2 | Feather motif | Thrown any distance || 3 | Tapered | +2d10 vs one who trusts you || 4 | Fang-like | Appears as twig || 5 | Wavy | Splits into two || 6 | Etched bone | Harmless to you |
+## Seer: The Needle Seer
+**Stats:** VIG 8, CLA 14, SPI 6, 4 GD.
+**Nature:** Slender, festooned with blades. Shows tears in reality (what could have been). Wants to make people feel bad.
+ 
+## Raw Text
+> A whimsied whirl, a crafty guise
+> The truth revealed as sour surprise
+ 
+===END_FILE===
+---
+ID: myth_tournament
+TITLE: "The Tournament"
+TYPE: entity
+TAGS: [myth, event, hex]
+---
+# The Tournament
+ 
+## Omens
+**Trigger:** From Omen 3, horn heard across Realm. Omens occur at Seat of Power.
+1. **The Boast:** Tinkerer (Nimiod) boasts Clockwork Knights will defeat all.
+2. **The Call:** Messenger calls Company to represent Realm.
+3. **The Parade:** Nimiod parades Clockwork Knights. Company presented.
+4. **The Melee:** Mounted battle vs Clockwork Knights. Elimination on Mortal Wound.
+5. **The Brawl:** Fight on foot, no shields.
+6. **The Duel:** One Knight vs Clockwork Champion.
+ 
+## Cast
+**Nimiod:** VIG 10, CLA 15, SPI 12, 2 GD. Fine sword (2d6). Genius tinkerer.
+**Clockwork Knight:** VIG 13, CLA 5, SPI 5, 6 GD. A4 (metal body/plate). Fine sword (2d6), shield. Follows commands.
+**Clockwork Champion:** Knows Feats. Fine Longsword (2d8 Hefty). Will disobey to preserve self/honour.
+ 
+### Clockwork Quirks
+| d6 | Strength | Weakness/Quirk || :--- | :--- | :--- || 1 | Ignore Mortal Wounds | Boasts || 2 | Cannot be disarmed | Strict etiquette || 3 | Human-like voice | Cunning fighter || 4 | Mean arm (Smite) | Intimidating || 5 | Real skull head | Showboats || 6 | Extra fast (Deny) | Stiff movement |
+## Raw Text
+> Tween cog and blade, a challenge thrown
+> Blood must beat bronze, its mettle shown
+ 
+===END_FILE===
+---
+ID: knight_gull
+TITLE: "The Gull Knight"
+TYPE: entity
+TAGS: [knight, class, wind]
+---
+# The Gull Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Hooked blade (d8 Hefty), patchwork mail (A1, see table), patterned cloak.
+**Item:** Blinding bracelet (Wearer is blind while worn).
+**Steed:** Tempestuous steed (VIG 12, CLA 8, SPI 7, 4 GD).
+ 
+### Ability: Guiding Gust
+**Trigger:** Touch vertical surface.
+**Effect:** Ascend to top on burst of wind.
+ 
+### Passion: Joy
+**Trigger:** Deliver good news.
+**Effect:** Restore SPI.
+ 
+### Patchwork Armour Sources
+| d6 | Source | Material || :--- | :--- | :--- || 1 | Fallen soldiers | Flexible leather || 2 | Ancient tomb | Sleek bronze || 3 | Shipwreck | Polished steel || 4 | Fighting pit | Brass studs || 5 | Defeated Knight | Padded coat || 6 | Thankful militia | Thick furs |
+## Seer: The Floating Seer
+**Stats:** VIG 12, CLA 12, SPI 14, 2 GD.
+**Nature:** Bloated, buoyant. Sees through eyes of flying beings. Hates being grounded (agony). Wants to float to stars.
+ 
+## Raw Text
+> Tattered wing, loath’ed cry, born of ugly bill
+> And yet what heights, what lofty sights, this skwarmew captures still
+ 
+===END_FILE===
+---
+ID: myth_bull
+TITLE: "The Bull"
+TYPE: entity
+TAGS: [myth, nature, hex]
+---
+# The Bull
+ 
+## Omens
+1. **The Parade:** Leaf-covered acolytes parade newborn green bull. Taking to secret location.
+2. **The Blessing:** Realm rejoices in Blessing of the Bull (see table).
+3. **The Death:** Bull found dead. Children blame Knights. Blessings lost.
+4. **The Accusation:** 5 leaf-clad guards charge Knights for killing Bull.
+5. **The Fiends:** Pair of winged fiends harassing horse. Flee if confronted.
+6. **The Truth:** Lone guard fending off 5 winged fiends. If saved, vouches for Knights.
+ 
+## Cast
+**The Bull:** VIG 10, CLA 5, SPI 3, 2 GD. Horns (d6). Docile.
+**Leaf-clad Guard (Solas):** VIG 11, CLA 8, SPI 8, 4 GD. A2. Guisarme (d10). Solas has great guisarme (2d10 Slow).
+**Winged Fiends:** VIG 8, CLA 17, SPI 4, 5 GD. A1 (wings). Bladed arms (2d6). Sow misery.
+ 
+### Blessings of the Bull
+| d6 | Blessing A | Blessing B || :--- | :--- | :--- || 1 | Drinks taste better | Perfect weather || 2 | Bread stays warm | Lost items return || 3 | Heavenly dreams | Fruit flourishes || 4 | Sick healed | Fish leap into nets || 5 | Wounds mended | Music sweeter || 6 | Wind smells great | Aurora |
+## Raw Text
+> The bless’d are bound for tragic end
+> While jealous eyes make wrath their friend
+ 
+===END_FILE===
+ 
+---
+ID: knight_magpie
+TITLE: "The Magpie Knight"
+TYPE: entity
+TAGS: [knight, class, perception]
+---
+# The Magpie Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Heavy cudgel (d8 Hefty), 3 javelins (d6).
+**Item:** Twofold pouch (Items placed inside can only be retrieved by you), Memento (see table).
+**Steed:** Ironclad steed (VIG 13, CLA 5, SPI 5, 2 GD, A1, d6 trample).
+ 
+### Ability: Scourer's Sense
+**Trigger:** Search for something specific.
+**Effect:** Know instantly if it is in your immediate surroundings or not.
+ 
+### Passion: Heraldry
+**Trigger:** Announce the owner of a banner, crest, or coat of arms.
+**Effect:** Restore SPI.
+ 
+### Treasured Memento
+| d6 | Item | Association || :--- | :--- | :--- || 1 | Dried flower | Great victory || 2 | Sword hilt | Shameful defeat || 3 | Pearl | Happy place || 4 | Banner scrap | Sorrowful place || 5 | Old coin | Loved one || 6 | Dog's collar | Hated one |
+## Seer: The Lens Seer
+**Stats:** VIG 10, CLA 14, SPI 6, 2 GD.
+**Nature:** Squat body, head is refractive orb of liquid glass. Knows true fate of things examined closely. Wants interesting things to examine.
+ 
+## Raw Text
+> Keen eyes see what cold heart seeks
+> This bird never bare of beak
+ 
+===END_FILE===
+---
+ID: myth_hydra
+TITLE: "The Hydra"
+TYPE: entity
+TAGS: [myth, monster, hex]
+---
+# The Hydra
+ 
+## Omens
+1. **The Survivor:** Broken Candle Knight tells of Hydra rising from stagnant pool. It cannot be killed.
+2. **The Awakening:** Wide hole leads to damp darkness. Disturbance awakens Hydra.
+3. **The Ruins:** Hydra screeches from shattered outpost. Mocks attackers.
+4. **The Fire:** Fire spreads in trees. Hydra waits in ambush (now breathes fire).
+5. **The Wings:** Roar from above. Hydra descends (now winged).
+6. **The Cure:** Weakened Hydra crawls to bubbling spring. Submersion turns water black. Hydra gone.
+ 
+## Cast
+**The Hydra (Punishment for Past Sins):** VIG 19, CLA 10, SPI 7, 12 GD. A5 (unbreakable). Onslaught of heads (2d10 Blast). Cannot be harmed (regenerates). One head holds treasure (see table).
+**The Candle Knight (Aluane):** VIG 14, CLA 13, SPI 8, 8 GD. A3. Longsword (2d8 Hefty). Can whisper message into candle to deliver anywhere in Realm.
+ 
+### Treasures of the Hydra
+**Input:** d6.
+1. Golden Crown.
+2. Bejewelled Sceptre.
+3. Engraved Longsword.
+4. Luminous Chalice.
+5. Ancient Spear.
+6. Runic Shield.
+ 
+## Raw Text
+> Our best fall before their time
+> The worst shall live forever
+ 
+===END_FILE===
+---
+ID: knight_reliquary
+TITLE: "The Reliquary Knight"
+TYPE: entity
+TAGS: [knight, class, spirit]
+---
+# The Reliquary Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** War sickle (d8 Hefty), gambeson (A1), carved plate (A1).
+**Item:** Sack of history tomes, Treasured Reliquary (see table).
+**Steed:** Bearded steed (VIG 12, CLA 8, SPI 6, 3 GD).
+ 
+### Ability: Spirit Call
+**Trigger:** Once per day.
+**Effect:** Release invisible spirit from reliquary. Follows one specific command. Acts as invisible/immaterial human.
+ 
+### Passion: Tradition
+**Trigger:** Ensure a tradition is thoroughly honoured.
+**Effect:** Restore SPI.
+ 
+### Treasured Relic
+| d6 | Body Part | Source || :--- | :--- | :--- || 1 | Hand | Forgotten Seer || 2 | Skull | Glorious Knight || 3 | Heart | Deposed monarch || 4 | Ribs | Pitied monster || 5 | Eye | Hateful bird || 6 | Unknown organ | Ancient reptile |
+## Seer: The Predator Seer
+**Stats:** VIG 16, CLA 17, SPI 12, 9 GD.
+**Nature:** Animalistic woman, powerful body. Perfect guide to hunting. Wants to sharpen Knights into predators.
+ 
+## Raw Text
+> Noble rest, earned in life, final breath
+> Echos ring, they live on, spurning death
+ 
+===END_FILE===
+---
+ID: myth_spire
+TITLE: "The Spire"
+TYPE: entity
+TAGS: [myth, fungus, hex]
+---
+# The Spire
+ 
+## Omens
+1. **The Gatherer:** Finely-dressed gatherer complains of lean harvest. Predicts fungal spire.
+2. **The Haze:** Yellow spore haze. Inhaling causes world to bend/breathe.
+3. **The Serfs:** 6 Fungal Serfs gathering food for Spire. Take without asking, no will to fight.
+4. **The Stargazers:** Two sisters in round cabin, hallucinating that the other is a shapeshifter.
+5. **The Guardian:** Fungal Knight shambles forward. No appetite to fight, wants to rot.
+6. **The Collapse:** Squelch heard across Realm. Spire and fungal beings collapse into sludge. Bountiful fungus next season.
+ 
+## Cast
+**The Spire:** 9 GD, A2 (bouncy). Spores grant pleasing hallucinations (friends) or nightmares (foes).
+**Fungal Serf:** VIG 10, CLA 5, SPI 5, 1 GD. Heavy fist (d6).
+**Fungal Knight:** VIG 13, CLA 7, SPI 8, 3 GD. A2 (mouldy mail). Fungal mace (d8 Hefty).
+ 
+### Fungal Serf Appearance
+| d6 | Appearance | Trait || :--- | :--- | :--- || 1 | Huge head | Wheezing spores || 2 | Spindly limbs | Curious || 3 | Bloated body | Diligent || 4 | Broad cap | Warm || 5 | Gills | Proud || 6 | Tall | Eating own body |
+## Raw Text
+> The pinnacle of stool and shroom
+> Grown to fall in putrid bloom
+ 
+===END_FILE===
+---
+ID: knight_vulture
+TITLE: "The Vulture Knight"
+TYPE: entity
+TAGS: [knight, class, divination]
+---
+# The Vulture Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Black axe (d10 Long, +d10 vs Wounded), sinister mail (A1, see table).
+**Item:** Spidernip nuts (Stimulant for insects/arachnids, restock each Season).
+**Steed:** Bright-eyed steed (VIG 12, CLA 9, SPI 5, 2 GD).
+ 
+### Ability: Carrion Casting
+**Trigger:** Spread innards of recently dead.
+**Effect:** Ask one question. Innards point in helpful direction.
+ 
+### Passion: Thrift
+**Trigger:** Make good use of something discarded.
+**Effect:** Restore SPI.
+ 
+### Sinister Armour
+| d6 | Base | Detail || :--- | :--- | :--- || 1 | Burned mail | Bat wing motif || 2 | Blackened bronze | Blood red embroidery || 3 | Bloody gambeson | Darker shadow || 4 | Jagged iron strips | Tattered cloak || 5 | Spiked leather | Embedded bones || 6 | Barbed scales | Tiny skulls |
+## Seer: The Hymn Seer
+**Stats:** VIG 7, CLA 10, SPI 13, 5 GD.
+**Nature:** Skeleton in white robes. Guides via dreary song. Wants to bring world to sorrowful close.
+ 
+## Raw Text
+> Gutly ribbons, blood’s sweet dance
+> The future calls in gory trance
+ 
+===END_FILE===
+---
+ID: myth_sprite
+TITLE: "The Sprite"
+TYPE: entity
+TAGS: [myth, water, hex]
+---
+# The Sprite
+ 
+## Omens
+1. **The Warning:** Drowsy fisherman warns "Old Girl o' the Pond" cannot be trusted.
+2. **The Meeting:** Sprite (Old woman/Child voice) emerges. Takes liking to a Knight.
+3. **The Question:** Sprite asks beloved to name object they want. Insists on answer.
+4. **The Rivals:** Two watery beings fight, claiming Sprite's love.
+5. **The Gift:** Green arms emerge from lake holding requested item. Sprite attacks if refused.
+6. **The Reclaim:** Sprite returns, angry, to reclaim gift by force.
+ 
+## Cast
+**The Sprite (Wrundl):** VIG 12, CLA 16, SPI 16, 7 GD. A1 (weed robe). Water blade (3d6) or arrow (2d6). Intense fleeting love.
+**Watery Being:** VIG 10, CLA 4, SPI 4, 3 GD. Drowned people. Long for Sprite's love.
+**Drowsy Fisherman (Mucks):** VIG 12, CLA 6, SPI 10, 4 GD. A1. Plans petty revenge.
+ 
+### Watery Creations
+| d6 | Sound | Form/Effect || :--- | :--- | :--- || 1 | Gurgling | Lashing weeds (2d6) || 2 | Splashing | Bloated limbs (d8) || 3 | Sloshing | Rusted axe (d8) || 4 | Frothing | River rock (2d10 slow) || 5 | Moaning | Choking hands (d6) || 6 | Roaring | Cold scream (d6 blast) |
+## Raw Text
+> Sodden gifts from spriggle wylde
+> Atop a crone, below a child
+ 
+===END_FILE===
+ 
+---
+ID: knight_free
+TITLE: "The Free Knight"
+TYPE: entity
+TAGS: [knight, class, liberation]
+---
+# The Free Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=5).
+**Equipment:** Hooked flail (d8 Hefty), hexshield (d4, A1, see table).
+**Item:** Tempest chest (Draws storm within to calm weather. Releases storm if opened).
+**Steed:** Grassy steed (VIG 11, CLA 8, SPI 5, 2 GD, blends into Long grass).
+ 
+### Ability: Bond Breaker
+**Trigger:** Strike a chain or lock with a metal weapon.
+**Effect:** It shatters loudly.
+ 
+### Passion: Liberty
+**Trigger:** Release somebody from an unwanted bond.
+**Effect:** Restore SPI.
+ 
+### The Hexshield
+| d6 | Property | Alternate Property || :--- | :--- | :--- || 1 | Ineffective vs Axes | Can be thrown (d6) || 2 | Arrows | Fall safely from any height || 3 | Birds | Pattern pains Seers || 4 | Spears & Polearms | Always floats || 5 | Swords | Blocks all sound || 6 | Blunt arms | Bladed (d6 in melee) |
+## Seer: The Roaming Seer
+**Stats:** VIG 10, CLA 14, SPI 6, 4 GD.
+**Nature:** Tall, cloaked, leaves sand trail. Offers no guidance but accompanies worthy Knights. Wants to see everything.
+ 
+## Raw Text
+> No soul, no mind, should live acaged or chained
+> Yet freedom won is never quietly gained
+ 
+===END_FILE===
+---
+ID: myth_hole
+TITLE: "The Hole"
+TYPE: entity
+TAGS: [myth, underground, hex]
+---
+# The Hole
+ 
+## Omens
+1. **The Opening:** Hole rips open. Holfolk (Gruff) scurries out. Invisible force blocks entry from above.
+2. **The Chase:** Angry man chasing 4 Holfolk (spies?).
+3. **The Builders:** Ardwright builders hammering at great project (see table). Won't converse.
+4. **The King:** Bear-a-boar staggering, challenging animals to dispute sovereignty.
+5. **The Capture:** Holfolk dragging Bear-a-boar in chains back to Hole.
+6. **The Seal:** Ardwrights seal up the Hole. Work completed.
+ 
+## Cast
+**Holfolk:** VIG 7, CLA 7, SPI 15, 5 GD. Hide well. No fight. Want to explore.
+**Ardwright (Jade Architects):** VIG 10, CLA 15, SPI 3, 1 GD. A2 (green plate). Rockhammer (d8 Hefty, fuses natural objects).
+**Bear-a-boar:** VIG 15, CLA 12, SPI 4, 6 GD. A2 (bulky). Claws (2d8). Wants respect/fear.
+ 
+### Ardwright Projects
+| d6 | Project | Material || :--- | :--- | :--- || 1 | Watchtower | Branches || 2 | Great hall | Rocks || 3 | Statue | Grass || 4 | Ship | Mud || 5 | Mausoleum | Bones || 6 | Bridge | Petals |
+## Raw Text
+> In mud and root, from sunken land
+> Careful hands plan works agrand
+ 
+===END_FILE===
+---
+ID: knight_silk
+TITLE: "The Silk Knight"
+TYPE: entity
+TAGS: [knight, class, weaving]
+---
+# The Silk Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Delicate halberd (d10 Long), woven coat (A1, no fire protection).
+**Item:** Intricate brass puzzle (impossible).
+**Steed:** Young steed (VIG 9, CLA 8, SPI 6, 1 GD, see table).
+ 
+### Ability: Adamant Gossamer
+**Trigger:** Draw strands from mouth.
+**Effect:** Unbreakable silk string of any length. Burns to ash instantly if ignited.
+ 
+### Passion: Mercy
+**Trigger:** Accept a surrender or plea for forgiveness.
+**Effect:** Restore SPI.
+ 
+### A Young Steed
+| d6 | Distraction | Fear || :--- | :--- | :--- || 1 | Smaller animals | Other steeds || 2 | Moss | Fire || 3 | Water | Darkness || 4 | Salt | Children || 5 | Fruit | Music || 6 | Shiny things | Being alone |
+## Seer: The Crimson Seer
+**Stats:** VIG 11, CLA 14, SPI 16, 4 GD.
+**Nature:** Visible pulsing heart. Tastes blood to see desires/fates. Wants drama.
+ 
+## Raw Text
+> Judge not a knight on might and favour
+> Where silk endures, a heart can waver
+ 
+===END_FILE===
+---
+ID: myth_mist
+TITLE: "The Mist"
+TYPE: entity
+TAGS: [myth, weather, hex]
+---
+# The Mist
+ 
+## Omens
+1. **The Chill:** Cool air, thin mist. Red crows shrieking.
+2. **The Curtain:** Mist thickens (leaden curtain). Vision limited to current Hex.
+3. **The Stalkers:** 6 Horrors lurk just beyond vision. Attack isolated targets.
+4. **The Blindness:** Dense mist. Vision limited to few feet. Travel is blind.
+5. **The Friendly Fire:** Militia open fire on Company, mistaking them for horrors.
+6. **The Bell:** Dull bell clangs. Towering figure takes Seer. Mist clears leaving silvery dew.
+ 
+## Cast
+**The Mist:** Pushed back by smoke from burning bones.
+**Misguided Militia (Harlger):** VIG 10, CLA 10, SPI 8, 4 GD. A2. Bow/Axe.
+**Horror in the Mist:** VIG 7, CLA 14, SPI 4, 4 GD. A1 (cold). Claws (2d6). Fear of bells. Shifting form.
+ 
+### A Shifting Form
+| d6 | Sound | Form || :--- | :--- | :--- || 1 | Hooting | Long dragging limbs || 2 | Shrieking | Hanging wet jaw || 3 | Grinding | Huge black eyes || 4 | Weeping | Spiked prehensile tail || 5 | Gasping | Many rows of teeth || 6 | Singing | Normal pitiful human |
+## Raw Text
+> Agrime’d air a’dims the gleam
+> A realm is lost in fearful dream
+ 
+===END_FILE===
+---
+ID: knight_tiger
+TITLE: "The Tiger Knight"
+TYPE: entity
+TAGS: [knight, class, beast]
+---
+# The Tiger Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Fang blades (d6, or d8 pair), knotted coat (A1).
+**Item:** 3 phoenix feathers (Erupt in flame on impact, d8 Blast. Restock each Season).
+**Steed:** Tattooed steed (VIG 12, CLA 9, SPI 5, 5 GD, see table).
+ 
+### Ability: Bestial Renown
+**Trigger:** Defeat an animal in a contest befitting its strengths.
+**Effect:** All animals of that TYPE react favourably to you.
+ 
+### Passion: Closure
+**Trigger:** Get an answer you have been seeking.
+**Effect:** Restore SPI.
+ 
+### A Tattooed Steed
+| d6 | Tattoo Style | Origin || :--- | :--- | :--- || 1 | Abstract shapes | For service in battle || 2 | Ancient runes | Before you bought them || 3 | Unknown letters | Born that way || 4 | Skulls and bones | Happened overnight || 5 | Thunderbolts | Appeared slowly || 6 | Thorns and flowers | Seer demanded it |
+## Seer: The Dying Seer
+**Stats:** VIG 3, CLA 12, SPI 3, 1 GD.
+**Nature:** Ghostly projection on corpse. Knows details of every death. Wants everyone to die to rest.
+ 
+## Raw Text
+> You see in beasts an anarchy unfold
+> In truth, a structure strict as crowns of old
+ 
+===END_FILE===
+---
+ID: myth_gargoyle
+TITLE: "The Gargoyle"
+TYPE: entity
+TAGS: [myth, monster, hex]
+---
+# The Gargoyle
+ 
+## Omens
+1. **The Vandals:** Two lads smashing temple statues with hammer (following Seer's orders).
+2. **The Descent:** Gargoyle descends. Seeks lost item (see table). Causes argument for amusement.
+3. **The Carver:** Gargoyle carving beasts atop ruin. Two beasts watch.
+4. **The Argument:** Gargoyle argues with Seer. Claims to give them knowledge (Lie).
+5. **The Statues:** Lads from Omen 1 found petrified.
+6. **The Departure:** Gargoyle smashes his beasts. Flies to another Realm (this one is dull).
+ 
+## Cast
+**The Gargoyle (Astergrist):** VIG 14, CLA 17, SPI 12, 6 GD. A4 (stone). Claws (2d8), Tail (d10 Blast). Hates sun. Wants to bring back old things.
+**Sculpted Beast:** VIG 10, CLA 6, SPI 6, 3 GD. A3 (stone). Bite (2d8, petrifies over week, reversible by Gargoyle).
+ 
+### Lost Item
+| d6 | Item | Location || :--- | :--- | :--- || 1 | Twisted tin flute | Sinking into water || 2 | Bejewelled chess set | In Seat of Power || 3 | Huge cauldron | Seized by Seer || 4 | Map-marked shield | Buried in woods || 5 | Mummified Seer head | Hurled from peak || 6 | Crown of raw iron | Entombed in tree |
+## Raw Text
+> In hearthy glow, small joys take flight
+> Whilst bitter past doth dwell in spite
+ 
+===END_FILE===
+ 
+---
+ID: knight_leaf
+TITLE: "The Leaf Knight"
+TYPE: entity
+TAGS: [knight, class, nature]
+---
+# The Leaf Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Hooked club (d8 Hefty), verdant leather (A1 within foliage), useful stick (see table).
+**Item:** Murmur box (creates illusion of indistinct conversation when open).
+**Steed:** Patchy steed (VIG 12, CLA 5, SPI 5, 3 GD).
+ 
+### Ability: Nature's Vault
+**Trigger:** At any time.
+**Effect:** Wield branches as javelins (d6) or greatspears (d10 Long). Eat leaves as a satisfying meal.
+ 
+### Passion: Gourmet
+**Trigger:** Eat a new TYPE of fruit or vegetable.
+**Effect:** Restore SPI.
+ 
+### Useful Stick Table
+| d6 | Property A | Property B || :--- | :--- | :--- || 1 | Instantly cools liquid | Long and inconvenient || 2 | Repels insects | Dogs want it || 3 | Becomes 20ft rope when shaken | Looks like normal stick || 4 | Terrifies snakes/eels/worms | Very delicate || 5 | One end extremely sticky | Extremely flammable || 6 | Seer blessing | Works only in sunlight |
+## Seer: The Born Seer
+**Stats:** VIG 6, CLA 6, SPI 8, 1 GD.
+**Nature:** Infant with huge eyes. Destined to be most powerful Seer. Gives clumsy, unexplained guidance. Wants to go somewhere new.
+ 
+## Raw Text
+> No greater gift than bough and bush
+> All feast in verdy bountilush
+ 
+===END_FILE===
+---
+ID: myth_changeling
+TITLE: "The Changeling"
+TYPE: entity
+TAGS: [myth, shapeshifter, hex]
+---
+# The Changeling
+ 
+## Omens
+1. **The Swap:** Dove looks at Knight then flies. Changeling captures a victim (see table), stealing form/memory.
+2. **The Warning:** Elderly rider (Beltor) warns Changeling walks the Realm.
+3. **The Arrival:** Mature Knight seeks Seat of Power. If not Changeling, has good intentions.
+4. **The Door:** Fleshy door in tree trunk snaps shut instantly.
+5. **The Attack:** Two horned wolves attack random Company member to drag them away.
+6. **The Reveal:** Changeling stands in clearing. Unfolds to true form if disturbed. Flees to find passage home.
+ 
+## Cast
+**The Changeling (True Form):** VIG 10, CLA 16, SPI 17, 8 GD. A2 (shapeless). Warping touch (d8, Mortal Wound leaves victim as quivering heap).
+**Elderly Rider (Beltor):** VIG 6, CLA 6, SPI 9, 9 GD. A2. Longsword (2d8 Hefty).
+**Horned Wolves (Malicorn):** VIG 12, CLA 8, SPI 3, 3 GD. Gore/tear (2d8).
+ 
+### Chosen Victim
+| d6 | Victim | Flaw/Clue || :--- | :--- | :--- || 1 | Ruler | Cannot eat || 2 | Known Knight | Cannot drink || 3 | Known Seer | Animals hate them || 4 | Known Vassal | Children scared || 5 | Last person met | No memories || 6 | Next person met | Sunlight discomfort |
+## Raw Text
+> When eyes can lie and words beguile
+> So falsehoods gain a truthness vile
+ 
+===END_FILE===
+---
+ID: knight_glass
+TITLE: "The Glass Knight"
+TYPE: entity
+TAGS: [knight, class, vision]
+---
+# The Glass Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Two-pronged pike (d10 Long), painted mail (A1, see table).
+**Item:** Witching needle (6-inch spike, sticks into any material, removable only by you/Seer).
+**Steed:** Chestnut steed (VIG 11, CLA 8, SPI 6, 3 GD, hates spiders).
+ 
+### Ability: Touch of Glass
+**Trigger:** Place hand on surface.
+**Effect:** See through the surface.
+ 
+### Passion: Curiosity
+**Trigger:** Look somewhere you really shouldn't.
+**Effect:** Restore SPI.
+ 
+### Painted Armour Table
+| d6 | Color | Motif || :--- | :--- | :--- || 1 | Indigo | Faces || 2 | Crimson | Vines || 3 | Forest Green | Stars || 4 | Teal | Wolves || 5 | Gold | Fire || 6 | Rose | The City |
+## Seer: The Blossom Seer
+**Stats:** VIG 9, CLA 18, SPI 16, 2 GD.
+**Nature:** Woman with uncertain limbs, draped in silk. Petals of skin fall. Sees present in intense detail. Returns next year. Wants to do good.
+ 
+## Raw Text
+> Revealer of all secrets, in stark, judgemental light
+> In cold and sharpened heart lies no deceitful spite
+ 
+===END_FILE===
+---
+ID: myth_inferno
+TITLE: "The Inferno"
+TYPE: entity
+TAGS: [myth, fire, hex]
+---
+# The Inferno
+ 
+## Omens
+1. **The Heat:** Faint heat from ground.
+2. **The Fire:** Smoke rising. Crackling forest fire. Can be stopped if quick.
+3. **The Aftermath:** Burned orchard. Young farmer weeps.
+4. **The Rift:** Smouldering rift opens. Red Serpent emerges. Demands gold.
+5. **The Sinkhole:** Watchtower sinking into melting ground. Swallowed by flame.
+6. **The Hoard:** Serpent encircles pile of riches, sinking into molten earth.
+ 
+## Cast
+**The Red Serpent (Guivregule Ignis):** VIG 18, CLA 10, SPI 10, 10 GD. A4 (blazing scales). Snap (2d10), Whip (d10), Breath (3d10 Blast). Wants gold.
+**Young Farmer (Etane):** VIG 12, CLA 10, SPI 6, 2 GD. Petty belongings.
+**Watchtower Guards:** VIG 10, CLA 12, SPI 9, 3 GD. A2. Warfork (d10 Long).
+ 
+### Packed Lunch
+| d6 | Food | Drink || :--- | :--- | :--- || 1 | Meaty cake | Old wine || 2 | Spiced sausages | Medicinal tea || 3 | Thick broth | Strong mead || 4 | Raw cabbage | Apple juice || 5 | Steamed snails | Pond water || 6 | Potato bread | Lemon water |
+## Raw Text
+> Flames of greed in earth entrenched
+> In deepest soil no thirst bequenched
+ 
+===END_FILE===
+---
+ID: knight_hive
+TITLE: "The Hive Knight"
+TYPE: entity
+TAGS: [knight, class, rebirth]
+---
+# The Hive Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Rootbow (d6 Long), countless daggers (d6).
+**Item:** Tidal resin (Burn to make water still/solid, restock each Season).
+**Steed:** Hooded steed (VIG 11, CLA 10, SPI 5, 3 GD).
+ 
+### Ability: Chrysalent Rebirth
+**Trigger:** At night. Immerse self in cocoon (requires condition/material, see table).
+**Effect:** Emerge after full day with VIG restored and physical harm cured (except death).
+ 
+### Passion: Community
+**Trigger:** Leave a community better off than when you arrived.
+**Effect:** Restore SPI.
+ 
+### Forming the Cocoon Table
+| d6 | Method A | Method B || :--- | :--- | :--- || 1 | Fed beyond full | Complete darkness || 2 | Thoroughly cleaned | Submersion in water || 3 | Sung to sleep | Milk and honey || 4 | Set alight | Choking smoke || 5 | Buried in soil | Blanket of leaves || 6 | Beheaded | Burning embers |
+## Seer: The Skin Seer
+**Stats:** VIG 14, CLA 7, SPI 7, 4 GD.
+**Nature:** Patchwork of murdered Seers. Twisted visage. Sees thoughts of betrayal. Wants to punish disrespect.
+ 
+## Raw Text
+> A bed of gluous, parchly cloth, a coat of stickly sleen
+> Emerged in morning good as new, chirurgery unseen
+ 
+===END_FILE===
+---
+ID: myth_harp
+TITLE: "The Harp"
+TYPE: entity
+TAGS: [myth, artifact, hex]
+---
+# The Harp
+ 
+## Omens
+1. **The Wind:** Rustling branches sound like music.
+2. **The Carpenter:** Frail carpenter rummaging for wood for great project.
+3. **The Attack:** Carpenter fighting 6 wood centipedes.
+4. **The Music:** Glittering music in air (see table for effect).
+5. **The Gift:** Carpenter on cart with concealed Harp. Insists Knights take it for safety.
+6. **The Burial:** Parade of acolytes/Seers declare Harp must be buried until needed.
+ 
+## Cast
+**The Harp (Orlyndra):** Played with malice: d12 ranged. Played soothingly: Restore Virtues (sleep). Played badly: d12 Damage to player.
+**Frail Carpenter (Quilfrey):** VIG 6, CLA 14, SPI 17, 2 GD. Clumsy axe (d8 Long). Optimistic.
+**Wood Centipede:** VIG 7, CLA 5, SPI 2, 1 GD. A1. Mandibles (2d6 or devour wood).
+ 
+### The Harp (Played by Creator)
+**Input:** d6.
+1. Deep sleep (Moment).
+2. Shadows vanish (Phase).
+3. Sun darkens (Until morning).
+4. Strong body VIG 18 (Season).
+5. Sharp senses CLA 18 (Year).
+6. Light heart SPI 18 (Age).
+ 
+## Raw Text
+> Lilt and dirge in bough astrung
+> As sharp as soft, his doom asung
+ 
+===END_FILE===
+ 
+---
+ID: knight_ghoul
+TITLE: "The Ghoul Knight"
+TYPE: entity
+TAGS: [knight, class, death]
+---
+# The Ghoul Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Bearded axe (d10 Long), dusty mail (A1).
+**Item:** Cleaner salt (Renders rotten food safe/delicious, restock each Season). Animal miniature (see table).
+**Steed:** Faithful steed (VIG 12, CLA 8, SPI 5, 3 GD, never abandons you).
+ 
+### Ability: Rebuked by Death
+**Trigger:** You are dead.
+**Effect:** Return to life. Body/Guard/Virtues remain as they were at death.
+ 
+### Passion: Acceptance
+**Trigger:** Warmly welcomed into somebody's home.
+**Effect:** Restore SPI.
+ 
+### Wooden Animal Table
+| d6 | Animal | Origin || :--- | :--- | :--- || 1 | Turtle | Gift from friend || 2 | Elephant | Stolen || 3 | Lion cub | Made yourself || 4 | Seahorse | From parent || 5 | Unicorn | Found in ruin || 6 | Pigeon | Found in river |
+## Seer: The Paired Seer
+**Stats:** VIG 9, CLA 9, SPI 9, 2 GD.
+**Nature:** Unremarkable peasant. Shares mind/memory with twin in future City. Wants to be reunited.
+ 
+## Raw Text
+> Arise! Arise!
+> But, for what? For whom?
+ 
+===END_FILE===
+---
+ID: myth_tree
+TITLE: "The Tree"
+TYPE: entity
+TAGS: [myth, nature, hex]
+---
+# The Tree
+ 
+## Omens
+1. **The Horizon:** Twisting branches (black/blue) appear on horizon.
+2. **The Growth:** Branches grow to clouds, spread over Realm.
+3. **The Raiders:** Branches scrape clouds. 6 Cloud Raiders fall, seeking earthly goods.
+4. **The Felling:** Militia march to chop Tree. Earthly tools fail.
+5. **The Fall:** Branches fall from sky. 2 Cloud Creatures cling on, attack in panic.
+6. **The Collapse:** Tree falls with thunderous creak. Rain of branches. Myth Hex + adjacent Hexes devastated (2d12 Damage to all).
+ 
+## Cast
+**Cloud Raiders:** VIG 14, CLA 8, SPI 8, 5 GD. A1 (hazy). Hooked trident (d10). Want earthly goods.
+**Felling Militia (Melca):** VIG 11, CLA 8, SPI 8, 3 GD. Felling axes (d8 Long). Poor motivation.
+**Cloud Creature:** VIG 12, CLA 8, SPI 4, 3 GD. A1 (cloud form, see table). Slam (d8), Lightning (d12, once/Phase).
+ 
+### Cloud Form
+| d6 | Appearance | Trait || :--- | :--- | :--- || 1 | Snakelike | Thin (VIG 6) || 2 | Wolflike | Swift (fly) || 3 | Bearlike | Icy (A2) || 4 | Goatlike | Dense (VIG 16) || 5 | Squidlike | Unstable (collapses in water) || 6 | Apelike | Crackling (2x lightning) |
+## Raw Text
+> Not all that grows is good and fair
+> Not all from ‘bove an answered prayer
+ 
+===END_FILE===
+---
+ID: knight_weaver
+TITLE: "The Weaver Knight"
+TYPE: entity
+TAGS: [knight, class, space]
+---
+# The Weaver Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Two-headed axe (d8 Hefty), bronze buckler (d4, A1), thrown weapon (d6, see table).
+**Item:** Hushcloth (Wrapped items create no noise).
+**Steed:** Orchard steed (VIG 12, CLA 9, SPI 5, 1 GD, sniffs fruit).
+ 
+### Ability: Warp & Weft
+**Trigger:** Visible objects of similar size/shape (one held).
+**Effect:** Swap positions of the objects.
+ 
+### Passion: Detachment
+**Trigger:** Discard something that you want.
+**Effect:** Restore SPI.
+ 
+### Unusual Thrown Weapon
+| d6 | Weapon | Bonus || :--- | :--- | :--- || 1 | Club | +d6 in duel || 2 | Disc | +d6 vs steeds || 3 | Spike | +d6 vs fleeing || 4 | Bola | +d6 vs mounted || 5 | Fork | +d6 vs flying || 6 | Ball | +d6 vs no shield |
+## Seer: The Armoured Seer
+**Stats:** VIG 15, CLA 7, SPI 9, 5 GD. A3 (metal).
+**Nature:** Blocky mass of chains/iron. Interred in armour after mortal wound. Sees through eyes of all armour/weapons. Wants to restore body.
+ 
+## Raw Text
+> This and that, might just be that and this
+> As now is morrow, perfectly amiss
+ 
+===END_FILE===
+---
+ID: myth_pool
+TITLE: "The Pool"
+TYPE: example_entity context: specific_myth_instance negative_keywords: ["procedure", "how to generate", "map creation"]
+TAGS: [myth, magic, hex]
+---
+# The Pool
+ 
+## Omens
+1. **The Wish:** Joyous farmer leading golden ox. Wished for it from Pool.
+2. **The Curse:** Elderly man cries for help. Curse made him old (was young).
+3. **The Glimpse:** Light peeks through canopy. Pool surrounded by round stones.
+4. **The Victims:** Two bodies, stabbed each other. Dried-up pool between them.
+5. **The Hill:** Pool appears on hill among jagged rocks.
+6. **The Cauldron:** Stone cauldron rises. Pool provides enough water for Company. Drink once per person (SPI Save: Pass=Blessing, Fail=Curse). Effect lasts until end of Season.
+ 
+## Cast
+**The Pool:** Cloudy water. Cure is blood of great whale.
+**Joyous Farmer (Dolm):** VIG 10, CLA 6, SPI 13, 3 GD. Impulsive.
+**Elderly Wretch (Alastig):** VIG 8, CLA 8, SPI 7, 2 GD. Bow. Claims to be young.
+ 
+### Pool Effects
+| d6 | Boon | Bane || :--- | :--- | :--- || 1 | Invisible in moonlight | Blind in moonlight || 2 | Never age past Mature | Become Old || 3 | Fire immunity | Memory wiped || 4 | Fire breath (d8 blast) | Limb withers || 5 | Wish for one object | All possessions lost || 6 | Icesword (3d6 hefty) | Attack nearest ally |
+## Raw Text
+> Idle fiends steep murksome brew
+> A heart’s desire turned false or true
+ 
+===END_FILE===
+---
+ID: knight_thunder
+TITLE: "The Thunder Knight"
+TYPE: entity
+TAGS: [knight, class, sound]
+---
+# The Thunder Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Forked spear (d8 Hefty), oakshield (d4, A1).
+**Item:** Caged bug (see table).
+**Steed:** Overfed steed (VIG 12, CLA 6, SPI 5, 2 GD, d6 trample).
+ 
+### Ability: Voice of the Skies
+**Trigger:** Outdoors.
+**Effect:** Shout loud enough to be heard clearly in current Hex and adjacent Hexes.
+ 
+### Passion: Discord
+**Trigger:** Disrupt a place of order.
+**Effect:** Restore SPI.
+ 
+### Caged Bug Table
+| d6 | Ability | Temperament || :--- | :--- | :--- || 1 | Jolting bite (d6) | Wild || 2 | Eat through metal | Well-trained || 3 | Melodious chirp | Stupid || 4 | Fetch items (coin weight) | Eager || 5 | Finds food | Hates you || 6 | Agonising harmless bite | Noble |
+## Seer: The Dice Seer
+**Stats:** 3 GD, A3 (Structure).
+**Nature:** Crystalline form, twitching/rotating. Grinding chant. Sees all possible futures. Encourages risk.
+ 
+## Raw Text
+> Thunder!
+> Should be felt, not heard, else call it a whimper!
+ 
+===END_FILE===
+---
+ID: myth_elephant
+TITLE: "The Elephant"
+TYPE: entity
+TAGS: [myth, beast, hex]
+---
+# The Elephant
+ 
+## Omens
+1. **The Parade:** Elephant Knight parades with soldiers to Seat of Power.
+2. **The Tales:** Children bicker over Knight's greatest deed (see table).
+3. **The Hunter:** Cruel hunter tracks Elephant. Hunting for sport.
+4. **The Death:** Elephant dead. Knight screams/runs. Hunter waits to claim trophy.
+5. **The Grief:** Elephant Knight slathers self in wet clay, shouting to sky.
+6. **The Monster:** Monstrous clay elephant smashes trees. Rain washes it away.
+ 
+## Cast
+**The Elephant (Balihanthor):** VIG 18, CLA 5, SPI 5, 6 GD. A3. Gore (d10), Trample (2d10). Safe only with Knight.
+**The Elephant Knight (Castine):** VIG 16, CLA 9, SPI 13, 8 GD. A2. Hooked greatsword (2d10 Slow). Weary.
+**Cruel Hunter (Berach):** VIG 14, CLA 16, SPI 6, 6 GD. Crossbow (2d8 Slow). Can Smite prey.
+ 
+### Deeds of the Elephant Knight
+**Input:** d6.
+1. Defeated Iron Crocodile.
+2. Restored Invisible Wolf.
+3. Mastered Faerie King.
+4. Exposed Blood Heron.
+5. Sated Labyrinth Beast.
+6. Beheaded Mirror Ghost.
+ 
+## Raw Text
+> Booming march and children’s cheer
+> A hunter ushers death a’near
+ 
+===END_FILE===
+ 
+---
+ID: knight_dust
+TITLE: "The Dust Knight"
+TYPE: entity
+TAGS: [knight, class, water]
+---
+# The Dust Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Old hammer (d8), inscribed shield (d4, A1).
+**Item:** Beckoning net (fish wilfully swim into it), preserved fish (see table, restock each Season).
+**Steed:** Spotted steed (VIG 12, CLA 9, SPI 5, 3 GD, hated by other horses).
+ 
+### Ability: Aqueous Repulsion
+**Trigger:** Outstretched hand.
+**Effect:** Forcefully repel liquids. Can hold a river at bay for a while.
+ 
+### Passion: Entitlement
+**Trigger:** Get something that you were promised but initially denied.
+**Effect:** Restore SPI.
+ 
+### Preserved Fish Table
+| d6 | Flavour | Effect || :--- | :--- | :--- || 1 | Salty | Numbs taste and smell || 2 | Picante | Very filling || 3 | Sour | Addictive || 4 | Challenging | VIG Save or vomit || 5 | Soapy | CLA Save or go blind for a moment || 6 | Smoky | SPI Save or weep with intense sorrow |
+## Seer: The Purged Seer
+**Stats:** Does not exist (Dark cold void).
+**Nature:** Stepping into void shows futures that cannot exist. Has no agenda.
+ 
+## Raw Text
+> Lust and loathing, ire and desire
+> In truth as one, a frosted fire
+ 
+===END_FILE===
+---
+ID: myth_snail
+TITLE: "The Snail"
+TYPE: entity
+TAGS: [myth, time, hex]
+---
+# The Snail
+ 
+## Omens
+1. **The Trail:** Trail of slime on crooked rocks. Runic inscriptions promise "the truth in time".
+2. **The Tunnel:** Slime-covered passage leads to darkness. Runes promise travel. Leads to destination in 1 Phase then closes. Ambush by 5 helix beasts.
+3. **The Shell:** Huge empty shell (cave). Entering shows taunting vision of future.
+4. **The Cliff:** Spiral of runes on cliff: "avoid the short cuts".
+5. **The Slime:** Thick slime covers Realm. Animals refuse to travel.
+6. **The Lesson:** Snail approaches. Asks what Company learned. Glides to another Realm.
+ 
+## Cast
+**The Snail (Glossly):** VIG 10, CLA 5, SPI 5, 1 GD. A2 (A4 in shell). Slow sword (2d6 Slow). Tutor of Time. Smug.
+**Helix Beast:** VIG 7, CLA 7, SPI 2, 3 GD. Acidic bite (d8). Mass of coiled worms shaped like hound.
+ 
+### Taunting Vision
+| d6 | Subject | Fate || :--- | :--- | :--- || 1 | Company member | Burned || 2 | Another Knight | Crowned || 3 | A Seer | Drowned || 4 | Seat of Power | Satisfied || 5 | The Snail | Condemned || 6 | The Realm | Celebrated |
+## Raw Text
+> On grimely stone a truth be told
+> The sluggen path in slime enscrolled
+ 
+===END_FILE===
+---
+ID: knight_fanged
+TITLE: "The Fanged Knight"
+TYPE: entity
+TAGS: [knight, class, emotion]
+---
+# The Fanged Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Forked blade (d8 Hefty), chain mail (A1), shell plates (A1).
+**Item:** Ancient scroll (References to places, but outdated, see table).
+**Steed:** Noble steed (VIG 12, CLA 5, SPI 7, 4 GD).
+ 
+### Ability: Sink Teeth
+**Trigger:** Bite (d6) someone.
+**Logic:**
+1. Choose Effect BEFORE bite.
+2. IF Target Wounded THEN Apply Effect.
+**Effects:**
+* Regain VIG equal to VIG lost by target.
+* Lower target into normal sleep.
+* Show target one of your memories.
+ 
+### Passion: Melancholy
+**Trigger:** Dampen the mood.
+**Effect:** Restore SPI.
+ 
+### Scroll References
+| d6 | Location | Reference || :--- | :--- | :--- || 1 | A tower | Ancestor to Ruler || 2 | Body of water | Ancestor to Knight || 3 | A peak | Ancestor to Seer || 4 | A village | Ancestor to All people || 5 | A river | Ancestor to You || 6 | A cave | Ancestor to Company member |
+## Seer: The Damned Seer
+**Stats:** VIG 7, CLA 15, SPI 4, 1 GD.
+**Nature:** Burning figure tied to post. Knows everything but hesitant to advise. Wants to redeem himself.
+ 
+## Raw Text
+> You see now why I cannot wear a smile
+> Now bare your skin and share your heart awhile
+ 
+===END_FILE===
+---
+ID: myth_cave
+TITLE: "The Cave"
+TYPE: entity
+TAGS: [myth, darkness, hex]
+---
+# The Cave
+ 
+## Omens
+1. **The Mouth:** Wide cave mouth looms. Echoes sound altered.
+2. **The Seal:** 3 iron pilgrims attempt to seal cave.
+3. **The Glow:** Cave appears again. Glow within reveals 3 useful crystals.
+4. **The Gold:** Cave on cliff face. "Gold" echoes. Beast of solid darkness guards coffer of gold.
+5. **The Face:** Cave on boulder with eye-holes/teeth. Answers one question per Knight.
+6. **The Collector:** Debt Collector (Shadow form) arrives to take payment for Cave. Accepts value or kills.
+ 
+## Cast
+**Beast of Solid Darkness:** VIG 12, CLA 12, SPI 7, 8 GD. A3 (Iron darkness). Blade (3d10) or Un-light (d8 Blast).
+**Iron Pilgrims:** VIG 12, CLA 10, SPI 13, 3 GD. Blacksmith tools.
+**Debt Collector (Ambralleon):** VIG 16, CLA 16, SPI 7, 8 GD. A2 (Shadow/Plate). Black spear (2d8 Hefty, return). Can Smite.
+ 
+### Useful Crystals
+| d6 | Color | Effect || :--- | :--- | :--- || 1 | Grey | d10 blast lightning || 2 | White | Releases harmless horrifying ghosts || 3 | Ochre | Winter arrives immediately || 4 | Mauve | Open flaming pit (d10) || 5 | Turquoise | Vision of useful truth || 6 | Crimson | Plants grow rapidly |
+## Raw Text
+> A weary soul discerns no truth or lie
+> An eager heart asks neither what or why
+ 
+===END_FILE===
+---
+ID: knight_pearl
+TITLE: "The Pearl Knight"
+TYPE: entity
+TAGS: [knight, class, sea]
+---
+# The Pearl Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Seablade (2d8 Long, see table), glossy mail (A1), demi-plate (A1).
+**Item:** Salincense (Smoke causes plants to wither/die instantly).
+**Steed:** Rose steed (VIG 12, CLA 9, SPI 5, 3 GD).
+ 
+### Ability: Gift from the Deep
+**Trigger:** Morning (IF previous pearl given/traded).
+**Effect:** Produce one pearl. Can see through eyes of anyone carrying your pearl.
+ 
+### Passion: Gossip
+**Trigger:** Share or receive gossip.
+**Effect:** Restore SPI.
+ 
+### Seablade Table
+| d6 | Origin/Theme | Curse/Effect || :--- | :--- | :--- || 1 | Aquatic nightmares | Sea creatures get +d6 vs you || 2 | Fish told you | Cannot swim in saltwater || 3 | Cold touch | River water tastes salty || 4 | Fear of water | Sailors distrust you || 5 | Storms call | Salt tastes foul || 6 | Waves rebuke | Fish is poison |
+## Seer: The Pain Seer
+**Stats:** VIG 7, CLA 13, SPI 5, 1 GD.
+**Nature:** Shattered image. Absorbs sorrow/aches. Guidance causes more sorrow. Wants to feed on pain.
+ 
+## Raw Text
+> Why lurk shellbound in the depths, awashed in solitude?
+> All best secrets walk above, all dark and low and lewd
+ 
+===END_FILE===
+---
+ID: myth_apparatus
+TITLE: "The Apparatus"
+TYPE: entity
+TAGS: [myth, machine, hex]
+---
+# The Apparatus
+ 
+## Omens
+1. **The Order:** Trappers notice strange order (Square crops, aligned stars, etc.).
+2. **The Numerator:** Learned numerator calculates future. Claims age of Seers is over.
+3. **The Bridge:** Brawler Knight on bridge. Won't fight (sees no point).
+4. **The Trumpet:** Scribe declares Apparatus complete. Numerator can calculate future.
+5. **The Attack:** Seer-loyal Knights ride to destroy Apparatus.
+6. **The Plea:** Numerator pleads for protection. If unchecked, Knights break Apparatus.
+ 
+## Cast
+**The Apparatus:** Oracular Device. Copper springs/cogs. Predicts future perfectly (takes time).
+**Learned Numerator (Alfger):** VIG 10, CLA 17, SPI 14, 2 GD. Busy mind.
+**Brawler Knight (Charcabol):** VIG 15, CLA 6, SPI 6, 7 GD. A2. Heavy gauntlets (d8). Cynical.
+**Seer-Loyal Knights:** VIG 12, CLA 12, SPI 12, 7 GD. A3. Axe (d8 Hefty), shield.
+ 
+### Strange Order
+| d6 | Phenomenon A | Phenomenon B || :--- | :--- | :--- || 1 | Crops square | Stars aligned || 2 | Cube boulders | Spiral clouds || 3 | Worm signs | Orderly rain || 4 | Straight rivers | No wind || 5 | Symmetrical trees | Wasps in formation || 6 | Pulse from below | Birds in lines |
+## Raw Text
+> When all the seeds are tallied, and every leaf scribed down
+> The age of Seers shall tumble, bereft their wicked crown
+ 
+===END_FILE===
+ 
+---
+ID: knight_rat
+TITLE: "The Rat Knight"
+TYPE: entity
+TAGS: [knight, class, transformation]
+---
+# The Rat Knight
+ 
+## Mechanics
+ 
+**Virtues:** Start (d6=6).
+**Equipment:** Pole sickle (d10 Long), 3 darts (d6), modified gambeson (A1, see table).
+**Item:** Listening horn (Place against wall to hear other side perfectly).
+**Steed:** Matted steed (VIG 12, CLA 8, SPI 5, 3 GD).
+ 
+### Ability: Verminform
+**Trigger:** At any time.
+**Effect:** Take form of a rat to squeeze into small spaces. Return to normal form when space allows. Can speak with rats (generally helpful).
+ 
+### Passion: Trust
+**Trigger:** Give benefit of the doubt in a way that leaves you vulnerable.
+**Effect:** Restore SPI.
+ 
+### Modified Armour
+| d6 | Material | Benefit || :--- | :--- | :--- || 1 | Leather | Fast donning || 2 | Velvet | Fire immunity || 3 | Fur | Ease of swimming || 4 | Scales | Fall protection || 5 | Hair | Concealing robes || 6 | Straw | Repellent to rats |
+## Seer: The Rising Seer
+**Stats:** VIG 14, CLA 17, SPI 17, 4 GD.
+**Nature:** Embers of starlight in human form. Touch grants foresight. Wants to ascend to stars after finding successor.
+ 
+## Raw Text
+> In squeakling hole I squashed and curled
+> Amidst my kin, a kinder world
+ 
+===END_FILE===
+---
+ID: myth_rock
+TITLE: "The Rock"
+TYPE: entity
+TAGS: [myth, war, hex]
+---
+# The Rock
+ 
+## Omens
+1. **The Scent:** Breeze carries scent of steel and blood.
+2. **The Corpse:** Dancing farmer dragging skeletal corpse to Rock ("only resting place for such a warrior").
+3. **The Guardian:** Alabaster Knight guarding withered tree. Fruit kept for returning warriors.
+4. **The Pilgrims:** 9 Pilgrims offering protective talismans (prevent Warriors mistaking Knights for enemies).
+5. **The Storm:** Invigorating storm. Lightning brings sound of battle.
+6. **The Return:** Mist clears from lake. Rocky island. 3 warbands of Warriors waiting to serve Realm one last time.
+ 
+## Cast
+**Alabaster Knight (Denebawde):** VIG 15, CLA 8, SPI 8, 4 GD. A4 (white stone). Black stone greatsword (3d10 Slow). Wears whispering white python (cannot bite).
+**Warriors of the Rock:** VIG 16, CLA 10, SPI 16, 8 GD. A2. Ancient sword (2d8 Long). Can Smite. Want worthy battle.
+**Rock Pilgrims:** VIG 10, CLA 10, SPI 13, 2 GD. Red cloaks. Offer weapons to warriors.
+ 
+### Sacred Fruit
+| d6 | Appearance | Effect || :--- | :--- | :--- || 1 | Silver berries | Turn to stone || 2 | Bright oranges | Voice silenced || 3 | Translucent grapes | Loss of eyes || 4 | Purple pears | Hand withers || 5 | Star figs | Ghoulish face || 6 | Huge peaches | Become Exposed |
+## Raw Text
+> Amid the waves a stony throne
+> Where ancient warlords sleep alone
+ 
+===END_FILE===
+---
+ID: city_quest
+TITLE: "The City Quest"
+TYPE: entity
+TAGS: [myth, endgame, meta]
+---
+# The City Quest
+ 
+## Mechanics
+ 
+**Trigger:** Company is Worthy (12 Glory).
+**Wilderness Roll:** If result is **1**, encounter City Omen instead of Random Myth.
+**Progression:** Roll d12 + Number of City Omens already encountered. Max 24.
+**End:** Quest ends after Omen 18 or higher.
+ 
+## Omens (Selected)
+1. **Traveller:** Lost man with strange device. Tales of coloured lights.
+2. **Mirage:** Jagged skyline of towers/domes. Fades next Phase.
+3. **Raiders:** 4 Strange Raiders mock primitives. Rob Knights.
+4. **Road:** Broken golden trail turns to sparkling stone. Fades.
+5. **Warning:** City Knight returning. Advises turn back.
+6. **Ships:** 3 dark egg-shapes in sky. Barrage (2d10 Blast). Drift away.
+7. **The Arch-Hellion:** Rider in red plate claiming claim on Seat of Power.
+8. **Tunnel:** Train emerging from cliff tunnel. Impact (3d10).
+...
+18. **The Plain:** Certainty that City must be built here.
+19. **The Castle:** Empty, glittering castle.
+20. **The Factory:** Hellish smoke-choked factory.
+21. **The Electric City:** Coloured lights, machines, discordant music.
+22. **The Void:** Force draws you to stars.
+23. **The Light:** Liquid light roars. End or abandon.
+24. **The Truth:** The City was a lie.
+ 
+## Cast
+**Strange Raiders (Hooper):** VIG 13, CLA 11, SPI 8, 6 GD. A2. Roaring blades (2d10), Grenades (d8 Blast). Flamethrower (2d6 Blast).
+**The City Knight (Abril):** VIG 14, CLA 17, SPI 16, 13 GD. A3. Etched Longsword (2d8 Hefty). Disappointed by City.
+**Arch-Hellion (Quith):** VIG 10, CLA 13, SPI 13, 7 GD. A3. Lightning rod (3d8). Wants to raise army.
+**Knight-Catchers:** VIG 12, CLA 12, SPI 10, 7 GD. A2. Tremor-guns (2d8, Long, ignore armour, non-lethal). Want to collect Knights for museum.
+**Science-Mystic (Lyonelle):** VIG 6, CLA 16, SPI 11, 4 GD. Ceramic staff (2d6 Long), Tech case (Lamps, Acid d8, Magnets).
+**Silver Ghoul:** VIG 7, CLA 7, SPI 6, 6 GD. A2 (metal). Scream (d12 Slow, ignore armour).
+**Brick Giant:** VIG 18, CLA 7, SPI 2, 4 GD. A3 (structure). Crush (3d12 Slow). Voice like cement mixer.
+ 
+## Raw Text
+> For the oath, for the glory, through sorrow and ache
+> The City, that quest to which no Knight can make
+ 
+===END_FILE===

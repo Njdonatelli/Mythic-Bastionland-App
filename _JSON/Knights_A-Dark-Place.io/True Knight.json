@@ -1,0 +1,70 @@
+{
+    "id": "01",
+    "table": {
+      "title": "SYMBOL OF THE TRUTH",
+      "columns": [
+        "Trigger",
+        "Effect"
+      ],
+      "rows": [
+        [
+          "Lying to you about their identity",
+          "Golden glow"
+        ],
+        [
+          "Giving false witness to you",
+          "Turns cold"
+        ],
+        [
+          "Giving you malicious advice",
+          "Gentle hum"
+        ],
+        [
+          "Lying while bearing the shield",
+          "Fragrant aroma"
+        ],
+        [
+          "Omitting key information to you",
+          "Distant birdcall"
+        ],
+        [
+          "Lying to you about their intent",
+          "Loud clang"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Punitive Stroke",
+      "text": "Make a melee Attack against a known liar. Get +[[/r d10]] to the Attack, ignoring armour."
+    },
+    "passion": {
+      "name": "Honesty",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you tell the truth where a lie might be more beneficial."
+    },
+    "property": [
+      "Polished mace ([[/r d8]] hefty), mail (A1), plate (A1), and helm (A1)",
+      "Kite shield ([[/r d4]], A1) marked with a symbol of the truth (see below)",
+      "Petulant steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 5\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "True Knight",
+    "poem": [
+      "A pact to uphold truth and fact",
+      "On lies the false lay brake and cracked"
+    ],
+    "idx": "01",
+    "_id": "259f4b14-e998-457a-abf1-10224162ee38",
+    "type": "knight",
+    "seer": {
+      "id": "01",
+      "title": "Rotted Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 7, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 11, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Their withered touch is only contagious if they will it.",
+        "Sees the way to live on through any amount of physical decay.",
+        "Wants to become even more rotten, filthy, and diseased."
+      ],
+      "idx": "01",
+      "_id": "2efc0cd9-42f7-485b-9859-d8ac261a0fd6",
+      "type": "seer"
+    }
+  }

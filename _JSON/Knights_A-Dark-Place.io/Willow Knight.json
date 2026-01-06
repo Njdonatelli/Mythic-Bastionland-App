@@ -1,0 +1,70 @@
+{
+    "id": "07",
+    "table": {
+      "title": "MEMORIES OF HOME",
+      "columns": [
+        "Place",
+        "Disaster"
+      ],
+      "rows": [
+        [
+          "Riverside",
+          "Death"
+        ],
+        [
+          "Coastal",
+          "War"
+        ],
+        [
+          "Mountain",
+          "Famine"
+        ],
+        [
+          "Pine forest",
+          "Plague"
+        ],
+        [
+          "Moor",
+          "Fire"
+        ],
+        [
+          "Castle",
+          "Flood"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Bend with the Wind",
+      "text": "When you use a Gambit to Move you count as having Armour 4 until your next turn. This does not stack with your actual armour."
+    },
+    "passion": {
+      "name": "Doubt",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you defer to somebody more senior than you, even though you disagree."
+    },
+    "property": [
+      "Old sword ([[/r d8]] hefty) and half-shield (A1), gambeson (A1)",
+      "Youthful energy (use once only to treat a Mortal Wound as a normal Wound)",
+      "Cautious steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "Willow Knight",
+    "poem": [
+      "Titans tall, now smithreened stones",
+      "The youth, cast down, intact, alone"
+    ],
+    "idx": "07",
+    "_id": "b92393b8-72ce-4e0e-a3c8-aa83e6059cfa",
+    "type": "knight",
+    "seer": {
+      "id": "07",
+      "title": "Carved Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 7, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 11, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Requires constant treatment, acolytes tending to their runic flesh carvings.",
+        "Sees the outcome of battles in their own healing wounds.",
+        "Wants to drive the land toward a climactic war that will bring peace."
+      ],
+      "idx": "07",
+      "_id": "3c09eafa-c8fd-4e05-be03-1b346fa01fb9",
+      "type": "seer"
+    }
+  }

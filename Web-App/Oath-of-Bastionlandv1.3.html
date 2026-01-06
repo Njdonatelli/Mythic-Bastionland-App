@@ -1,0 +1,3094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Bastionland: The Oath</title>
+    <style>
+        :root {
+            --bg-parchment: #f4e4bc;
+            --ink-primary: #2b2b2b;
+            --ink-secondary: #4a4a4a;
+            --accent-red: #8a2be2; 
+            --accent-gold: #c5a059;
+            --font-header: 'Cinzel', 'Georgia', serif;
+            --font-body: 'EB Garamond', 'Times New Roman', serif;
+            --font-ui: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+        body {
+            background-color: var(--bg-parchment);
+            color: var(--ink-primary);
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        #app {
+            width: 100%;
+            max-width: 700px;
+            padding: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.4);
+            border: 2px solid var(--ink-secondary);
+            padding: 3rem;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 4px; left: 4px; right: 4px; bottom: 4px;
+            border: 1px solid var(--ink-secondary);
+            pointer-events: none;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-header);
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 0.1em;
+            margin-top: 0;
+        }
+
+        h1 { font-size: 2.5rem; border-bottom: 2px solid var(--ink-primary); padding-bottom: 1rem; }
+        h2 { font-size: 1.8rem; color: var(--ink-secondary); margin-bottom: 2rem; }
+        
+        p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            margin: 0.8rem 0;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid var(--ink-primary);
+            color: var(--ink-primary);
+            font-family: var(--font-ui); 
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+            text-transform: none; 
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
+
+        .btn:hover {
+            background: var(--ink-primary);
+            color: var(--bg-parchment);
+            transform: scale(1.02);
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+        }
+
+        .btn-hero {
+            font-family: var(--font-header);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.3rem;
+        }
+
+        .hidden { display: none; }
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-detail {
+            text-align: left;
+            margin-top: 1.5rem;
+            border-top: 1px solid var(--ink-secondary);
+            padding-top: 1rem;
+        }
+        
+        .result-label {
+            font-family: var(--font-header);
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #555;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .keyword-cloud {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+        }
+
+        #result-flavor {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--ink-secondary);
+        }
+
+        .flavor-item {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .flavor-title {
+            font-family: var(--font-header);
+            font-weight: bold;
+            font-size: 0.95rem;
+            color: var(--ink-primary);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .flavor-text {
+            font-family: var(--font-body);
+            font-style: italic;
+            color: var(--ink-secondary);
+        }
+
+        @media (max-width: 600px) {
+            #app { padding: 1rem; }
+            .card { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+            .btn { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <div id="screen-intro" class="card fade-in">
+        <h1>Mythic Bastionland</h1>
+        <p>The mists part. A realm of myths and fading seasons lies ahead. You are a Knight, but which Knight?</p>
+        <p>Swear your oath and discover your burden.</p>
+        <button class="btn btn-hero" onclick="app.startQuiz()">Begin Oath</button>
+    </div>
+
+    <div id="screen-quiz" class="card hidden">
+        <h2 id="question-text">Question Text</h2>
+        <div id="options-container">
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; font-family: var(--font-ui); opacity: 0.6;">
+            <span id="question-progress">1 / 7</span>
+        </div>
+    </div>
+
+    <div id="screen-result" class="card hidden">
+        <h2>Your Knight Is</h2>
+        <h1 id="result-name">The True Knight</h1>
+        <div class="keyword-cloud" id="result-archetype">Arbiter of Veracity</div>
+        
+        <p id="result-desc">A pact to uphold truth. The false slung broken upon their lies.</p>
+
+        <div class="result-detail">
+            <span class="result-label">Passion</span>
+            <span id="result-passion"><strong>Honesty:</strong> Restore SPI when you tell the truth where a lie might be more convenient.</span>
+        </div>
+
+        <div class="result-detail">
+            <span class="result-label">Ability</span>
+            <span id="result-ability"><strong>Punitive Stroke:</strong> Make a melee attack against a known liar. Get +d12 to damage.</span>
+        </div>
+
+        <div id="result-flavor"></div>
+
+        <button class="btn btn-hero" style="margin-top: 2rem;" onclick="app.reset()">Swear New Oath</button>
+    </div>
+</div>
+
+<script>
+    const KNIGHTS = [
+        {
+            name: "The True Knight",
+            archetype: "Arbiter of Veracity",
+            keywords: ["Truth-bound", "Petulant-steed", "Punitive", "Mace-wielder", "Dogmatic", "Golden-glow", "Honest", "Stern", "Law"],
+            description: "A pact to uphold truth. The false slung broken upon their lies.",
+            passion: "Honesty: Restore SPI when you tell the truth where a lie might be more beneficial.",
+            ability: "Punitive Stroke: Make a melee attack against a known liar. Get +d10 to the attack, ignoring armour."
+        },
+        {
+            name: "The Snare Knight",
+            archetype: "Warden of the Wilds",
+            keywords: ["Sylvan", "Trapper", "Tattered-steed", "Beast-bond", "Empathetic", "Wild-eyed", "Exiled", "Foliage-clad", "Nature"],
+            description: "Bound to the tangled roots and the hunter's art.",
+            passion: "Empathy: Restore SPI when you spare the life of a hostile animal.",
+            ability: "Wild Eye: Observe a beast in secret. Learn a useful truth about their habitat."
+        },
+        {
+            name: "The Tourney Knight",
+            archetype: "Glory Seeker",
+            keywords: ["Competitive", "Horned-stallion", "Heraldic", "Greatlance", "Resentful", "Showman", "Lion-helmed", "Champion", "Glory"],
+            description: "A calling brought a life of combat. Nay a protector, in fact a competitor.",
+            passion: "Hatred: Restore SPI when you refuse a plea for forgiveness.",
+            ability: "Champion Vow: Use immediately before a combat where there is a prize at stake. +d6 to melee attacks for the whole combat."
+        },
+        {
+            name: "The Bloody Knight",
+            archetype: "Sanguine Berserker",
+            keywords: ["Visceral", "Bullish-mount", "Intoxicated", "Justiciar", "Longaxe", "Rage-fueled", "Blast-striker", "Blood-born", "Violence"],
+            description: "Some were born to fight. This one birthed from the very blood of battle.",
+            passion: "Justice: Restore SPI when you restore the balance of justice.",
+            ability: "Bloody Echo: Use immediately after defeating an opponent. Your next melee attack in this combat gains Blast."
+        },
+        {
+            name: "The Moss Knight",
+            archetype: "Lithic Druid",
+            keywords: ["Ancient", "Pale-steed", "Tattooed", "Stone-speaker", "Naturalist", "Cudgel-bearer", "Thorned", "Blue-thorned", "Nature", "Quiet"],
+            description: "The tree and stone had no need to be taught. The wisest knew to study beneath them.",
+            passion: "Naturality: Restore SPI when you reject an opportunity to sleep indoors, sleeping in nature instead.",
+            ability: "Mosstongue: Speak with uncut stones and particularly old trees."
+        },
+        {
+            name: "The War Knight",
+            archetype: "Gritty Tactician",
+            keywords: ["Veteran", "Stocky-steed", "Regimental", "Polearm-master", "Dutiful", "Mud-forged", "Bucket-helmed", "Strategist", "War"],
+            description: "Forged and broken in the bloodied mud. Won some, lost some, ever survived.",
+            passion: "Duty: Restore SPI when you answer the call for martial service under a superior.",
+            ability: "Battle Awareness: When fighting in a combat with at least 3 combatants on each side all your Gambits count as Strong Gambits."
+        },
+        {
+            name: "The Willow Knight",
+            archetype: "Storm-Born Youth",
+            keywords: ["Resilient", "Cautious-steed", "Flexible", "Doubtful", "Wind-bent", "Disaster-born", "Youthful", "Old-soul", "Sorrow"],
+            description: "The giants fought the storm, falling, all broken bones. The youth, thrown about, arose in the calm.",
+            passion: "Doubt: Restore SPI when you defer to somebody more senior than you, even though you disagree.",
+            ability: "Bend with the Wind: When you use a Gambit to Move you count as having Armour 4 until your next turn."
+        },
+        {
+            name: "The Gilded Knight",
+            archetype: "Auric Martyr",
+            keywords: ["Opulent", "Majestic-charger", "Prideful", "Gold-masked", "Sacrificial", "Sunnen-gold", "Haunted-victory", "Radiant", "Wealth"],
+            description: "A beacon of the brave and bold. All cloaked and masked in sunnen gold.",
+            passion: "Pride: Restore SPI when you take personal credit for a great victory.",
+            ability: "Martyr-in-Waiting: Use as a reaction to being Mortally Wounded. Allies fighting with you regain d6 GD and get +d12 damage against your attacker."
+        },
+        {
+            name: "The Saddle Knight",
+            archetype: "Centaurian Rider",
+            keywords: ["Equestrian", "Beloved-steed", "Certain", "Tack-master", "Mounted", "Plaited", "Swift", "Symbiotic", "Speed"],
+            description: "Within a blink they were atop their steed. Knight and beast at one, a red streak in the green.",
+            passion: "Certainty: Restore SPI when you prove somebody wrong.",
+            ability: "Song of the Steed: Speak in a voice comprehensible to horses. They need reasoning with rather than commanding."
+        },
+        {
+            name: "The Riddle Knight",
+            archetype: "Enigmatic Inquisitor",
+            keywords: ["Curious", "Secret", "Puzzle", "Twisted", "Moon", "Trickster", "Bow"],
+            description: "The right words say everything and nothing. A different truth to each ear.",
+            passion: "Integrity: Restore SPI when you discredit somebody unworthy of their position.",
+            ability: "Twisted Words: Speak, but choose two different meanings. Choose which meaning each listener takes from the words."
+        },
+        {
+            name: "The Talon Knight",
+            archetype: "Sky Hunter",
+            keywords: ["Hunter", "Bird", "Flight", "Sky", "Sharp", "Regret", "Hammer"],
+            description: "The claw is nothing without the eye. The eye is nothing without the wing.",
+            passion: "Regret: Restore SPI when you burn a part of your past.",
+            ability: "Flockbond: See through the eyes of your bird, and learn the local knowledge of any prey it eats."
+        },
+        {
+            name: "The Barbed Knight",
+            archetype: "Cruel Warden",
+            keywords: ["Visceral", "Spike", "Thorn", "Blood", "Hunter", "Apathy", "Cruel"],
+            description: "Cruelty can bring a peace. Stone and spikes split into bloom.",
+            passion: "Apathy: Restore SPI when you reject a call for comfort.",
+            ability: "The Red Hunt: Once each day, infuse a target’s spilt blood into an arrow to give it +d12 damage against the target."
+        },
+        {
+            name: "The Trail Knight",
+            archetype: "Pathfinder",
+            keywords: ["Track", "Travel", "Wanderer", "Fear", "Axe", "Sanguine", "Transient"],
+            description: "More than foxes leave trails in their stead. Comings and goings laid plain as a thread.",
+            passion: "Fear: Restore SPI when refusing to go into the dark.",
+            ability: "Strands of Past: By studying the ground for a whole Phase you can ask a single yes or no question about what happened here."
+        },
+        {
+            name: "The Amber Knight",
+            archetype: "Ancient Sentinel",
+            keywords: ["Slow", "Heavy", "Time", "Preserved", "Avarice", "Blade", "Ancient"],
+            description: "Their wait has been longer than we could imagine. Their blade slow but unstoppable.",
+            passion: "Avarice: Restore SPI when you gain significant wealth.",
+            ability: "Patient Strike: Make a melee Attack when you have not moved this turn. +d10 to the Attack. Ignore Armour."
+        },
+        {
+            name: "The Horde Knight",
+            archetype: "Pack Leader",
+            keywords: ["Swarm", "Chaos", "Group", "Prestige", "Violence", "Aggressive", "Sword"],
+            description: "In fury’s reign afore the rav’ning throng. In chaos born as knight where beast belong.",
+            passion: "Prestige: Restore SPI when you take credit for the deeds of another.",
+            ability: "Pack Tactics: Use before attacking with at least one ally. You may combine any number of dice into larger dice."
+        },
+        {
+            name: "The Emerald Knight",
+            archetype: "Verdant Shadow",
+            keywords: ["Nature", "Hidden", "Green", "Foliage-clad", "Elegance", "Spear", "Silent"],
+            description: "A verdant cloak on sable steed. Neath nature’s veil, yond sight and heed.",
+            passion: "Elegance: Restore SPI when you leave a place more beautiful than you found it.",
+            ability: "Fade to Green: Use when hiding still and silent in greenery. You cannot be found by any means."
+        },
+        {
+            name: "The Chain Knight",
+            archetype: "Abyssal Jailor",
+            keywords: ["Underground", "Dark", "Chain", "Heavy", "Punitive", "Abyss", "Mace-wielder"],
+            description: "Born below the soil, below the stone, below all thought. Down, down, further down.",
+            passion: "Abyss: Restore SPI when sleeping underground in complete darkness.",
+            ability: "Will of the Irons: Move a single chain that you touch as if it was a limb."
+        },
+        {
+            name: "The Banner Knight",
+            archetype: "Rallying Captain",
+            keywords: ["Heraldic", "Commanding", "Noble", "Sensitivity", "War", "Pike-wielder", "Social"],
+            description: "Beware of those festooning the flag. Their blade may be idle but their comrades are sharpened.",
+            passion: "Sensitivity: Restore SPI when receiving social approval.",
+            ability: "Rousing Presence: Use once per Attack when you are part of a group Attack. You may reroll the entire pool of Attack dice."
+        },
+        {
+            name: "The Pigeon Knight",
+            archetype: "Urban Wayfinder",
+            keywords: ["Travel", "Home", "Inquisition", "Transient", "Bird", "Simple", "Glaive"],
+            description: "The humble know no home in place. For such wanderers, the horizon is their hearth.",
+            passion: "Inquisition: Restore SPI when you wrangle the truth out of an uncooperative person.",
+            ability: "Wayfinder Sense: Sense the direction in which a particular goal lies, but not the best route to travel there."
+        },
+        {
+            name: "The Shield Knight",
+            archetype: "Stalwart Defender",
+            keywords: ["Protection", "Defense", "Shield", "Duty", "Mortality", "Sword", "Hefty"],
+            description: "In wood, hide, or iron, as armour meek or grand. No greater shield for the weak than the oath-sworn Knight.",
+            passion: "Mortality: Restore SPI when you see an ally suffer a Mortal Wound.",
+            ability: "Death Ward: Use when a nearby ally would take a Mortal Wound. You take a Mortal Wound instead."
+        },
+        {
+            name: "The Whip Knight",
+            archetype: "Tormentor",
+            keywords: ["Pain", "Control", "Reverence", "Cruel", "Whip", "Mace-wielder", "Punitive"],
+            description: "Some draw screams from wrent flesh and bone. Others have ways to make very soul moan.",
+            passion: "Reverence: Restore SPI when offering respectful homage to the dead.",
+            ability: "Pain Strike: Make a melee Attack. Damage is applied to GD as normal, but then to SPI in place of VIG."
+        },
+        {
+            name: "The Seal Knight",
+            archetype: "Oathkeeper",
+            keywords: ["Law", "Order", "Modesty", "Halberd", "Door", "Lock", "Dutiful"],
+            description: "A Knight’s sworn oath outlasts the stone wall. Yet Seers say in time even words must fall.",
+            passion: "Modesty: Restore SPI when refusing a reward.",
+            ability: "Seal of Authority: Mark an object. It cannot be opened or moved by anyone but you or a Seer."
+        },
+        {
+            name: "The Horn Knight",
+            archetype: "Wild Caller",
+            keywords: ["Sound", "Wild", "Beast-bond", "Bluntness", "Spear", "Nature", "Call"],
+            description: "Horn cried, hearts asank, blood awoke. In its wail our fates all sealed as the feast for death.",
+            passion: "Bluntness: Restore SPI when you move the conversation in a way that somebody is avoiding.",
+            ability: "Carnage Fanfare: Blow the wild horn in battle. For the rest of this battle any VIG lost through Damage is doubled."
+        },
+        {
+            name: "The Dove Knight",
+            archetype: "Vengeful Peacekeeper",
+            keywords: ["Peace", "Hope", "Vengeance", "Blade", "Flying", "Light", "Mercy"],
+            description: "In serenous moon the best of us can rest in docile light. That quietest bird in impure times must soar in bloody flight.",
+            passion: "Vengeance: Restore SPI when achieving a worthy revenge.",
+            ability: "Strike of Serenity: Make a melee Attack against a wounded target. Get +d8 to the Attack. If this defeats the target then all allies restore SPI."
+        },
+        {
+            name: "The Story Knight",
+            archetype: "Chronicler",
+            keywords: ["Showman", "Knowledge", "Book", "Blade", "Tale", "Memory", "Social"],
+            description: "At last, I’m here! The one you were waiting for, the one behind the words.",
+            passion: "Showmanship: Restore SPI when you deliberately draw unwanted attention.",
+            ability: "Weaver of Fate: Just before night falls, tell a story related to a nearby place. The Referee secretly chooses one detail to become truth."
+        },
+        {
+            name: "The Turtle Knight",
+            archetype: "Shellguard",
+            keywords: ["Defense", "Shell", "Slow", "Water", "Hammer", "Wellrestedness", "Heavy"],
+            description: "I stand inclad in shelldy stead. Nawone of you will see me dead!",
+            passion: "Wellrestedness: Restore SPI when you sleep for two consecutive Phases.",
+            ability: "Unbreakable Shell: Use at the start of your turn. You cannot move, but double your Armour and gain +d6 damage with shields."
+        },
+        {
+            name: "The Key Knight",
+            archetype: "Gatekeeper",
+            keywords: ["Unlock", "Secret", "Urban", "Access", "Distraction", "Axe", "Thief"],
+            description: "Sure as sky and sea. For every lock a key.",
+            passion: "Distraction: Restore SPI when you abandon a set plan.",
+            ability: "Retroactive Forethought: Once per day, produce a common item from your backpack that you could have reasonably acquired."
+        },
+        {
+            name: "The Moat Knight",
+            archetype: "Swamp Sentinel",
+            keywords: ["Water", "Filth", "Mud", "Defense", "Flail", "Barbed", "Grim"],
+            description: "There they stood, awashed in soddled loam. A grottling dance, the dusky sky agloam.",
+            passion: "Filth: Restore SPI when you become utterly filthy.",
+            ability: "Wading Stance: Gain 1 Armour and +d6 damage when fighting in at least waist-high water."
+        },
+        {
+            name: "The Boulder Knight",
+            archetype: "Unstoppable Force",
+            keywords: ["Heavy", "Stone", "Strength", "Hammer", "Crush", "Siege", "Hard"],
+            description: "A fated charge in mail and stalward plate. Abaited foes await that thundring gait.",
+            passion: "Strength: Restore SPI when you complete a physical task that somebody else was struggling with.",
+            ability: "Unstoppable Dash: When you are in motion you cannot be stopped, but sustain d12 Damage if breaking through a solid wall."
+        },
+        {
+            name: "The Tankard Knight",
+            archetype: "Reveler",
+            keywords: ["Revelry", "Drink", "Social", "Axe", "Simple", "Glory", "Party"],
+            description: "Abrash and bold, renowned and rued. Their presence cheered on one breath, damned anext.",
+            passion: "Revelry: Restore SPI when socially overindulging.",
+            ability: "Humble Glamourie: After eating and drinking with somebody they consider you trustworthy enough to speak openly."
+        },
+        {
+            name: "The Owl Knight",
+            archetype: "Night Watcher",
+            keywords: ["Knowledge", "Night", "Watcher", "Alertness", "Staff", "Tree", "Wise"],
+            description: "A fat one indeed who feasts on the fruits of fact. The nut of knowing nourishes from nog to nosh.",
+            passion: "Alertness: Restore SPI when you spot an ambush, trap, or surprise attack.",
+            ability: "Arboreal Archive: Spend a Phase running hands over a tree to access its memory."
+        },
+        {
+            name: "The Hooded Knight",
+            archetype: "Forgotten Wanderer",
+            keywords: ["Anonymity", "Hidden", "Secret", "Urban", "Glaive", "Shadow", "Forgotten"],
+            description: "As deeds abound in history's script. More slip from time’s forgetful grip.",
+            passion: "Anonymity: Restore SPI when somebody believes in a false identity you are portraying.",
+            ability: "Unnoticed Deed: Once per day you can retroactively declare an action that you took earlier that day."
+        },
+        {
+            name: "The Lance Knight",
+            archetype: "Seeing Lancer",
+            keywords: ["Charging", "War", "Adventure", "Lance", "Noble-steed", "Sight", "Blind"],
+            description: "Steed agasp, spear agroan, strike agore. Sharp afrail, sight ablind, then no more.",
+            passion: "Adventure: Restore SPI when you enter a Myth Hex.",
+            ability: "Shattering Charge: Once per day, make a solo mounted charging Attack. The Attack gains +d12 damage and Blast. The lance is shattered."
+        },
+        {
+            name: "The Questing Knight",
+            archetype: "Eternal Seeker",
+            keywords: ["Quest", "Duty", "Sword", "Impetuosity", "Travel", "Goal", "Noble"],
+            description: "Dream of the commoner, tragedy of the knight. To die at rest, at peace, at quiet.",
+            passion: "Impetuosity: Restore SPI when you are first to fight.",
+            ability: "Pledge Quest: Swear a quest to somebody who cares. Get +d12 damage on all attacks against those who stand in your way."
+        },
+        {
+            name: "The Ring Knight",
+            archetype: "Bound Guardian",
+            keywords: ["Order", "Circle", "Magic", "Respectfulness", "Mace-wielder", "Bond", "Protection"],
+            description: "With ring a’lone, head dreams of home. With rings o’two, heart fills with rue.",
+            passion: "Respectfulness: Restore SPI when returning something to its rightful owner.",
+            ability: "Unbreakable Circle: Draw a circle in the ground. Until you leave the circle, no other living being can enter or leave it."
+        },
+        {
+            name: "The Forge Knight",
+            archetype: "Iron Smith",
+            keywords: ["Fire", "Craft", "Burning", "Heavy", "Metal", "Blade", "Creation"],
+            description: "Gravid beats on ferrous slab, thick air a crimson sheen. Each mallenstroke leaves scars aworn.",
+            passion: "Burning: Restore SPI when you are wounded by fire.",
+            ability: "Tempering Strike: When you cause a Wound with a melee weapon, that weapon receives +d6 damage until the end of combat."
+        },
+        {
+            name: "The Rune Knight",
+            archetype: "Fate Scribe",
+            keywords: ["Magic", "Foresight", "Star", "Stone", "Heavy", "Scroll", "Fate"],
+            description: "Under gleam of lumenlight, in skin or stone ascratch. Strands of faten path unveiled.",
+            passion: "Foresight: Restore SPI when your prediction is proven to be correct.",
+            ability: "Destinous Sigil: Etch a cosmic rune. Choose a number. When a die rolls that number you may adjust it to any other value."
+        },
+        {
+            name: "The Gallows Knight",
+            archetype: "Grim Executioner",
+            keywords: ["Death", "Misery", "Grim", "Urban", "Fear", "Hook", "Scavenger"],
+            description: "In dregs of dawn the damnlings sway. For famine’s brood a gifted prey.",
+            passion: "Misery: Restore SPI when you meet somebody new and complain to them about something.",
+            ability: "Carrion’s Call: Speak with scavenger creatures, and summon them to you."
+        },
+        {
+            name: "The Tome Knight",
+            archetype: "Silent Scholar",
+            keywords: ["Knowledge", "Introversion", "Book", "Staff", "Study", "Quiet", "History"],
+            description: "A loom of wisdom spun at dawn. Laid to rest til coming morn.",
+            passion: "Introversion: Restore SPI when you refuse a formal social gathering, or leave early.",
+            ability: "Dawn Contemplation: At sunrise each day, ask the Referee three questions within a chosen area of knowledge."
+        },
+        {
+            name: "The Meteor Knight",
+            archetype: "Starfall Sentinel",
+            keywords: ["Star", "Impact", "Authenticity", "Sky", "Trident", "Heavy", "Destruction"],
+            description: "A star of truth, fell from ahigh. Such lumous ones should wear no lie.",
+            passion: "Authenticity: Restore SPI when you reveal your identity or intentions at an inconvenient moment.",
+            ability: "Star Fall: You never suffer Damage from falling. When you land from a fall of at least 12ft you may release a shockwave."
+        },
+        {
+            name: "The Gazer Knight",
+            archetype: "Visionary",
+            keywords: ["Vision", "Respect", "Eye", "Magic", "Blade", "Fate", "Future"],
+            description: "The blood sees through time aflow. To certain souls, a glimpse they show.",
+            passion: "Respect: Restore SPI when you yield to a Seer.",
+            ability: "Glimpse of Fate: Once per day you can undo a single action performed by you or your Company."
+        },
+        {
+            name: "The Mule Knight",
+            archetype: "Stubborn Laborer",
+            keywords: ["Simple", "Kindness", "Humble", "Labor", "Staff", "Load", "Explosive"],
+            description: "A humble beast, no roar or flight. Beneath the grey a show of might.",
+            passion: "Kindness: Restore SPI when you stop an act of cruelty.",
+            ability: "Lowly Shroud: At any time you may choose to have somebody observing you be utterly convinced that you are just a humble peasant."
+        },
+        {
+            name: "The Halo Knight",
+            archetype: "Luminous Hope",
+            keywords: ["Light", "Valour", "Hope", "Axe", "Holy", "Blind", "Good"],
+            description: "A trail of hope across the land. In sorrow’s face, bright reprimand.",
+            passion: "Valour: Restore SPI when you engage in combat against the odds.",
+            ability: "Luminous Eruption: Use once per Phase. A light source you are holding briefly illuminates the entire Hex and causes damage to dark beings."
+        },
+        {
+            name: "The Iron Knight",
+            archetype: "Ferrous Warrior",
+            keywords: ["Metal", "Diligence", "Blade", "Strong", "Sharp", "War", "Heavy"],
+            description: "As sword abend, as plate afold. As shield asplint, a tale atold.",
+            passion: "Diligence: Restore SPI when refusing a shortcut.",
+            ability: "Heightened Sharpness: When you perform a Strong Gambit with a bladed weapon you may choose to take a limb or head."
+        },
+        {
+            name: "The Mirror Knight",
+            archetype: "Reflective Duelist",
+            keywords: ["Reflect", "Egality", "Copy", "Axe", "Glass", "Self", "Twin"],
+            description: "In eyes ajust, the given got. Blow for blow, from one shared lot.",
+            passion: "Egality: Restore SPI when you give somebody else their fair share.",
+            ability: "Reflection of Blood: When you are Wounded or Scarred, the attacker suffers the same effect."
+        },
+        {
+            name: "The Dusk Knight",
+            archetype: "Memory Reaper",
+            keywords: ["Darkness", "Temperance", "Memory", "Hammer", "Loss", "Time", "End"],
+            description: "Each touch of iron takes a price, in breath or blood or bone. A nasty cut takes something worse, the warmth of distant home.",
+            passion: "Temperance: Restore SPI when you refuse a luxury.",
+            ability: "Sunder Memory: When you Wound a target you can rob them of a single specific memory."
+        },
+        {
+            name: "The Coin Knight",
+            archetype: "Mercenary Gambler",
+            keywords: ["Wealth", "Generosity", "Chance", "Greed", "Mace-wielder", "Trade", "City"],
+            description: "In arg or aur, decisions spun. A prize, a life, lost or won.",
+            passion: "Generosity: Restore SPI when you give generously to somebody in need.",
+            ability: "Thrown to Chance: Flip a coin instead of attacking. Heads the target is killed, tails you are killed."
+        },
+        {
+            name: "The Mock Knight",
+            archetype: "Living Construct",
+            keywords: ["Artificial", "Imitation", "False", "Wood", "Flail", "Construct", "Toy"],
+            description: "Sycamore, leather, felt and strings. In heartless chest a soul still sings.",
+            passion: "Imitation: Restore SPI when you pass for human while under scrutiny.",
+            ability: "Impression of Life: You do not need to breathe, eat, drink, sleep, or love, but still feel the drives."
+        },
+        {
+            name: "The Mask Knight",
+            archetype: "Faceless Actor",
+            keywords: ["Deception", "Vigilance", "Hidden", "Face", "Axe", "Performance", "Identity"],
+            description: "You call for the truth from me? I will not offer you that which cannot be found.",
+            passion: "Vigilance: Restore SPI when you prevent a betrayal.",
+            ability: "Thousand Faces: You can assume the face of anybody you have touched."
+        },
+        {
+            name: "The Bone Knight",
+            archetype: "Skeletal Merchant",
+            keywords: ["Bone", "Acumen", "Death", "Trade", "Dagger", "Structure", "Grim"],
+            description: "Ribble rabble, ronky donk, they bounce a duckle dine. Clatter clink, clanky tank, a rib, a skull, a spine.",
+            passion: "Acumen: Restore SPI when you come out better from a bargain.",
+            ability: "Bone Magnate: When you make a genuine trade, a bone for a bone, learn something about the individual that the bone came from."
+        },
+        {
+            name: "The Salt Knight",
+            archetype: "Brine Walker",
+            keywords: ["Sea", "Mettle", "Water", "Bitter", "Mace-wielder", "Preserve", "Endurance"],
+            description: "Saline stink adwells in every depth. No matter how calm the surface.",
+            passion: "Mettle: Restore SPI when accepting a non-combat challenge with the odds set against you.",
+            ability: "Inspire Ire: Activate at the end of your turn. Enemies that Attack targets other than you lose SPI."
+        },
+        {
+            name: "The Violet Knight",
+            archetype: "Dream Walker",
+            keywords: ["Light", "Positivity", "Beauty", "Hidden", "Mace-wielder", "Dream", "Color"],
+            description: "A glow unseen, from neath a dream. Illuminates the fabric’s seam.",
+            passion: "Positivity: Restore SPI when you raise somebody’s mood.",
+            ability: "Light Beyond Light: You can cause any metal object you hold to emit a bright light that only you can see."
+        },
+        {
+            name: "The Cosmic Knight",
+            archetype: "Star Watcher",
+            keywords: ["Star", "Constellations", "Space", "Void", "Distance", "Crossbow", "Alien"],
+            description: "Countless stars dotted in the night. To the eyes of one, each a stain of failure amid purest black.",
+            passion: "Constellations: Restore SPI when you get tell somebody new about the stars as you point to them.",
+            ability: "Celestial Retreat: While you can see the sky you can instantly vanish to a distant sanctuary."
+        },
+        {
+            name: "The Temple Knight",
+            archetype: "Sanctuary Guardian",
+            keywords: ["Holy", "Quietude", "Peace", "Structure", "Spear", "Order", "Safety"],
+            description: "No blood or cry. Not here, not today.",
+            passion: "Quietude: Restore SPI when bringing peaceful order to a chaotic place.",
+            ability: "Site of Respite: You may declare a building that you occupy as peaceful ground. Nobody within can attack."
+        },
+        {
+            name: "The Fox Knight",
+            archetype: "Cunning Trickster",
+            keywords: ["Wits", "Trickster", "Blade", "Hidden", "Animal", "Smart", "Wild"],
+            description: "A whimsied whirl, a crafty guise. The truth revealed as sour surprise.",
+            passion: "Wits: Restore SPI when you avoid being tricked or outwitted.",
+            ability: "Cunning Ploy: Once per day, declare your current self to be an illusion, dispersing into smoke."
+        },
+        {
+            name: "The Gull Knight",
+            archetype: "Wind Rider",
+            keywords: ["Flight", "Joy", "Sea", "Bird", "Freedom", "Blade", "Scavenger"],
+            description: "Tattered wing, loath’ed cry, ugly bill. And yet what heights.",
+            passion: "Joy: Restore SPI when you deliver good news.",
+            ability: "Guiding Gust: Ascend to the top of a vertical surface you are touching, lifted on a burst of wind."
+        },
+        {
+            name: "The Magpie Knight",
+            archetype: "Collector",
+            keywords: ["Heraldry", "Thief", "Shiny", "Bird", "Cudgel-bearer", "Collector", "Eye"],
+            description: "Keen eyes see what cold heart seeks. No empty handed fool, this bird.",
+            passion: "Heraldry: Restore SPI when you announce the owner of a banner, crest, or coat of arms.",
+            ability: "Scourer’s Sense: If you are searching for something specific you always know for sure whether it is in your immediate surroundings."
+        },
+        {
+            name: "The Reliquary Knight",
+            archetype: "Spirit Keeper",
+            keywords: ["Tradition", "Death", "History", "Bone", "Sickle", "Holy", "Spirit"],
+            description: "Final rest, earned in life. The echos linger on.",
+            passion: "Tradition: Restore SPI when you ensure a tradition is thoroughly honoured.",
+            ability: "Spirit Call: Once per day, release the invisible spirit from your reliquary to follow a command."
+        },
+        {
+            name: "The Vulture Knight",
+            archetype: "Carrion Seer",
+            keywords: ["Thrift", "Death", "Scavenger", "Patience", "Axe", "Grim", "Gut"],
+            description: "Gutly ribbons, blood’s sweet dance. The future calls in gory trance.",
+            passion: "Thrift: Restore SPI when you make good use of something you found discarded.",
+            ability: "Carrion Casting: Spread the innards of the recently dead. Ask a single question, they point you in a direction that would help."
+        },
+        {
+            name: "The Free Knight",
+            archetype: "Chain Breaker",
+            keywords: ["Liberty", "Freedom", "Unbound", "Flail", "Wild", "Break", "Open"],
+            description: "No body, no mind, should live acaged. Yet freedom rarely comes with a whisper.",
+            passion: "Liberty: Restore SPI when you release somebody from an unwanted bond.",
+            ability: "Bond Breaker: Strike a chain or lock with a metal weapon. Both shatter loudly."
+        },
+        {
+            name: "The Silk Knight",
+            archetype: "Gossamer Weaver",
+            keywords: ["Mercy", "Soft", "Weaver", "Halberd", "Luxury", "Spider", "Creation"],
+            description: "Judge not a knight on might and favour. Where silk endures, a heart can waver.",
+            passion: "Mercy: Restore SPI when you accept a surrender or plea for forgiveness.",
+            ability: "Adamant Gossamer: You can draw thin strands of silky string from your mouth. Unbreakable, but burn to ash in an instant."
+        },
+        {
+            name: "The Tiger Knight",
+            archetype: "Primal Apex",
+            keywords: ["Closure-seeking", "Bestial", "Hunter", "Blade", "Tattooed-steed", "Aggressive", "Wild"],
+            description: "The ignorant deem beastly realms as mere anarchy. In truth, the structure runs much deeper.",
+            passion: "Closure: Restore SPI when you get an answer that you’ve been seeking for some time.",
+            ability: "Bestial Renown: Each time you defeat an animal in a contest befitting its strengths, all animals of that type will react favourably."
+        },
+        {
+            name: "The Leaf Knight",
+            archetype: "Arboreal Forager",
+            keywords: ["Gourmet", "Rustic", "Branch-wielder", "Nature", "Green", "Forest", "Simple"],
+            description: "No greater gift than bough and bush. What more could we ask from this bountiful land?",
+            passion: "Gourmet: Restore SPI when you eat a new type of fruit or vegetable.",
+            ability: "Nature’s Vault: You can wield branches as javelins or greatspears and eat leaves as a satisfying meal."
+        },
+        {
+            name: "The Glass Knight",
+            archetype: "Transparent Judge",
+            keywords: ["Curiosity", "Revealing", "See-through", "Pike-wielder", "Fragile", "Truth", "Glass"],
+            description: "Revealer of all secrets, in stark, judgemental light. In cold and sharpened heart lies no deceitful curse.",
+            passion: "Curiosity: Restore SPI when looking somewhere you really shouldn’t.",
+            ability: "Touch of Glass: You can see through any surface that you place your hand upon."
+        },
+        {
+            name: "The Hive Knight",
+            archetype: "Insectoid Rebirth",
+            keywords: ["Community", "Swarm-bound", "Bug", "Rootbow", "Chrysalis-born", "Hive", "Growth"],
+            description: "A bed of gluous, parchly cloth, a coat of stickly sleen. Emerged in morning good as new, chirurgery unseen.",
+            passion: "Community: Restore SPI when you leave a community better off than when you arrived.",
+            ability: "Chrysaline Rebirth: At night you may immerse yourself in a cocoon. After a full day you emerge cured."
+        },
+        {
+            name: "The Ghoul Knight",
+            archetype: "Undead Lazarus",
+            keywords: ["Acceptance", "Deathless", "Resurrected", "Axe", "Rot", "Grave", "Home"],
+            description: "Arise! Arise! But, for what? For whom?",
+            passion: "Acceptance: Restore SPI when warmly welcomed into somebody’s home.",
+            ability: "Rebuked by Death: Use when you are dead. Return to life."
+        },
+        {
+            name: "The Weaver Knight",
+            archetype: "Textile Transposer",
+            keywords: ["Detachment", "Displacement", "Axe", "Warp-weft", "Craft", "Change", "Swap"],
+            description: "This and that, might just be that and this. As today were tomorrow, soon yesterday, no truth lies set in stone.",
+            passion: "Detachment: Restore SPI when you discard something that you want.",
+            ability: "Warp & Weft: Swap the positions of an object you are holding and another object you can see."
+        },
+        {
+            name: "The Thunder Knight",
+            archetype: "Sonic Herald",
+            keywords: ["Discord", "Booming", "Loud", "Spear", "Voice-shout", "Storm", "Noise"],
+            description: "Thunder! Should be felt, not heard, else call it a whimper!",
+            passion: "Discord: Restore SPI when you disrupt a place of order.",
+            ability: "Voice of the Skies: While outdoors, you can shout loud enough to be heard clearly throughout the whole Hex."
+        },
+        {
+            name: "The Dust Knight",
+            archetype: "Arid Repulsor",
+            keywords: ["Entitlement", "Hydrophobic", "Dry", "Hammer", "Water-pusher", "Wasteland", "Salt"],
+            description: "Lust and loathing, desire and ire. The two great forces, perhaps just one.",
+            passion: "Entitlement: Restore SPI when you get something that you were promised but initially denied.",
+            ability: "Aqueous Repulsion: You can forcefully repel liquids with an outstretched hand, enough to hold a river at bay."
+        },
+        {
+            name: "The Fanged Knight",
+            archetype: "Parasitic Noble",
+            keywords: ["Melancholy", "Vampiric", "Bite", "Blade", "Blood", "Noble", "Darkness"],
+            description: "I can show you why I cannot bare the false smile. Now bare your skin and harden your heart.",
+            passion: "Melancholy: Restore SPI when you dampen the mood.",
+            ability: "Sink Teeth: You can bite someone to regain VIG, put them to sleep, or show them a memory."
+        },
+        {
+            name: "The Pearl Knight",
+            archetype: "Abyssal Merchant",
+            keywords: ["Gossip", "Sea", "Wealth", "Hidden", "Blade", "Secret", "Shell"],
+            description: "Why lurk shellbound in abyssal depths, solitary for life? All the best secrets come from the mouths and eyes of others.",
+            passion: "Gossip: Restore SPI when you share or receive gossip.",
+            ability: "Gift from the Deep: Produce one pearl each morning. You can see through the eyes of anybody carrying one."
+        },
+        {
+            name: "The Rat Knight",
+            archetype: "Vermintide Scion",
+            keywords: ["Trust", "Squeaking", "Small", "Scavenger", "Sickle", "Filthy", "Bug"],
+            description: "In squeakling hole I squashed and curled. Amidst my kin, a kinder world.",
+            passion: "Trust: Restore SPI when giving the benefit of the doubt in a way that leaves you vulnerable.",
+            ability: "Verminform: Take the form of a rat to squeeze into any space."
+        }
+    ];
+
+    const ROLL_TABLES = {
+  "name": "Knight - RollTables",
+  "folders": [
+    {
+      "name": "The True Knight",
+      "items": [
+        {
+          "name": "Trigger",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Lying to you about their identity" ],
+            [ 2, 2, "Giving false witness to you." ],
+            [ 3, 3, "Giving you malicious advice." ],
+            [ 4, 4, "Lying while bearing the shield." ],
+            [ 5, 5, "Omitting key information to you." ],
+            [ 6, 6, "Lying to you about their intent." ]
+          ]
+        },
+        {
+          "name": "Effect",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Golden Glow" ],
+            [ 2, 2, "Turns Cold" ],
+            [ 3, 3, "Gentle Hum" ],
+            [ 4, 4, "Fragrant Aroma" ],
+            [ 5, 5, "Distant Birdcall" ],
+            [ 6, 6, "Loud Clang" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Snare Knight",
+      "items": [
+        {
+          "name": "History",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Exiled" ],
+            [ 2, 2, "Feral" ],
+            [ 3, 3, "Recluse" ],
+            [ 4, 4, "Abandoned" ],
+            [ 5, 5, "Lost" ],
+            [ 6, 6, "Runaway" ]
+          ]
+        },
+        {
+          "name": "Type",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Wolf" ],
+            [ 2, 2, "Boar" ],
+            [ 3, 3, "Bear" ],
+            [ 4, 4, "Cat" ],
+            [ 5, 5, "Owl" ],
+            [ 6, 6, "Badger" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Tourney Knight",
+      "items": [
+        {
+          "name": "Call to Battle",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Warhorn" ],
+            [ 2, 2, "Challenger" ],
+            [ 3, 3, "Insult" ],
+            [ 4, 4, "Drums" ],
+            [ 5, 5, "Standard" ],
+            [ 6, 6, "Roar" ]
+          ]
+        },
+        {
+          "name": "Fancy Helm",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Lion" ],
+            [ 2, 2, "Griffin" ],
+            [ 3, 3, "Dragon" ],
+            [ 4, 4, "Unicorn" ],
+            [ 5, 5, "Eagle" ],
+            [ 6, 6, "Stag" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Bloody Knight",
+      "items": [
+        {
+          "name": "Alcohol",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Rotten Grog" ],
+            [ 2, 2, "Bitter Ale" ],
+            [ 3, 3, "Sour Wine" ],
+            [ 4, 4, "Spiced Mead" ],
+            [ 5, 5, "Clear Spirit" ],
+            [ 6, 6, "Thick Stout" ]
+          ]
+        },
+        {
+          "name": "Hatred",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Cowardice" ],
+            [ 2, 2, "Weakness" ],
+            [ 3, 3, "Trickery" ],
+            [ 4, 4, "Mercy" ],
+            [ 5, 5, "Politics" ],
+            [ 6, 6, "Nobility" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Moss Knight",
+      "items": [
+        {
+          "name": "Design",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Vines" ],
+            [ 2, 2, "Roots" ],
+            [ 3, 3, "Leaves" ],
+            [ 4, 4, "Thorns" ],
+            [ 5, 5, "Bark" ],
+            [ 6, 6, "Flowers" ]
+          ]
+        },
+        {
+          "name": "Effect",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Skin is rough like bark" ],
+            [ 2, 2, "Hair grows like moss" ],
+            [ 3, 3, "Sweat smells like pine" ],
+            [ 4, 4, "Voice sounds like wind" ],
+            [ 5, 5, "Eyes are solid green" ],
+            [ 6, 6, "Blood is like sap" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The War Knight",
+      "items": [
+        {
+          "name": "Special Polearm",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Halberd" ],
+            [ 2, 2, "Glaive" ],
+            [ 3, 3, "Bill" ],
+            [ 4, 4, "Partisan" ],
+            [ 5, 5, "Guisarme" ],
+            [ 6, 6, "Voulge" ]
+          ]
+        },
+        {
+          "name": "Helm",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Bucket" ],
+            [ 2, 2, "Sallet" ],
+            [ 3, 3, "Bascinet" ],
+            [ 4, 4, "Kettle" ],
+            [ 5, 5, "Armet" ],
+            [ 6, 6, "Greathelm" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Willow Knight",
+      "items": [
+        {
+          "name": "Place",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Village" ],
+            [ 2, 2, "Farm" ],
+            [ 3, 3, "Mill" ],
+            [ 4, 4, "Inn" ],
+            [ 5, 5, "Market" ],
+            [ 6, 6, "Shrine" ]
+          ]
+        },
+        {
+          "name": "Disaster",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Flood" ],
+            [ 2, 2, "Fire" ],
+            [ 3, 3, "Plague" ],
+            [ 4, 4, "Famine" ],
+            [ 5, 5, "War" ],
+            [ 6, 6, "Storm" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Gilded Knight",
+      "items": [
+        {
+          "name": "Where did the armour show itself?",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "In a dream" ],
+            [ 2, 2, "Reflection in water" ],
+            [ 3, 3, "Pattern in fire" ],
+            [ 4, 4, "Shadow on wall" ],
+            [ 5, 5, "Shape in clouds" ],
+            [ 6, 6, "Whisper in wind" ]
+          ]
+        },
+        {
+          "name": "What was left behind?",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Name" ],
+            [ 2, 2, "Family" ],
+            [ 3, 3, "Home" ],
+            [ 4, 4, "Love" ],
+            [ 5, 5, "Hope" ],
+            [ 6, 6, "Fear" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Saddle Knight",
+      "items": [
+        {
+          "name": "Appearance",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Dappled Grey" ],
+            [ 2, 2, "Chestnut" ],
+            [ 3, 3, "Black" ],
+            [ 4, 4, "White" ],
+            [ 5, 5, "Piebald" ],
+            [ 6, 6, "Roan" ]
+          ]
+        },
+        {
+          "name": "Temperament",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Skittish" ],
+            [ 2, 2, "Stubborn" ],
+            [ 3, 3, "Aggressive" ],
+            [ 4, 4, "Lazy" ],
+            [ 5, 5, "Playful" ],
+            [ 6, 6, "Loyal" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Riddle Knight",
+      "items": [
+        {
+          "name": "Body",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Wolf" ],
+            [ 2, 2, "Bear" ],
+            [ 3, 3, "Boar" ],
+            [ 4, 4, "Stag" ],
+            [ 5, 5, "Owl" ],
+            [ 6, 6, "Serpent" ]
+          ]
+        },
+        {
+          "name": "Visage",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Human face" ],
+            [ 2, 2, "Blank face" ],
+            [ 3, 3, "Multiple eyes" ],
+            [ 4, 4, "Glowing eyes" ],
+            [ 5, 5, "Skeletal face" ],
+            [ 6, 6, "Masked face" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Talon Knight",
+      "items": [
+        {
+          "name": "Breed",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Eagle" ],
+            [ 2, 2, "Hawk" ],
+            [ 3, 3, "Falcon" ],
+            [ 4, 4, "Owl" ],
+            [ 5, 5, "Vulture" ],
+            [ 6, 6, "Raven" ]
+          ]
+        },
+        {
+          "name": "Special Training",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Fetch items" ],
+            [ 2, 2, "Deliver messages" ],
+            [ 3, 3, "Attack eyes" ],
+            [ 4, 4, "Scout ahead" ],
+            [ 5, 5, "Distract foes" ],
+            [ 6, 6, "Guard sleep" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Barbed Knight",
+      "items": [
+        {
+          "name": "Begrudging Ally",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Local Lord" ],
+            [ 2, 2, "Merchant" ],
+            [ 3, 3, "Priest" ],
+            [ 4, 4, "Witch" ],
+            [ 5, 5, "Bandit Leader" ],
+            [ 6, 6, "Innkeeper" ]
+          ]
+        },
+        {
+          "name": "Hated Enemy",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Rival Knight" ],
+            [ 2, 2, "Monster" ],
+            [ 3, 3, "Cult" ],
+            [ 4, 4, "Family Member" ],
+            [ 5, 5, "Official" ],
+            [ 6, 6, "Former Friend" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Trail Knight",
+      "items": [
+        {
+          "name": "Value",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Truth" ],
+            [ 2, 2, "Justice" ],
+            [ 3, 3, "Freedom" ],
+            [ 4, 4, "Honor" ],
+            [ 5, 5, "Loyalty" ],
+            [ 6, 6, "Mercy" ]
+          ]
+        },
+        {
+          "name": "Forged by",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Father" ],
+            [ 2, 2, "Mother" ],
+            [ 3, 3, "Mentor" ],
+            [ 4, 4, "Loss" ],
+            [ 5, 5, "War" ],
+            [ 6, 6, "Love" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Amber Knight",
+      "items": [
+        {
+          "name": "Pastime",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Carving" ],
+            [ 2, 2, "Meditation" ],
+            [ 3, 3, "Gardening" ],
+            [ 4, 4, "Reading" ],
+            [ 5, 5, "Painting" ],
+            [ 6, 6, "Music" ]
+          ]
+        },
+        {
+          "name": "Taught By",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Tree" ],
+            [ 2, 2, "Stone" ],
+            [ 3, 3, "River" ],
+            [ 4, 4, "Mountain" ],
+            [ 5, 5, "Cloud" ],
+            [ 6, 6, "Star" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Horde Knight",
+      "items": [
+        {
+          "name": "Flavour",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Salty" ],
+            [ 2, 2, "Sweet" ],
+            [ 3, 3, "Spicy" ],
+            [ 4, 4, "Bitter" ],
+            [ 5, 5, "Sour" ],
+            [ 6, 6, "Umami" ]
+          ]
+        },
+        {
+          "name": "Substance",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Meat" ],
+            [ 2, 2, "Bread" ],
+            [ 3, 3, "Cheese" ],
+            [ 4, 4, "Fruit" ],
+            [ 5, 5, "Vegetable" ],
+            [ 6, 6, "Stew" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Emerald Knight",
+      "items": [
+        {
+          "name": "Hidden Action",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Move" ],
+            [ 2, 2, "Attack" ],
+            [ 3, 3, "Cast" ],
+            [ 4, 4, "Use Item" ],
+            [ 5, 5, "Speak" ],
+            [ 6, 6, "Observe" ]
+          ]
+        },
+        {
+          "name": "Heightened Sense",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Sight" ],
+            [ 2, 2, "Hearing" ],
+            [ 3, 3, "Smell" ],
+            [ 4, 4, "Touch" ],
+            [ 5, 5, "Taste" ],
+            [ 6, 6, "Intuition" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Chain Knight",
+      "items": [
+        {
+          "name": "First",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Climbed" ],
+            [ 2, 2, "Dug" ],
+            [ 3, 3, "Swam" ],
+            [ 4, 4, "Fell" ],
+            [ 5, 5, "Carried" ],
+            [ 6, 6, "Summoned" ]
+          ]
+        },
+        {
+          "name": "Then",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Crawled" ],
+            [ 2, 2, "Ran" ],
+            [ 3, 3, "Hid" ],
+            [ 4, 4, "Fought" ],
+            [ 5, 5, "Barged" ],
+            [ 6, 6, "Walked" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Banner Knight",
+      "items": [
+        {
+          "name": "Design",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Lion" ],
+            [ 2, 2, "Eagle" ],
+            [ 3, 3, "Sun" ],
+            [ 4, 4, "Moon" ],
+            [ 5, 5, "Star" ],
+            [ 6, 6, "Tower" ]
+          ]
+        },
+        {
+          "name": "Topper",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Skull" ],
+            [ 2, 2, "Hand" ],
+            [ 3, 3, "Crown" ],
+            [ 4, 4, "Bird" ],
+            [ 5, 5, "Cross" ],
+            [ 6, 6, "Spike" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Pigeon Knight",
+      "items": [
+        {
+          "name": "Hue",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Red" ],
+            [ 2, 2, "Blue" ],
+            [ 3, 3, "Green" ],
+            [ 4, 4, "Yellow" ],
+            [ 5, 5, "White" ],
+            [ 6, 6, "Black" ]
+          ]
+        },
+        {
+          "name": "Shape",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Tower" ],
+            [ 2, 2, "Tree" ],
+            [ 3, 3, "Bridge" ],
+            [ 4, 4, "Gate" ],
+            [ 5, 5, "House" ],
+            [ 6, 6, "Hill" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Shield Knight",
+      "items": [
+        {
+          "name": "Aroma",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Lavender" ],
+            [ 2, 2, "Mint" ],
+            [ 3, 3, "Pine" ],
+            [ 4, 4, "Rose" ],
+            [ 5, 5, "Lemon" ],
+            [ 6, 6, "Sage" ]
+          ]
+        },
+        {
+          "name": "Side Effect",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Drowsiness" ],
+            [ 2, 2, "Numbness" ],
+            [ 3, 3, "Tingling" ],
+            [ 4, 4, "Itching" ],
+            [ 5, 5, "Heat" ],
+            [ 6, 6, "Cold" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Whip Knight",
+      "items": [
+        {
+          "name": "Positive Effect",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Energy" ],
+            [ 2, 2, "Focus" ],
+            [ 3, 3, "Strength" ],
+            [ 4, 4, "Speed" ],
+            [ 5, 5, "Endurance" ],
+            [ 6, 6, "Courage" ]
+          ]
+        },
+        {
+          "name": "Side Effect",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Paranoia" ],
+            [ 2, 2, "Aggression" ],
+            [ 3, 3, "Hunger" ],
+            [ 4, 4, "Thirst" ],
+            [ 5, 5, "Shaking" ],
+            [ 6, 6, "Sweating" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Seal Knight",
+      "items": [
+        {
+          "name": "Subject",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "War" ],
+            [ 2, 2, "Love" ],
+            [ 3, 3, "Death" ],
+            [ 4, 4, "Birth" ],
+            [ 5, 5, "Wealth" ],
+            [ 6, 6, "Power" ]
+          ]
+        },
+        {
+          "name": "Prophecy",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Doom" ],
+            [ 2, 2, "Glory" ],
+            [ 3, 3, "Betrayal" ],
+            [ 4, 4, "Change" ],
+            [ 5, 5, "Loss" ],
+            [ 6, 6, "Gain" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Horn Knight",
+      "items": [
+        {
+          "name": "Shape",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Curved" ],
+            [ 2, 2, "Straight" ],
+            [ 3, 3, "Spiral" ],
+            [ 4, 4, "Hooked" ],
+            [ 5, 5, "Flared" ],
+            [ 6, 6, "Knotted" ]
+          ]
+        },
+        {
+          "name": "Sound",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Deep boom" ],
+            [ 2, 2, "Shrill shriek" ],
+            [ 3, 3, "Hollow moan" ],
+            [ 4, 4, "Harsh blast" ],
+            [ 5, 5, "Clear note" ],
+            [ 6, 6, "Rasping cough" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Dove Knight",
+      "items": [
+        {
+          "name": "Ability",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Feather fall" ],
+            [ 2, 2, "Jump high" ],
+            [ 3, 3, "Run fast" ],
+            [ 4, 4, "Silent step" ],
+            [ 5, 5, "See far" ],
+            [ 6, 6, "Hear well" ]
+          ]
+        },
+        {
+          "name": "Limitation",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Only in sun" ],
+            [ 2, 2, "Only in moon" ],
+            [ 3, 3, "Only when wet" ],
+            [ 4, 4, "Only when dry" ],
+            [ 5, 5, "Only when full" ],
+            [ 6, 6, "Only when empty" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Story Knight",
+      "items": [
+        {
+          "name": "Style",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Tragedy" ],
+            [ 2, 2, "Comedy" ],
+            [ 3, 3, "Romance" ],
+            [ 4, 4, "Action" ],
+            [ 5, 5, "Mystery" ],
+            [ 6, 6, "Horror" ]
+          ]
+        },
+        {
+          "name": "Twist",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "They died" ],
+            [ 2, 2, "They lived" ],
+            [ 3, 3, "It was a dream" ],
+            [ 4, 4, "They were rich" ],
+            [ 5, 5, "They were poor" ],
+            [ 6, 6, "It was a lie" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Turtle Knight",
+      "items": [
+        {
+          "name": "Appearance",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Curved" ],
+            [ 2, 2, "Spiral" ],
+            [ 3, 3, "Straight" ],
+            [ 4, 4, "Jagged" ],
+            [ 5, 5, "Smooth" ],
+            [ 6, 6, "Rough" ]
+          ]
+        },
+        {
+          "name": "Imparted Flavour",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Honey" ],
+            [ 2, 2, "Wine" ],
+            [ 3, 3, "Milk" ],
+            [ 4, 4, "Blood" ],
+            [ 5, 5, "Water" ],
+            [ 6, 6, "Ale" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Key Knight",
+      "items": [
+        {
+          "name": "Valuables",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Coins" ],
+            [ 2, 2, "Gems" ],
+            [ 3, 3, "Jewelry" ],
+            [ 4, 4, "Art" ],
+            [ 5, 5, "Spices" ],
+            [ 6, 6, "Silks" ]
+          ]
+        },
+        {
+          "name": "Keepsakes",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Locket" ],
+            [ 2, 2, "Letter" ],
+            [ 3, 3, "Ring" ],
+            [ 4, 4, "Toy" ],
+            [ 5, 5, "Lock of hair" ],
+            [ 6, 6, "Pressed flower" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Moat Knight",
+      "items": [
+        {
+          "name": "Will Not",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Jump" ],
+            [ 2, 2, "Run" ],
+            [ 3, 3, "Swim" ],
+            [ 4, 4, "Climb" ],
+            [ 5, 5, "Back up" ],
+            [ 6, 6, "Turn left" ]
+          ]
+        },
+        {
+          "name": "But",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Bites hard" ],
+            [ 2, 2, "Kicks hard" ],
+            [ 3, 3, "Never tires" ],
+            [ 4, 4, "Very fast" ],
+            [ 5, 5, "Very quiet" ],
+            [ 6, 6, "Very brave" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Boulder Knight",
+      "items": [
+        {
+          "name": "Design",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Spikes" ],
+            [ 2, 2, "Ridges" ],
+            [ 3, 3, "Plates" ],
+            [ 4, 4, "Scales" ],
+            [ 5, 5, "Studs" ],
+            [ 6, 6, "Bands" ]
+          ]
+        },
+        {
+          "name": "Quirk",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Heavy" ],
+            [ 2, 2, "Noisy" ],
+            [ 3, 3, "Hot" ],
+            [ 4, 4, "Cold" ],
+            [ 5, 5, "Tight" ],
+            [ 6, 6, "Loose" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Tankard Knight",
+      "items": [
+        {
+          "name": "Who Scarred You?",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Brother" ],
+            [ 2, 2, "Sister" ],
+            [ 3, 3, "Father" ],
+            [ 4, 4, "Mother" ],
+            [ 5, 5, "Lover" ],
+            [ 6, 6, "Friend" ]
+          ]
+        },
+        {
+          "name": "Your Betrayal",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Stole money" ],
+            [ 2, 2, "Stole love" ],
+            [ 3, 3, "Revealed secret" ],
+            [ 4, 4, "Failed duty" ],
+            [ 5, 5, "Ran away" ],
+            [ 6, 6, "Lied" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Owl Knight",
+      "items": [
+        {
+          "name": "Title",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "History of" ],
+            [ 2, 2, "Nature of" ],
+            [ 3, 3, "Secret of" ],
+            [ 4, 4, "Guide to" ],
+            [ 5, 5, "Song of" ],
+            [ 6, 6, "Law of" ]
+          ]
+        },
+        {
+          "name": "Topic",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Birds" ],
+            [ 2, 2, "Trees" ],
+            [ 3, 3, "Stars" ],
+            [ 4, 4, "Rivers" ],
+            [ 5, 5, "Stones" ],
+            [ 6, 6, "Beasts" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Hooded Knight",
+      "items": [
+        {
+          "name": "Hood",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Deep" ],
+            [ 2, 2, "Pointed" ],
+            [ 3, 3, "Tattered" ],
+            [ 4, 4, "Fur-lined" ],
+            [ 5, 5, "Silk" ],
+            [ 6, 6, "Leather" ]
+          ]
+        },
+        {
+          "name": "Cloak",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Heavy" ],
+            [ 2, 2, "Light" ],
+            [ 3, 3, "Patchwork" ],
+            [ 4, 4, "Embroidered" ],
+            [ 5, 5, "Stained" ],
+            [ 6, 6, "Plain" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Lance Knight",
+      "items": [
+        {
+          "name": "What can you see?",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Ghosts" ],
+            [ 2, 2, "Magic" ],
+            [ 3, 3, "Heat" ],
+            [ 4, 4, "Sickness" ],
+            [ 5, 5, "Lies" ],
+            [ 6, 6, "Fear" ]
+          ]
+        },
+        {
+          "name": "But you cannot see",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Faces" ],
+            [ 2, 2, "Colors" ],
+            [ 3, 3, "Depth" ],
+            [ 4, 4, "Writing" ],
+            [ 5, 5, "Stars" ],
+            [ 6, 6, "Animals" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Questing Knight",
+      "items": [
+        {
+          "name": "Appearance",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Rusted" ],
+            [ 2, 2, "Shining" ],
+            [ 3, 3, "Notched" ],
+            [ 4, 4, "Jeweled" ],
+            [ 5, 5, "Plain" ],
+            [ 6, 6, "Dark" ]
+          ]
+        },
+        {
+          "name": "Who gave it to you?",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "King" ],
+            [ 2, 2, "Queen" ],
+            [ 3, 3, "Father" ],
+            [ 4, 4, "Mother" ],
+            [ 5, 5, "Lover" ],
+            [ 6, 6, "Stranger" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Ring Knight",
+      "items": [
+        {
+          "name": "Design",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Gold" ],
+            [ 2, 2, "Silver" ],
+            [ 3, 3, "Iron" ],
+            [ 4, 4, "Bone" ],
+            [ 5, 5, "Wood" ],
+            [ 6, 6, "Stone" ]
+          ]
+        },
+        {
+          "name": "Effect",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Warmth" ],
+            [ 2, 2, "Cold" ],
+            [ 3, 3, "Light" ],
+            [ 4, 4, "Shadow" ],
+            [ 5, 5, "Silence" ],
+            [ 6, 6, "Noise" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Forge Knight",
+      "items": [
+        {
+          "name": "Visible",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Burn on arm" ],
+            [ 2, 2, "Cut on face" ],
+            [ 3, 3, "Missing finger" ],
+            [ 4, 4, "Twisted leg" ],
+            [ 5, 5, "Blind eye" ],
+            [ 6, 6, "Bald patches" ]
+          ]
+        },
+        {
+          "name": "Non-Visible",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Lung cough" ],
+            [ 2, 2, "Back pain" ],
+            [ 3, 3, "Ringing ears" ],
+            [ 4, 4, "Stiff joints" ],
+            [ 5, 5, "Nightmares" ],
+            [ 6, 6, "Bad temper" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Rune Knight",
+      "items": [
+        {
+          "name": "If Shaken",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Rattles" ],
+            [ 2, 2, "Glows" ],
+            [ 3, 3, "Hums" ],
+            [ 4, 4, "Gets heavy" ],
+            [ 5, 5, "Gets hot" ],
+            [ 6, 6, "Gets cold" ]
+          ]
+        },
+        {
+          "name": "If Smashed",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Explosion" ],
+            [ 2, 2, "Gas cloud" ],
+            [ 3, 3, "Bright light" ],
+            [ 4, 4, "Darkness" ],
+            [ 5, 5, "Scream" ],
+            [ 6, 6, "Silence" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Gallows Knight",
+      "items": [
+        {
+          "name": "Type",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Plate" ],
+            [ 2, 2, "Mail" ],
+            [ 3, 3, "Leather" ],
+            [ 4, 4, "Scale" ],
+            [ 5, 5, "Brigandine" ],
+            [ 6, 6, "Cloth" ]
+          ]
+        },
+        {
+          "name": "Detail",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Bloodstained" ],
+            [ 2, 2, "Rusted" ],
+            [ 3, 3, "Dented" ],
+            [ 4, 4, "Scratched" ],
+            [ 5, 5, "Burned" ],
+            [ 6, 6, "Patched" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Tome Knight",
+      "items": [
+        {
+          "name": "Blind spot for…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Names" ],
+            [ 2, 2, "Faces" ],
+            [ 3, 3, "Numbers" ],
+            [ 4, 4, "Dates" ],
+            [ 5, 5, "Places" ],
+            [ 6, 6, "Directions" ]
+          ]
+        },
+        {
+          "name": "And…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Songs" ],
+            [ 2, 2, "Poems" ],
+            [ 3, 3, "Jokes" ],
+            [ 4, 4, "Stories" ],
+            [ 5, 5, "Recipes" ],
+            [ 6, 6, "Prayers" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Meteor Knight",
+      "items": [
+        {
+          "name": "Appearance",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Obsidian" ],
+            [ 2, 2, "Crystal" ],
+            [ 3, 3, "Bone" ],
+            [ 4, 4, "Gold" ],
+            [ 5, 5, "Silver" ],
+            [ 6, 6, "Iron" ]
+          ]
+        },
+        {
+          "name": "Ability",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Glows" ],
+            [ 2, 2, "Hums" ],
+            [ 3, 3, "Floats" ],
+            [ 4, 4, "Returns" ],
+            [ 5, 5, "Burns" ],
+            [ 6, 6, "Freezes" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Gazer Knight",
+      "items": [
+        {
+          "name": "Event",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Battle" ],
+            [ 2, 2, "Wedding" ],
+            [ 3, 3, "Funeral" ],
+            [ 4, 4, "Feast" ],
+            [ 5, 5, "Hunt" ],
+            [ 6, 6, "Coronation" ]
+          ]
+        },
+        {
+          "name": "Subject",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "King" ],
+            [ 2, 2, "Queen" ],
+            [ 3, 3, "Knight" ],
+            [ 4, 4, "Dragon" ],
+            [ 5, 5, "Castle" ],
+            [ 6, 6, "Forest" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Mule Knight",
+      "items": [
+        {
+          "name": "Form",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Ball" ],
+            [ 2, 2, "Disc" ],
+            [ 3, 3, "Tube" ],
+            [ 4, 4, "Cube" ],
+            [ 5, 5, "Pyramid" ],
+            [ 6, 6, "Star" ]
+          ]
+        },
+        {
+          "name": "Trigger",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Impact" ],
+            [ 2, 2, "Fire" ],
+            [ 3, 3, "Water" ],
+            [ 4, 4, "Fuse" ],
+            [ 5, 5, "Sound" ],
+            [ 6, 6, "Time" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Halo Knight",
+      "items": [
+        {
+          "name": "Material Requirement",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Glass" ],
+            [ 2, 2, "Gold" ],
+            [ 3, 3, "Silver" ],
+            [ 4, 4, "Iron" ],
+            [ 5, 5, "Wood" ],
+            [ 6, 6, "Bone" ]
+          ]
+        },
+        {
+          "name": "Other Requirement",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Tears" ],
+            [ 2, 2, "Blood" ],
+            [ 3, 3, "Sweat" ],
+            [ 4, 4, "Song" ],
+            [ 5, 5, "Prayer" ],
+            [ 6, 6, "Silence" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Iron Knight",
+      "items": [
+        {
+          "name": "Out of a…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Plough" ],
+            [ 2, 2, "Anvil" ],
+            [ 3, 3, "Chain" ],
+            [ 4, 4, "Gate" ],
+            [ 5, 5, "Statue" ],
+            [ 6, 6, "Bell" ]
+          ]
+        },
+        {
+          "name": "At a time of…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "War" ],
+            [ 2, 2, "Plague" ],
+            [ 3, 3, "Famine" ],
+            [ 4, 4, "Peace" ],
+            [ 5, 5, "Storm" ],
+            [ 6, 6, "Drought" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Mirror Knight",
+      "items": [
+        {
+          "name": "Knight",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Saved it" ],
+            [ 2, 2, "Raised it" ],
+            [ 3, 3, "Stole it" ],
+            [ 4, 4, "Bought it" ],
+            [ 5, 5, "Won it" ],
+            [ 6, 6, "Found it" ]
+          ]
+        },
+        {
+          "name": "Steed",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Saved you" ],
+            [ 2, 2, "Carried you" ],
+            [ 3, 3, "Bit you" ],
+            [ 4, 4, "Threw you" ],
+            [ 5, 5, "Kicked you" ],
+            [ 6, 6, "Loved you" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Dusk Knight",
+      "items": [
+        {
+          "name": "Start",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "The sun sets" ],
+            [ 2, 2, "The moon rises" ],
+            [ 3, 3, "The stars fade" ],
+            [ 4, 4, "The wind blows" ],
+            [ 5, 5, "The fire dies" ],
+            [ 6, 6, "The bird sings" ]
+          ]
+        },
+        {
+          "name": "End",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "And we sleep" ],
+            [ 2, 2, "And we dream" ],
+            [ 3, 3, "And we die" ],
+            [ 4, 4, "And we live" ],
+            [ 5, 5, "And we wake" ],
+            [ 6, 6, "And we forget" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Coin Knight",
+      "items": [
+        {
+          "name": "Loved by",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Children" ],
+            [ 2, 2, "Animals" ],
+            [ 3, 3, "Old people" ],
+            [ 4, 4, "Drunkards" ],
+            [ 5, 5, "Soldiers" ],
+            [ 6, 6, "Priests" ]
+          ]
+        },
+        {
+          "name": "Hated by",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Dogs" ],
+            [ 2, 2, "Cats" ],
+            [ 3, 3, "Horses" ],
+            [ 4, 4, "Birds" ],
+            [ 5, 5, "Rats" ],
+            [ 6, 6, "Snakes" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Mock Knight",
+      "items": [
+        {
+          "name": "Bones of…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Iron" ],
+            [ 2, 2, "Wood" ],
+            [ 3, 3, "Stone" ],
+            [ 4, 4, "Glass" ],
+            [ 5, 5, "Ice" ],
+            [ 6, 6, "Gold" ]
+          ]
+        },
+        {
+          "name": "Skin of…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Leather" ],
+            [ 2, 2, "Cloth" ],
+            [ 3, 3, "Bark" ],
+            [ 4, 4, "Paper" ],
+            [ 5, 5, "Leaves" ],
+            [ 6, 6, "Mud" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Mask Knight",
+      "items": [
+        {
+          "name": "Appearance",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Smiling" ],
+            [ 2, 2, "Frowning" ],
+            [ 3, 3, "Crying" ],
+            [ 4, 4, "Screaming" ],
+            [ 5, 5, "Sleeping" ],
+            [ 6, 6, "Staring" ]
+          ]
+        },
+        {
+          "name": "Design",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Painted" ],
+            [ 2, 2, "Carved" ],
+            [ 3, 3, "Molded" ],
+            [ 4, 4, "Beaten" ],
+            [ 5, 5, "Woven" ],
+            [ 6, 6, "Stitched" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Bone Knight",
+      "items": [
+        {
+          "name": "The Box",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Iron" ],
+            [ 2, 2, "Wood" ],
+            [ 3, 3, "Bone" ],
+            [ 4, 4, "Stone" ],
+            [ 5, 5, "Lead" ],
+            [ 6, 6, "Gold" ]
+          ]
+        },
+        {
+          "name": "The Bones",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Human" ],
+            [ 2, 2, "Animal" ],
+            [ 3, 3, "Bird" ],
+            [ 4, 4, "Fish" ],
+            [ 5, 5, "Monster" ],
+            [ 6, 6, "Dragon" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Salt Knight",
+      "items": [
+        {
+          "name": "Design",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Gourd" ],
+            [ 2, 2, "Skin" ],
+            [ 3, 3, "Bottle" ],
+            [ 4, 4, "Horn" ],
+            [ 5, 5, "Shell" ],
+            [ 6, 6, "Skull" ]
+          ]
+        },
+        {
+          "name": "Thirst",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Blood" ],
+            [ 2, 2, "Tears" ],
+            [ 3, 3, "Sweat" ],
+            [ 4, 4, "Rain" ],
+            [ 5, 5, "River" ],
+            [ 6, 6, "Sea" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Violet Knight",
+      "items": [
+        {
+          "name": "Why?",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "No name fits" ],
+            [ 2, 2, "Forgot it" ],
+            [ 3, 3, "Forbidden" ],
+            [ 4, 4, "Stolen" ],
+            [ 5, 5, "Secret" ],
+            [ 6, 6, "Sacred" ]
+          ]
+        },
+        {
+          "name": "A Strange Steed",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Purple eyes" ],
+            [ 2, 2, "Silent hoofs" ],
+            [ 3, 3, "Eat meat" ],
+            [ 4, 4, "No shadow" ],
+            [ 5, 5, "Cold skin" ],
+            [ 6, 6, "Human laugh" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Cosmic Knight",
+      "items": [
+        {
+          "name": "Form",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Star shape" ],
+            [ 2, 2, "Crescent" ],
+            [ 3, 3, "Comet" ],
+            [ 4, 4, "Planet" ],
+            [ 5, 5, "Nebula" ],
+            [ 6, 6, "Void" ]
+          ]
+        },
+        {
+          "name": "Twist",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Bolts glow" ],
+            [ 2, 2, "Silent fire" ],
+            [ 3, 3, "No string" ],
+            [ 4, 4, "Floating" ],
+            [ 5, 5, "Ice cold" ],
+            [ 6, 6, "Whispers" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Temple Knight",
+      "items": [
+        {
+          "name": "Voice",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Hissing" ],
+            [ 2, 2, "Whispering" ],
+            [ 3, 3, "Singing" ],
+            [ 4, 4, "Growling" ],
+            [ 5, 5, "Crying" ],
+            [ 6, 6, "Laughing" ]
+          ]
+        },
+        {
+          "name": "Agenda",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Protect" ],
+            [ 2, 2, "Destroy" ],
+            [ 3, 3, "Consume" ],
+            [ 4, 4, "Learn" ],
+            [ 5, 5, "Hide" ],
+            [ 6, 6, "Rule" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Fox Knight",
+      "items": [
+        {
+          "name": "Design",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Boot" ],
+            [ 2, 2, "Glove" ],
+            [ 3, 3, "Belt" ],
+            [ 4, 4, "Hat" ],
+            [ 5, 5, "Cane" ],
+            [ 6, 6, "Book" ]
+          ]
+        },
+        {
+          "name": "Ability",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Springs out" ],
+            [ 2, 2, "Drops out" ],
+            [ 3, 3, "Slides out" ],
+            [ 4, 4, "Folds out" ],
+            [ 5, 5, "Snaps out" ],
+            [ 6, 6, "Pops out" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Gull Knight",
+      "items": [
+        {
+          "name": "Some taken from…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Enemies" ],
+            [ 2, 2, "Friends" ],
+            [ 3, 3, "Animals" ],
+            [ 4, 4, "Statues" ],
+            [ 5, 5, "Ships" ],
+            [ 6, 6, "Houses" ]
+          ]
+        },
+        {
+          "name": "Mixed with…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Rope" ],
+            [ 2, 2, "Chain" ],
+            [ 3, 3, "Leather" ],
+            [ 4, 4, "Cloth" ],
+            [ 5, 5, "Wire" ],
+            [ 6, 6, "Hair" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Magpie Knight",
+      "items": [
+        {
+          "name": "Item",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Ring" ],
+            [ 2, 2, "Coin" ],
+            [ 3, 3, "Key" ],
+            [ 4, 4, "Gem" ],
+            [ 5, 5, "Button" ],
+            [ 6, 6, "Tooth" ]
+          ]
+        },
+        {
+          "name": "Reminds you of…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Home" ],
+            [ 2, 2, "Love" ],
+            [ 3, 3, "Loss" ],
+            [ 4, 4, "Victory" ],
+            [ 5, 5, "Defeat" ],
+            [ 6, 6, "Childhood" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Reliquary Knight",
+      "items": [
+        {
+          "name": "Bodypart",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Finger" ],
+            [ 2, 2, "Toe" ],
+            [ 3, 3, "Tooth" ],
+            [ 4, 4, "Ear" ],
+            [ 5, 5, "Eye" ],
+            [ 6, 6, "Heart" ]
+          ]
+        },
+        {
+          "name": "Being",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Saint" ],
+            [ 2, 2, "Sinner" ],
+            [ 3, 3, "King" ],
+            [ 4, 4, "Beggar" ],
+            [ 5, 5, "Warrior" ],
+            [ 6, 6, "Wizard" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Vulture Knight",
+      "items": [
+        {
+          "name": "Material",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Black iron" ],
+            [ 2, 2, "Rusted steel" ],
+            [ 3, 3, "Bone white" ],
+            [ 4, 4, "Blood red" ],
+            [ 5, 5, "Shadow grey" ],
+            [ 6, 6, "Rot green" ]
+          ]
+        },
+        {
+          "name": "Detail",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Spikes" ],
+            [ 2, 2, "Hooks" ],
+            [ 3, 3, "Chains" ],
+            [ 4, 4, "Skulls" ],
+            [ 5, 5, "Ribs" ],
+            [ 6, 6, "Teeth" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Free Knight",
+      "items": [
+        {
+          "name": "Ineffective vs",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Fire" ],
+            [ 2, 2, "Cold" ],
+            [ 3, 3, "Lightning" ],
+            [ 4, 4, "Acid" ],
+            [ 5, 5, "Poison" ],
+            [ 6, 6, "Magic" ]
+          ]
+        },
+        {
+          "name": "Special Ability",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Reflects gaze" ],
+            [ 2, 2, "Absorbs light" ],
+            [ 3, 3, "Makes silence" ],
+            [ 4, 4, "Glows near evil" ],
+            [ 5, 5, "Floats on water" ],
+            [ 6, 6, "Cannot be lost" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Silk Knight",
+      "items": [
+        {
+          "name": "Distracted by…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Butterflies" ],
+            [ 2, 2, "Flowers" ],
+            [ 3, 3, "Running water" ],
+            [ 4, 4, "Shiny things" ],
+            [ 5, 5, "Loud noises" ],
+            [ 6, 6, "Strong smells" ]
+          ]
+        },
+        {
+          "name": "Scared by…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Fire" ],
+            [ 2, 2, "Dogs" ],
+            [ 3, 3, "Storms" ],
+            [ 4, 4, "Shadows" ],
+            [ 5, 5, "Snakes" ],
+            [ 6, 6, "Mice" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Tiger Knight",
+      "items": [
+        {
+          "name": "Design",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Stripes" ],
+            [ 2, 2, "Spots" ],
+            [ 3, 3, "Scales" ],
+            [ 4, 4, "Feathers" ],
+            [ 5, 5, "Flames" ],
+            [ 6, 6, "Lightning" ]
+          ]
+        },
+        {
+          "name": "Why?",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Tribute" ],
+            [ 2, 2, "Warning" ],
+            [ 3, 3, "Magic" ],
+            [ 4, 4, "Curse" ],
+            [ 5, 5, "Honor" ],
+            [ 6, 6, "Camouflage" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Leaf Knight",
+      "items": [
+        {
+          "name": "Use",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Walking stick" ],
+            [ 2, 2, "Tent pole" ],
+            [ 3, 3, "Fishing rod" ],
+            [ 4, 4, "Fire poker" ],
+            [ 5, 5, "Back scratcher" ],
+            [ 6, 6, "Weapon" ]
+          ]
+        },
+        {
+          "name": "But…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "It is crooked" ],
+            [ 2, 2, "It is heavy" ],
+            [ 3, 3, "It is sticky" ],
+            [ 4, 4, "It is weak" ],
+            [ 5, 5, "It is ugly" ],
+            [ 6, 6, "It smells" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Glass Knight",
+      "items": [
+        {
+          "name": "Main Hue",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Red" ],
+            [ 2, 2, "Blue" ],
+            [ 3, 3, "Green" ],
+            [ 4, 4, "Yellow" ],
+            [ 5, 5, "White" ],
+            [ 6, 6, "Black" ]
+          ]
+        },
+        {
+          "name": "Decoration",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Eyes" ],
+            [ 2, 2, "Hands" ],
+            [ 3, 3, "Stars" ],
+            [ 4, 4, "Waves" ],
+            [ 5, 5, "Flames" ],
+            [ 6, 6, "Vines" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Hive Knight",
+      "items": [
+        {
+          "name": "You must be",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Naked" ],
+            [ 2, 2, "Covered in honey" ],
+            [ 3, 3, "Covered in mud" ],
+            [ 4, 4, "Underwater" ],
+            [ 5, 5, "Buried" ],
+            [ 6, 6, "Hanging" ]
+          ]
+        },
+        {
+          "name": "You require",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Royal jelly" ],
+            [ 2, 2, "Rare flower" ],
+            [ 3, 3, "Morning dew" ],
+            [ 4, 4, "Specific song" ],
+            [ 5, 5, "Full moon" ],
+            [ 6, 6, "Silence" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Ghoul Knight",
+      "items": [
+        {
+          "name": "Animal Type",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Dog" ],
+            [ 2, 2, "Cat" ],
+            [ 3, 3, "Horse" ],
+            [ 4, 4, "Bird" ],
+            [ 5, 5, "Fish" ],
+            [ 6, 6, "Rabbit" ]
+          ]
+        },
+        {
+          "name": "Origin",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Childhood toy" ],
+            [ 2, 2, "Found in grave" ],
+            [ 3, 3, "Gift from dead" ],
+            [ 4, 4, "Carved yourself" ],
+            [ 5, 5, "Washed up" ],
+            [ 6, 6, "Stolen" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Weaver Knight",
+      "items": [
+        {
+          "name": "Design",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Needle" ],
+            [ 2, 2, "Shuttle" ],
+            [ 3, 3, "Spindle" ],
+            [ 4, 4, "Hook" ],
+            [ 5, 5, "Blade" ],
+            [ 6, 6, "Weight" ]
+          ]
+        },
+        {
+          "name": "Ability",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Returns to hand" ],
+            [ 2, 2, "Never misses" ],
+            [ 3, 3, "Pierces armor" ],
+            [ 4, 4, "Silent flight" ],
+            [ 5, 5, "Explodes on impact" ],
+            [ 6, 6, "Entangles target" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Thunder Knight",
+      "items": [
+        {
+          "name": "Ability",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Glows in storm" ],
+            [ 2, 2, "Buzzes loudly" ],
+            [ 3, 3, "Eats metal" ],
+            [ 4, 4, "Spits sparks" ],
+            [ 5, 5, "Sings songs" ],
+            [ 6, 6, "Predicts weather" ]
+          ]
+        },
+        {
+          "name": "Manner",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Angry" ],
+            [ 2, 2, "Sleepy" ],
+            [ 3, 3, "Hungry" ],
+            [ 4, 4, "Afraid" ],
+            [ 5, 5, "Curious" ],
+            [ 6, 6, "Friendly" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Dust Knight",
+      "items": [
+        {
+          "name": "Flavour",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Salty" ],
+            [ 2, 2, "Smoky" ],
+            [ 3, 3, "Spicy" ],
+            [ 4, 4, "Sour" ],
+            [ 5, 5, "Sweet" ],
+            [ 6, 6, "Bitter" ]
+          ]
+        },
+        {
+          "name": "Side Effect",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Thirst" ],
+            [ 2, 2, "Hunger" ],
+            [ 3, 3, "Sleepiness" ],
+            [ 4, 4, "Alertness" ],
+            [ 5, 5, "Sadness" ],
+            [ 6, 6, "Joy" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Fanged Knight",
+      "items": [
+        {
+          "name": "Place",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Castle" ],
+            [ 2, 2, "Town" ],
+            [ 3, 3, "Dungeon" ],
+            [ 4, 4, "Forest" ],
+            [ 5, 5, "Mountain" ],
+            [ 6, 6, "Lake" ]
+          ]
+        },
+        {
+          "name": "Ancestor to",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Current King" ],
+            [ 2, 2, "Local Lord" ],
+            [ 3, 3, "High Priest" ],
+            [ 4, 4, "Famous Hero" ],
+            [ 5, 5, "Notorious Villain" ],
+            [ 6, 6, "You" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Pearl Knight",
+      "items": [
+        {
+          "name": "How do you know?",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Aquatic nightmares" ],
+            [ 2, 2, "A fish told you" ],
+            [ 3, 3, "It’s cold to the touch" ],
+            [ 4, 4, "Sudden fear of water" ],
+            [ 5, 5, "Storms call to you" ],
+            [ 6, 6, "The waves rebuke you" ]
+          ]
+        },
+        {
+          "name": "Punishment",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Sea creatures get +[[/roll d6 #damage]] against you" ],
+            [ 2, 2, "You cannot swim in saltwater" ],
+            [ 3, 3, "River water tastes salty to you" ],
+            [ 4, 4, "Sailors distrust you" ],
+            [ 5, 5, "Salt tastes foul to you" ],
+            [ 6, 6, "Fish is poison to you" ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Rat Knight",
+      "items": [
+        {
+          "name": "Type",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Leather" ],
+            [ 2, 2, "Velvet" ],
+            [ 3, 3, "Fur" ],
+            [ 4, 4, "Scales" ],
+            [ 5, 5, "Hair" ],
+            [ 6, 6, "Feathers" ]
+          ]
+        },
+        {
+          "name": "Modified for…",
+          "formula": "d6",
+          "results": [
+            [ 1, 1, "Squeezing" ],
+            [ 2, 2, "Climbing" ],
+            [ 3, 3, "Swimming" ],
+            [ 4, 4, "Hiding" ],
+            [ 5, 5, "Running" ],
+            [ 6, 6, "Jumping" ]
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+    const QUESTIONS = [
+        {
+            text: "A beast blocks your path. How do you respond?",
+            options: [
+                { text: "I strike it down with primal fury.", tags: ["Visceral", "Rage-fueled", "Aggressive", "Bestial", "Violence", "Hunter"] },
+                { text: "I command it to step aside.", tags: ["Noble", "Commanding", "Voice-shout", "Authority", "Stern", "Truth-bound"] },
+                { text: "I study it, looking for a weakness.", tags: ["Curious", "Strategist", "Knowledge", "Watcher", "Wise"] },
+                { text: "I offer it food and try to pass peacefully.", tags: ["Empathetic", "Nature", "Beast-bond", "Peace", "Hospitality"] }
+            ]
+        },
+        {
+            text: "What is your weapon of choice?",
+            options: [
+                { text: "A heavy mace or hammer to crush armor.", tags: ["Mace-wielder", "Old-hammer", "Punitive", "Cudgel-bearer", "Heavy", "Strong"] },
+                { text: "A long spear or pike to keep foes at bay.", tags: ["Pike-wielder", "Forked-spear", "Longaxe", "Greatlance", "Reach", "Distance"] },
+                { text: "A finely crafted sword, sharp and reliable.", tags: ["Blade", "Sword", "Steel", "Sharp", "Noble"] },
+                { text: "Whatever is at hand—branch, bone, or stone.", tags: ["Improvised", "Rustic", "Simple", "Branch-wielder", "Bone", "Scavenger"] }
+            ]
+        },
+        {
+            text: "Where do you feel most at home?",
+            options: [
+                { text: "In the deep, silent woods.", tags: ["Sylvan", "Foliage-clad", "Arboreal", "Green", "Forest", "Nature"] },
+                { text: "Amidst the noise and stone of the City.", tags: ["Urban", "Wall", "Brick", "Crowd", "Trade", "Civilization"] },
+                { text: "On the open road, under the stars.", tags: ["Transient", "Wanderer", "Travel", "Sky", "Star", "Distance"] },
+                { text: "In the damp dark, where others fear to tread.", tags: ["Underground", "Dark", "Rot", "Cave", "Hidden", "Secret"] }
+            ]
+        },
+        {
+            text: "What drives you forward?",
+            options: [
+                { text: "The pursuit of Glory and Renown.", tags: ["Glory", "Prideful", "Showman", "Heraldic", "Champion", "Gold"] },
+                { text: "A solemn Duty to a higher cause.", tags: ["Dutiful", "Truth-bound", "Justiciar", "Law", "Order", "Protection"] },
+                { text: "The thrill of the Hunt.", tags: ["Hunter", "Chasing", "Predator", "Swift", "Aggressive", "Track"] },
+                { text: "A hunger for forbidden Knowledge.", tags: ["Curious", "Secret", "Magic", "Book", "Scroll", "Study"] }
+            ]
+        },
+        {
+            text: "How does your steed appear?",
+            options: [
+                { text: "Armoured and disciplined.", tags: ["Majestic-charger", "Stocky-steed", "Noble-steed", "War", "Heavy"] },
+                { text: "Wild, barely tamed, perhaps not even a horse.", tags: ["Tattered-steed", "Petulant-steed", "Beast", "Wild", "Monster"] },
+                { text: "Strange, altered by magic or nature.", tags: ["Hooded-steed", "Pale-steed", "Tattooed-steed", "Spotted-steed", "Mutant"] },
+                { text: "I prefer to walk.", tags: ["Walking", "Ground", "Foot", "Slow", "Steady"] }
+            ]
+        },
+        {
+            text: "What is your greatest flaw?",
+            options: [
+                { text: "I am too rigid and unforgiving.", tags: ["Stern", "Dogmatic", "Punitive", "Cold", "Hard"] },
+                { text: "I am easily distracted by beauty or luxury.", tags: ["Opulent", "Intoxicated", "Greed", "Gold", "Luxury"] },
+                { text: "I trust no one.", tags: ["Doubtful", "Paranoid", "Loner", "Secret", "Hidden"] },
+                { text: "My rage sometimes consumes me.", tags: ["Rage-fueled", "Visceral", "Angry", "Violence", "Fire"] }
+            ]
+        },
+        {
+            text: "The mists close in. What do you see?",
+            options: [
+                { text: "The faces of the dead.", tags: ["Ghost", "Death", "Skull", "Bone", "Memory", "Grave"] },
+                { text: "The geometry of the world.", tags: ["Structure", "Map", "Plan", "Logic", "Order"] },
+                { text: "A swarm of tiny lives.", tags: ["Bug", "Swarm", "Insect", "Small", "Hive"] },
+                { text: "Only the path ahead.", tags: ["Focus", "Road", "Travel", "Simple", "Determination"] }
+            ]
+        }
+    ];
+
+    const app = {
+        currentQuestion: 0,
+        scores: {},
+
+        init: function() {
+            KNIGHTS.forEach(k => this.scores[k.name] = 0);
+        },
+
+        startQuiz: function() {
+            this.init();
+            document.getElementById('screen-intro').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+            document.getElementById('screen-quiz').classList.add('fade-in');
+            this.renderQuestion();
+        },
+
+        renderQuestion: function() {
+            const q = QUESTIONS[this.currentQuestion];
+            document.getElementById('question-text').innerText = q.text;
+            document.getElementById('question-progress').innerText = `${this.currentQuestion + 1} / ${QUESTIONS.length}`;
+            
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            q.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'btn';
+                btn.innerText = opt.text;
+                btn.onclick = () => this.handleAnswer(opt.tags);
+                container.appendChild(btn);
+            });
+        },
+
+        handleAnswer: function(tags) {
+            KNIGHTS.forEach(knight => {
+                let matchCount = 0;
+                tags.forEach(tag => {
+                    if (knight.keywords.includes(tag)) matchCount += 3;
+                    const partialMatch = knight.keywords.some(k => k.toLowerCase().includes(tag.toLowerCase()));
+                    if (partialMatch) matchCount += 1;
+                });
+                this.scores[knight.name] += matchCount;
+            });
+
+            this.currentQuestion++;
+            
+            if (this.currentQuestion < QUESTIONS.length) {
+                setTimeout(() => this.renderQuestion(), 50);
+            } else {
+                this.showResult();
+            }
+        },
+
+        cleanText: function(text) {
+            return text.replace(/\[\[\/roll\s+([^#]+)#([^\]]+)\]\]/g, "$1$2")
+                       .replace(/\[\[\/roll\s+([^\]]+)\]\]/g, "$1");
+        },
+
+        getFlavorText: function(knightName) {
+            const folder = ROLL_TABLES.folders.find(f => f.name === knightName);
+            if (!folder) return [];
+
+            return folder.items.map(table => {
+                const max = parseInt(table.formula.replace('d', '')) || 6;
+                const roll = Math.floor(Math.random() * max) + 1;
+                
+                const resultObj = table.results.find(r => roll >= r[0] && roll <= r[1]);
+                const rawText = resultObj ? resultObj[2] : "Unknown";
+                
+                return {
+                    table: table.name,
+                    result: this.cleanText(rawText)
+                };
+            });
+        },
+
+        showResult: function() {
+            let maxScore = -1;
+            let winners = [];
+
+            for (const [name, score] of Object.entries(this.scores)) {
+                if (score > maxScore) {
+                    maxScore = score;
+                    winners = [name];
+                } else if (score === maxScore) {
+                    winners.push(name);
+                }
+            }
+
+            const winnerName = winners[Math.floor(Math.random() * winners.length)];
+            const winnerData = KNIGHTS.find(k => k.name === winnerName);
+
+            document.getElementById('screen-quiz').classList.add('hidden');
+            const resScreen = document.getElementById('screen-result');
+            resScreen.classList.remove('hidden');
+            resScreen.classList.add('fade-in');
+
+            document.getElementById('result-name').innerText = winnerData.name;
+            document.getElementById('result-archetype').innerText = winnerData.archetype;
+            document.getElementById('result-desc').innerText = winnerData.description;
+            document.getElementById('result-passion').innerHTML = `<strong>${winnerData.passion.split(':')[0]}:</strong> ${winnerData.passion.split(':')[1] || ''}`;
+            document.getElementById('result-ability').innerHTML = `<strong>${winnerData.ability.split(':')[0]}:</strong> ${winnerData.ability.split(':')[1] || ''}`;
+
+            const flavorData = this.getFlavorText(winnerData.name);
+            const flavorContainer = document.getElementById('result-flavor');
+            if (flavorData.length > 0) {
+                let html = '';
+                flavorData.forEach(item => {
+                    html += `
+                        <div class="flavor-item">
+                            <span class="flavor-title">${item.table}:</span>
+                            <span class="flavor-text">${item.result}</span>
+                        </div>
+                    `;
+                });
+                flavorContainer.innerHTML = html;
+            } else {
+                flavorContainer.innerHTML = ''; 
+            }
+        },
+
+        reset: function() {
+            this.currentQuestion = 0;
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-intro').classList.remove('hidden');
+            document.getElementById('screen-intro').classList.add('fade-in');
+        }
+    };
+
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+</script>
+</body>
+</html>

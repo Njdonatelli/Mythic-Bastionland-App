@@ -1,0 +1,317 @@
+[
+    {
+        "name": "A Rotting Corpse, Denied their Rest",
+        "attributes": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 2, <span class=\"virtue\">SPI</span> 1, 1<span class=\"virtue\">GD</span>",
+        "description": "A1 (tattered mail)\nRusted glaive ([[/r d10]] slow)\nKeeps fighting even after a Mortal Wound.\nRunning water causes [[/r d12]] Damage.",
+        "_id": "97e0319b-ee82-42b7-a271-9667e1bea6b5",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Dead"
+    },
+    {
+        "name": "Bridge Knight, Tog",
+        "attributes": "<span class=\"virtue\">VIG</span> 15, <span class=\"virtue\">CLA</span> 15, <span class=\"virtue\">SPI</span> 6, 6<span class=\"virtue\">GD</span>",
+        "description": "A2 (ringmail, redshield)\nHooksword ([[/r 2d6]] hefty), redshield ([[/r d4]]),\nheavy coffer of toll money",
+        "_id": "4f44917c-138c-4178-85cb-9592bce3e382",
+        "type": "cast",
+        "source": "myth",
+        "myth": "River"
+    },
+    {
+        "name": "Empowered Refugees, Mohan & Orla",
+        "attributes": "<span class=\"virtue\">VIG</span> 18, <span class=\"virtue\">CLA</span> 8, <span class=\"virtue\">SPI</span> 9, 2<span class=\"virtue\">GD</span>",
+        "description": "Giant punches ([[/r 2d10]])",
+        "_id": "7c19e4cd-0cf1-432e-820a-6e7889f23d14",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Wall"
+    },
+    {
+        "name": "Frightened Draft Horse",
+        "attributes": "<span class=\"virtue\">VIG</span> 15, <span class=\"virtue\">CLA</span> 6, <span class=\"virtue\">SPI</span> 2, 2<span class=\"virtue\">GD</span>",
+        "description": "Kick ([[/r d6]])\nCannot be calmed by any carrying a weapon.",
+        "_id": "03f9fc8a-0aac-4f67-913c-e2ac88bfce29",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Order"
+    },
+    {
+        "name": "Giant Magpie, Silverseeker",
+        "attributes": "<span class=\"virtue\">VIG</span> 6, <span class=\"virtue\">CLA</span> 14, <span class=\"virtue\">SPI</span> 5, 3<span class=\"virtue\">GD</span>",
+        "description": "Beak and talons ([[/r 2d6]], wounded targets are\nblinded until they rest)",
+        "_id": "87138583-ec64-49c3-9387-3ebab56de43e",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Wall"
+    },
+    {
+        "name": "Grasping Hands from the Dark",
+        "attributes": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 2, 1<span class=\"virtue\">GD</span>",
+        "description": "Cold grasp ([[/r d6]], on a Wound lose [[/r d8]] <span class=\"virtue\">SPI</span>)",
+        "_id": "e2d35518-d934-48c8-b922-c5f851db460b",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Underworld"
+    },
+    {
+        "name": "Great Guardians, Stag, Boar & Bear",
+        "attributes": "<span class=\"virtue\">VIG</span> 14, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 5, 5<span class=\"virtue\">GD</span>.",
+        "description": "A1 (thick hides)\nTusk and maul ([[/r 2d8]])",
+        "_id": "8963f0f5-543c-4eae-9d5e-f23b267151ca",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Forest"
+    },
+    {
+        "name": "Great Red Vulture, Grizzlebird",
+        "attributes": "<span class=\"virtue\">VIG</span> 15, <span class=\"virtue\">CLA</span> 6, <span class=\"virtue\">SPI</span> 5, 3<span class=\"virtue\">GD</span>",
+        "description": "Rip and tear ([[/r d8]])\nBurned and ground feathers are known to\ncharm vermin into obedience.\nCompletely silent under moonlight.",
+        "_id": "ea0bc6a2-fb15-44d8-b13d-42fffb4002a0",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Dead"
+    },
+    {
+        "name": "Its Poisonous Young",
+        "attributes": "<span class=\"virtue\">VIG</span> 5, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 2, 3<span class=\"virtue\">GD</span>",
+        "description": "A1 (cold hide)\nThrash ([[/r d8]], carries its mother's poison)",
+        "_id": "dffe7413-082d-43b1-98bd-6a3969f5700f",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Wyvern"
+    },
+    {
+        "name": "Jolly Hunter, Maccan",
+        "attributes": "<span class=\"virtue\">VIG</span> 14, <span class=\"virtue\">CLA</span> 12, <span class=\"virtue\">SPI</span> 15, 4<span class=\"virtue\">GD</span>",
+        "description": "Shortbow ([[/r d6]] long), handaxe ([[/r d6]])",
+        "_id": "fee9ec0b-8712-4804-a477-0722d6a88620",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Plague"
+    },
+    {
+        "name": "Lost Knight, Valenta",
+        "attributes": "<span class=\"virtue\">VIG</span> 13, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 10, 5<span class=\"virtue\">GD</span>",
+        "description": "A3 (mail, helm, shield)\nJagged sword ([[/r 2d8]] hefty), religious symbol",
+        "_id": "0dfbb83d-7af1-4687-a148-65536ec5338e",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Underworld"
+    },
+    {
+        "name": "Lost Lad, Roth",
+        "attributes": "<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 9, <span class=\"virtue\">SPI</span> 9, 3<span class=\"virtue\">GD</span>",
+        "description": "Practice bow ([[/r d4]], long)",
+        "_id": "3d368f7a-4f5c-4d64-a0cf-53c342f0f4d8",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Goblin"
+    },
+    {
+        "name": "Lost Pets",
+        "attributes": "<span class=\"virtue\">VIG</span> 5, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 5, 2<span class=\"virtue\">GD</span>",
+        "description": "Yapping, biting, and scratching ([[/r d6]])",
+        "_id": "822c4a79-7a7c-4b4f-a7c4-405e40068288",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Goblin"
+    },
+    {
+        "name": "Mighty Newt, Slippery Starback",
+        "attributes": "<span class=\"virtue\">VIG</span> 16, <span class=\"virtue\">CLA</span> 14, <span class=\"virtue\">SPI</span> 5, 5<span class=\"virtue\">GD</span>",
+        "description": "Crushing toothless bite ([[/r d8]], drag into water)\nFlees if Wounded, regenerating quickly\nbefore seeking petty revenge.\nFeared by all venomous beasts.",
+        "_id": "ee960600-4b25-42de-9e73-d90b6bdcbb0d",
+        "type": "cast",
+        "source": "myth",
+        "myth": "River"
+    },
+    {
+        "name": "Mocking Bones Conjured into Service",
+        "attributes": "<span class=\"virtue\">VIG</span> 6, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 1, 3<span class=\"virtue\">GD</span>",
+        "description": "A1 (brass shield), Impair piercing attacks\nHook falx ([[/r d6]]), brass shield ([[/r d4]])\nRunning water causes [[/r d12]] Damage.",
+        "_id": "dc348519-41df-459f-9ba9-b0f7cf4938e7",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Dead"
+    },
+    {
+        "name": "Mourning Shadow, Vestige of Sorrow",
+        "attributes": "<span class=\"virtue\">VIG</span> 3, <span class=\"virtue\">CLA</span> 15, <span class=\"virtue\">SPI</span> 17, 2<span class=\"virtue\">GD</span>",
+        "description": "Despair-of-flesh ([[/r d8]] blast, wounds cause <span class=\"virtue\">SPI</span>\nloss in place of <span class=\"virtue\">VIG</span>)\nCan only be harmed by weapons forged by a\ncreator mourned by the wielder.\nRepelled by earth from a burial mound, or\nfunerary imagery. Destroyed if entombed.",
+        "_id": "50319438-4d16-45dd-ad0d-369960475178",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Shadow"
+    },
+    {
+        "name": "Purging Knights, Dirmad & Duncas",
+        "attributes": "<span class=\"virtue\">VIG</span> 12, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 7, 5<span class=\"virtue\">GD</span>",
+        "description": "A3 (mail, helm, shield)\nFlail ([[/r d8]] hefty), shield ([[/r d4]])\n3 firepots ([[/r d6]] blast, sets area alight)\nTwins, hate each other.",
+        "_id": "d3b1c0e3-b23f-4482-a3d3-7cd26f2c8389",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Plague"
+    },
+    {
+        "name": "Redmaw Wolf, Greymender, Scartooth",
+        "attributes": "<span class=\"virtue\">VIG</span> 14, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 5, 5<span class=\"virtue\">GD</span>",
+        "description": "A1 (matted fur)\nStalk and bite ([[/r 2d8]])\nCan bite out a wound to restore [[/r d6]] <span class=\"virtue\">VIG</span>",
+        "_id": "9a3deb69-45bd-4c2a-bd67-4b179a417a47",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Child"
+    },
+    {
+        "name": "River Monks, led by Refton",
+        "attributes": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 12, 2<span class=\"virtue\">GD</span>",
+        "description": "Cudgels ([[/r d8]] hefty), bread, mead barrels",
+        "_id": "55546284-fa1e-4bf0-ab53-4a95d4aa0561",
+        "type": "cast",
+        "source": "myth",
+        "myth": "River"
+    },
+    {
+        "name": "Roaming Alchemist, Coalin",
+        "attributes": "<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 11, 1<span class=\"virtue\">GD</span>",
+        "description": "Dagger ([[/r d6]]), alchemical tools",
+        "_id": "e0d47b31-b33c-405f-a59b-3636913da3a5",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Shadow"
+    },
+    {
+        "name": "Scholar-Knight of the Order",
+        "attributes": "<span class=\"virtue\">VIG</span> 16, <span class=\"virtue\">CLA</span> 16, <span class=\"virtue\">SPI</span> 8, 9<span class=\"virtue\">GD</span>",
+        "description": "A4 (mail, plate, towerhelm, shield)\nThicksword ([[/r 2d6]] hefty), shield ([[/r d4]])\nCrusher steed (4<span class=\"virtue\">GD</span>, A1, [[/r d10]] trample)",
+        "_id": "df536768-9d5e-45c5-90dc-51ed5011c3cf",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Order"
+    },
+    {
+        "name": "Seeker Knights, Feliz, Gornig & Tayley",
+        "attributes": "<span class=\"virtue\">VIG</span> 14, <span class=\"virtue\">CLA</span> 12, <span class=\"virtue\">SPI</span> 12, 5<span class=\"virtue\">GD</span>",
+        "description": "A3 (halfshield, mail, helm)\nMorningstar ([[/r d8]] hefty), halfshield ([[/r d4]])",
+        "_id": "1a5fc766-47f0-4603-84dd-2f70cd91bd17",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Child"
+    },
+    {
+        "name": "Shrouded Guides, Hooded Ones",
+        "attributes": "<span class=\"virtue\">VIG</span> 5, <span class=\"virtue\">CLA</span> 18, <span class=\"virtue\">SPI</span> 15, 4<span class=\"virtue\">GD</span>",
+        "description": "Coldsword ([[/r 2d6]] hefty, ignores metal\narmour), pale lantern ([[/r 2d8]] blast if thrown)\nIf slain, two more emerge from the dark.",
+        "_id": "530dcd25-485e-4c4f-8529-0cf276e0da19",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Underworld"
+    },
+    {
+        "name": "Sorrowful Knight, Orwan",
+        "attributes": "<span class=\"virtue\">VIG</span> 12, <span class=\"virtue\">CLA</span> 8, <span class=\"virtue\">SPI</span> 6, 2<span class=\"virtue\">GD</span>",
+        "description": "A3 (mail, greencloaked plate, helm)\nHooked greatsword ([[/r 2d10]] long), oak necklace",
+        "_id": "7424c419-3223-448c-9c90-dfdfe9d9fb4a",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Shadow"
+    },
+    {
+        "name": "The Angry Infected",
+        "attributes": "<span class=\"virtue\">VIG</span> 8, <span class=\"virtue\">CLA</span> 6, <span class=\"virtue\">SPI</span> 5, 2<span class=\"virtue\">GD</span>",
+        "description": "Logging axe ([[/r d8]] long)\nThose directly exposed must pass a <span class=\"virtue\">VIG</span> Save\nto avoid infection. Causes [[/r d6]] VIG loss daily.\nThere are treatments but no cures.",
+        "_id": "9c9e115f-9b71-4c4f-90f0-078a61754d4a",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Plague"
+    },
+    {
+        "name": "The Burning Mother",
+        "attributes": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 16, <span class=\"virtue\">SPI</span> 17, 7<span class=\"virtue\">GD</span>",
+        "description": "Body aflame (ignores metal and wood)\nFire ([[/r d8]] blast) or grasp ([[/r 3d8]], slow)",
+        "_id": "255bd265-830b-48d4-97e0-f1f15e3f4b27",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Child"
+    },
+    {
+        "name": "The Fearmonger in Wood, Glaiburn",
+        "attributes": "<span class=\"virtue\">VIG</span> 17, <span class=\"virtue\">CLA</span> 16, <span class=\"virtue\">SPI</span> 12, 8<span class=\"virtue\">GD</span>",
+        "description": "A2, A4 vs forged arms (rune-carved wood)\nSlash ([[/r d10]] vs two targets) or grasp ([[/r 2d10]]\nslow) or spores (everyone in Blast loses their\nspeech until they leave the Forest)\nCan Smite humans.",
+        "_id": "df4ee61c-1f01-4ee7-8b2f-41e3e9acba06",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Forest"
+    },
+    {
+        "name": "The Promised Child",
+        "attributes": "<span class=\"virtue\">VIG</span> 2, <span class=\"virtue\">CLA</span> 2, <span class=\"virtue\">SPI</span> 18, 1<span class=\"virtue\">GD</span>",
+        "description": "No human can wilfully cause them harm.",
+        "_id": "07b74e22-1ee1-45bd-90af-8c966fd7c5fc",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Child"
+    },
+    {
+        "name": "The Wurm, the Colossal Spite-Glutton",
+        "attributes": "<span class=\"virtue\">VIG</span> 18, <span class=\"virtue\">CLA</span> 8, <span class=\"virtue\">SPI</span> 5, 10<span class=\"virtue\">GD</span>",
+        "description": "A3 (craggy hide)\nWrithe ([[/r d10]] blast) or chew ([[/r 3d10]] slow) or\nshower with debris ([[/r d8]] blast)",
+        "_id": "7bc2adc1-c2ff-4fbe-aba7-a5cf093d0712",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Wurm"
+    },
+    {
+        "name": "The Wyvern, That Foul Twisted Reptile",
+        "attributes": "<span class=\"virtue\">VIG</span> 17, <span class=\"virtue\">CLA</span> 17, <span class=\"virtue\">SPI</span> 5, 12<span class=\"virtue\">GD</span>",
+        "description": "A2 in flight, A4 on ground (cowering wings)\nBite & throw ([[/r 3d10]], slow when grounded) or\nsting ([[/r d10]], wound causes bloating death\nwithin an hour unless thoroughly washed\nout with fresh milk)\nDisgusted by the sound of a baby's cry.\nFast but clumsy flyer.",
+        "_id": "bf3a4a7f-789e-4a08-9a50-8e7bf1f799a8",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Wyvern"
+    },
+    {
+        "name": "Their Cleverness, the Goblin Lord of all Lost Things",
+        "attributes": "<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 16, <span class=\"virtue\">SPI</span> 15, 9<span class=\"virtue\">GD</span>",
+        "description": "Bony needle ([[/r d6]] +[[/r d10]] to anybody indebted to\nthe wielder), sack of favourite lost things\nCan only be harmed by objects that have\nlain lost for at least ninety-nine years.\nCan Focus.",
+        "_id": "639d6dc6-a391-4598-93d9-34c927b205fd",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Goblin"
+    },
+    {
+        "name": "Wall Knight, Annick",
+        "attributes": "<span class=\"virtue\">VIG</span> 13, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 8, 5<span class=\"virtue\">GD</span>",
+        "description": "A2 (old mail, helm)\nLongaxe ([[/r d10]] long), excessive curiosity",
+        "_id": "3ac1acd6-d2a9-4dc6-98f7-e388a3104e44",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Wall"
+    },
+    {
+        "name": "Wall Wardens, Brin, Catrona & Elish",
+        "attributes": "<span class=\"virtue\">VIG</span> 11, <span class=\"virtue\">CLA</span> 8, <span class=\"virtue\">SPI</span> 7, 4<span class=\"virtue\">GD</span>",
+        "description": "A1 (visored helm)\nWallerhook ([[/r d8]] long, +[[/r d10]] vs targets below)",
+        "_id": "a0298b2c-f46e-4dcc-a36f-3760ee8dd9b6",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Wall"
+    },
+    {
+        "name": "Woodland Guardians",
+        "attributes": ", Fox, Wolf & Cat",
+        "description": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 13, <span class=\"virtue\">SPI</span> 5, 3<span class=\"virtue\">GD</span>\nTooth and claw ([[/r 2d6]])",
+        "_id": "b9a95b2d-50ac-4631-8096-a307f399f901",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Forest"
+    },
+    {
+        "name": "Wurmshields, Kermac, Cado, Zune,",
+        "attributes": "Shena, Marlo, Yazakel",
+        "description": "<span class=\"virtue\">VIG</span> 10, <span class=\"virtue\">CLA</span> 12, <span class=\"virtue\">SPI</span> 8, 2<span class=\"virtue\">GD</span>\nA2 (helm, red halfshield)\nSpike mace ([[/r d8]] hefty), red halfshield ([[/r d4]])\nRepugnant personalities, always trying to\nmake themselves even worse by mimicking\nthe Wurm.",
+        "_id": "56ecf9d6-a775-4dc6-9dcb-80a72e017046",
+        "type": "cast",
+        "source": "myth",
+        "myth": "Wurm"
+    }
+]

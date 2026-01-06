@@ -1,0 +1,64 @@
+  {
+    "id": "08",
+    "table": {
+      "rows": [
+        [
+          "Lake",
+          "A farm"
+        ],
+        [
+          "Waterfall",
+          "A name"
+        ],
+        [
+          "River",
+          "Only graves"
+        ],
+        [
+          "Beach",
+          "A student"
+        ],
+        [
+          "Cave",
+          "A teacher"
+        ],
+        [
+          "Mountain",
+          "A castle"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Martyr-in-Waiting",
+      "text": "Use as a reaction to being Mortally Wounded. Allies fighting with you regain [[/r d6]]\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E and get +[[/r d12]] against your attacker for the combat."
+    },
+    "passion": {
+      "name": "Pride",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you take personal credit for a great victory."
+    },
+    "property": [
+      "Great mace ([[/r d10]] long)",
+      "Gambeson (A1), gold cloaked plate (A1), gold-masked helm (A1, opponents who know the value of gold have their first ever Attack against you"
+    ],
+    "title": "Gilded Knight",
+    "poem": [
+      "A beacon of the brave and bold",
+      "All cloaked and masked in sunnen gold"
+    ],
+    "idx": "08",
+    "_id": "6aba9c2f-4397-4ae4-853d-ad0445f0bc00",
+    "type": "knight",
+    "seer": {
+      "id": "08",
+      "title": "Enthroned Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 11, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 16, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "They are a twisted heap of flesh, bone, and spikes of precious metal.",
+        "Sees glimpses of the ultimate fate of anybody taking up a Seat of Power.",
+        "Demands a humiliating level of reverence from visitors. Wants to manipulate loyal contacts into positions of authority."
+      ],
+      "idx": "08",
+      "_id": "79b7ff04-0c7a-4a55-8e33-8d27bc756a86",
+      "type": "seer"
+    }
+  }

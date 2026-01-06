@@ -1,0 +1,836 @@
+[
+  {
+    "id": "01",
+    "table": {
+      "title": "SYMBOL OF THE TRUTH",
+      "columns": [
+        "Trigger",
+        "Effect"
+      ],
+      "rows": [
+        [
+          "Lying to you about their identity",
+          "Golden glow"
+        ],
+        [
+          "Giving false witness to you",
+          "Turns cold"
+        ],
+        [
+          "Giving you malicious advice",
+          "Gentle hum"
+        ],
+        [
+          "Lying while bearing the shield",
+          "Fragrant aroma"
+        ],
+        [
+          "Omitting key information to you",
+          "Distant birdcall"
+        ],
+        [
+          "Lying to you about their intent",
+          "Loud clang"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Punitive Stroke",
+      "text": "Make a melee Attack against a known liar. Get +[[/r d10]] to the Attack, ignoring armour."
+    },
+    "passion": {
+      "name": "Honesty",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you tell the truth where a lie might be more beneficial."
+    },
+    "property": [
+      "Polished mace ([[/r d8]] hefty), mail (A1), plate (A1), and helm (A1)",
+      "Kite shield ([[/r d4]], A1) marked with a symbol of the truth (see below)",
+      "Petulant steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 5\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "True Knight",
+    "poem": [
+      "A pact to uphold truth and fact",
+      "On lies the false lay brake and cracked"
+    ],
+    "idx": "01",
+    "_id": "259f4b14-e998-457a-abf1-10224162ee38",
+    "type": "knight",
+    "seer": {
+      "id": "01",
+      "title": "Rotted Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 7, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 11, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Their withered touch is only contagious if they will it.",
+        "Sees the way to live on through any amount of physical decay.",
+        "Wants to become even more rotten, filthy, and diseased."
+      ],
+      "idx": "01",
+      "_id": "2efc0cd9-42f7-485b-9859-d8ac261a0fd6",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "02",
+    "table": {
+      "title": "KNIGHT & COMPANION",
+      "columns": [
+        "History",
+        "Type"
+      ],
+      "rows": [
+        [
+          "Exiled",
+          "Otter"
+        ],
+        [
+          "Feral",
+          "Hare"
+        ],
+        [
+          "Vengeful",
+          "Rat"
+        ],
+        [
+          "Shamed",
+          "Weasel"
+        ],
+        [
+          "Jovial",
+          "Ferret"
+        ],
+        [
+          "Artistic",
+          "Squirrel"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Wild Eye",
+      "text": "Observe a beast in secret. Learn a useful truth about their habitat."
+    },
+    "passion": {
+      "name": "Empathy",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you spare the life of a hostile animal."
+    },
+    "property": [
+      "Handaxe ([[/r d6]]) attached to wildrope (strong rope that blends perfectly into foliage), gambeson (A1)",
+      "Companion (see below) (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 7, 4\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, partially understands human speech)",
+      "Tattered steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "Snare Knight",
+    "poem": [
+      "Immersed within the woods adeep",
+      "A sheriff rides from nature's keep"
+    ],
+    "idx": "02",
+    "_id": "3e67e686-0329-4d31-aaf8-240f31153454",
+    "type": "knight",
+    "seer": {
+      "id": "02",
+      "title": "Swollen Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 4, 1\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Can only be moved by feats of engineering usually reserved for siegery.",
+        "Sees within the minds of huge beings.",
+        "Wants to grow ever bigger."
+      ],
+      "idx": "02",
+      "_id": "68f62bf0-55fd-4483-80e7-f2e7b2e95fd5",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "03",
+    "table": {
+      "title": "CALLING AND HELM",
+      "columns": [
+        "Call to Battle",
+        "Fancy Helm"
+      ],
+      "rows": [
+        [
+          "Greed",
+          "Lion"
+        ],
+        [
+          "Bloodlust",
+          "Shark"
+        ],
+        [
+          "Glory",
+          "Great crest"
+        ],
+        [
+          "Duty",
+          "Hawk"
+        ],
+        [
+          "Pride",
+          "Bull"
+        ],
+        [
+          "Ambition",
+          "Demon"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Champion Vow",
+      "text": "Use immediately before a combat where there is a prize at stake. +[[/r d6]] to melee attacks for the whole combat."
+    },
+    "passion": {
+      "name": "Hatred",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you refuse a plea for forgiveness."
+    },
+    "property": [
+      "Greatlance ([[/r 2d10]] hefty when mounted, slow on foot) and 2 javelins ([[/r d6]])",
+      "Gambeson (A1), arena plate (A1), fancy helm (A1, see below)",
+      "Horned stallion (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 12, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 4\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, [[/r d6]] trample)"
+    ],
+    "title": "Tourney Knight",
+    "poem": [
+      "A calling brought a life of combat, victories amassed",
+      "Questing for the fame that comes with prowess unsurpassed"
+    ],
+    "idx": "03",
+    "_id": "35146e4e-0500-4dfd-a583-765d2a7d7049",
+    "type": "knight",
+    "seer": {
+      "id": "03",
+      "title": "Entombed Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 7, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 11, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Now entombed in white stone, their voice answers visitors only rarely.",
+        "Always guarded by a Knight, mourned by an apprentice.",
+        "Sees beyond the veil of death."
+      ],
+      "idx": "03",
+      "_id": "aa7336dd-a989-481d-a960-4f711222e254",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "04",
+    "table": {
+      "title": "RAGE FUEL",
+      "columns": [
+        "Alcohol",
+        "Hatred"
+      ],
+      "rows": [
+        [
+          "Burning wine",
+          "The rich"
+        ],
+        [
+          "Strong mead",
+          "Knights"
+        ],
+        [
+          "Spiced ale",
+          "The poor"
+        ],
+        [
+          "Sour milk",
+          "Seers"
+        ],
+        [
+          "Fermented vegetable",
+          "The sea"
+        ],
+        [
+          "Blood brew",
+          "The sun"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Slaughter Echo",
+      "text": "Use immediately after defeating an opponent. Your next melee Attack in this combat gains Blast."
+    },
+    "passion": {
+      "name": "Justice",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you restore the balance of justice."
+    },
+    "property": [
+      "Longaxe ([[/r d10]] long), mail (A1), brutal plate (A1 only when Wounded), helm (A1)",
+      "Sacks of strong alcohol, to which you're largely resistant (see below, restock each new Season)",
+      "Bullish warhorse (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 3\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, [[/r d6]] trample)"
+    ],
+    "title": "Bloody Knight",
+    "poem": [
+      "Some were born to fight and fall, forged beneath blade's clash",
+      "This one birthed from blood of war, stained with corpses' ash"
+    ],
+    "idx": "04",
+    "_id": "04d079fb-fbd3-45c8-8be1-e32e7cf3a586",
+    "type": "knight",
+    "seer": {
+      "id": "04",
+      "title": "Reed Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 10, 4\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Knows they will lose their sight if they pass over a river.",
+        "Sees the near future in the patterns of reeds chopped in a very specific way.",
+        "Wants to live in the protection of a worthy master, serving a righteous cause."
+      ],
+      "idx": "04",
+      "_id": "be727438-c9dd-41da-a7fb-282b702a793f",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "05",
+    "table": {
+      "title": "FULL BODY TATTOOS",
+      "columns": [
+        "Design",
+        "Effect"
+      ],
+      "rows": [
+        [
+          "Faded spirals",
+          "Points to water"
+        ],
+        [
+          "Blue thorns",
+          "Burns before an ambush"
+        ],
+        [
+          "Silver stars",
+          "A1 in saltwater"
+        ],
+        [
+          "Colourful snakes",
+          "A1 under moonlight"
+        ],
+        [
+          "Red bones",
+          "A1 in rivers or streams"
+        ],
+        [
+          "Burnt rings",
+          "Conceals a third eye"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Mosstongue",
+      "text": "Speak with uncut stones and particularly old trees. If you push them for too much knowledge they rebuke you, shunning you for the rest of the day."
+    },
+    "passion": {
+      "name": "Naturality",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you reject an opportunity to sleep indoors, sleeping in nature instead."
+    },
+    "property": [
+      "Branch cudgel ([[/r d8]] hefty), buckler ([[/r d4]], A1), mail coif (A1)",
+      "Tattoos (see below)",
+      "Pale steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 12, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 3\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "Moss Knight",
+    "poem": [
+      "No need for lessons, tree or stone",
+      "The wisest seek what soil has shown"
+    ],
+    "idx": "05",
+    "_id": "302c3ef3-dac1-4330-87fc-7f675a5aa4cb",
+    "type": "knight",
+    "seer": {
+      "id": "05",
+      "title": "Loathed Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 11, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 6\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Long, twisted face and body, like she's been pulled around a cart wheel.",
+        "Sees into a person's hate with a touch, sharing and fuelling their contempt.",
+        "Physically pained by admiration or love. Wants to become even more loathed."
+      ],
+      "idx": "05",
+      "_id": "ef9903ba-a3ce-4880-8a6e-185c4508c67b",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "06",
+    "table": {
+      "title": "MILITARY GEAR",
+      "columns": [
+        "Special Polearm",
+        "Helm"
+      ],
+      "rows": [
+        [
+          "+[[/r d10]] vs mounted targets",
+          "Veiled leather cowl"
+        ],
+        [
+          "+[[/r d10]] vs targets with a shield",
+          "Long mail hood"
+        ],
+        [
+          "+[[/r d10]] vs targets in armour",
+          "Full heavy bucket"
+        ],
+        [
+          "+[[/r d10]] vs targets without a shield",
+          "Crow-beaked"
+        ],
+        [
+          "+[[/r d10]] vs beasts and monsters",
+          "Caged visor"
+        ],
+        [
+          "+[[/r d10]] vs anybody attacking you",
+          "Kettle cap"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Battle Awareness",
+      "text": "When fighting in a combat with at least 3 combatants on each side all your Gambits count as Strong Gambits."
+    },
+    "passion": {
+      "name": "Duty",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you answer the call for martial service under a superior."
+    },
+    "property": [
+      "Special polearm ([[/r d8]], long, see below), gambeson (A1), splint (A1), helm (A1, see below)",
+      "Whalebone chess set (and some skill)",
+      "Stocky steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "War Knight",
+    "poem": [
+      "Forged and broke in goreful plight",
+      "Won some, lost some, still upright"
+    ],
+    "idx": "06",
+    "_id": "04dc2ac5-3b06-4033-853c-f9814613504b",
+    "type": "knight",
+    "seer": {
+      "id": "06",
+      "title": "Lost Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 9, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 7, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Constantly being rubbed with psychotropic tinctures, parts of their body seeming to dissipate from reality.",
+        "Sees things that have been lost in a hazy vision of their current location.",
+        "Knows they will lose their sight if they advise directly how to find something."
+      ],
+      "idx": "06",
+      "_id": "97fa302e-51a0-47f6-9dc5-5e2292a2d950",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "07",
+    "table": {
+      "title": "MEMORIES OF HOME",
+      "columns": [
+        "Place",
+        "Disaster"
+      ],
+      "rows": [
+        [
+          "Riverside",
+          "Death"
+        ],
+        [
+          "Coastal",
+          "War"
+        ],
+        [
+          "Mountain",
+          "Famine"
+        ],
+        [
+          "Pine forest",
+          "Plague"
+        ],
+        [
+          "Moor",
+          "Fire"
+        ],
+        [
+          "Castle",
+          "Flood"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Bend with the Wind",
+      "text": "When you use a Gambit to Move you count as having Armour 4 until your next turn. This does not stack with your actual armour."
+    },
+    "passion": {
+      "name": "Doubt",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you defer to somebody more senior than you, even though you disagree."
+    },
+    "property": [
+      "Old sword ([[/r d8]] hefty) and half-shield (A1), gambeson (A1)",
+      "Youthful energy (use once only to treat a Mortal Wound as a normal Wound)",
+      "Cautious steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "Willow Knight",
+    "poem": [
+      "Titans tall, now smithreened stones",
+      "The youth, cast down, intact, alone"
+    ],
+    "idx": "07",
+    "_id": "b92393b8-72ce-4e0e-a3c8-aa83e6059cfa",
+    "type": "knight",
+    "seer": {
+      "id": "07",
+      "title": "Carved Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 7, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 11, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Requires constant treatment, acolytes tending to their runic flesh carvings.",
+        "Sees the outcome of battles in their own healing wounds.",
+        "Wants to drive the land toward a climactic war that will bring peace."
+      ],
+      "idx": "07",
+      "_id": "3c09eafa-c8fd-4e05-be03-1b346fa01fb9",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "08",
+    "table": {
+      "rows": [
+        [
+          "Lake",
+          "A farm"
+        ],
+        [
+          "Waterfall",
+          "A name"
+        ],
+        [
+          "River",
+          "Only graves"
+        ],
+        [
+          "Beach",
+          "A student"
+        ],
+        [
+          "Cave",
+          "A teacher"
+        ],
+        [
+          "Mountain",
+          "A castle"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Martyr-in-Waiting",
+      "text": "Use as a reaction to being Mortally Wounded. Allies fighting with you regain [[/r d6]]\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E and get +[[/r d12]] against your attacker for the combat."
+    },
+    "passion": {
+      "name": "Pride",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you take personal credit for a great victory."
+    },
+    "property": [
+      "Great mace ([[/r d10]] long)",
+      "Gambeson (A1), gold cloaked plate (A1), gold-masked helm (A1, opponents who know the value of gold have their first ever Attack against you"
+    ],
+    "title": "Gilded Knight",
+    "poem": [
+      "A beacon of the brave and bold",
+      "All cloaked and masked in sunnen gold"
+    ],
+    "idx": "08",
+    "_id": "6aba9c2f-4397-4ae4-853d-ad0445f0bc00",
+    "type": "knight",
+    "seer": {
+      "id": "08",
+      "title": "Enthroned Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 11, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 16, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "They are a twisted heap of flesh, bone, and spikes of precious metal.",
+        "Sees glimpses of the ultimate fate of anybody taking up a Seat of Power.",
+        "Demands a humiliating level of reverence from visitors. Wants to manipulate loyal contacts into positions of authority."
+      ],
+      "idx": "08",
+      "_id": "79b7ff04-0c7a-4a55-8e33-8d27bc756a86",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "09",
+    "table": {
+      "title": "LOYAL STEED",
+      "columns": [
+        "Appearance",
+        "Temperament"
+      ],
+      "rows": [
+        [
+          "Pristine",
+          "Completely silent"
+        ],
+        [
+          "Plaited",
+          "Highly alert"
+        ],
+        [
+          "Tall",
+          "Eternally valiant"
+        ],
+        [
+          "Golden",
+          "Fierce ([[/r d8]] trample)"
+        ],
+        [
+          "Dark",
+          "Loved by other beasts"
+        ],
+        [
+          "Stocky",
+          "Perfect sense of direction"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Song of the Steed",
+      "text": "Speak in a voice comprehensible to horses. They need reasoning with, but are inclined to trust you."
+    },
+    "passion": {
+      "name": "Certainty",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you prove somebody wrong."
+    },
+    "property": [
+      "Beloved steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 12, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 7, 4\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, see below)",
+      "Fine saddle and tack (you can never be dismounted)",
+      "3 Rider's Axes ([[/r d6]] +[[/r d6]] when mounted, can be thrown), mail (A1) and rider’s plate (A1 when mounted)"
+    ],
+    "title": "Saddle Knight",
+    "poem": [
+      "A perfect steed is neither wild nor tamed",
+      "As one, a streak aguele through green untamed"
+    ],
+    "idx": "09",
+    "_id": "19b8f5f5-f0dc-4f06-a028-da3fd6856921",
+    "type": "knight",
+    "seer": {
+      "id": "09",
+      "title": "Jewelled Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 6, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 6, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 16, 1\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "No body is visible, just layers and layers of jewelled silk and glittering lace.",
+        "Can see the history of jewelled items, and the locations of their own jewels.",
+        "Wants to send their jewels out to remote places, watching from afar."
+      ],
+      "idx": "09",
+      "_id": "de80146e-f3a7-4783-bd06-2f8863b65599",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "10",
+    "table": {
+      "title": "MOON FORM",
+      "columns": [
+        "Body",
+        "Visage"
+      ],
+      "rows": [
+        [
+          "Muscular ([[/r d8]] grasp)",
+          "Elderly"
+        ],
+        [
+          "Shrunken ([[/r d6]] bite)",
+          "Youthful"
+        ],
+        [
+          "Stretched ([[/r d6]] strike)",
+          "Hideous"
+        ],
+        [
+          "Skeletal ([[/r d6]] slash)",
+          "Amorphous"
+        ],
+        [
+          "Canine ([[/r d8]] jaws)",
+          "Horned"
+        ],
+        [
+          "Feline ([[/r d6]] claws)",
+          "Regal"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Layered Words",
+      "text": "Speak, but choose two different meanings, as different as you wish, even total opposites. Choose which meaning each listener takes from the words."
+    },
+    "passion": {
+      "name": "Integrity",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you discredit somebody unworthy of their position."
+    },
+    "property": [
+      "Twisted bow ([[/r d6]] long), light mail (A1) with embroidered cloak",
+      "Moon pendant (grants the wearer a false form under moonlight, see below, rolling each night)",
+      "Shadowy horse (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, very quiet)"
+    ],
+    "title": "Riddle Knight",
+    "poem": [
+      "A careful word can rise or fade",
+      "Within each ear a truth remade"
+    ],
+    "idx": "10",
+    "_id": "033b7182-f064-4e9c-9508-a72806a3bb74",
+    "type": "knight",
+    "seer": {
+      "id": "10",
+      "title": "Jawbone Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 3, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Hunched, pale, huge jawbone grafted onto their own, speaks like a wolf.",
+        "Sees with the senses of a beast while clutching an object made from the bone or horn of their species.",
+        "Wants to return the land to the beasts."
+      ],
+      "idx": "10",
+      "_id": "1984acd0-f8a6-4af2-9be8-27e094a322c7",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "11",
+    "table": {
+      "title": "LOYAL BIRD",
+      "columns": [
+        "Breed",
+        "Special Training"
+      ],
+      "rows": [
+        [
+          "Fisherhawk (can dive into water)",
+          "Singing"
+        ],
+        [
+          "Cave owl (nocturnal)",
+          "Fighting humans (+[[/r d6]] vs humans)"
+        ],
+        [
+          "Grey raven (highly intelligent)",
+          "Silent flight"
+        ],
+        [
+          "Red eagle ([[/r d6]] talons)",
+          "Delivery"
+        ],
+        [
+          "Rock falcon (preys on reptiles)",
+          "Stealing"
+        ],
+        [
+          "Bog vulture (5\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)",
+          "Fighting birds (+[[/r d6]] vs birds)"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Flockbond",
+      "text": "See through the eyes of your bird, and learn the local knowledge of any prey it eats."
+    },
+    "passion": {
+      "name": "Regret",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you burn a part of the past."
+    },
+    "property": [
+      "Hookhammer ([[/r d8]] hefty, +[[/r d8]] dropping from above), shield-gauntlet ([[/r d6]], A1), helm (A1)",
+      "Loyal bird (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 4\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, [[/r d4]] talons, see below)",
+      "Old steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 7, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "Talon Knight",
+    "poem": [
+      "The claw is nothing without the eye",
+      "The eye is nothing without the wing"
+    ],
+    "idx": "11",
+    "_id": "14ccc8a5-4d3f-4ee3-908b-369d6edcedf7",
+    "type": "knight",
+    "seer": {
+      "id": "11",
+      "title": "Veiled Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 7, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 11, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Hanging folds of flesh and horse-like hair hide any semblance of a face.",
+        "Sees nothing, but hears all within a Hex. Speaks just once each day, giving a single word of advice to the most worthy visitor.",
+        "Genuinely wants to uphold peace."
+      ],
+      "idx": "11",
+      "_id": "6ea94b17-0d04-42c4-ac6d-7c0d33e0bcee",
+      "type": "seer"
+    }
+  },
+  {
+    "id": "12",
+    "table": {
+      "title": "BAD REPUTATION",
+      "columns": [
+        "Begrudging Ally",
+        "Hated Enemy"
+      ],
+      "rows": [
+        [
+          "Eccentric alchemist",
+          "Rich merchant"
+        ],
+        [
+          "Humble chronicler",
+          "Master blacksmith"
+        ],
+        [
+          "Surly brewer",
+          "Admired Knight"
+        ],
+        [
+          "Horse breeder",
+          "Bandit leader"
+        ],
+        [
+          "Elderly innkeeper",
+          "Retired general"
+        ],
+        [
+          "Petty burglar",
+          "Mercenary captain"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "The Red Hunt",
+      "text": "Infuse a target’s blood into an arrow to give it +[[/r d12]] against the target. You can also taste a small amount of the blood to get a glimpse of their location."
+    },
+    "passion": {
+      "name": "Apathy",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you reject a call for comfort."
+    },
+    "property": [
+      "Jagged spear ([[/r d8]] hefty, +[[/r d8]] against a target you have Wounded or Scarred), red cloaked mail (A1)",
+      "Hunting bow ([[/r d6]] long)",
+      "Vicious charger (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 12, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 3\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, [[/r d6]] trample)"
+    ],
+    "title": "Barbed Knight",
+    "poem": [
+      "Stone and spikes split into flowers",
+      "Cruelty is delicious power"
+    ],
+    "idx": "12",
+    "_id": "79962312-1939-4e6d-ae87-b56dfeb52398",
+    "type": "knight",
+    "seer": {
+      "id": "12",
+      "title": "Serpent Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 16, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 14, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 14, 3\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "A writhing pile of serpents, speaking as one through a choir of hisses.",
+        "Grants visions of dangerous beasts in the wilderness nearby.",
+        "Wants more unusual serpents for their pile, or even just a snack."
+      ],
+      "idx": "12",
+      "_id": "6bb977a8-d6e7-4511-8161-b5f42fdcfc62",
+      "type": "seer"
+    }
+  }
+]

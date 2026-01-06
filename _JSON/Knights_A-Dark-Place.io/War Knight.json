@@ -1,0 +1,70 @@
+{
+    "id": "06",
+    "table": {
+      "title": "MILITARY GEAR",
+      "columns": [
+        "Special Polearm",
+        "Helm"
+      ],
+      "rows": [
+        [
+          "+[[/r d10]] vs mounted targets",
+          "Veiled leather cowl"
+        ],
+        [
+          "+[[/r d10]] vs targets with a shield",
+          "Long mail hood"
+        ],
+        [
+          "+[[/r d10]] vs targets in armour",
+          "Full heavy bucket"
+        ],
+        [
+          "+[[/r d10]] vs targets without a shield",
+          "Crow-beaked"
+        ],
+        [
+          "+[[/r d10]] vs beasts and monsters",
+          "Caged visor"
+        ],
+        [
+          "+[[/r d10]] vs anybody attacking you",
+          "Kettle cap"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Battle Awareness",
+      "text": "When fighting in a combat with at least 3 combatants on each side all your Gambits count as Strong Gambits."
+    },
+    "passion": {
+      "name": "Duty",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you answer the call for martial service under a superior."
+    },
+    "property": [
+      "Special polearm ([[/r d8]], long, see below), gambeson (A1), splint (A1), helm (A1, see below)",
+      "Whalebone chess set (and some skill)",
+      "Stocky steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "War Knight",
+    "poem": [
+      "Forged and broke in goreful plight",
+      "Won some, lost some, still upright"
+    ],
+    "idx": "06",
+    "_id": "04dc2ac5-3b06-4033-853c-f9814613504b",
+    "type": "knight",
+    "seer": {
+      "id": "06",
+      "title": "Lost Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 9, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 7, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Constantly being rubbed with psychotropic tinctures, parts of their body seeming to dissipate from reality.",
+        "Sees things that have been lost in a hazy vision of their current location.",
+        "Knows they will lose their sight if they advise directly how to find something."
+      ],
+      "idx": "06",
+      "_id": "97fa302e-51a0-47f6-9dc5-5e2292a2d950",
+      "type": "seer"
+    }
+  }

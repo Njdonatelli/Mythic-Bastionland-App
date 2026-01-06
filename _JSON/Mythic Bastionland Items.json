@@ -1,0 +1,434 @@
+[
+    {
+        "_id": "OaSMuVzXve86aFK2",
+        "name": "Axe",
+        "system": {
+            "description": "<p>Weapon: [[/r d8]], @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "dOyINRYQiUBmyf6F",
+        "name": "Beasts",
+        "system": {
+            "description": "<h3>COMMON BEASTS</h3><p><strong>Hound</strong>: <span class=\"virtue\">VIG</span> 5, <span class=\"virtue\">CLA</span> 10, <span class=\"virtue\">SPI</span> 5, 4<span class=\"virtue\">GD</span>, [[/r d6]] bite<br /><strong>Sheep</strong> <strong>or</strong> <strong>Pig</strong>: VIG 5, CLA 5, SPI 5, 1GD<br /><strong>Pony</strong>: VIG 7, CLA 7, SPI 5, 2GD<br /><strong>Mule</strong>: VIG 10, CLA 5, SPI 5, 1GD</p><h3>UNCOMMON BEASTS</h3><p><strong>Ox</strong>: VIG 15, CLA 5, SPI 5, 3GD<br /><strong>Hawk</strong>: VIG 5, CLA 15, SPI 5, 4GD, [[/r d4]] talons<br /><strong>Riding</strong> <strong>Steed</strong>: VIG 10, CLA 10, SPI 5, 3GD<br /><strong>Heavy</strong> <strong>Steed</strong>: VIG 15, CLA 5, SPI 5, 2GD</p><h3>RARE BEASTS</h3><p><strong>Charger</strong>: VIG 10, CLA 5, SPI 5, 5GD, [[/r d8]] trample</p>",
+            "rarity": "Special"
+        },
+        "type": "item"
+    },
+    {
+        "_id": "VE7vXdiy1TmoNMFH",
+        "name": "Billhook",
+        "system": {
+            "description": "<p>Weapon: [[/r d10]], @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "rLDuVJwoELVqvZJA",
+        "name": "Club",
+        "system": {
+            "description": "<p>Weapon: [[/r d6]]</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "AkIZO3pU7XrTzJK2",
+        "name": "Coat",
+        "system": {
+            "description": "<p>A1 (mail, gambeson, flexible armour suitable for general wear or beneath plates)</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "armor"
+    },
+    {
+        "_id": "19BpUoaxs3fwWkKv",
+        "name": "Common Weapons",
+        "system": {
+            "description": "<p>Hefty Tools: d6 hefty (@UUID[Compendium.celestus.items.deCxGbnrGLIAR5OZ]{Pitchfork}, @UUID[Compendium.celestus.items.miyMiAJhHRd1auM3]{Hatchet})<br />Long Tools: d8 long (@UUID[Compendium.celestus.items.BxukO9UJEwd2nGJ8]{Staff}, @UUID[Compendium.celestus.items.64duhMkfJKzOegq1]{Logging Axe}, @UUID[Compendium.celestus.items.hnyeJ3dNoVksF4SZ]{Pick})</p><p>Hand Weapons: d6 (@UUID[Compendium.celestus.items.QCO3X6n1tHqez2DV]{Dagger}, @UUID[Compendium.celestus.items.rLDuVJwoELVqvZJA]{Club}, @UUID[Compendium.celestus.items.xlZaXdsyxCP8E9XI]{Handaxe})<br />Hefty Weapons: d8 hefty (@UUID[Compendium.celestus.items.bhH83HZyRwBOqLhd]{Spear}, @UUID[Compendium.celestus.items.vHG1rH2nEd3Har48]{Mace}, @UUID[Compendium.celestus.items.OaSMuVzXve86aFK2]{Axe}, @UUID[Compendium.celestus.items.t0GC5p3EBpIeQWFW]{Cudgel})<br />Long Weapons: d10 long (@UUID[Compendium.celestus.items.EDbihEqAVfBeJCJi]{Poleaxe}, @UUID[Compendium.celestus.items.VE7vXdiy1TmoNMFH]{Billhook})</p><p>@UUID[Compendium.celestus.items.6Y0Zopr1Q1NLBIlC]{Sling}: d4 hefty<br />@UUID[Compendium.celestus.items.pFEsSqdFQyjEU1pN]{Javelin}: d6 hefty<br />@UUID[Compendium.celestus.items.hjVEH81r0j5AZIqx]{Shortbow}: d6 long</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "OXeEsVg9AnYCVW31",
+        "name": "Crossbow",
+        "system": {
+            "description": "<p>Weapon: [[/r 2d8]], @UUID[Compendium.celestus.rules.TL8avk3aIUjFozBV]{Slow}<br />(@UUID[Compendium.celestus.rules.sC5DFwEuA3qy9sYa]{Ranged})</p>",
+            "rarity": "Rare"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "t0GC5p3EBpIeQWFW",
+        "name": "Cudgel",
+        "system": {
+            "description": "<p>Weapon: [[/r d6]], @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "JMNWx3y6v7ExgVHO",
+        "name": "Curvebow",
+        "system": {
+            "description": "<p>Weapon: [[/r 2d6]], @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}<br />(@UUID[Compendium.celestus.rules.sC5DFwEuA3qy9sYa]{Ranged})</p>",
+            "rarity": "Rare"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "QCO3X6n1tHqez2DV",
+        "name": "Dagger",
+        "system": {
+            "description": "<p>Weapon: [[/r d6]]</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "37b3d61e-2d1f-43f0-992e-ad8d83a2aa32",
+        "name": "Death’s Head",
+        "system": {
+            "description": "<p>[[/r d10]] & @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}<br />When the wielder @UUID[Compendium.celestus.rules.w5kp8Mu6RhZosdcq]{Smites}, the target counts as having no Armour against this attack. <br />Cannot @UUID[Compendium.celestus.rules.G4QYjtCVWeZP6YIA]{Deny}.</p>",
+            "rarity": "Special"
+        },
+        "type": "weapon",
+        "source": "blog",
+        "href": "https://www.bastionland.com/2024/12/the-d6-sceptres.html",
+        "date": "2024-12-11T08:00:00.000Z"
+    },
+    {
+        "_id": "nS249e1d0ewUHQiT",
+        "name": "Greataxe",
+        "system": {
+            "description": "<p>Weapon: [[/r 2d10]], @UUID[Compendium.celestus.rules.TL8avk3aIUjFozBV]{Slow}</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "SOhIMwZZuIBQnCdt",
+        "name": "Greatsword",
+        "system": {
+            "description": "<p>Weapon: [[/r 2d10]], @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}</p>",
+            "rarity": "Rare"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "xlZaXdsyxCP8E9XI",
+        "name": "Handaxe",
+        "system": {
+            "description": "<p>Weapon: [[/r d6]]</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "miyMiAJhHRd1auM3",
+        "name": "Hatchet",
+        "system": {
+            "description": "<p>Weapon: [[/r d6]], @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "UtHKYmeBDzrFdDXz",
+        "name": "Helm",
+        "system": {
+            "description": "<p>A1 (kettle, nasal, bucket, coif)</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "armor"
+    },
+    {
+        "_id": "pFEsSqdFQyjEU1pN",
+        "name": "Javelin",
+        "system": {
+            "description": "<p>Weapon: [[/r 1d6]], @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "BzEjVd8rEMBqk7aT",
+        "name": "Lance",
+        "system": {
+            "description": "<p>Weapon: [[/r d10]], @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}. Counts as @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty} if mounted</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "64duhMkfJKzOegq1",
+        "name": "Logging Axe",
+        "system": {
+            "description": "<p>Weapon: [[/r d8]], @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "xt9Tff1mbx924hr5",
+        "name": "Longbow",
+        "system": {
+            "description": "<p>Weapon: [[/r d8]], @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "DJt25tLqpGviWbYn",
+        "name": "Longsword",
+        "system": {
+            "description": "<p>Weapon: [[/r 2d8]], @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}</p>",
+            "rarity": "Rare"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "vHG1rH2nEd3Har48",
+        "name": "Mace",
+        "system": {
+            "description": "<p>Weapon: [[/r d8]], @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "hnyeJ3dNoVksF4SZ",
+        "name": "Pick",
+        "system": {
+            "description": "<p>Weapon: [[/r d8]], @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "deCxGbnrGLIAR5OZ",
+        "name": "Pitchfork",
+        "system": {
+            "description": "<p>Weapon: [[/r d6]], @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "MgrxzDhulacjitl0",
+        "name": "Plate",
+        "system": {
+            "description": "<p>A1 (cuirass, brigandine, splint, scale, rigid armour often worn over a coat, slow to remove or don, even with assistance)</p>",
+            "rarity": "Rare"
+        },
+        "type": "armor"
+    },
+    {
+        "_id": "lJUil4lbQ642RcPZ",
+        "name": "Poisons",
+        "system": {
+            "description": "<p><strong>Common</strong>: Sickness and discomfort</p><p><strong>Uncommon</strong>: Suffering, then slow death</p><p><strong>Rare</strong>: Death plus speed, secrecy, or suffering</p>",
+            "rarity": "Special"
+        },
+        "type": "item"
+    },
+    {
+        "_id": "EDbihEqAVfBeJCJi",
+        "name": "Poleaxe",
+        "system": {
+            "description": "<p>Weapon: [[/r d10]], @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "6Xa4CELe9PsrqQQy",
+        "name": "Rare Weapons",
+        "system": {
+            "description": "<p>@UUID[Compendium.celestus.items.DJt25tLqpGviWbYn]{Longsword}: 2d8 hefty<br />@UUID[Compendium.celestus.items.SOhIMwZZuIBQnCdt]{Greatsword}: 2d10 long</p><p>@UUID[Compendium.celestus.items.JMNWx3y6v7ExgVHO]{Curvebow}: 2d6 long<br />@UUID[Compendium.celestus.items.OXeEsVg9AnYCVW31]{Crossbow}: 2d8 slow</p>",
+            "rarity": "Rare"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "VwJ2aV2jxvFuXhL0",
+        "name": "Remedies",
+        "system": {
+            "description": "<p>Remedies include @UUID[Compendium.celestus.items.04y6tu0NjqOtOxHU]{Sustenance} (<span class=\"virtue\">VIG</span>), @UUID[Compendium.celestus.items.m4eN8wzWx1wIP2mK]{Stimulant} (<span class=\"virtue\">CLA</span>), and @UUID[Compendium.celestus.items.B2owmLXQ62SX30oD]{Sacrament} (<span class=\"virtue\">SPI</span>).</p><p>A single Remedy is a sizeable bundle of materials and tools. A person or dedicated beast of burden can only carry one at once.</p><p>Using a Remedy requires a whole Phase of the day, and is more about the ceremonial act than the material components themselves.</p><p>The Virtue is restored before resolving any Omens or other encounters. A single Remedy is enough to benefit all company present.</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "item"
+    },
+    {
+        "_id": "B2owmLXQ62SX30oD",
+        "name": "Sacrament",
+        "system": {
+            "description": "<p>Props for a ritual or performance. Used to recover <span class=\"virtue\">SPI</span>.</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "item"
+    },
+    {
+        "_id": "8QKLl6QqDFbxRwUf",
+        "name": "Shield",
+        "system": {
+            "description": "<p>Shield: [[/r d4]], A1 (round, kite, heater)</p>",
+            "rarity": "Common"
+        },
+        "type": "armor"
+    },
+    {
+        "_id": "hjVEH81r0j5AZIqx",
+        "name": "Shortbow",
+        "system": {
+            "description": "<p>Weapon: [[/r 1d6]], @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}<br />(@UUID[Compendium.celestus.rules.sC5DFwEuA3qy9sYa]{Ranged})</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "gPcVXyQX8qx2wuoW",
+        "name": "Shortsword",
+        "system": {
+            "description": "<p>Weapon: [[/r 2d6]]</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "6Y0Zopr1Q1NLBIlC",
+        "name": "Sling",
+        "system": {
+            "description": "<p>Weapon: [[/r 1d4]], @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}<br />(@UUID[Compendium.celestus.rules.sC5DFwEuA3qy9sYa]{Ranged})</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "bhH83HZyRwBOqLhd",
+        "name": "Spear",
+        "system": {
+            "description": "<p>Weapon: [[/r d8]], @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "n52blaVhabVecJDq",
+        "name": "Specialist Weapons",
+        "system": {
+            "description": "<p>Take an existing @UUID[Compendium.celestus.items.19BpUoaxs3fwWkKv]{common} or @UUID[Compendium.celestus.items.vFpGjnYbnkcXVsl2]{uncommon} weapon with +[[/r d8]] or +[[/r d10]] in a specific situation. Make it one category rarer.</p>",
+            "rarity": "Special"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "BxukO9UJEwd2nGJ8",
+        "name": "Staff",
+        "system": {
+            "description": "<p>Weapon: [[/r d8]], @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}</p>",
+            "rarity": "Common"
+        },
+        "type": "weapon"
+    },
+    {
+        "_id": "m4eN8wzWx1wIP2mK",
+        "name": "Stimulant",
+        "system": {
+            "description": "<p>Enlightening herbal preparations. Used to recover <span class=\"virtue\">CLA</span>.</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "item"
+    },
+    {
+        "_id": "04y6tu0NjqOtOxHU",
+        "name": "Sustenance",
+        "system": {
+            "description": "<p>The means for a generous feast. Used to recover <span class=\"virtue\">VIG</span>.</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "item"
+    },
+    {
+        "_id": "da783ea4-b5f0-44a7-81c4-72b4ef408988",
+        "name": "The Butcher’s Bludgeon",
+        "system": {
+            "description": "<p>[[/r d10]] @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}</p>\n<p>When the wielder @UUID[Compendium.celestus.rules.w5kp8Mu6RhZosdcq]{Smites}, the attack gains both +[[/r d12]] and @UUID[Compendium.celestus.rules.Q84GshhKtznJytyY]{Blast}.</p>\n<p>Cannot @UUID[Compendium.celestus.rules.OVaEls1kihdxQT3g]{Focus}.</p>",
+            "rarity": "Special"
+        },
+        "type": "weapon",
+        "source": "blog",
+        "href": "https://www.bastionland.com/2024/12/the-d6-sceptres.html",
+        "date": "2024-12-11T08:00:00.000Z"
+    },
+    {
+        "_id": "ec0319a8-d344-4d01-b20e-7af035bfa183",
+        "name": "The Duellist’s Rod",
+        "system": {
+            "description": "<p>[[/r d10]]&nbsp;@UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}<br />When the wielder @UUID[Compendium.celestus.rules.OVaEls1kihdxQT3g]{Focuses}, perform two @UUID[Compendium.celestus.rules.U8Vl83tcDkRYLmpZ]{Gambits} instead of one. <br />Cannot @UUID[Compendium.celestus.rules.G4QYjtCVWeZP6YIA]{Deny}.</p>",
+            "rarity": "Special"
+        },
+        "type": "weapon",
+        "source": "blog",
+        "href": "https://www.bastionland.com/2024/12/the-d6-sceptres.html",
+        "date": "2024-12-11T08:00:00.000Z"
+    },
+    {
+        "_id": "4b41f6dc-82a0-45e9-86e2-cdfa6a3d2183",
+        "name": "The Gust Wand",
+        "system": {
+            "description": "<p>[[/r d8]]&nbsp;@UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}<br />When the wielder @UUID[Compendium.celestus.rules.G4QYjtCVWeZP6YIA]{Denies}, perform an immediate free Move. <br />Cannot @UUID[Compendium.celestus.rules.OVaEls1kihdxQT3g]{Focus}.</p>",
+            "rarity": "Special"
+        },
+        "type": "weapon",
+        "source": "blog",
+        "href": "https://www.bastionland.com/2024/12/the-d6-sceptres.html",
+        "date": "2024-12-11T08:00:00.000Z"
+    },
+    {
+        "_id": "2d45ec59-f8d0-4618-9b12-06ad3202afd7",
+        "name": "The Master Mace",
+        "system": {
+            "description": "<p>[[/r d8]]&nbsp;@UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}<br />When the wielder @UUID[Compendium.celestus.rules.OVaEls1kihdxQT3g]{Focuses}, the Gambit counts as a Strong Gambit. <br />Cannot @UUID[Compendium.celestus.rules.w5kp8Mu6RhZosdcq]{Smite}.</p>",
+            "rarity": "Special"
+        },
+        "type": "weapon",
+        "source": "blog",
+        "href": "https://www.bastionland.com/2024/12/the-d6-sceptres.html",
+        "date": "2024-12-11T08:00:00.000Z"
+    },
+    {
+        "_id": "c9e97344-47ed-4c4a-ad6f-de1849c47688",
+        "name": "The Smithie’s Maul",
+        "system": {
+            "description": "<p>[[/r d10]] @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}<br />When the wielder @UUID[Compendium.celestus.rules.G4QYjtCVWeZP6YIA]{Denies} in melee the attacker&rsquo;s weapon is destroyed.<br />Cannot @UUID[Compendium.celestus.rules.w5kp8Mu6RhZosdcq]{Smite}.</p>",
+            "rarity": "Special"
+        },
+        "type": "weapon",
+        "source": "blog",
+        "href": "https://www.bastionland.com/2024/12/the-d6-sceptres.html",
+        "date": "2024-12-11T08:00:00.000Z"
+    },
+    {
+        "_id": "Agh3e6l3iHJZnenG",
+        "name": "Tools",
+        "system": {
+            "description": "<p><strong>Common Tools:</strong> Saw, fishing rod, sewing set, candles, shovel, flute</p><p><strong>Uncommon Tools:</strong> Animal trap, smithing tools, herbalist kit, scribe set, lute</p><p><strong>Rare Tools:</strong> Alchemy tools, crystal ball, extravagant harp</p>",
+            "rarity": "Special"
+        },
+        "type": "item"
+    },
+    {
+        "_id": "vFpGjnYbnkcXVsl2",
+        "name": "Uncommon Weapons",
+        "system": {
+            "description": "<p>@UUID[Compendium.celestus.items.gPcVXyQX8qx2wuoW]{Shortsword}: 2d6<br />@UUID[Compendium.celestus.items.BzEjVd8rEMBqk7aT]{Lance}: d10 long, count as hefty if mounted<br />Brutal Weapons: 2d10 slow (@UUID[Compendium.celestus.items.nS249e1d0ewUHQiT]{Greataxe}, @UUID[Compendium.celestus.gear.iU5FyjFl7xhwz1sH]{Maul})</p><p>@UUID[Compendium.celestus.items.xt9Tff1mbx924hr5]{Longbow}: d8 slow</p>",
+            "rarity": "Uncommon"
+        },
+        "type": "weapon"
+    }
+]

@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Bastionland: The Oath</title>
+    <style>
+        :root {
+            --bg-parchment: #f4e4bc;
+            --ink-primary: #2b2b2b;
+            --ink-secondary: #4a4a4a;
+            --accent-red: #8a2be2; 
+            --accent-gold: #c5a059;
+            --font-header: 'Cinzel', 'Georgia', serif;
+            --font-body: 'EB Garamond', 'Times New Roman', serif;
+            --font-ui: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+        body {
+            background-color: var(--bg-parchment);
+            color: var(--ink-primary);
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        #app {
+            width: 100%;
+            max-width: 900px;
+            padding: 1rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.4);
+            border: 2px solid var(--ink-secondary);
+            padding: 2rem;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 4px; left: 4px; right: 4px; bottom: 4px;
+            border: 1px solid var(--ink-secondary);
+            pointer-events: none;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-header);
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 0.1em;
+            margin-top: 0;
+            color: var(--ink-primary);
+        }
+
+        h1 { font-size: 2.2rem; border-bottom: 2px solid var(--ink-primary); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.5rem; color: var(--ink-secondary); margin-bottom: 1rem; }
+        h4 { font-size: 1.1rem; border-bottom: 1px solid var(--ink-secondary); padding-bottom: 0.2rem; margin-top: 1.5rem; margin-bottom: 0.8rem; text-align: left; }
+
+        p, li {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: var(--ink-primary);
+        }
+        
+        ul { padding-left: 1.2rem; margin: 0.5rem 0; }
+        li { margin-bottom: 0.4rem; list-style-type: square; }
+
+        /* Button Styles */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.6);
+            border: 2px solid var(--ink-primary);
+            color: var(--ink-primary);
+            font-family: var(--font-ui);
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--ink-primary);
+            color: var(--bg-parchment);
+            transform: scale(1.01);
+        }
+
+        .btn-hero {
+            font-family: var(--font-header);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        /* Character Sheet Grid Layout */
+        .sheet-header { text-align: center; margin-bottom: 1.5rem; }
+        .sheet-archetype { font-style: italic; color: var(--ink-secondary); font-size: 1rem; }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Updated to 5 columns for Armour */
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-top: 1px solid var(--ink-secondary);
+            border-bottom: 1px solid var(--ink-secondary);
+            padding: 1rem 0;
+        }
+
+        .stat-box { display: flex; flex-direction: column; align-items: center; }
+        .stat-label { font-family: var(--font-header); font-size: 0.9rem; text-transform: uppercase; color: var(--ink-secondary); }
+        .stat-value { font-family: var(--font-header); font-size: 1.8rem; font-weight: bold; }
+
+        .sheet-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .item-row { display: flex; justify-content: space-between; font-size: 1rem; border-bottom: 1px dotted rgba(0,0,0,0.1); padding: 0.2rem 0; }
+        .item-name { font-weight: bold; }
+        .item-meta { font-size: 0.9rem; color: #555; }
+
+        .steed-box {
+            background: rgba(0,0,0,0.05);
+            padding: 1rem;
+            border: 1px solid var(--ink-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .steed-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            border-top: 1px dotted var(--ink-secondary);
+            padding-top: 0.5rem;
+        }
+
+        .flavor-item { 
+            font-size: 1rem; 
+            margin-bottom: 0.6rem; 
+            padding-bottom: 0.3rem;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+        .flavor-label { 
+            font-weight: bold; 
+            font-family: var(--font-header); 
+            text-transform: uppercase; 
+            color: var(--ink-secondary); 
+            font-size: 0.85rem;
+        }
+        .flavor-assoc {
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .sheet-footer-quote {
+            margin-top: 2rem;
+            text-align: center;
+            font-family: var(--font-header);
+            font-weight: bold;
+            color: var(--ink-secondary);
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            line-height: 1.6;
+            border-top: 1px solid var(--ink-secondary);
+            padding-top: 1rem;
+        }
+
+        .save-controls {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .hidden { display: none; }
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 650px) {
+            .sheet-columns { grid-template-columns: 1fr; }
+            .stat-grid { grid-template-columns: repeat(3, 1fr); } /* Adjusted for mobile */
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <!-- Screen 1: Intro -->
+    <div id="screen-intro" class="card fade-in">
+        <h1>Mythic Bastionland</h1>
+        <p style="text-align: center;">The mists part. A realm of myths and fading seasons lies ahead.</p> 
+        <p style="text-align: center;">You are a Knight, but which Knight? Swear your oath.</p>
+        <button class="btn btn-hero" onclick="game.startQuiz()">Begin Oath</button>
+    </div>
+
+    <!-- Screen 2: Quiz -->
+    <div id="screen-quiz" class="card hidden">
+        <h2 id="question-text" style="text-align: center;">Question Text</h2>
+        <div id="options-container">
+            <!-- Options injected here -->
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.6;">
+            <span id="question-progress">1 / 12</span>
+        </div>
+    </div>
+
+    <!-- Screen 3: Complete Profile -->
+    <div id="screen-result" class="card hidden">
+        <!-- Injected via JS -->
+    </div>
+</div>
+
+<script>
+    // --- DATA INGESTION ---
+
+    // 1. ALL 72 KNIGHTS (Using previous data)
+    const KNIGHTS = [
+        { name: "The True Knight", archetype: "Arbiter of Veracity", keywords: ["Truth", "Honesty", "Stern", "Law", "Light"], description: "A pact to uphold truth. The false slung broken upon their lies.", passion: "Honesty: Restore SPI when you tell the truth where a lie might be more beneficial.", ability: "Punitive Stroke: Make a melee attack against a known liar. Get +d10 to the attack, ignoring armour." },
+        { name: "The Snare Knight", archetype: "Warden of the Wilds", keywords: ["Nature", "Wild", "Hunt", "Trap", "Forest"], description: "Bound to the tangled roots and the hunter's art.", passion: "Empathy: Restore SPI when you spare the life of a hostile animal.", ability: "Wild Eye: Observe a beast in secret. Learn a useful truth about their habitat." },
+        { name: "The Tourney Knight", archetype: "Glory Seeker", keywords: ["Glory", "Pride", "Competition", "Combat", "Fame"], description: "A calling brought a life of combat. Nay a protector, in fact a competitor.", passion: "Hatred: Restore SPI when you refuse a plea for forgiveness.", ability: "Champion Vow: Use immediately before a combat where there is a prize at stake. +d6 to melee attacks for the whole combat." },
+        { name: "The Bloody Knight", archetype: "Sanguine Berserker", keywords: ["Blood", "War", "Fury", "Violence", "Battle"], description: "Some were born to fight. This one birthed from the very blood of battle.", passion: "Justice: Restore SPI when you restore the balance of justice.", ability: "Bloody Echo: Use immediately after defeating an opponent. Your next melee attack in this combat gains Blast." },
+        { name: "The Moss Knight", archetype: "Lithic Druid", keywords: ["Stone", "Nature", "Ancient", "Quiet", "Growth"], description: "The tree and stone had no need to be taught. The wisest knew to study beneath them.", passion: "Naturality: Restore SPI when you reject an opportunity to sleep indoors, sleeping in nature instead.", ability: "Mosstongue: Speak with uncut stones and particularly old trees." },
+        { name: "The War Knight", archetype: "Gritty Tactician", keywords: ["War", "Duty", "Soldier", "Battle", "Grit"], description: "Forged and broken in the bloodied mud. Won some, lost some, ever survived.", passion: "Duty: Restore SPI when you answer the call for martial service under a superior.", ability: "Battle Awareness: When fighting in a combat with at least 3 combatants on each side all your Gambits count as Strong Gambits." },
+        { name: "The Willow Knight", archetype: "Storm-Born Youth", keywords: ["Youth", "Resilience", "Storm", "Flexibility", "Wind"], description: "The giants fought the storm, falling, all broken bones. The youth, thrown about, arose in the calm.", passion: "Doubt: Restore SPI when you defer to somebody more senior than you, even though you disagree.", ability: "Bend with the Wind: When you use a Gambit to Move you count as having Armour 4 until your next turn." },
+        { name: "The Gilded Knight", archetype: "Auric Martyr", keywords: ["Gold", "Wealth", "Pride", "Sacrifice", "Light"], description: "A beacon of the brave and bold. All cloaked and masked in sunnen gold.", passion: "Pride: Restore SPI when you take personal credit for a great victory.", ability: "Martyr-in-Waiting: Use as a reaction to being Mortally Wounded. Allies fighting with you regain d6 GD and get +d12 damage against your attacker." },
+        { name: "The Saddle Knight", archetype: "Centaurian Rider", keywords: ["Horse", "Ride", "Speed", "Travel", "Beast"], description: "Within a blink they were atop their steed. Knight and beast at one, a red streak in the green.", passion: "Certainty: Restore SPI when you prove somebody wrong.", ability: "Song of the Steed: Speak in a voice comprehensible to horses. They need reasoning with rather than commanding." },
+        { name: "The Riddle Knight", archetype: "Enigmatic Inquisitor", keywords: ["Secret", "Puzzle", "Mystery", "Truth", "Trick"], description: "The right words say everything and nothing. A different truth to each ear.", passion: "Integrity: Restore SPI when you discredit somebody unworthy of their position.", ability: "Twisted Words: Speak, but choose two different meanings. Choose which meaning each listener takes from the words." },
+        { name: "The Talon Knight", archetype: "Sky Hunter", keywords: ["Sky", "Flight", "Hunt", "Bird", "Prey"], description: "The claw is nothing without the eye. The eye is nothing without the wing.", passion: "Regret: Restore SPI when you burn a part of your past.", ability: "Flockbond: See through the eyes of your bird, and learn the local knowledge of any prey it eats." },
+        { name: "The Barbed Knight", archetype: "Cruel Warden", keywords: ["Pain", "Cruelty", "Thorn", "Blood", "Spike"], description: "Cruelty can bring a peace. Stone and spikes split into bloom.", passion: "Apathy: Restore SPI when you reject a call for comfort.", ability: "The Red Hunt: Once each day, infuse a target’s spilt blood into an arrow to give it +d12 damage against the target." },
+        { name: "The Trail Knight", archetype: "Pathfinder", keywords: ["Travel", "Path", "Track", "Wander", "Hunt"], description: "More than foxes leave trails in their stead. Comings and goings laid plain as a thread.", passion: "Fear: Restore SPI when refusing to go into the dark.", ability: "Strands of Past: By studying the ground for a whole Phase you can ask a single yes or no question about what happened here." },
+        { name: "The Amber Knight", archetype: "Ancient Sentinel", keywords: ["Time", "Preservation", "Slow", "Ancient", "Wait"], description: "Their wait has been longer than we could imagine. Their blade slow but unstoppable.", passion: "Avarice: Restore SPI when you gain significant wealth.", ability: "Patient Strike: Make a melee Attack when you have not moved this turn. +d10 to the Attack. Ignore Armour." },
+        { name: "The Horde Knight", archetype: "Pack Leader", keywords: ["Swarm", "Chaos", "Group", "Battle", "Fury"], description: "In fury’s reign afore the rav’ning throng. In chaos born as knight where beast belong.", passion: "Prestige: Restore SPI when you take credit for the deeds of another.", ability: "Pack Tactics: Use before attacking with at least one ally. You may combine any number of dice into larger dice." },
+        { name: "The Emerald Knight", archetype: "Verdant Shadow", keywords: ["Nature", "Green", "Hidden", "Beauty", "Growth"], description: "A verdant cloak on sable steed. Neath nature’s veil, yond sight and heed.", passion: "Elegance: Restore SPI when you leave a place more beautiful than you found it.", ability: "Fade to Green: Use when hiding still and silent in greenery. You cannot be found by any means." },
+        { name: "The Chain Knight", archetype: "Abyssal Jailor", keywords: ["Dark", "Prison", "Chain", "Bind", "Deep"], description: "Born below the soil, below the stone, below all thought. Down, down, further down.", passion: "Abyss: Restore SPI when sleeping underground in complete darkness.", ability: "Will of the Irons: Move a single chain that you touch as if it was a limb." },
+        { name: "The Banner Knight", archetype: "Rallying Captain", keywords: ["Leadership", "Command", "Heraldry", "War", "Inspire"], description: "Beware of those festooning the flag. Their blade may be idle but their comrades are sharpened.", passion: "Sensitivity: Restore SPI when receiving social approval.", ability: "Rousing Presence: Use once per Attack when you are part of a group Attack. You may reroll the entire pool of Attack dice." },
+        { name: "The Pigeon Knight", archetype: "Urban Wayfinder", keywords: ["City", "Travel", "Home", "Bird", "Message"], description: "The humble know no home in place. For such wanderers, the horizon is their hearth.", passion: "Inquisition: Restore SPI when you wrangle the truth out of an uncooperative person.", ability: "Wayfinder Sense: Sense the direction in which a particular goal lies, but not the best route to travel there." },
+        { name: "The Shield Knight", archetype: "Stalwart Defender", keywords: ["Defense", "Protection", "Shield", "Guard", "Safety"], description: "In wood, hide, or iron, as armour meek or grand. No greater shield for the weak than the oath-sworn Knight.", passion: "Mortality: Restore SPI when you see an ally suffer a Mortal Wound.", ability: "Death Ward: Use when a nearby ally would take a Mortal Wound. You take a Mortal Wound instead." },
+        { name: "The Whip Knight", archetype: "Tormentor", keywords: ["Pain", "Control", "Fear", "Punish", "Cruel"], description: "Some draw screams from wrent flesh and bone. Others have ways to make very soul moan.", passion: "Reverence: Restore SPI when offering respectful homage to the dead.", ability: "Pain Strike: Make a melee Attack. Damage is applied to GD as normal, but then to SPI in place of VIG." },
+        { name: "The Seal Knight", archetype: "Oathkeeper", keywords: ["Law", "Order", "Secret", "Lock", "Duty"], description: "A Knight’s sworn oath outlasts the stone wall. Yet Seers say in time even words must fall.", passion: "Modesty: Restore SPI when refusing a reward.", ability: "Seal of Authority: Mark an object. It cannot be opened or moved by anyone but you or a Seer." },
+        { name: "The Horn Knight", archetype: "Wild Caller", keywords: ["Sound", "Call", "Wild", "Hunt", "Beast"], description: "Horn cried, hearts asank, blood awoke. In its wail our fates all sealed as the feast for death.", passion: "Bluntness: Restore SPI when you move the conversation in a way that somebody is avoiding.", ability: "Carnage Fanfare: Blow the wild horn in battle. For the rest of this battle any VIG lost through Damage is doubled." },
+        { name: "The Dove Knight", archetype: "Vengeful Peacekeeper", keywords: ["Peace", "Love", "Hope", "Bird", "Flight"], description: "In serenous moon the best of us can rest in docile light. That quietest bird in impure times must soar in bloody flight.", passion: "Vengeance: Restore SPI when achieving a worthy revenge.", ability: "Strike of Serenity: Make a melee Attack against a wounded target. Get +d8 to the Attack. If this defeats the target then all allies restore SPI." },
+        { name: "The Story Knight", archetype: "Chronicler", keywords: ["Story", "Lore", "History", "Tale", "Word"], description: "At last, I’m here! The one you were waiting for, the one behind the words.", passion: "Showmanship: Restore SPI when you deliberately draw unwanted attention.", ability: "Weaver of Fate: Just before night falls, tell a story related to a nearby place. The Referee secretly chooses one detail to become truth." },
+        { name: "The Turtle Knight", archetype: "Shellguard", keywords: ["Defense", "Shell", "Slow", "Water", "Protection"], description: "I stand inclad in shelldy stead. Nawone of you will see me dead!", passion: "Wellrestedness: Restore SPI when you sleep for two consecutive Phases.", ability: "Unbreakable Shell: Use at the start of your turn. You cannot move, but double your Armour and gain +d6 damage with shields." },
+        { name: "The Key Knight", archetype: "Gatekeeper", keywords: ["Unlock", "Open", "Secret", "Door", "Access"], description: "Sure as sky and sea. For every lock a key.", passion: "Distraction: Restore SPI when you abandon a set plan.", ability: "Retroactive Forethought: Once per day, produce a common item from your backpack that you could have reasonably acquired." },
+        { name: "The Moat Knight", archetype: "Swamp Sentinel", keywords: ["Water", "Defense", "Mud", "Guard", "Deep"], description: "There they stood, awashed in soddled loam. A grottling dance, the dusky sky agloam.", passion: "Filth: Restore SPI when you become utterly filthy.", ability: "Wading Stance: Gain 1 Armour and +d6 damage when fighting in at least waist-high water." },
+        { name: "The Boulder Knight", archetype: "Unstoppable Force", keywords: ["Stone", "Heavy", "Strong", "Crush", "Force"], description: "A fated charge in mail and stalward plate. Abaited foes await that thundring gait.", passion: "Strength: Restore SPI when you complete a physical task that somebody else was struggling with.", ability: "Unstoppable Dash: When you are in motion you cannot be stopped, but sustain d12 Damage if breaking through a solid wall." },
+        { name: "The Tankard Knight", archetype: "Reveler", keywords: ["Drink", "Party", "Social", "Fun", "Joy"], description: "Abrash and bold, renowned and rued. Their presence cheered on one breath, damned anext.", passion: "Revelry: Restore SPI when socially overindulging.", ability: "Humble Glamourie: After eating and drinking with somebody they consider you trustworthy enough to speak openly." },
+        { name: "The Owl Knight", archetype: "Night Watcher", keywords: ["Night", "Wisdom", "Silent", "Bird", "Watch"], description: "A fat one indeed who feasts on the fruits of fact. The nut of knowing nourishes from nog to nosh.", passion: "Alertness: Restore SPI when you spot an ambush, trap, or surprise attack.", ability: "Arboreal Archive: Spend a Phase running hands over a tree to access its memory." },
+        { name: "The Hooded Knight", archetype: "Forgotten Wanderer", keywords: ["Hidden", "Secret", "Mystery", "Shadow", "Lost"], description: "As deeds abound in history's script. More slip from time’s forgetful grip.", passion: "Anonymity: Restore SPI when somebody believes in a false identity you are portraying.", ability: "Unnoticed Deed: Once per day you can retroactively declare an action that you took earlier that day." },
+        { name: "The Lance Knight", archetype: "Seeing Lancer", keywords: ["Charge", "Ride", "War", "Battle", "Strike"], description: "Steed agasp, spear agroan, strike agore. Sharp afrail, sight ablind, then no more.", passion: "Adventure: Restore SPI when you enter a Myth Hex.", ability: "Shattering Charge: Once per day, make a solo mounted charging Attack. The Attack gains +d12 damage and Blast. The lance is shattered." },
+        { name: "The Questing Knight", archetype: "Eternal Seeker", keywords: ["Quest", "Journey", "Goal", "Travel", "Seek"], description: "Dream of the commoner, tragedy of the knight. To die at rest, at peace, at quiet.", passion: "Impetuosity: Restore SPI when you are first to fight.", ability: "Pledge Quest: Swear a quest to somebody who cares. Get +d12 damage on all attacks against those who stand in your way." },
+        { name: "The Ring Knight", archetype: "Bound Guardian", keywords: ["Circle", "Protect", "Magic", "Bound", "Safe"], description: "With ring a’lone, head dreams of home. With rings o’two, heart fills with rue.", passion: "Respectfulness: Restore SPI when returning something to its rightful owner.", ability: "Unbreakable Circle: Draw a circle in the ground. Until you leave the circle, no other living being can enter or leave it." },
+        { name: "The Forge Knight", archetype: "Iron Smith", keywords: ["Fire", "Create", "Craft", "Iron", "Heat"], description: "Gravid beats on ferrous slab, thick air a crimson sheen. Each mallenstroke leaves scars aworn.", passion: "Burning: Restore SPI when you are wounded by fire.", ability: "Tempering Strike: When you cause a Wound with a melee weapon, that weapon receives +d6 damage until the end of combat." },
+        { name: "The Rune Knight", archetype: "Fate Scribe", keywords: ["Magic", "Rune", "Fate", "Read", "Sign"], description: "Under gleam of lumenlight, in skin or stone ascratch. Strands of faten path unveiled.", passion: "Foresight: Restore SPI when your prediction is proven to be correct.", ability: "Destinous Sigil: Etch a cosmic rune. Choose a number. When a die rolls that number you may adjust it to any other value." },
+        { name: "The Gallows Knight", archetype: "Grim Executioner", keywords: ["Death", "Grim", "End", "Fate", "Dark"], description: "In dregs of dawn the damnlings sway. For famine’s brood a gifted prey.", passion: "Misery: Restore SPI when you meet somebody new and complain to them about something.", ability: "Carrion’s Call: Speak with scavenger creatures, and summon them to you." },
+        { name: "The Tome Knight", archetype: "Silent Scholar", keywords: ["Book", "Read", "Learn", "Knowledge", "Quiet"], description: "A loom of wisdom spun at dawn. Laid to rest til coming morn.", passion: "Introversion: Restore SPI when you refuse a formal social gathering, or leave early.", ability: "Dawn Contemplation: At sunrise each day, ask the Referee three questions within a chosen area of knowledge." },
+        { name: "The Meteor Knight", archetype: "Starfall Sentinel", keywords: ["Star", "Sky", "Fall", "Impact", "Fire"], description: "A star of truth, fell from ahigh. Such lumous ones should wear no lie.", passion: "Authenticity: Restore SPI when you reveal your identity or intentions at an inconvenient moment.", ability: "Star Fall: You never suffer Damage from falling. When you land from a fall of at least 12ft you may release a shockwave." },
+        { name: "The Gazer Knight", archetype: "Visionary", keywords: ["See", "Vision", "Eye", "Watch", "Look"], description: "The blood sees through time aflow. To certain souls, a glimpse they show.", passion: "Respect: Restore SPI when you yield to a Seer.", ability: "Glimpse of Fate: Once per day you can undo a single action performed by you or your Company." },
+        { name: "The Mule Knight", archetype: "Stubborn Laborer", keywords: ["Work", "Carry", "Strong", "Stubborn", "Endure"], description: "A humble beast, no roar or flight. Beneath the grey a show of might.", passion: "Kindness: Restore SPI when you stop an act of cruelty.", ability: "Lowly Shroud: At any time you may choose to have somebody observing you be utterly convinced that you are just a humble peasant." },
+        { name: "The Halo Knight", archetype: "Luminous Hope", keywords: ["Light", "Holy", "Hope", "Shine", "Bright"], description: "A trail of hope across the land. In sorrow’s face, bright reprimand.", passion: "Valour: Restore SPI when you engage in combat against the odds.", ability: "Luminous Eruption: Use once per Phase. A light source you are holding briefly illuminates the entire Hex and causes damage to dark beings." },
+        { name: "The Iron Knight", archetype: "Ferrous Warrior", keywords: ["Iron", "Metal", "Strong", "Hard", "Tough"], description: "As sword abend, as plate afold. As shield asplint, a tale atold.", passion: "Diligence: Restore SPI when refusing a shortcut.", ability: "Heightened Sharpness: When you perform a Strong Gambit with a bladed weapon you may choose to take a limb or head." },
+        { name: "The Mirror Knight", archetype: "Reflective Duelist", keywords: ["Reflect", "Mirror", "Copy", "Image", "Self"], description: "In eyes ajust, the given got. Blow for blow, from one shared lot.", passion: "Egality: Restore SPI when you give somebody else their fair share.", ability: "Reflection of Blood: When you are Wounded or Scarred, the attacker suffers the same effect." },
+        { name: "The Dusk Knight", archetype: "Memory Reaper", keywords: ["Dark", "Night", "Shadow", "End", "Fade"], description: "Each touch of iron takes a price, in breath or blood or bone. A nasty cut takes something worse, the warmth of distant home.", passion: "Temperance: Restore SPI when you refuse a luxury.", ability: "Sunder Memory: When you Wound a target you can rob them of a single specific memory." },
+        { name: "The Coin Knight", archetype: "Mercenary Gambler", keywords: ["Gold", "Money", "Trade", "Wealth", "Luck"], description: "In arg or aur, decisions spun. A prize, a life, lost or won.", passion: "Generosity: Restore SPI when you give generously to somebody in need.", ability: "Thrown to Chance: Flip a coin instead of attacking. Heads the target is killed, tails you are killed." },
+        { name: "The Mock Knight", archetype: "Living Construct", keywords: ["Fake", "Toy", "Construct", "Play", "False"], description: "Sycamore, leather, felt and strings. In heartless chest a soul still sings.", passion: "Imitation: Restore SPI when you pass for human while under scrutiny.", ability: "Impression of Life: You do not need to breathe, eat, drink, sleep, or love, but still feel the drives." },
+        { name: "The Mask Knight", archetype: "Faceless Actor", keywords: ["Mask", "Face", "Hide", "Act", "False"], description: "You call for the truth from me? I will not offer you that which cannot be found.", passion: "Vigilance: Restore SPI when you prevent a betrayal.", ability: "Thousand Faces: You can assume the face of anybody you have touched." },
+        { name: "The Bone Knight", archetype: "Skeletal Merchant", keywords: ["Bone", "Death", "Skeleton", "Dead", "Grim"], description: "Ribble rabble, ronky donk, they bounce a duckle dine. Clatter clink, clanky tank, a rib, a skull, a spine.", passion: "Acumen: Restore SPI when you come out better from a bargain.", ability: "Bone Magnate: When you make a genuine trade, a bone for a bone, learn something about the individual that the bone came from." },
+        { name: "The Salt Knight", archetype: "Brine Walker", keywords: ["Salt", "Sea", "Ocean", "Water", "Preserve"], description: "Saline stink adwells in every depth. No matter how calm the surface.", passion: "Mettle: Restore SPI when accepting a non-combat challenge with the odds set against you.", ability: "Inspire Ire: Activate at the end of your turn. Enemies that Attack targets other than you lose SPI." },
+        { name: "The Violet Knight", archetype: "Dream Walker", keywords: ["Dream", "Sleep", "Purple", "Vision", "Night"], description: "A glow unseen, from neath a dream. Illuminates the fabric’s seam.", passion: "Positivity: Restore SPI when you raise somebody’s mood.", ability: "Light Beyond Light: You can cause any metal object you hold to emit a bright light that only you can see." },
+        { name: "The Cosmic Knight", archetype: "Star Watcher", keywords: ["Space", "Star", "Void", "Alien", "Far"], description: "Countless stars dotted in the night. To the eyes of one, each a stain of failure amid purest black.", passion: "Constellations: Restore SPI when you get tell somebody new about the stars as you point to them.", ability: "Celestial Retreat: While you can see the sky you can instantly vanish to a distant sanctuary." },
+        { name: "The Temple Knight", archetype: "Sanctuary Guardian", keywords: ["Holy", "Temple", "Guard", "Sacred", "Protect"], description: "No blood or cry. Not here, not today.", passion: "Quietude: Restore SPI when bringing peaceful order to a chaotic place.", ability: "Site of Respite: You may declare a building that you occupy as peaceful ground. Nobody within can attack." },
+        { name: "The Fox Knight", archetype: "Cunning Trickster", keywords: ["Trick", "Cunning", "Animal", "Smart", "Wild"], description: "A whimsied whirl, a crafty guise. The truth revealed as sour surprise.", passion: "Wits: Restore SPI when you avoid being tricked or outwitted.", ability: "Cunning Ploy: Once per day, declare your current self to be an illusion, dispersing into smoke." },
+        { name: "The Gull Knight", archetype: "Wind Rider", keywords: ["Wind", "Bird", "Sea", "Fly", "Freedom"], description: "Tattered wing, loath’ed cry, ugly bill. And yet what heights.", passion: "Joy: Restore SPI when you deliver good news.", ability: "Guiding Gust: Ascend to the top of a vertical surface you are touching, lifted on a burst of wind." },
+        { name: "The Magpie Knight", archetype: "Collector", keywords: ["Steal", "Shiny", "Bird", "Collect", "Thief"], description: "Keen eyes see what cold heart seeks. No empty handed fool, this bird.", passion: "Heraldry: Restore SPI when you announce the owner of a banner, crest, or coat of arms.", ability: "Scourer’s Sense: If you are searching for something specific you always know for sure whether it is in your immediate surroundings." },
+        { name: "The Reliquary Knight", archetype: "Spirit Keeper", keywords: ["Spirit", "Ghost", "Dead", "Soul", "Keep"], description: "Final rest, earned in life. The echos linger on.", passion: "Tradition: Restore SPI when you ensure a tradition is thoroughly honoured.", ability: "Spirit Call: Once per day, release the invisible spirit from your reliquary to follow a command." },
+        { name: "The Vulture Knight", archetype: "Carrion Seer", keywords: ["Death", "Bird", "Rot", "Scavenge", "Grim"], description: "Gutly ribbons, blood’s sweet dance. The future calls in gory trance.", passion: "Thrift: Restore SPI when you make good use of something you found discarded.", ability: "Carrion Casting: Spread the innards of the recently dead. Ask a single question, they point you in a direction that would help." },
+        { name: "The Free Knight", archetype: "Chain Breaker", keywords: ["Free", "Break", "Chain", "Liberty", "Open"], description: "No body, no mind, should live acaged. Yet freedom rarely comes with a whisper.", passion: "Liberty: Restore SPI when you release somebody from an unwanted bond.", ability: "Bond Breaker: Strike a chain or lock with a metal weapon. Both shatter loudly." },
+        { name: "The Silk Knight", archetype: "Gossamer Weaver", keywords: ["Soft", "Web", "Cloth", "Weave", "Gentle"], description: "Judge not a knight on might and favour. Where silk endures, a heart can waver.", passion: "Mercy: Restore SPI when you accept a surrender or plea for forgiveness.", ability: "Adamant Gossamer: You can draw thin strands of silky string from your mouth. Unbreakable, but burn to ash in an instant." },
+        { name: "The Tiger Knight", archetype: "Primal Apex", keywords: ["Hunt", "Cat", "Wild", "Strong", "Fast"], description: "The ignorant deem beastly realms as mere anarchy. In truth, the structure runs much deeper.", passion: "Closure: Restore SPI when you get an answer that you’ve been seeking for some time.", ability: "Bestial Renown: Each time you defeat an animal in a contest befitting its strengths, all animals of that type will react favourably." },
+        { name: "The Leaf Knight", archetype: "Arboreal Forager", keywords: ["Tree", "Leaf", "Green", "Nature", "Growth"], description: "No greater gift than bough and bush. What more could we ask from this bountiful land?", passion: "Gourmet: Restore SPI when you eat a new type of fruit or vegetable.", ability: "Nature’s Vault: You can wield branches as javelins or greatspears and eat leaves as a satisfying meal." },
+        { name: "The Glass Knight", archetype: "Transparent Judge", keywords: ["Glass", "Clear", "See", "Fragile", "Sharp"], description: "Revealer of all secrets, in stark, judgemental light. In cold and sharpened heart lies no deceitful curse.", passion: "Curiosity: Restore SPI when looking somewhere you really shouldn’t.", ability: "Touch of Glass: You can see through any surface that you place your hand upon." },
+        { name: "The Hive Knight", archetype: "Insectoid Rebirth", keywords: ["Bug", "Swarm", "Many", "Life", "Grow"], description: "A bed of gluous, parchly cloth, a coat of stickly sleen. Emerged in morning good as new, chirurgery unseen.", passion: "Community: Restore SPI when you leave a community better off than when you arrived.", ability: "Chrysaline Rebirth: At night you may immerse yourself in a cocoon. After a full day you emerge cured." },
+        { name: "The Ghoul Knight", archetype: "Undead Lazarus", keywords: ["Dead", "Rot", "Grave", "Life", "Return"], description: "Arise! Arise! But, for what? For whom?", passion: "Acceptance: Restore SPI when warmly welcomed into somebody’s home.", ability: "Rebuked by Death: Use when you are dead. Return to life." },
+        { name: "The Weaver Knight", archetype: "Textile Transposer", keywords: ["Weave", "Cloth", "Change", "Swap", "Create"], description: "This and that, might just be that and this. As today were tomorrow, soon yesterday, no truth lies set in stone.", passion: "Detachment: Restore SPI when you discard something that you want.", ability: "Warp & Weft: Swap the positions of an object you are holding and another object you can see." },
+        { name: "The Thunder Knight", archetype: "Sonic Herald", keywords: ["Loud", "Storm", "Sound", "Voice", "Noise"], description: "Thunder! Should be felt, not heard, else call it a whimper!", passion: "Discord: Restore SPI when you disrupt a place of order.", ability: "Voice of the Skies: While outdoors, you can shout loud enough to be heard clearly throughout the whole Hex." },
+        { name: "The Dust Knight", archetype: "Arid Repulsor", keywords: ["Dry", "Sand", "Dust", "Waste", "Dead"], description: "Lust and loathing, desire and ire. The two great forces, perhaps just one.", passion: "Entitlement: Restore SPI when you get something that you were promised but initially denied.", ability: "Aqueous Repulsion: You can forcefully repel liquids with an outstretched hand, enough to hold a river at bay." },
+        { name: "The Fanged Knight", archetype: "Parasitic Noble", keywords: ["Bite", "Blood", "Vampire", "Dark", "Noble"], description: "I can show you why I cannot bare the false smile. Now bare your skin and harden your heart.", passion: "Melancholy: Restore SPI when you dampen the mood.", ability: "Sink Teeth: You can bite someone to regain VIG, put them to sleep, or show them a memory." },
+        { name: "The Pearl Knight", archetype: "Abyssal Merchant", keywords: ["Sea", "Water", "Gem", "Rich", "Deep"], description: "Why lurk shellbound in abyssal depths, solitary for life? All the best secrets come from the mouths and eyes of others.", passion: "Gossip: Restore SPI when you share or receive gossip.", ability: "Gift from the Deep: Produce one pearl each morning. You can see through the eyes of anybody carrying one." },
+        { name: "The Rat Knight", archetype: "Vermintide Scion", keywords: ["Rat", "Small", "Sneak", "Hide", "Filth"], description: "In squeakling hole I squashed and curled. Amidst my kin, a kinder world.", passion: "Trust: Restore SPI when giving the benefit of the doubt in a way that leaves you vulnerable.", ability: "Verminform: Take the form of a rat to squeeze into any space." },
+    ];
+
+    // --- KNIGHT_SPECS ---
+    const KNIGHT_SPECS = {
+    "The True Knight": {
+        items: [
+            { type: "knight", flavor: "Symbol of Truth", flavorLabel1: "Trigger", flavorLabel2: "Effect" },
+            { type: "weapon", name: "Polished Mace", damage: "d8", hefty: true }, // Text says "Polished mace"
+            { type: "shield", name: "Kite Shield", armor: 1, damage: "d4", description: "Marked with a symbol of the truth" },
+            { type: "coat", name: "Mail", armor: 1 },
+            { type: "coat", name: "Plate", armor: 1 }, // Added missing Plate
+            { type: "helm", name: "Helm", armor: 1 }   // Added missing Helm
+        ],
+        actors: [{ type: "steed", name: "Petulant Steed", vigour: 10, clarity: 10, spirit: 5, guard: 5, biography: "Refuses to move if lied to." }],
+        tables: [
+            { name: "Trigger", formula: "d6", results: [[1,1,"Lying to you about their identity", null], [2,2,"Giving false witness to you", null], [3,3,"Giving you malicious advice", null], [4,4,"Lying while bearing the shield", null], [5,5,"Omitting key information to you", null], [6,6,"Lying to you about their intent", null]] },
+            { name: "Effect", formula: "d6", results: [[1,1,"Golden Glow", null], [2,2,"Turns Cold", null], [3,3,"Gentle Hum", null], [4,4,"Fragrant Aroma", null], [5,5,"Distant Birdcall", null], [6,6,"Loud Clang", null]] }
+        ]
+    },
+    "The Snare Knight": {
+        items: [
+            { type: "knight", flavor: "Knight & Companion", flavorLabel1: "History", flavorLabel2: "Type" },
+            { type: "weapon", name: "Handaxe", damage: "d6", description: "Attached to wildrope" },
+            { type: "coat", name: "Gambeson", armor: 1 }
+        ],
+        actors: [
+            { type: "steed", name: "Tattered Steed", vigour: 8, clarity: 10, spirit: 5, guard: 2 },
+            { type: "npc", name: "Companion", vigour: 5, clarity: 10, spirit: 7, guard: 4, biography: "Partially understands human speech." }
+        ],
+        tables: [
+            { name: "History", formula: "d6", results: [[1,1,"Exiled", null], [2,2,"Feral", null], [3,3,"Vengeful", null], [4,4,"Shamed", null], [5,5,"Jovial", null], [6,6,"Artistic", null]] },
+            { name: "Type", formula: "d6", results: [[1,1,"Otter", null], [2,2,"Hare", null], [3,3,"Rat", null], [4,4,"Weasel", null], [5,5,"Ferret", null], [6,6,"Squirrel", null]] }
+        ]
+    },
+    "The Tourney Knight": {
+        items: [
+            { type: "knight", flavor: "Helm & Calling", flavorLabel1: "Calling", flavorLabel2: "Helm Design" },
+            { type: "weapon", name: "Greatlance", damage: "2d10", hefty: true, description: "Hefty when mounted, slow on foot" },
+            { type: "weapon", name: "Javelin x2", damage: "d6" },
+            { type: "coat", name: "Gambeson", armor: 1 },
+            { type: "coat", name: "Arena Plate", armor: 1 },
+            { type: "helm", name: "Fancy Helm", armor: 1, description: "See table for design" }
+        ],
+        actors: [{ type: "steed", name: "Horned Stallion", vigour: 12, clarity: 10, spirit: 5, guard: 4, biography: "d6 Trample" }],
+        tables: [
+            { name: "Call to Battle", formula: "d6", results: [[1,1,"Greed", null], [2,2,"Bloodlust", null], [3,3,"Glory", null], [4,4,"Duty", null], [5,5,"Pride", null], [6,6,"Ambition", null]] },
+            { name: "Fancy Helm", formula: "d6", results: [[1,1,"Lion", null], [2,2,"Shark", null], [3,3,"Great Crest", null], [4,4,"Hawk", null], [5,5,"Bull", null], [6,6,"Demon", null]] }
+        ]
+    },
+    "The Bloody Knight": {
+        items: [
+            { type: "knight", flavor: "Rage Fuel", flavorLabel1: "Alcohol", flavorLabel2: "Hatred" },
+            { type: "weapon", name: "Longaxe", damage: "d10", long: true },
+            { type: "coat", name: "Mail", armor: 1 },
+            { type: "coat", name: "Brutal Plate", armor: 1, description: "A1 only when Wounded" }, // Added Brutal Plate
+            { type: "helm", name: "Helm", armor: 1 }, // Added Helm
+            { type: "misc", name: "Sacks of Alcohol" }
+        ],
+        actors: [{ type: "steed", name: "Bullish Warhorse", vigour: 15, clarity: 5, spirit: 5, guard: 3, biography: "d6 Trample" }],
+        tables: [
+            { name: "Alcohol", formula: "d6", results: [[1,1,"Burning Wine", null], [2,2,"Strong Mead", null], [3,3,"Spiced Ale", null], [4,4,"Sour Milk", null], [5,5,"Fermented Vegetable", null], [6,6,"Blood Brew", null]] },
+            { name: "Hatred", formula: "d6", results: [[1,1,"The Rich", null], [2,2,"Knights", null], [3,3,"The Poor", null], [4,4,"Seers", null], [5,5,"The Sea", null], [6,6,"The Sun", null]] }
+        ]
+    },
+    "The Moss Knight": {
+        items: [
+            { type: "knight", flavor: "Tattoos", flavorLabel1: "Design", flavorLabel2: "Effect" },
+            { type: "weapon", name: "Branch Cudgel", damage: "d8", hefty: true },
+            { type: "shield", name: "Buckler", armor: 1, damage: "d4" },
+            { type: "helm", name: "Mail Coif", armor: 1 }
+        ],
+        actors: [{ type: "steed", name: "Pale Steed", vigour: 8, clarity: 12, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Design", formula: "d6", results: [[1,1,"Faded Spirals", null], [2,2,"Blue Thorns", null], [3,3,"Silver Stars", null], [4,4,"Colourful Snakes", null], [5,5,"Red Bones", null], [6,6,"Burnt Rings", null]] },
+            { name: "Effect", formula: "d6", results: [[1,1,"Points to water", null], [2,2,"Burns before ambush", null], [3,3,"A1 in saltwater", 1], [4,4,"A1 in moonlight", 1], [5,5,"A1 in rivers or streams", 1], [6,6,"Conceals a third eye", null]] }
+        ]
+    },
+    "The War Knight": {
+        items: [
+            { type: "knight", flavor: "Military Gear", flavorLabel1: "Polearm Trait", flavorLabel2: "Helm Style" },
+            { type: "weapon", name: "Special Polearm", damage: "d8", long: true },
+            { type: "coat", name: "Gambeson", armor: 1 },
+            { type: "coat", name: "Splint", armor: 1 },
+            { type: "misc", name: "Whalebone Chess Set" }
+        ],
+        actors: [{ type: "steed", name: "Stocky Steed", vigour: 15, clarity: 8, spirit: 5, guard: 2 }],
+        tables: [
+            { name: "Polearm Trait", formula: "d6", results: [[1,1,"+d10 vs mounted", null], [2,2,"+d10 vs shielded", null], [3,3,"+d10 vs armored", null], [4,4,"+d10 vs unshielded", null], [5,5,"+d10 vs beasts and monsters", null], [6,6,"+d10 vs attackers", null]] },
+            { name: "Helm Style", formula: "d6", results: [[1,1,"Veiled leather cowl", 1], [2,2,"Long mail hood", 1], [3,3,"Full heavy bucket", 1], [4,4,"Crow-beaked", 1], [5,5,"Caged visor", 1], [6,6,"Kettle cap", 1]] }
+        ]
+    },
+    "The Willow Knight": {
+        items: [
+            { type: "knight", flavor: "Memories", flavorLabel1: "Place", flavorLabel2: "Disaster" },
+            { type: "weapon", name: "Old Sword", damage: "d8", hefty: true },
+            { type: "shield", name: "Half-shield", armor: 1 },
+            { type: "coat", name: "Gambeson", armor: 1 },
+            { type: "misc", name: "Youthful Energy", description: "Treat Mortal Wound as normal Wound once" }
+        ],
+        actors: [{ type: "steed", name: "Cautious Steed", vigour: 10, clarity: 15, spirit: 5, guard: 2 }],
+        tables: [
+            { name: "Place", formula: "d6", results: [[1,1,"Riverside", null], [2,2,"Coastal", null], [3,3,"Mountain", null], [4,4,"Pine forest", null], [5,5,"Moor", null], [6,6,"Castle", null]] },
+            { name: "Disaster", formula: "d6", results: [[1,1,"Death", null], [2,2,"War", null], [3,3,"Famine", null], [4,4,"Plague", null], [5,5,"Fire", null], [6,6,"Flood", null]] }
+        ]
+    },
+    "The Gilded Knight": {
+        items: [
+            { type: "knight", flavor: "The Cost", flavorLabel1: "Found At", flavorLabel2: "Left Behind" },
+            { type: "weapon", name: "Great Mace", damage: "d10", long: true },
+            { type: "coat", name: "Gambeson", armor: 1 }, // Added Gambeson
+            { type: "coat", name: "Gold Cloaked Plate", armor: 1 },
+            { type: "helm", name: "Gold-Masked Helm", armor: 1, description: "Opponents who know value of gold are Impaired on first attack" } // Added Helm
+        ],
+        actors: [{ type: "steed", name: "Majestic Charger", vigour: 12, clarity: 9, spirit: 12, guard: 4, biography: "d6 Trample" }],
+        tables: [
+            { name: "The Armour Found You At", formula: "d6", results: [[1,1,"Lake", null], [2,2,"Waterfall", null], [3,3,"River", null], [4,4,"Beach", null], [5,5,"Cave", null], [6,6,"Mountain", null]] },
+            { name: "What Was Left Behind?", formula: "d6", results: [[1,1,"A farm", null], [2,2,"A name", null], [3,3,"Only graves", null], [4,4,"A student", null], [5,5,"A teacher", null], [6,6,"A castle", null]] }
+        ]
+    },
+    "The Saddle Knight": {
+        items: [
+            { type: "knight", flavor: "Loyal Steed", flavorLabel1: "Appearance", flavorLabel2: "Temperament" },
+            { type: "weapon", name: "Rider's Axe x3", damage: "d6", description: "+d6 when mounted, can be thrown" },
+            { type: "misc", name: "Fine Saddle", description: "Cannot be dismounted" },
+            { type: "coat", name: "Mail", armor: 1 },
+            { type: "coat", name: "Rider's Plate", armor: 1, description: "When mounted" }
+        ],
+        actors: [{ type: "steed", name: "Beloved Steed", vigour: 12, clarity: 15, spirit: 7, guard: 4 }],
+        tables: [
+            { name: "Appearance", formula: "d6", results: [[1,1,"Pristine", null], [2,2,"Plaited", null], [3,3,"Tall", null], [4,4,"Golden", null], [5,5,"Dark", null], [6,6,"Stocky", null]] },
+            { name: "Temperament", formula: "d6", results: [[1,1,"Completely Silent", null], [2,2,"Highly Alert", null], [3,3,"Eternally Valiant", null], [4,4,"Fierce (d8 trample)", null], [5,5,"Loved by Other Beasts", null], [6,6,"Perfect Sense of Direction", null]] }
+        ]
+    },
+    "The Riddle Knight": {
+        items: [
+            { type: "knight", flavor: "False Form", flavorLabel1: "Body", flavorLabel2: "Visage" },
+            { type: "weapon", name: "Twisted Bow", damage: "d6", long: true },
+            { type: "misc", name: "Moon Pendant", description: "Grants false form under moonlight" },
+            { type: "coat", name: "Light Mail", armor: 1, description: "With embroidered cloak" }
+        ],
+        actors: [{ type: "steed", name: "Shadowy Horse", vigour: 8, clarity: 15, spirit: 5, guard: 2, biography: "Very quiet" }],
+        tables: [
+            { name: "Body", formula: "d6", results: [[1,1,"Muscular (d8 grasp)", null], [2,2,"Shrunken (d6 bite)", null], [3,3,"Stretched (d6 strike)", null], [4,4,"Skeletal (d6 slash)", null], [5,5,"Canine (d8 jaws)", null], [6,6,"Feline (d6 claws)", null]] },
+            { name: "Visage", formula: "d6", results: [[1,1,"Elderly", null], [2,2,"Youthful", null], [3,3,"Hideous", null], [4,4,"Amorphous", null], [5,5,"Horned", null], [6,6,"Regal", null]] }
+        ]
+    },
+    "The Talon Knight": {
+        items: [
+            { type: "knight", flavor: "Loyal Bird", flavorLabel1: "Breed", flavorLabel2: "Training" },
+            { type: "weapon", name: "Hookhammer", damage: "d8", hefty: true, description: "+d8 dropping from above" },
+            { type: "shield", name: "Shield-Gauntlet", armor: 1, damage: "d6" },
+            { type: "helm", name: "Helm", armor: 1 } // Added Helm
+        ],
+        actors: [
+            { type: "steed", name: "Old Steed", vigour: 8, clarity: 8, spirit: 7, guard: 2 },
+            { type: "npc", name: "Bird", vigour: 5, clarity: 10, spirit: 5, guard: 4, biography: "d4 Talons" }
+        ],
+        tables: [
+            { name: "Breed", formula: "d6", results: [[1,1,"Fisherhawk", null], [2,2,"Cave Owl", null], [3,3,"Grey Raven", null], [4,4,"Red Eagle", null], [5,5,"Rock Falcon", null], [6,6,"Bog Vulture", null]] },
+            { name: "Training", formula: "d6", results: [[1,1,"Singing", null], [2,2,"Fighting Humans", null], [3,3,"Silent Flight", null], [4,4,"Delivery", null], [5,5,"Stealing", null], [6,6,"Fighting Birds", null]] }
+        ]
+    },
+    "The Barbed Knight": {
+        items: [
+            { type: "knight", flavor: "Bad Reputation", flavorLabel1: "Ally", flavorLabel2: "Enemy" },
+            { type: "weapon", name: "Jagged Spear", damage: "d8", hefty: true, description: "+d8 against target Wounded/Scarred by you" },
+            { type: "weapon", name: "Hunting Bow", damage: "d6", long: true },
+            { type: "coat", name: "Red Cloaked Mail", armor: 1 }
+        ],
+        actors: [{ type: "steed", name: "Vicious Charger", vigour: 12, clarity: 8, spirit: 5, guard: 3, biography: "d6 Trample" }],
+        tables: [
+            { name: "Ally", formula: "d6", results: [[1,1,"Eccentric Alchemist", null], [2,2,"Humble Chronicler", null], [3,3,"Surly Brewer", null], [4,4,"Horse Breeder", null], [5,5,"Elderly Innkeeper", null], [6,6,"Petty Burglar", null]] },
+            { name: "Enemy", formula: "d6", results: [[1,1,"Rich Merchant", null], [2,2,"Master Blacksmith", null], [3,3,"Admired Knight", null], [4,4,"Bandit Leader", null], [5,5,"Retired General", null], [6,6,"Mercenary Captain", null]] }
+        ]
+    },
+    "The Trail Knight": {
+        items: [
+            { type: "knight", flavor: "Personal Code", flavorLabel1: "Value", flavorLabel2: "Forged By" },
+            { type: "weapon", name: "Crow-beak Axe", damage: "d8", hefty: true },
+            { type: "misc", name: "Sanguine Lens", description: "Traces of blood appear obvious" },
+            { type: "coat", name: "Beaten Gambeson", armor: 1 }
+        ],
+        actors: [{ type: "steed", name: "Serene Steed", vigour: 10, clarity: 13, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Value", formula: "d6", results: [[1,1,"Honour", null], [2,2,"Duty", null], [3,3,"Loyalty", null], [4,4,"Justice", null], [5,5,"Respect", null], [6,6,"Truth", null]] },
+            { name: "Forged By", formula: "d6", results: [[1,1,"Battling Monster", null], [2,2,"Raided Village", null], [3,3,"Rescuing Helpless", null], [4,4,"Killing Tyrant", null], [5,5,"Long Journey", null], [6,6,"Facing Temptation", null]] }
+        ]
+    },
+    "The Amber Knight": {
+        items: [
+            { type: "knight", flavor: "Pastime", flavorLabel1: "Hobby", flavorLabel2: "Taught By" },
+            { type: "weapon", name: "Ancient Greatblade", damage: "2d10", slow: true },
+            { type: "misc", name: "Amber Amulet", description: "Carries warmth for a day if placed in fire" },
+            { type: "coat", name: "Ancient Mail", armor: 1 }
+        ],
+        actors: [{ type: "steed", name: "Loyal Steed", vigour: 10, clarity: 10, spirit: 5, guard: 3, biography: "d6 Trample" }],
+        tables: [
+            { name: "Hobby", formula: "d6", results: [[1,1,"Painting", null], [2,2,"Miniature sculpture", null], [3,3,"Embroidery", null], [4,4,"Pottery", null], [5,5,"Drawing", null], [6,6,"Flower pressing", null]] },
+            { name: "Taught By", formula: "d6", results: [[1,1,"Knight-Mentor", null], [2,2,"Father", null], [3,3,"Mother", null], [4,4,"Brother", null], [5,5,"Sister", null], [6,6,"Self", null]] }
+        ]
+    },
+    "The Horde Knight": {
+        items: [
+            { type: "knight", flavor: "Taste of Home", flavorLabel1: "Flavour", flavorLabel2: "Substance" },
+            { type: "weapon", name: "Blunt Sword", damage: "d8", hefty: true },
+            { type: "misc", name: "Sack of Food" },
+            { type: "coat", name: "Ringed Mail", armor: 1 }
+        ],
+        actors: [{ type: "steed", name: "Beastly Steed", vigour: 15, clarity: 7, spirit: 5, guard: 3, biography: "d6 Trample" }],
+        tables: [
+            { name: "Flavour", formula: "d6", results: [[1,1,"Sour", null], [2,2,"Salty", null], [3,3,"Fiery", null], [4,4,"Smoked", null], [5,5,"Burnt", null], [6,6,"Chewy", null]] },
+            { name: "Substance", formula: "d6", results: [[1,1,"Skin", null], [2,2,"Beans", null], [3,3,"Insects", null], [4,4,"Roots", null], [5,5,"Cheese", null], [6,6,"Honey", null]] }
+        ]
+    },
+    "The Emerald Knight": {
+        items: [
+            { type: "knight", flavor: "Hidden Action", flavorLabel1: "Action", flavorLabel2: "Sense" },
+            { type: "weapon", name: "Branchspear", damage: "d8", hefty: true, description: "Immovable when stabbed into a tree" },
+            { type: "shield", name: "Shield", armor: 1, damage: "d4" },
+            { type: "coat", name: "Cloaked Mail", armor: 1, description: "A1 in verdant environments only" }
+        ],
+        actors: [{ type: "steed", name: "Sable Steed", vigour: 10, clarity: 14, spirit: 5, guard: 4 }],
+        tables: [
+            { name: "Action", formula: "d6", results: [[1,1,"Strike enemy", null], [2,2,"Animal calls", null], [3,3,"Throw stones", null], [4,4,"Grab enemy", null], [5,5,"Move slowly", null], [6,6,"Whisper", null]] },
+            { name: "Sense", formula: "d6", results: [[1,1,"Vision (detail)", null], [2,2,"Vision (distance)", null], [3,3,"Hearing", null], [4,4,"Smell", null], [5,5,"Weather", null], [6,6,"Emotion", null]] }
+        ]
+    },
+    "The Chain Knight": {
+        items: [
+            { type: "knight", flavor: "Reaching Surface", flavorLabel1: "First", flavorLabel2: "Then" },
+            { type: "weapon", name: "Pronged Mace", damage: "d8", hefty: true },
+            { type: "misc", name: "Iron Chain" },
+            { type: "coat", name: "Oubliette Mail", armor: 1, description: "Wrapped in long iron chain" }
+        ],
+        actors: [{ type: "steed", name: "Tired Steed", vigour: 10, clarity: 12, spirit: 3, guard: 3 }],
+        tables: [
+            { name: "First", formula: "d6", results: [[1,1,"Darkness", null], [2,2,"Smoke", null], [3,3,"Cell", null], [4,4,"Chains", null], [5,5,"Stairs", null], [6,6,"Fire", null]] },
+            { name: "Then", formula: "d6", results: [[1,1,"Ice", null], [2,2,"Dirt", null], [3,3,"Mountain", null], [4,4,"Tomb", null], [5,5,"Well", null], [6,6,"Lake", null]] }
+        ]
+    },
+    "The Banner Knight": {
+        items: [
+            { type: "knight", flavor: "Banner", flavorLabel1: "Design", flavorLabel2: "Topper" },
+            { type: "weapon", name: "Banner-pike", damage: "d10", long: true },
+            { type: "weapon", name: "Spikehammer", damage: "d6" },
+            { type: "coat", name: "Ornate Mail", armor: 1 }
+        ],
+        actors: [{ type: "steed", name: "Fat Steed", vigour: 10, clarity: 8, spirit: 5, guard: 3, biography: "d6 Trample" }],
+        tables: [
+            { name: "Design", formula: "d6", results: [[1,1,"Red/white diamonds", null], [2,2,"Blue/yellow rings", null], [3,3,"Green/silver spiral", null], [4,4,"Purple/gold chevrons", null], [5,5,"Black/blue bars", null], [6,6,"Orange/black waves", null]] }, // Updated designs
+            { name: "Topper", formula: "d6", results: [[1,1,"Antlers", null], [2,2,"Jaws", null], [3,3,"Tree", null], [4,4,"Fishtail", null], [5,5,"Wings", null], [6,6,"Seashell", null]] }
+        ]
+    },
+    "The Pigeon Knight": {
+        items: [
+            { type: "knight", flavor: "Lost Home", flavorLabel1: "Hue", flavorLabel2: "Shape" },
+            { type: "weapon", name: "Bitterglaive", damage: "d10", long: true, description: "+d8 vs targets in their home" },
+            { type: "coat", name: "Tattered Mail", armor: 1 },
+            { type: "misc", name: "Hooded Cloak", description: "Vanish into crowds" }
+        ],
+        actors: [{ type: "steed", name: "Grey Steed", vigour: 7, clarity: 8, spirit: 5, guard: 2, biography: "Unmatched over long distance" }],
+        tables: [
+            { name: "Hue", formula: "d6", results: [[1,1,"Emerald", null], [2,2,"Marble", null], [3,3,"Silver", null], [4,4,"Golden", null], [5,5,"Ruby", null], [6,6,"Violet", null]] },
+            { name: "Shape", formula: "d6", results: [[1,1,"Towers", null], [2,2,"Walls", null], [3,3,"Flowers", null], [4,4,"Ships", null], [5,5,"Water", null], [6,6,"Clouds", null]] }
+        ]
+    },
+    "The Shield Knight": {
+        items: [
+            { type: "knight", flavor: "Soothing Salve", flavorLabel1: "Aroma", flavorLabel2: "Side Effect" },
+            { type: "weapon", name: "Dull Sword", damage: "2d6", hefty: true },
+            { type: "shield", name: "Cracked Shield", armor: 1, damage: "d4" },
+            { type: "coat", name: "Tattered Gambeson", armor: 1 }
+        ],
+        actors: [{ type: "steed", name: "Untested Steed", vigour: 12, clarity: 8, spirit: 4, guard: 2 }],
+        tables: [
+            { name: "Aroma", formula: "d6", results: [[1,1,"Rosemary", null], [2,2,"Mould", null], [3,3,"Pepper", null], [4,4,"Copper", null], [5,5,"Garlic", null], [6,6,"Meat", null]] },
+            { name: "Side Effect", formula: "d6", results: [[1,1,"Hallucination", null], [2,2,"Lethargy", null], [3,3,"Stimulation", null], [4,4,"Sorrow", null], [5,5,"Giddiness", null], [6,6,"Absent-mindedness", null]] }
+        ]
+    },
+    "The Whip Knight": {
+        items: [
+            { type: "knight", flavor: "Strange Herbs", flavorLabel1: "Effect", flavorLabel2: "Side Effect" },
+            { type: "weapon", name: "Spiny Mace", damage: "d8", hefty: true },
+            { type: "weapon", name: "Whip", damage: "d6" },
+            { type: "misc", name: "Strange Herbs" }
+        ],
+        actors: [{ type: "steed", name: "Pampered Steed", vigour: 10, clarity: 8, spirit: 5, guard: 2 }],
+        tables: [
+            { name: "Effect", formula: "d6", results: [[1,1,"Heightened hearing", null], [2,2,"Breathe fire once (d8 blast)", null], [3,3,"Speak remotely with any one person", null], [4,4,"No pain", 1], [5,5,"Restore one Virtue", null], [6,6,"Restore All Virtues", null]] }, // Added armor 1 for "No pain"
+            { name: "Side Effect", formula: "d6", results: [[1,1,"Mild Nausea", null], [2,2,"Mute", null], [3,3,"Hazy Vision", null], [4,4,"Lose d6 VIG", null], [5,5,"Lose d6 CLA", null], [6,6,"Lose d6 SPI", null]] }
+        ]
+    },
+    "The Seal Knight": {
+        items: [
+            { type: "knight", flavor: "Scrolls", flavorLabel1: "Subject", flavorLabel2: "Prophecy" },
+            { type: "weapon", name: "Stout Halberd", damage: "d10", long: true },
+            { type: "coat", name: "Gambeson", armor: 1 }, // Added Gambeson
+            { type: "coat", name: "Siege Plate", armor: 1, description: "Cannot be breached when bracing against door" },
+            { type: "misc", name: "Runic Scrolls x3" }
+        ],
+        actors: [{ type: "steed", name: "Dusty Steed", vigour: 10, clarity: 8, spirit: 5, guard: 4 }],
+        tables: [
+            { name: "Subject", formula: "d6", results: [[1,1,"Seer", null], [2,2,"Seal Knight", null], [3,3,"Knight", null], [4,4,"Seer", null], [5,5,"Myth", null], [6,6,"Realm", null]] },
+            { name: "Prophecy", formula: "d6", results: [[1,1,"Death", null], [2,2,"Torment", null], [3,3,"Rebirth", null], [4,4,"Treachery", null], [5,5,"Growth", null], [6,6,"Glory", null]] }
+        ]
+},
+    "The Horn Knight": {
+        items: [
+            { type: "knight", flavor: "Wild Horn", flavorLabel1: "Shape", flavorLabel2: "Sound" },
+            { type: "weapon", name: "Antler-halberd", damage: "d8", long: true, description: "+d10 vs horned opponents" },
+            { type: "weapon", name: "Bow", damage: "d6", long: true },
+            { type: "misc", name: "Wild Horn" }
+        ],
+        actors: [{ type: "steed", name: "Rusty Warhorse", vigour: 13, clarity: 6, spirit: 5, guard: 2, biography: "d6 Trample" }],
+        tables: [
+            { name: "Shape", formula: "d6", results: [[1,1,"Sharp", null], [2,2,"Helix", null], [3,3,"Sickle", null], [4,4,"Intertwined", null], [5,5,"Coiling", null], [6,6,"Swollen", null]] },
+            { name: "Sound", formula: "d6", results: [[1,1,"Dissonant", null], [2,2,"Solemn", null], [3,3,"Ghostly", null], [4,4,"Beastly", null], [5,5,"Droning", null], [6,6,"Gravelly", null]] }
+        ]
+    },
+    "The Dove Knight": {
+        items: [
+            { type: "knight", flavor: "Winged Armour", flavorLabel1: "Ability", flavorLabel2: "Limitation" },
+            { type: "weapon", name: "Stout Blade", damage: "2d6", hefty: true },
+            { type: "coat", name: "Gambeson", armor: 1 }, // Added Gambeson
+            { type: "coat", name: "Winged Scale", armor: 1 },
+            { type: "misc", name: "Bright Weeds" }
+        ],
+        actors: [{ type: "steed", name: "Mountain Steed", vigour: 14, clarity: 5, spirit: 5, guard: 2, biography: "Sure-footed on rocky ground" }],
+        tables: [
+            { name: "Ability", formula: "d6", results: [[1,1,"Safe land", null], [2,2,"Jump high", null], [3,3,"Sprint silent", null], [4,4,"Animals calm", null], [5,5,"Enemies sad", null], [6,6,"Real wings", null]] },
+            { name: "Limitation", formula: "d6", results: [[1,1,"Sink", null], [2,2,"Red glow", null], [3,3,"Slow run", null], [4,4,"Horses fear", null], [5,5,"Lose SPI", null], [6,6,"Daylight only", null]] }
+        ]
+    },
+    "The Story Knight": {
+        items: [
+            { type: "knight", flavor: "Book of Stories", flavorLabel1: "Style", flavorLabel2: "Twist" },
+            { type: "weapon", name: "Crook-blade", damage: "d10", long: true },
+            { type: "coat", name: "Mail", armor: 1 }, // Added Mail
+            { type: "coat", name: "Brigandine", armor: 1, description: "Bronze-studded" },
+            { type: "misc", name: "Book of Tales" }
+        ],
+        actors: [{ type: "steed", name: "Sinister Steed", vigour: 10, clarity: 14, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Style", formula: "d6", results: [[1,1,"Quest", null], [2,2,"Romance", null], [3,3,"Revenge", null], [4,4,"Farce", null], [5,5,"Nonsense", null], [6,6,"Tragedy", null]] },
+            { name: "Twist", formula: "d6", results: [[1,1,"Ghosts", null], [2,2,"Twins", null], [3,3,"Amnesia", null], [4,4,"Reincarnation", null], [5,5,"Animals", null], [6,6,"Death", null]] }
+        ]
+    },
+    "The Turtle Knight": {
+        items: [
+            { type: "knight", flavor: "Drinking Horn", flavorLabel1: "Appearance", flavorLabel2: "Flavour" },
+            { type: "weapon", name: "Beakhammer", damage: "d6" },
+            { type: "shield", name: "Tower Shield", armor: 1, damage: "d4", description: "Battered" },
+            { type: "misc", name: "Drinking Horn" }
+        ],
+        actors: [{ type: "steed", name: "Squat Steed", vigour: 14, clarity: 5, spirit: 6, guard: 2 }],
+        tables: [
+            { name: "Appearance", formula: "d6", results: [[1,1,"Tiny", null], [2,2,"Runic", null], [3,3,"Ruby", null], [4,4,"Volcanic", null], [5,5,"Battle", null], [6,6,"Huge", null]] },
+            { name: "Flavour", formula: "d6", results: [[1,1,"Honey", null], [2,2,"Salt", null], [3,3,"Almond", null], [4,4,"Ice", null], [5,5,"Berries", null], [6,6,"Meat", null]] }
+        ]
+    },
+    "The Key Knight": {
+        items: [
+            { type: "knight", flavor: "Valuables", flavorLabel1: "Valuable", flavorLabel2: "Keepsake" },
+            { type: "weapon", name: "Horned Axe", damage: "d8", hefty: true },
+            { type: "shield", name: "Kite Shield", armor: 1, damage: "d4" },
+            { type: "misc", name: "Ring of Keys" }
+        ],
+        actors: [{ type: "steed", name: "Jittery Steed", vigour: 12, clarity: 10, spirit: 3, guard: 3 }],
+        tables: [
+            { name: "Valuable", formula: "d6", results: [[1,1,"Gems", null], [2,2,"Coins", null], [3,3,"Salt", null], [4,4,"Diamond", null], [5,5,"Hairpin", null], [6,6,"Pearls", null]] },
+            { name: "Keepsake", formula: "d6", results: [[1,1,"Poem", null], [2,2,"Hair", null], [3,3,"Ring", null], [4,4,"Teeth", null], [5,5,"Blood", null], [6,6,"Figurine", null]] }
+        ]
+    },
+    "The Moat Knight": {
+        items: [
+            { type: "knight", flavor: "Difficult Steed", flavorLabel1: "Will Not", flavorLabel2: "But" },
+            { type: "weapon", name: "Spiked Flail", damage: "d10", long: true },
+            { type: "coat", name: "Barbed Mail", armor: 1, description: "Anyone grabbing you takes d6 damage" },
+            { type: "misc", name: "Moat Shovel" }
+        ],
+        actors: [{ type: "steed", name: "Difficult Steed", vigour: 12, clarity: 6, spirit: 6, guard: 2 }],
+        tables: [
+            { name: "Will Not", formula: "d6", results: [[1,1,"Jump", null], [2,2,"Stop", null], [3,3,"Carry others", null], [4,4,"Listen", null], [5,5,"Pull", null], [6,6,"Travel dark", null]] },
+            { name: "But", formula: "d6", results: [[1,1,"Eats all", null], [2,2,"Beautiful", null], [3,3,"Hears ambush", null], [4,4,"Knows north", null], [5,5,"Hums", null], [6,6,"Tough (A1)", 1]] } // Added armor 1
+        ]
+    },
+    "The Boulder Knight": {
+        items: [
+            { type: "knight", flavor: "Fancy Armour", flavorLabel1: "Design", flavorLabel2: "Quirk" },
+            { type: "weapon", name: "Siege Hammer", damage: "d10", long: true },
+            { type: "coat", name: "Mail", armor: 1 }, // Added Mail
+            { type: "coat", name: "Fancy Plate", armor: 1 },
+            { type: "misc", name: "Fortress Book" }
+        ],
+        actors: [{ type: "steed", name: "Well-fed Steed", vigour: 14, clarity: 8, spirit: 6, guard: 3 }],
+        tables: [
+            { name: "Design", formula: "d6", results: [[1,1,"Bronze", null], [2,2,"Flanged", null], [3,3,"Scales", null], [4,4,"Brigandine", null], [5,5,"Rings", null], [6,6,"Brass", null]] },
+            { name: "Quirk", formula: "d6", results: [[1,1,"Floats", null], [2,2,"Quick don", null], [3,3,"Silent", null], [4,4,"Scary (Helm A1)", 1], [5,5,"Spiked", null], [6,6,"Ignore fall", null]] } // Added Armor 1 for Scary (Helm A1)
+        ]
+    },
+    "The Tankard Knight": {
+        items: [
+            { type: "knight", flavor: "Scar Story", flavorLabel1: "Who", flavorLabel2: "Betrayal" },
+            { type: "weapon", name: "Eagle Axe", damage: "d8", hefty: true },
+            { type: "shield", name: "Roundshield", armor: 1, damage: "d4" },
+            { type: "coat", name: "Mail Shirt", armor: 1 }
+        ],
+        actors: [{ type: "steed", name: "Aggressive Charger", vigour: 14, clarity: 5, spirit: 6, guard: 2, biography: "d8 Trample" }],
+        tables: [
+            { name: "Who", formula: "d6", results: [[1,1,"Ruler", null], [2,2,"Seat", null], [3,3,"Knight", null], [4,4,"Village", null], [5,5,"Captain", null], [6,6,"Company", null]] },
+            { name: "Betrayal", formula: "d6", results: [[1,1,"Disloyalty", null], [2,2,"Theft", null], [3,3,"Argument", null], [4,4,"Promise", null], [5,5,"Slander", null], [6,6,"Neglect", null]] }
+        ]
+    },
+    "The Owl Knight": {
+        items: [
+            { type: "knight", flavor: "Tomes", flavorLabel1: "Title Start", flavorLabel2: "Title End" },
+            { type: "weapon", name: "Blade-staff", damage: "2d8", long: true },
+            { type: "coat", name: "Ringmail", armor: 1 },
+            { type: "misc", name: "Sack of Books" }
+        ],
+        actors: [{ type: "steed", name: "Peaceful Steed", vigour: 10, clarity: 10, spirit: 6, guard: 4 }],
+        tables: [
+            { name: "Title Start", formula: "d6", results: [[1,1,"Light of", null], [2,2,"Those who", null], [3,3,"Death &", null], [4,4,"Merits of", null], [5,5,"Domain &", null], [6,6,"Garden of", null]] },
+            { name: "Title End", formula: "d6", results: [[1,1,"Sea Beasts", null], [2,2,"Bread", null], [3,3,"The City", null], [4,4,"Meditations", null], [5,5,"Coin", null], [6,6,"Doom", null]] }
+        ]
+    },
+    "The Hooded Knight": {
+        items: [
+            { type: "knight", flavor: "Hood & Cloak", flavorLabel1: "Hood", flavorLabel2: "Cloak" },
+            { type: "weapon", name: "Glaive", damage: "d10", long: true },
+            { type: "weapon", name: "Throwing Axe x3", damage: "d6" },
+            { type: "misc", name: "Cloak & Hood", description: "Vanish in crowds" }
+        ],
+        actors: [{ type: "steed", name: "Modest Steed", vigour: 10, clarity: 9, spirit: 5, guard: 4 }],
+        tables: [
+            { name: "Hood", formula: "d6", results: [[1,1,"Veiled", null], [2,2,"Shadowy", null], [3,3,"Silken", null], [4,4,"Tattered", null], [5,5,"Fur-trimmed", null], [6,6,"Threadbare", null]] },
+            { name: "Cloak", formula: "d6", results: [[1,1,"Velvet", null], [2,2,"Torn", null], [3,3,"Weathered", null], [4,4,"Layered", null], [5,5,"Embroidered", null], [6,6,"Faded", null]] }
+        ]
+    },
+    "The Lance Knight": {
+        items: [
+            { type: "knight", flavor: "Mystic Sight", flavorLabel1: "Can See", flavorLabel2: "Cannot See" },
+            { type: "weapon", name: "Lance", damage: "d10", long: true, description: "Hefty if mounted" },
+            { type: "weapon", name: "Spiked Mace", damage: "d8", hefty: true },
+            { type: "shield", name: "Kite Shield", armor: 1, damage: "d4" }
+        ],
+        actors: [{ type: "steed", name: "Weary Charger", vigour: 14, clarity: 6, spirit: 4, guard: 3, biography: "d6 Trample" }],
+        tables: [
+            { name: "Can See", formula: "d6", results: [[1,1,"Fears", null], [2,2,"Desires", null], [3,3,"Hidden", null], [4,4,"Regrets", null], [5,5,"Loyalties", null], [6,6,"Injuries", null]] },
+            { name: "Cannot See", formula: "d6", results: [[1,1,"Colour", null], [2,2,"Writing", null], [3,3,"Birds", null], [4,4,"Water", null], [5,5,"Stars", null], [6,6,"Gold", null]] }
+        ]
+    },
+    "The Questing Knight": {
+        items: [
+            { type: "knight", flavor: "Ancient Sword", flavorLabel1: "Appearance", flavorLabel2: "Source" },
+            { type: "weapon", name: "Ancient Sword", damage: "varies", description: "See Appearance for stats" }, // Placeholder for dynamic stat
+            { type: "shield", name: "Kite Shield", armor: 1, damage: "d4" },
+            { type: "weapon", name: "Javelin x3", damage: "d6" }, // Added Javelins
+            { type: "misc", name: "Cold Stone" }
+        ],
+        actors: [{ type: "steed", name: "Reckless Charger", vigour: 14, clarity: 6, spirit: 6, guard: 1, biography: "d8 Trample" }],
+        tables: [
+            { name: "Appearance", formula: "d6", results: [[1,1,"Massive (d10 long)", null], [2,2,"Curved (d8)", null], [3,3,"Jagged (2d6 hefty)", null], [4,4,"Hooked (2d8 long)", null], [5,5,"Shining (2d6)", null], [6,6,"Cruel (2d8 hefty)", null]] }, // Updated stats
+            { name: "Source", formula: "d6", results: [[1,1,"Tide", null], [2,2,"Tomb", null], [3,3,"Tree", null], [4,4,"Eagle", null], [5,5,"Hermit", null], [6,6,"Mountain", null]] }
+        ]
+    },
+    "The Ring Knight": {
+        items: [
+            { type: "knight", flavor: "Rings", flavorLabel1: "Design", flavorLabel2: "Effect" },
+            { type: "weapon", name: "Long Mace", damage: "d10", long: true },
+            { type: "coat", name: "Violet Mail", armor: 1 },
+            { type: "misc", name: "Pair of Rings" }
+        ],
+        actors: [{ type: "steed", name: "Aloof Steed", vigour: 11, clarity: 8, spirit: 7, guard: 3, biography: "No trail" }],
+        tables: [
+            { name: "Design", formula: "d6", results: [[1,1,"Snakes", null], [2,2,"Skulls", null], [3,3,"Thorns", null], [4,4,"Rubies", null], [5,5,"Gold", null], [6,6,"Birds", null]] },
+            { name: "Effect", formula: "d6", results: [[1,1,"Vision", null], [2,2,"Hearing", null], [3,3,"GD", null], [4,4,"VIG", null], [5,5,"CLA", null], [6,6,"SPI", null]] }
+        ]
+    },
+    "The Forge Knight": {
+        items: [
+            { type: "knight", flavor: "Scars", flavorLabel1: "Visible", flavorLabel2: "Non-Visible" },
+            { type: "weapon", name: "Bolt-Guisarme", damage: "d10", long: true, description: "or d10 slow ranged" },
+            { type: "coat", name: "Gambeson", armor: 1 }, // Added Gambeson
+            { type: "coat", name: "Iron Chestplate", armor: 1 }, // Text says "scale (A1)" in property list, but "iron chestplate" elsewhere? No, property says "gambeson (A1), scale (A1)". Table says "Iron Chestplate" in previous json? Let's check text. Text: "gambeson (A1), scale (A1)".
+             // Correction: Original JSON said Iron Chestplate. Text says Scale. I will update to Scale to match text.
+            { type: "coat", name: "Scale", armor: 1 },
+            { type: "misc", name: "Forge Dust" }
+        ],
+        actors: [{ type: "steed", name: "Helmed Steed", vigour: 14, clarity: 4, spirit: 5, guard: 4, biography: "d6 Trample, A1" }], // Steed has A1
+        tables: [
+            { name: "Visible", formula: "d6", results: [[1,1,"Burnt hands", null], [2,2,"Scorched hair", null], [3,3,"Faded eyes", null], [4,4,"Missing teeth", null], [5,5,"Blisters", null], [6,6,"Brand", null]] },
+            { name: "Non-Visible", formula: "d6", results: [[1,1,"Nightmares", null], [2,2,"Noise sense", null], [3,3,"Sky distrust", null], [4,4,"Pain threshold", null], [5,5,"Light sense", null], [6,6,"Water fear", null]] }
+        ]
+    },
+    "The Rune Knight": {
+        items: [
+            { type: "knight", flavor: "Flask", flavorLabel1: "Shaken", flavorLabel2: "Smashed" },
+            { type: "weapon", name: "Stone Pillar", damage: "2d10", slow: true },
+            { type: "coat", name: "Gambeson", armor: 1 }, // Added Gambeson
+            { type: "coat", name: "Iron Chestplate", armor: 1 },
+            { type: "misc", name: "Crystal Flask" }
+        ],
+        actors: [{ type: "steed", name: "Muscular Charger", vigour: 13, clarity: 8, spirit: 5, guard: 3, biography: "d8 Trample" }],
+        tables: [
+            { name: "Shaken", formula: "d6", results: [[1,1,"Warmth", null], [2,2,"Darkness", null], [3,3,"Light", null], [4,4,"Repel birds", null], [5,5,"Soothe dogs", null], [6,6,"Ease pain", null]] },
+            { name: "Smashed", formula: "d6", results: [[1,1,"Thunder", null], [2,2,"Summer", null], [3,3,"Night", null], [4,4,"Scream", null], [5,5,"Locusts", null], [6,6,"Freeze water", null]] }
+        ]
+    },
+    "The Gallows Knight": {
+        items: [
+            { type: "knight", flavor: "Salvaged Armour", flavorLabel1: "Type", flavorLabel2: "Detail" },
+            { type: "weapon", name: "Neck-catcher", damage: "d10", long: true },
+            { type: "coat", name: "Salvaged Armour", armor: 1, description: "See table" },
+            { type: "misc", name: "Titan Beads" }
+        ],
+        actors: [{ type: "steed", name: "Flea-bitten Steed", vigour: 9, clarity: 7, spirit: 4, guard: 3 }],
+        tables: [
+            { name: "Type", formula: "d6", results: [[1,1,"Copper mail", 1], [2,2,"Cracked plate", 1], [3,3,"Brigandine", 1], [4,4,"Padded", 1], [5,5,"Leather", 1], [6,6,"Dented", 1]] }, // Added armor 1
+            { name: "Detail", formula: "d6", results: [[1,1,"Arrowhead", null], [2,2,"Patched", null], [3,3,"Burnt", null], [4,4,"Claw marks", null], [5,5,"Faded", null], [6,6,"Blood", null]] }
+        ]
+    },
+    "The Tome Knight": {
+        items: [
+            { type: "knight", flavor: "Recall", flavorLabel1: "Blind Spot", flavorLabel2: "Condition" },
+            { type: "weapon", name: "Heavy Staff", damage: "d10", long: true },
+            { type: "coat", name: "Gambeson", armor: 1 }, // Added Gambeson
+            { type: "coat", name: "Brigandine", armor: 1, description: "Brass-studded" },
+            { type: "misc", name: "Perfect Recall" }
+        ],
+        actors: [{ type: "steed", name: "Small Steed", vigour: 9, clarity: 8, spirit: 5, guard: 2 }],
+        tables: [
+            { name: "Blind Spot", formula: "d6", results: [[1,1,"Names", null], [2,2,"Places", null], [3,3,"Faces", null], [4,4,"Geography", null], [5,5,"Relationships", null], [6,6,"Time", null]] },
+            { name: "Condition", formula: "d6", results: [[1,1,"Crowds", null], [2,2,"Combat", null], [3,3,"Morning", null], [4,4,"Night", null], [5,5,"Alone", null], [6,6,"Drinking", null]] }
+        ]
+    },
+    "The Meteor Knight": {
+        items: [
+            { type: "knight", flavor: "Trident", flavorLabel1: "Appearance", flavorLabel2: "Ability" },
+            { type: "weapon", name: "Elaborate Trident", damage: "d10", long: true, description: "See table" },
+            { type: "coat", name: "Brass Mail", armor: 1 },
+            { type: "misc", name: "Moon Oil" }
+        ],
+        actors: [{ type: "steed", name: "Limping Steed", vigour: 12, clarity: 8, spirit: 5, guard: 4 }],
+        tables: [
+            { name: "Appearance", formula: "d6", results: [[1,1,"Rings", null], [2,2,"Blackened", null], [3,3,"Two-headed", null], [4,4,"Glow", null], [5,5,"Five prongs", null], [6,6,"Telescopic", null]] },
+            { name: "Ability", formula: "d6", results: [[1,1,"Thrown (d6)", null], [2,2,"Recall", null], [3,3,"Aquatic (+d8)", null], [4,4,"Anti-air (+d8)", null], [5,5,"Find water", null], [6,6,"Unbreakable", null]] } // Updated abilities with text details
+        ]
+    },
+    "The Gazer Knight": {
+        items: [
+            { type: "knight", flavor: "Tapestry", flavorLabel1: "Event", flavorLabel2: "Subject" },
+            { type: "weapon", name: "Toothed Blade", damage: "d8", hefty: true, description: "+d8 vs Seers" },
+            { type: "coat", name: "Mail", armor: 1 },
+            { type: "coat", name: "Tapestry Cloak", armor: 0 },
+            { type: "misc", name: "Flickerlamp" }
+        ],
+        actors: [{ type: "steed", name: "Blueish Steed", vigour: 12, clarity: 10, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Event", formula: "d6", results: [[1,1,"Birth", null], [2,2,"Deeds", null], [3,3,"Ambitions", null], [4,4,"Shame", null], [5,5,"Glory", null], [6,6,"Peace", null]] },
+            { name: "Subject", formula: "d6", results: [[1,1,"Seer", null], [2,2,"Knight", null], [3,3,"Self", null], [4,4,"Company", null], [5,5,"Ruler", null], [6,6,"Unknown", null]] }
+        ]
+    },
+    "The Mule Knight": {
+        items: [
+            { type: "knight", flavor: "Explosives", flavorLabel1: "Form", flavorLabel2: "Trigger" },
+            { type: "weapon", name: "Weighted Staff", damage: "d10", long: true },
+            { type: "coat", name: "Polished Chain", armor: 1 },
+            { type: "misc", name: "Explosives x3", damage: "d8 blast" }
+        ],
+        actors: [{ type: "steed", name: "Tall Steed", vigour: 14, clarity: 7, spirit: 6, guard: 2 }],
+        tables: [
+            { name: "Form", formula: "d6", results: [[1,1,"Pinecone", null], [2,2,"Dust", null], [3,3,"Oil", null], [4,4,"Chestnut", null], [5,5,"Gizzard", null], [6,6,"Egg", null]] },
+            { name: "Trigger", formula: "d6", results: [[1,1,"Water", null], [2,2,"Fire", null], [3,3,"Word", null], [4,4,"Touch", null], [5,5,"Light", null], [6,6,"Ground", null]] }
+        ]
+    },
+    "The Halo Knight": {
+        items: [
+            { type: "knight", flavor: "Mistvial", flavorLabel1: "Material", flavorLabel2: "Requirement" },
+            { type: "weapon", name: "Crescent Axe", damage: "d8", hefty: true },
+            { type: "coat", name: "Ringmail", armor: 1 }, // Added Ringmail
+            { type: "shield", name: "Kite Shield", armor: 1, damage: "d4" },
+            { type: "misc", name: "Mistvial" }
+        ],
+        actors: [{ type: "steed", name: "Wild Steed", vigour: 15, clarity: 5, spirit: 7, guard: 3 }],
+        tables: [
+            { name: "Material", formula: "d6", results: [[1,1,"Blood", null], [2,2,"Sand", null], [3,3,"Smoke", null], [4,4,"Milk", null], [5,5,"Salt", null], [6,6,"Silk", null]] },
+            { name: "Requirement", formula: "d6", results: [[1,1,"Ritual", null], [2,2,"Blessing", null], [3,3,"Wounded", null], [4,4,"Coin", null], [5,5,"Sunrise", null], [6,6,"Nest", null]] }
+        ]
+    },
+    "The Iron Knight": {
+        items: [
+            { type: "knight", flavor: "Blade Origin", flavorLabel1: "Source", flavorLabel2: "Time" },
+            { type: "weapon", name: "Cleavingblade", damage: "2d8", long: true },
+            { type: "coat", name: "Mail", armor: 1 },
+            { type: "coat", name: "Plate Pauldrons", armor: 1 }, // Updated to match text
+            { type: "misc", name: "Inscribed Scabbard" }
+        ],
+        actors: [{ type: "steed", name: "Dark Steed", vigour: 11, clarity: 7, spirit: 6, guard: 3 }],
+        tables: [
+            { name: "Source", formula: "d6", results: [[1,1,"Forest", null], [2,2,"Waterfall", null], [3,3,"Sea", null], [4,4,"Boulder", null], [5,5,"Cave", null], [6,6,"Tree", null]] },
+            { name: "Time", formula: "d6", results: [[1,1,"Contentment", null], [2,2,"Desperation", null], [3,3,"Victory", null], [4,4,"Anger", null], [5,5,"Sorrow", null], [6,6,"Transition", null]] }
+        ]
+    },
+    "The Mirror Knight": {
+        items: [
+            { type: "knight", flavor: "Memories", flavorLabel1: "Knight", flavorLabel2: "Steed" },
+            { type: "weapon", name: "Hook-axe", damage: "d8", hefty: true },
+            { type: "weapon", name: "Throwing Axe x3", damage: "d6" },
+            { type: "shield", name: "Roundshield", armor: 1, damage: "d4" },
+            { type: "misc", name: "Hushingbell" } // Added missing item
+        ],
+        actors: [{ type: "steed", name: "Faded Steed", vigour: 9, clarity: 8, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Knight", formula: "d6", results: [[1,1,"Treasure", null], [2,2,"Revenge", null], [3,3,"Tournament", null], [4,4,"Escape", null], [5,5,"Siege", null], [6,6,"Rescue", null]] },
+            { name: "Steed", formula: "d6", results: [[1,1,"Brave", null], [2,2,"Galloped", null], [3,3,"Ambush", null], [4,4,"Death", null], [5,5,"Lost eye", null], [6,6,"Arrows", null]] }
+        ]
+    },
+    "The Dusk Knight": {
+        items: [
+            { type: "knight", flavor: "Tattered Poem", flavorLabel1: "Once upon a time...", flavorLabel2: "The End" },
+            { type: "weapon", name: "Longhammer", damage: "d10", long: true },
+            { type: "weapon", name: "Javelin x3", damage: "d6" },
+            { type: "misc", name: "Wolfnuts" },
+            { type: "misc", name: "Tattered Poem" }
+        ],
+        actors: [{ type: "steed", name: "Auburn Steed", vigour: 12, clarity: 8, spirit: 6, guard: 2 }],
+        tables: [
+            { name: "Once upon a time...", formula: "d6", results: [[1,1,"Twin Knights are lost in the woods...", null], [2,2,"The Lion and the Lizard are bitter rivals...", null], [3,3,"A mother hates her six ugly sons...", null], [4,4,"A hermit lambasts the stars for his sad life...", null], [5,5,"A clever chicken outwits a farmer...", null], [6,6,"A poet wastes her life fleeing from death...", null]] },
+            { name: "The End", formula: "d6", results: [[1,1,"They're eaten by a pack of wolves.", null], [2,2,"They all die of a disgusting plague.", null], [3,3,"It turns into a call to find the City.", null], [4,4,"It devolves into psychedelic nonsense.", null], [5,5,"It ends on a literal cliffhanger.", null], [6,6,"They all lived happily ever after.", null]] }
+        ]
+    },
+    "The Coin Knight": {
+        items: [
+            { type: "knight", flavor: "Flute", flavorLabel1: "Loved By", flavorLabel2: "Hated By" },
+            { type: "weapon", name: "Morningstar", damage: "d8", hefty: true },
+            { type: "shield", name: "Roundshield", armor: 1, damage: "d4" },
+            { type: "coat", name: "Gambeson", armor: 1 }, // Added Gambeson
+            { type: "coat", name: "Brigandine", armor: 1, description: "Stone-studded" }
+        ],
+        actors: [{ type: "steed", name: "Arctic Steed", vigour: 14, clarity: 8, spirit: 7, guard: 3 }],
+        tables: [
+            { name: "Loved By", formula: "d6", results: [[1,1,"Children", null], [2,2,"Cats", null], [3,3,"Nobles", null], [4,4,"Knights", null], [5,5,"Predators", null], [6,6,"Sea creatures", null]] },
+            { name: "Hated By", formula: "d6", results: [[1,1,"All", null], [2,2,"Musicians", null], [3,3,"Rodents", null], [4,4,"Company", null], [5,5,"Seers", null], [6,6,"Songbirds", null]] }
+        ]
+    },
+    "The Mock Knight": {
+        items: [
+            { type: "knight", flavor: "Body", flavorLabel1: "Bones", flavorLabel2: "Skin" },
+            { type: "weapon", name: "War Flail", damage: "d10", long: true },
+            { type: "coat", name: "Plate Suit", armor: 1, description: "Conceals unnatural body" },
+            { type: "misc", name: "Hood & Clothes" } // Added missing item
+        ],
+        actors: [{ type: "steed", name: "Well-groomed Steed", vigour: 12, clarity: 8, spirit: 6, guard: 2 }],
+        tables: [
+            { name: "Bones", formula: "d6", results: [[1,1,"Ivory", null], [2,2,"Bronze", null], [3,3,"Sapling", null], [4,4,"String", null], [5,5,"Wood", null], [6,6,"Chain", null]] },
+            { name: "Skin", formula: "d6", results: [[1,1,"Leather", null], [2,2,"Felt", null], [3,3,"Silk", null], [4,4,"Wool", null], [5,5,"Parchment", null], [6,6,"Clay", null]] }
+        ]
+    },
+    "The Mask Knight": {
+        items: [
+            { type: "knight", flavor: "Masked Helm", flavorLabel1: "Appearance", flavorLabel2: "Design" },
+            { type: "weapon", name: "Splittingaxe", damage: "d10", long: true },
+            { type: "coat", name: "Mail", armor: 1 },
+            { type: "helm", name: "Masked Helm", armor: 1 }, // Added Helm
+            { type: "misc", name: "Star Ink" }
+        ],
+        actors: [{ type: "steed", name: "Silver Steed", vigour: 12, clarity: 8, spirit: 5, guard: 4 }],
+        tables: [
+            { name: "Appearance", formula: "d6", results: [[1,1,"Youthful", null], [2,2,"Beautiful", null], [3,3,"Misshapen", null], [4,4,"Abstract", null], [5,5,"Skull", null], [6,6,"Elder", null]] },
+            { name: "Design", formula: "d6", results: [[1,1,"Horned", null], [2,2,"Two-faced", null], [3,3,"Blindfolded", null], [4,4,"Scarred", null], [5,5,"Roaring", null], [6,6,"Crowned", null]] }
+        ]
+    },
+    "The Bone Knight": {
+        items: [
+            { type: "knight", flavor: "Box of Bones", flavorLabel1: "Box", flavorLabel2: "Content" },
+            { type: "weapon", name: "Needle Dagger", damage: "d6", description: "+d6 against armored" },
+            { type: "shield", name: "Jagged Buckler", armor: 1, damage: "d4" },
+            { type: "misc", name: "Box of Bones" }
+        ],
+        actors: [{ type: "steed", name: "Marsh Steed", vigour: 12, clarity: 8, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Box", formula: "d6", results: [[1,1,"Silver", null], [2,2,"Ivory", null], [3,3,"Bronze", null], [4,4,"Velvet", null], [5,5,"Wood", null], [6,6,"Shell", null]] },
+            { name: "Content", formula: "d6", results: [[1,1,"Age", null], [2,2,"Size", null], [3,3,"Habitat", null], [4,4,"Beauty", null], [5,5,"Virtue", null], [6,6,"Chaos", null]] }
+        ]
+    },
+    "The Salt Knight": {
+        items: [
+            { type: "knight", flavor: "Everflask", flavorLabel1: "Design", flavorLabel2: "Thirst" },
+            { type: "weapon", name: "Spined Mace", damage: "d8", hefty: true },
+            { type: "weapon", name: "Javelin", damage: "d6" },
+            { type: "coat", name: "Coraline Mail", armor: 1 }
+        ],
+        actors: [{ type: "steed", name: "Scaled Steed", vigour: 12, clarity: 8, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Design", formula: "d6", results: [[1,1,"Leather", null], [2,2,"Brass", null], [3,3,"Silver", null], [4,4,"Stone", null], [5,5,"Wood", null], [6,6,"Glass", null]] },
+            { name: "Thirst", formula: "d6", results: [[1,1,"Story", null], [2,2,"Blade", null], [3,3,"Creature", null], [4,4,"Fruit", null], [5,5,"Honey", null], [6,6,"Music", null]] }
+        ]
+    },
+    "The Violet Knight": {
+        items: [
+            { type: "knight", flavor: "Steed", flavorLabel1: "Why?", flavorLabel2: "Trait" },
+            { type: "weapon", name: "Grand Mace", damage: "d10", long: true },
+            { type: "coat", name: "Mail", armor: 1 }, // Added Mail
+            { type: "coat", name: "Reflective Scale", armor: 1 }, // Updated to Reflective Scale
+            { type: "misc", name: "Flattering Handmirror" } // Updated item name
+        ],
+        actors: [{ type: "steed", name: "Nameless Steed", vigour: 12, clarity: 8, spirit: 4, guard: 1 }],
+        tables: [
+            { name: "Why?", formula: "d6", results: [[1,1,"Seer", null], [2,2,"Fright", null], [3,3,"Forgotten", null], [4,4,"Unspeakable", null], [5,5,"Death", null], [6,6,"Power", null]] },
+            { name: "Trait", formula: "d6", results: [[1,1,"Silent", null], [2,2,"Water fear", null], [3,3,"Night", null], [4,4,"Arrow immune", null], [5,5,"Sea walk", null], [6,6,"Fealty", null]] }
+        ]
+    },
+    "The Cosmic Knight": {
+        items: [
+            { type: "knight", flavor: "Crossbow", flavorLabel1: "Form", flavorLabel2: "Twist" },
+            { type: "weapon", name: "Strange Crossbow", damage: "varies", description: "See table" },
+            { type: "misc", name: "Echostone" },
+            { type: "coat", name: "None", armor: 0 }
+        ],
+        actors: [{ type: "steed", name: "Boneless Steed", vigour: 10, clarity: 8, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Form", formula: "d6", results: [[1,1,"Handheld (d6)", null], [2,2,"Lightwood (d8 hefty)", null], [3,3,"Repeating (d8 long)", null], [4,4,"Double (2d6 long)", null], [5,5,"Bronze (2d8 slow)", null], [6,6,"Ironwood (d10 slow)", null]] }, // Updated stats
+            { name: "Twist", formula: "d6", results: [[1,1,"No dark", null], [2,2,"Owner only", null], [3,3,"Loud", null], [4,4,"No bolts", null], [5,5,"Painful", null], [6,6,"Melee", null]] }
+        ]
+    },
+    "The Temple Knight": {
+        items: [
+            { type: "knight", flavor: "Snake", flavorLabel1: "Voice", flavorLabel2: "Agenda" },
+            { type: "weapon", name: "Spear", damage: "d8", hefty: true },
+            { type: "shield", name: "Broadshield", armor: 1, damage: "d4" },
+            { type: "misc", name: "White Cloak" }, // Added missing item
+            { type: "misc", name: "Mummified Snake" }
+        ],
+        actors: [{ type: "steed", name: "Moorland Steed", vigour: 11, clarity: 9, spirit: 6, guard: 3 }],
+        tables: [
+            { name: "Voice", formula: "d6", results: [[1,1,"Pitiful", null], [2,2,"Mocking", null], [3,3,"Sinister", null], [4,4,"Benevolent", null], [5,5,"Ancient", null], [6,6,"Loving", null]] },
+            { name: "Agenda", formula: "d6", results: [[1,1,"Death", null], [2,2,"Order", null], [3,3,"Bloodshed", null], [4,4,"Peace", null], [5,5,"Chaos", null], [6,6,"Ambition", null]] }
+        ]
+    },
+    "The Fox Knight": {
+        items: [
+            { type: "knight", flavor: "Hidden Blade", flavorLabel1: "Design", flavorLabel2: "Ability" },
+            { type: "weapon", name: "Jagged Blade", damage: "d8", hefty: true },
+            { type: "shield", name: "Buckler", armor: 1, damage: "d4" },
+            { type: "helm", name: "Foxhelm", armor: 1 }, // Added Helm
+            { type: "weapon", name: "Hidden Blade", damage: "d6" },
+            { type: "misc", name: "Sealing Wax" } // Added missing item
+        ],
+        actors: [{ type: "steed", name: "Tunnel Steed", vigour: 10, clarity: 10, spirit: 5, guard: 2 }],
+        tables: [
+            { name: "Design", formula: "d6", results: [[1,1,"Ebony", null], [2,2,"Feather", null], [3,3,"Tapered", null], [4,4,"Fang", null], [5,5,"Wavy", null], [6,6,"Bone", null]] },
+            { name: "Ability", formula: "d6", results: [[1,1,"Shadow", null], [2,2,"Thrown", null], [3,3,"Betrayal", null], [4,4,"Twig", null], [5,5,"Split", null], [6,6,"Harmless", null]] }
+        ]
+    },
+    "The Gull Knight": {
+        items: [
+            { type: "knight", flavor: "Patchwork Armour", flavorLabel1: "Source", flavorLabel2: "Mix" },
+            { type: "weapon", name: "Hooked Blade", damage: "d8", hefty: true },
+            { type: "coat", name: "Patchwork Mail", armor: 1, description: "See table" },
+            { type: "misc", name: "Patterned Cloak" }, // Added missing item
+            { type: "misc", name: "Blinding Bracelet" }
+        ],
+        actors: [{ type: "steed", name: "Tempestuous Steed", vigour: 12, clarity: 8, spirit: 7, guard: 4 }],
+        tables: [
+            { name: "Source", formula: "d6", results: [[1,1,"Soldiers", null], [2,2,"Tomb", null], [3,3,"Shipwreck", null], [4,4,"Pit", null], [5,5,"Knight", null], [6,6,"Militia", null]] },
+            { name: "Mix", formula: "d6", results: [[1,1,"Leather", null], [2,2,"Bronze", null], [3,3,"Steel", null], [4,4,"Brass", null], [5,5,"Coat", null], [6,6,"Furs", null]] }
+        ]
+    },
+    "The Magpie Knight": {
+        items: [
+            { type: "knight", flavor: "Memento", flavorLabel1: "Item", flavorLabel2: "Memory" },
+            { type: "weapon", name: "Heavy Cudgel", damage: "d8", hefty: true },
+            { type: "weapon", name: "Javelin x3", damage: "d6" },
+            { type: "misc", name: "Twofold Pouch" }
+        ],
+        actors: [{ type: "steed", name: "Ironclad Steed", vigour: 13, clarity: 5, spirit: 5, guard: 2, biography: "d6 Trample, A1" }], // Steed has A1
+        tables: [
+            { name: "Item", formula: "d6", results: [[1,1,"Flower", null], [2,2,"Hilt", null], [3,3,"Pearl", null], [4,4,"Banner", null], [5,5,"Coin", null], [6,6,"Collar", null]] },
+            { name: "Memory", formula: "d6", results: [[1,1,"Victory", null], [2,2,"Defeat", null], [3,3,"Happy", null], [4,4,"Sorrow", null], [5,5,"Love", null], [6,6,"Hate", null]] }
+        ]
+    },
+    "The Reliquary Knight": {
+        items: [
+            { type: "knight", flavor: "Relic", flavorLabel1: "Part", flavorLabel2: "Being" },
+            { type: "weapon", name: "War Sickle", damage: "d8", hefty: true },
+            { type: "coat", name: "Gambeson", armor: 1 }, // Added Gambeson
+            { type: "coat", name: "Carved Plate", armor: 1 },
+            { type: "misc", name: "Sack of History Tomes" }, // Added missing item
+            { type: "misc", name: "Reliquary" }
+        ],
+        actors: [{ type: "steed", name: "Bearded Steed", vigour: 12, clarity: 8, spirit: 6, guard: 3 }],
+        tables: [
+            { name: "Part", formula: "d6", results: [[1,1,"Hand", null], [2,2,"Skull", null], [3,3,"Heart", null], [4,4,"Ribs", null], [5,5,"Eye", null], [6,6,"Organ", null]] },
+            { name: "Being", formula: "d6", results: [[1,1,"Seer", null], [2,2,"Knight", null], [3,3,"Monarch", null], [4,4,"Monster", null], [5,5,"Bird", null], [6,6,"Reptile", null]] }
+        ]
+    },
+    "The Vulture Knight": {
+        items: [
+            { type: "knight", flavor: "Armour", flavorLabel1: "Material", flavorLabel2: "Detail" },
+            { type: "weapon", name: "Black Axe", damage: "d10", long: true, description: "+d10 vs wounded targets" },
+            { type: "coat", name: "Sinister Mail", armor: 1, description: "See table" },
+            { type: "misc", name: "Spidernip" }
+        ],
+        actors: [{ type: "steed", name: "Bright-eyed Steed", vigour: 12, clarity: 9, spirit: 5, guard: 2 }],
+        tables: [
+            { name: "Material", formula: "d6", results: [[1,1,"Burned", null], [2,2,"Bronze", null], [3,3,"Bloody", null], [4,4,"Iron", null], [5,5,"Leather", null], [6,6,"Scales", null]] },
+            { name: "Detail", formula: "d6", results: [[1,1,"Bat wing", null], [2,2,"Embroidery", null], [3,3,"Shadow", null], [4,4,"Tattered", null], [5,5,"Bones", null], [6,6,"Skulls", null]] }
+        ]
+    },
+    "The Free Knight": {
+        items: [
+            { type: "knight", flavor: "Shield", flavorLabel1: "Weakness", flavorLabel2: "Ability" },
+            { type: "weapon", name: "Hooked Flail", damage: "d8", hefty: true },
+            { type: "shield", name: "Hexshield", armor: 1, damage: "d4" },
+            { type: "misc", name: "Tempest Chest" }
+        ],
+        actors: [{ type: "steed", name: "Grassy Steed", vigour: 11, clarity: 8, spirit: 5, guard: 2 }],
+        tables: [
+            { name: "Weakness", formula: "d6", results: [[1,1,"Axes", null], [2,2,"Arrows", null], [3,3,"Birds", null], [4,4,"Spears", null], [5,5,"Swords", null], [6,6,"Blunt", null]] },
+            { name: "Ability", formula: "d6", results: [[1,1,"Thrown", null], [2,2,"Fall safe", null], [3,3,"Seer pain", null], [4,4,"Floats", null], [5,5,"Sound block", null], [6,6,"Bladed", null]] }
+        ]
+    },
+    "The Silk Knight": {
+        items: [
+            { type: "knight", flavor: "Steed Fear", flavorLabel1: "Distracted", flavorLabel2: "Scared" },
+            { type: "weapon", name: "Delicate Halberd", damage: "d10", long: true },
+            { type: "coat", name: "Woven Coat", armor: 1, description: "No protection vs fire" },
+            { type: "misc", name: "Brass Puzzle" }
+        ],
+        actors: [{ type: "steed", name: "Young Steed", vigour: 9, clarity: 8, spirit: 6, guard: 1 }],
+        tables: [
+            { name: "Distracted", formula: "d6", results: [[1,1,"Animals", null], [2,2,"Moss", null], [3,3,"Water", null], [4,4,"Salt", null], [5,5,"Fruit", null], [6,6,"Shiny", null]] },
+            { name: "Scared", formula: "d6", results: [[1,1,"Steeds", null], [2,2,"Fire", null], [3,3,"Dark", null], [4,4,"Children", null], [5,5,"Music", null], [6,6,"Alone", null]] }
+        ]
+    },
+    "The Tiger Knight": {
+        items: [
+            { type: "knight", flavor: "Tattoo", flavorLabel1: "Design", flavorLabel2: "Why" },
+            { type: "weapon", name: "Fang Blade x2", damage: "d6", description: "d8 each as pair" },
+            { type: "coat", name: "Knotted Coat", armor: 1 },
+            { type: "misc", name: "Phoenix Feather" }
+        ],
+        actors: [{ type: "steed", name: "Tattooed Steed", vigour: 12, clarity: 9, spirit: 5, guard: 5 }],
+        tables: [
+            { name: "Design", formula: "d6", results: [[1,1,"Abstract", null], [2,2,"Runes", null], [3,3,"Letters", null], [4,4,"Skulls", null], [5,5,"Thunder", null], [6,6,"Thorns", null]] },
+            { name: "Why", formula: "d6", results: [[1,1,"Service", null], [2,2,"Bought", null], [3,3,"Born", null], [4,4,"Overnight", null], [5,5,"Slowly", null], [6,6,"Seer", null]] }
+        ]
+    },
+    "The Leaf Knight": {
+        items: [
+            { type: "knight", flavor: "Useful Stick", flavorLabel1: "Use", flavorLabel2: "But" },
+            { type: "weapon", name: "Hooked Club", damage: "d8", hefty: true },
+            { type: "coat", name: "Verdant Leather", armor: 1, description: "A1 within foliage" },
+            { type: "misc", name: "Useful Stick", description: "See table" },
+            { type: "misc", name: "Murmur Box", description: "Creates the illusion of indistinct conversation when open.)"}
+        ],
+        actors: [{ type: "steed", name: "Patchy Steed", vigour: 12, clarity: 5, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Use", formula: "d6", results: [[1,1,"Instantly cools any liquid it touches, but...", null], [2,2,"Insects hate the smell, but...", null], [3,3,"It transforms into 20ft of rope when shaken, but...", null], [4,4,"Terrifies snakes, eels, and worms, but...", null], [5,5,"One end is extremely sticky, but...", null], [6,6,"Seers believe it is a blessing upon you, but...", null]] },
+            { name: "But...", formula: "d6", results: [[1,1,"It's long and inconvenient to carry.", null], [2,2,"Dogs always want it.", null], [3,3,"It looks just like every other stick.", null], [4,4,"It's very delicate.", null], [5,5,"It's extremely flammable", null], [6,6,"It only works in bright sunlight.", null]] }
+        ]
+    },
+    "The Glass Knight": {
+        items: [
+            { type: "knight", flavor: "Armour", flavorLabel1: "Hue", flavorLabel2: "Decoration" },
+            { type: "weapon", name: "Two-pronged Pike", damage: "d10", long: true }, // Updated name to match text
+            { type: "coat", name: "Painted Mail", armor: 1 },
+            { type: "misc", name: "Witching Needle" }
+        ],
+        actors: [{ type: "steed", name: "Chestnut Steed", vigour: 11, clarity: 8, spirit: 6, guard: 3 }],
+        tables: [
+            { name: "Hue", formula: "d6", results: [[1,1,"Indigo", null], [2,2,"Crimson", null], [3,3,"Green", null], [4,4,"Teal", null], [5,5,"Gold", null], [6,6,"Rose", null]] },
+            { name: "Decoration", formula: "d6", results: [[1,1,"Faces", null], [2,2,"Vines", null], [3,3,"Stars", null], [4,4,"Wolves", null], [5,5,"Fire", null], [6,6,"City", null]] }
+        ]
+    },
+    "The Hive Knight": {
+        items: [
+            { type: "knight", flavor: "Cocoon", flavorLabel1: "Condition", flavorLabel2: "Requirement" },
+            { type: "weapon", name: "Rootbow", damage: "d6", long: true },
+            { type: "weapon", name: "Countless Daggers", damage: "d6" }, // Updated name
+            { type: "misc", name: "Tidal Resin" }
+        ],
+        actors: [{ type: "steed", name: "Hooded Steed", vigour: 11, clarity: 10, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Condition", formula: "d6", results: [[1,1,"Fed", null], [2,2,"Clean", null], [3,3,"Sung", null], [4,4,"Alight", null], [5,5,"Buried", null], [6,6,"Beheaded", null]] },
+            { name: "Requirement", formula: "d6", results: [[1,1,"Darkness", null], [2,2,"Submersion", null], [3,3,"Milk", null], [4,4,"Smoke", null], [5,5,"Leaves", null], [6,6,"Embers", null]] }
+        ]
+    },
+    "The Ghoul Knight": {
+        items: [
+            { type: "knight", flavor: "Toy", flavorLabel1: "Animal", flavorLabel2: "Origin" },
+            { type: "weapon", name: "Bearded Axe", damage: "d10", long: true },
+            { type: "coat", name: "Dusty Mail", armor: 1 },
+            { type: "misc", name: "Cleaner Salt" },
+            { type: "misc", name: "Animal Miniature" } // Added missing item
+        ],
+        actors: [{ type: "steed", name: "Faithful Steed", vigour: 12, clarity: 8, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Animal", formula: "d6", results: [[1,1,"Turtle", null], [2,2,"Elephant", null], [3,3,"Lion", null], [4,4,"Seahorse", null], [5,5,"Unicorn", null], [6,6,"Pigeon", null]] },
+            { name: "Origin", formula: "d6", results: [[1,1,"Friend", null], [2,2,"Stolen", null], [3,3,"Made", null], [4,4,"Parent", null], [5,5,"Ruin", null], [6,6,"River", null]] }
+        ]
+    },
+    "The Weaver Knight": {
+        items: [
+            { type: "knight", flavor: "Weapon", flavorLabel1: "Design", flavorLabel2: "Ability" },
+            { type: "weapon", name: "Two-headed Axe", damage: "d8", hefty: true },
+            { type: "shield", name: "Bronze Buckler", armor: 1, damage: "d4" }, // Updated name
+            { type: "weapon", name: "Thrown Weapon", damage: "d6", description: "See table" },
+            { type: "misc", name: "Hushcloth" } // Added missing item
+        ],
+        actors: [{ type: "steed", name: "Orchard Steed", vigour: 12, clarity: 9, spirit: 5, guard: 1, biography: "Sniffs out fruit" }],
+        tables: [
+            { name: "Design", formula: "d6", results: [[1,1,"Club", null], [2,2,"Disc", null], [3,3,"Spike", null], [4,4,"Bola", null], [5,5,"Fork", null], [6,6,"Ball", null]] },
+            { name: "Ability", formula: "d6", results: [[1,1,"Duel", null], [2,2,"Steeds", null], [3,3,"Fleeing", null], [4,4,"Mounted", null], [5,5,"Flying", null], [6,6,"No Shield", null]] }
+        ]
+    },
+    "The Thunder Knight": {
+        items: [
+            { type: "knight", flavor: "Bug", flavorLabel1: "Ability", flavorLabel2: "Manner" },
+            { type: "weapon", name: "Forked Spear", damage: "d8", hefty: true },
+            { type: "shield", name: "Oakshield", armor: 1, damage: "d4" },
+            { type: "misc", name: "Caged Bug" }
+        ],
+        actors: [{ type: "steed", name: "Overfed Steed", vigour: 12, clarity: 6, spirit: 5, guard: 2, biography: "d6 Trample" }],
+        tables: [
+            { name: "Ability", formula: "d6", results: [[1,1,"Bite", null], [2,2,"Eat metal", null], [3,3,"Chirp", null], [4,4,"Fetch", null], [5,5,"Food", null], [6,6,"Painful", null]] },
+            { name: "Manner", formula: "d6", results: [[1,1,"Wild", null], [2,2,"Trained", null], [3,3,"Stupid", null], [4,4,"Eager", null], [5,5,"Hateful", null], [6,6,"Noble", null]] }
+        ]
+    },
+    "The Dust Knight": {
+        items: [
+            { type: "knight", flavor: "Fish", flavorLabel1: "Flavour", flavorLabel2: "Side Effect" },
+            { type: "weapon", name: "Old Hammer", damage: "d8" },
+            { type: "shield", name: "Inscribed Shield", armor: 1, damage: "d4" },
+            { type: "misc", name: "Beckoning Net" },
+            { type: "misc", name: "Preserved Fish" } // Added missing item
+        ],
+        actors: [{ type: "steed", name: "Spotted Steed", vigour: 12, clarity: 9, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Flavour", formula: "d6", results: [[1,1,"Salty", null], [2,2,"Picante", null], [3,3,"Sour", null], [4,4,"Challenging", null], [5,5,"Soapy", null], [6,6,"Smoky", null]] },
+            { name: "Side Effect", formula: "d6", results: [[1,1,"Numb", null], [2,2,"Filling", null], [3,3,"Addictive", null], [4,4,"Vomit", null], [5,5,"Blind", null], [6,6,"Weep", null]] }
+        ]
+    },
+    "The Fanged Knight": {
+        items: [
+            { type: "knight", flavor: "Ancestor", flavorLabel1: "Place", flavorLabel2: "Relation" },
+            { type: "weapon", name: "Forked Blade", damage: "d8", hefty: true },
+            { type: "coat", name: "Chain Mail", armor: 1 }, // Updated to match text "Chain mail (A1)"
+            { type: "coat", name: "Shell Plates", armor: 1 },
+            { type: "misc", name: "Ancient Scroll" }
+        ],
+        actors: [{ type: "steed", name: "Noble Steed", vigour: 12, clarity: 5, spirit: 7, guard: 4 }],
+        tables: [
+            { name: "Place", formula: "d6", results: [[1,1,"Tower", null], [2,2,"Water", null], [3,3,"Peak", null], [4,4,"Village", null], [5,5,"River", null], [6,6,"Cave", null]] },
+            { name: "Relation", formula: "d6", results: [[1,1,"Ruler", null], [2,2,"Knight", null], [3,3,"Seer", null], [4,4,"People", null], [5,5,"You", null], [6,6,"Company", null]] }
+        ]
+    },
+    "The Pearl Knight": {
+        items: [
+            { type: "knight", flavor: "Blade", flavorLabel1: "Knowledge", flavorLabel2: "Punishment" },
+            { type: "weapon", name: "Seablade", damage: "2d8", long: true },
+            { type: "coat", name: "Glossy Mail", armor: 1 },
+            { type: "coat", name: "Demi-plate", armor: 1 }, // Added Demi-plate
+            { type: "misc", name: "Salincense" }
+        ],
+        actors: [{ type: "steed", name: "Rose Steed", vigour: 12, clarity: 9, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Knowledge", formula: "d6", results: [[1,1,"Nightmares", null], [2,2,"Fish", null], [3,3,"Cold", null], [4,4,"Fear", null], [5,5,"Storms", null], [6,6,"Waves", null]] },
+            { name: "Punishment", formula: "d6", results: [[1,1,"Creatures", null], [2,2,"Swim", null], [3,3,"Taste", null], [4,4,"Sailors", null], [5,5,"Salt", null], [6,6,"Poison", null]] }
+        ]
+    },
+    "The Rat Knight": {
+        items: [
+            { type: "knight", flavor: "Modified Armour", flavorLabel1: "Type", flavorLabel2: "Mod" },
+            { type: "weapon", name: "Pole Sickle", damage: "d10", long: true },
+            { type: "weapon", name: "Dart x3", damage: "d6" },
+            { type: "coat", name: "Modified Gambeson", armor: 1, description: "See table" },
+            { type: "misc", name: "Listening Horn" }
+        ],
+        actors: [{ type: "steed", name: "Matted Steed", vigour: 12, clarity: 8, spirit: 5, guard: 3 }],
+        tables: [
+            { name: "Type", formula: "d6", results: [[1,1,"Leather", null], [2,2,"Velvet", null], [3,3,"Fur", null], [4,4,"Scales", null], [5,5,"Hair", null], [6,6,"Straw", null]] },
+            { name: "Mod", formula: "d6", results: [[1,1,"Fast", null], [2,2,"Fire", null], [3,3,"Swim", null], [4,4,"Fall", null], [5,5,"Conceal", null], [6,6,"Repel", null]] }
+        ]
+    },
+};
+
+    const COMMON_ITEMS = [
+        { type: "misc", name: "Torches", quantity: 3 },
+        { type: "misc", name: "Rope", quantity: 1 },
+        { type: "misc", name: "Dry rations", quantity: 3 },
+        { type: "misc", name: "Camping Gear", quantity: 1 },
+        { type: "weapon", name: "Dagger", damage: "d6" }
+    ];
+
+    // Helper functions defined explicitly before use
+    function getKnightItems(knightName) {
+        const specs = KNIGHT_SPECS[knightName];
+        if (specs && specs.items) {
+            const filteredItems = specs.items.filter(item => item.type !== 'knight');
+            return [...COMMON_ITEMS, ...filteredItems];
+        }
+        return [...COMMON_ITEMS, { type: "weapon", name: "Knightly Weapon", damage: "d8" }, { type: "shield", name: "Shield", armor: 1 }, { type: "coat", name: "Mail Armour", armor: 1 }];
+    }
+
+    function getKnightActors(knightName) {
+        const specs = KNIGHT_SPECS[knightName];
+        if (specs && specs.actors) return specs.actors;
+        // Fallback should technically not be hit if data is complete, but keeping empty array is safer than a generic if we want to enforce uniqueness
+        return [];
+    }
+
+    function getKnightTables(knightName) {
+        const specs = KNIGHT_SPECS[knightName];
+        if (specs && specs.tables) return specs.tables;
+        return [];
+    }
+
+    function getKnightTypeItem(knightName) {
+        const specs = KNIGHT_SPECS[knightName];
+        if (specs && specs.items) {
+            return specs.items.find(i => i.type === "knight");
+        }
+        return null;
+    }
+
+    // --- NEW HELPER: Get Knight Flavor Header ---
+    function getKnightFlavorHeader(knightName) {
+        const specs = KNIGHT_SPECS[knightName];
+        if (specs && specs.items) {
+            const knightItem = specs.items.find(i => i.type === "knight");
+            if (knightItem && knightItem.flavor) {
+                return knightItem.flavor;
+            }
+        }
+        return "Details"; // Default fallback
+    }
+
+
+    const QUESTIONS = [
+        { 
+            text: "When the drums of war beat, how do you answer?", 
+            options: [
+                { text: "With overwhelming force and fury.", tags: ["Aggressive", "Attack", "Battle", "Blood", "Charge", "Combat", "Fury", "Hit", "Kill", "Rage", "Rage-fueled", "Strike", "Violence", "Visceral", "War", "Wound"] },
+                { text: "I stand as a bulwark for the weak.", tags: ["Defense", "Guard", "Protect", "Protection", "Shield", "Ward"] },
+                { text: "With the precision of my chosen arms.", tags: ["Blade", "Break", "Crush", "Cudgel-bearer", "Forked-spear", "Greatlance", "Lance", "Longaxe", "Mace-wielder", "Old-hammer", "Pike-wielder", "Sharp", "Spike", "Sword", "Weapon"] },
+                { text: "I hunt the enemy down like prey.", tags: ["Champion", "Competition", "Fight", "Hunt", "Hunter", "Pain", "Predator", "Punish", "Punitive", "Reach", "Scavenge", "Trap"] }
+            ]
+        },
+        { 
+            text: "Which aspect of the wild calls to your soul?", 
+            options: [
+                { text: "The deep, tangled forests and growing things.", tags: ["Arboreal", "Branch-wielder", "Foliage-clad", "Forest", "Green", "Grow", "Growth", "Leaf", "Moss", "Nature", "Root", "Sylvan", "Tree", "Wood", "Wild"] },
+                { text: "The unyielding stone and dark places beneath.", tags: ["Cave", "Dust", "Earth", "Ground", "Metal", "Mud", "Rot", "Sand", "Stone", "Underground"] },
+                { text: "The crashing waves and thundering skies.", tags: ["Cloud", "Mire", "Ocean", "Rain", "River", "Sea", "Storm", "Swamp", "Thunder", "Water", "Wet"] },
+                { text: "The extremes of heat and cold.", tags: ["Air", "Ash", "Cold", "Dry", "Fire", "Freeze", "Heat", "Ice", "Light", "Salt", "Sky", "Snow", "Wind", "Winter"] }
+            ]
+        },
+        { 
+            text: "What is your role within the walls of the City?", 
+            options: [
+                { text: "I command and lead the people.", tags: ["Authority", "Command", "Commanding", "Crown", "Decree", "Duty", "King", "Law", "Leader", "Leadership", "Noble", "Order", "Power", "Rule", "Ruler"] },
+                { text: "I enjoy the finery and status of my station.", tags: ["Fame", "Glory", "Gold", "Heraldic", "Heraldry", "Honor", "Hospitality", "Luxury", "Money", "Opulent", "Rich", "Social", "Wealth"] },
+                { text: "I build and defend the structures of society.", tags: ["Brick", "Building", "City", "Civilization", "Community", "House", "Structure", "Urban", "Wall"] },
+                { text: "I operate in the shadows or margins.", tags: ["Court", "Crime", "Crowd", "Jailor", "Judge", "Justiciar", "Liberty", "Market", "Merchant", "Party", "Poor", "Prison", "Rustic", "Service", "Slave", "Thief", "Trade", "Work"] }
+            ]
+        },
+        { 
+            text: "What lies beyond the veil of the mundane?", 
+            options: [
+                { text: "The cold embrace of the grave.", tags: ["Bone", "Dead", "Death", "Ghost", "Grave", "Grim", "Pale-steed", "Skeleton", "Skull", "Soul", "Spirit", "Vampire"] },
+                { text: "Things that should not be known.", tags: ["Alien", "Ancient", "Chaos", "Demon", "Monster", "Mutant", "Mystery", "Void"] },
+                { text: "The power of spells and secrets.", tags: ["Magic", "Miracle", "Myth", "Omen", "Portal", "Ritual", "Rune", "Sacred", "Secret", "Spell", "Witch", "Wizard"] },
+                { text: "The shifting forms of night.", tags: ["Dark", "Dream", "Fade", "Fate", "Hallow", "Hidden", "Holy", "Hooded-steed", "Illusion", "Memory", "Night", "Phantom", "Shadow", "Spotted-steed", "Tattered-steed", "Tattooed-steed", "Vision"] }
+            ]
+        },
+        { 
+            text: "How do you perceive the truth?", 
+            options: [
+                { text: "Through books, scrolls, and study.", tags: ["Book", "History", "Ink", "Learn", "Lore", "Read", "Scholar", "School", "Scroll", "Study", "Word", "Write"] },
+                { text: "Through logic, planning, and reason.", tags: ["Fact", "Focus", "Logic", "Mind", "Plan", "Reason", "Skill", "Smart", "Strategist", "Theory", "Think", "Thought"] },
+                { text: "By asking questions and seeking answers.", tags: ["Curious", "Discovery", "Idea", "Know", "Knowledge", "Puzzle", "Riddle", "Tale", "Story"] },
+                { text: "I know what is true and hold to it.", tags: ["Belief", "Clever", "Dogmatic", "Doubt", "Doubtful", "Teach", "Truth", "Truth-bound", "Wisdom", "Wise"] }
+            ]
+        },
+        { 
+            text: "What is your preferred method of solving a problem?", 
+            options: [
+                { text: "I build, forge, or cook a solution.", tags: ["Build", "Construct", "Cook", "Craft", "Create", "Fix", "Make", "Mold", "Repair", "Weave", "Web", "Work"] },
+                { text: "I move, run, or climb to overcome it.", tags: ["Climb", "Flight", "Fly", "Go", "Jump", "Move", "Run", "Swim", "Walk", "Walking"] },
+                { text: "I control, trick, or steal what I need.", tags: ["Access", "Bind", "Catch", "Change", "Control", "Copy", "Cut", "Grab", "Hide", "Hold", "Open", "Pull", "Push", "Steal", "Swap", "Take", "Touch"] },
+                { text: "I watch and wait for the right moment.", tags: ["Act", "Call", "Carry", "Chew", "Collect", "Dig", "Drink", "Eat", "Look", "Play", "Seek", "Showman", "Sleep", "Speak", "Stop", "Wait", "Watch"] }
+            ]
+        },
+        { 
+            text: "What feeling burns brightest within you?", 
+            options: [
+                { text: "Courage, honesty, and duty.", tags: ["Brave", "Dutiful", "Honesty", "Hope", "Love", "Mercy", "Modesty", "Peace", "Resilience", "Respect", "Trust", "Valour", "Vigilance"] },
+                { text: "Anger, fear, and regret.", tags: ["Angry", "Apathy", "Cruel", "Cruelty", "Fear", "Gloom", "Greed", "Hate", "Lonely", "Loner", "Mad", "Melancholy", "Paranoid", "Petulant-steed", "Regret", "Sad", "Stern", "Vengeance"] },
+                { text: "Joy, pride, and determination.", tags: ["Determination", "Elegance", "Fun", "Happy", "Impetuosity", "Intoxicated", "Joy", "Passion", "Pride", "Prideful", "Warmth", "Wonder"] },
+                { text: "Quiet patience and introversion.", tags: ["Calm", "Empathetic", "Gentle", "Introversion", "Patience", "Quiet", "Serious", "Simple", "Stubborn"] }
+            ]
+        },
+        { 
+            text: "Which object holds the most significance to you?", 
+            options: [
+                { text: "Fine jewelry, coins, and silks.", tags: ["Coin", "Gem", "Gold", "Ring", "Silk", "Silver", "Treasure"] },
+                { text: "Practical tools, keys, and maps.", tags: ["Bag", "Bottle", "Box", "Clock", "Key", "Lamp", "Lock", "Map", "Oil", "Paper", "Pen", "Rope", "Sack", "String", "Tool", "Wheel"] },
+                { text: "Armor, shields, and weapons.", tags: ["Armor", "Chain", "Coat", "Iron", "Shield", "Steel", "Whip"] },
+                { text: "Strange relics and bones.", tags: ["Bell", "Bone", "Cloth", "Cup", "Door", "Glass", "Kite", "Mask", "Mirror", "Nail", "Shell", "Ship", "Skin", "Skull", "Tankard", "Toy", "Vault"] }
+            ]
+        },
+        { 
+            text: "Which beast do you feel a kinship with?", 
+            options: [
+                { text: "The hunters: wolves, lions, and hawks.", tags: ["Beast", "Cat", "Dog", "Fox", "Hawk", "Hound", "Lion", "Owl", "Pack", "Tiger", "Wolf"] },
+                { text: "The masters of the sky.", tags: ["Bird", "Dove", "Feather", "Gull", "Magpie", "Pigeon", "Raven", "Vulture"] },
+                { text: "The crawling, swarming multitudes.", tags: ["Bug", "Hive", "Insect", "Rat", "Serpent", "Snake", "Spider", "Swarm", "Vermin", "Worm"] },
+                { text: "The loyal mounts and noble creatures.", tags: ["Animal", "Beast-bond", "Bestial", "Fish", "Horse", "Majestic-charger", "Mule", "Noble-steed", "Stocky-steed", "Turtle"] }
+            ]
+        },
+        { 
+            text: "How do you perceive your journey through life?", 
+            options: [
+                { text: "A fast, frantic race.", tags: ["Fast", "Haste", "Quick", "Run", "Speed", "Swift"] },
+                { text: "A long, wandering road.", tags: ["Distance", "Far", "Journey", "Path", "Quest", "Ride", "Road", "Track", "Trail", "Transient", "Travel", "Wander", "Wanderer", "Wayfinder"] },
+                { text: "The turning of seasons and ages.", tags: ["Age", "Cycle", "Day", "End", "Future", "Hour", "Late", "Life", "Moment", "Month", "Morning", "Now", "Old", "Past", "Season", "Time", "Today", "Tomorrow", "Year", "Young", "Youth"] },
+                { text: "Where I stand right now.", tags: ["Beginning", "Chance", "Circle", "High", "Infinite", "Low", "Return", "Slow", "Space", "Start", "Steady"] }
+            ]
+        },
+        { 
+            text: "What sensation dominates your world?", 
+            options: [
+                { text: "Bright lights and clear visions.", tags: ["Beauty", "Blind", "Bright", "Clear", "Color", "Gaze", "Invisible", "Light", "Look", "Observe", "Perception", "Perspective", "Reflection", "See", "Sharp", "Shine", "Shiny", "Sight", "Spy", "View", "Watcher"] },
+                { text: "Loud noises and whispers.", tags: ["Deaf", "Echo", "Hear", "Listen", "Loud", "Noise", "Quiet", "Silent", "Sound", "Voice", "Voice-shout", "Whisper"] },
+                { text: "The texture and weight of things.", tags: ["Hard", "Heavy", "Rough", "Smooth", "Soft", "Texture", "Touch", "Weight"] },
+                { text: "Subtle scents and tastes.", tags: ["Scent", "Smell", "Taste"] }
+            ]
+        },
+        { 
+            text: "Which part of yourself do you trust most?", 
+            options: [
+                { text: "My eyes, ears, and mouth.", tags: ["Ear", "Eye", "Face", "Head", "Jaw", "Mouth", "Nose", "Teeth", "Throat", "Tongue", "Tooth"] },
+                { text: "My hands and strength.", tags: ["Arm", "Finger", "Hand", "Limb", "Muscle"] },
+                { text: "My heart and breath.", tags: ["Blood", "Breath", "Flesh", "Heart", "Lung", "Vein"] },
+                { text: "My bones and feet.", tags: ["Back", "Body", "Bone", "Foot", "Hair", "Leg", "Nerve", "Rib", "Skeleton", "Skin", "Spine", "Toe"] }
+            ]
+        }
+    ];
+
+    const Dice = {
+        roll: (sides) => Math.floor(Math.random() * sides) + 1,
+        parse: (formula) => {
+            let total = 0;
+            const parts = formula.toLowerCase().replace(/\s/g, '').split('+');
+            parts.forEach(part => {
+                if (part.includes('d')) {
+                    const [count, sides] = part.split('d');
+                    const num = count === '' ? 1 : parseInt(count);
+                    const s = parseInt(sides);
+                    for (let i = 0; i < num; i++) total += Math.floor(Math.random() * s) + 1;
+                } else {
+                    total += parseInt(part);
+                }
+            });
+            return total;
+        }
+    };
+
+    const cleanText = (text) => {
+        if (!text) return "";
+        return text.replace(/\[\[\/r\s(.*?)\s.*?\]\]/g, "$1").replace(/\[\[.*?\]\]/g, "");
+    };
+
+    const game = {
+        currentQuestion: 0,
+        scores: {},
+        answerHistory: [],
+
+        init: function() {
+            KNIGHTS.forEach(k => this.scores[k.name] = 0);
+            this.answerHistory = [];
+        },
+
+        startQuiz: function() {
+            this.init();
+            document.getElementById('screen-intro').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+            document.getElementById('screen-quiz').classList.add('fade-in');
+            this.renderQuestion();
+        },
+
+        renderQuestion: function() {
+            const q = QUESTIONS[this.currentQuestion];
+            document.getElementById('question-text').innerText = q.text;
+            document.getElementById('question-progress').innerText = `${this.currentQuestion + 1} / ${QUESTIONS.length}`;
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'btn';
+                btn.innerText = opt.text;
+                btn.onclick = () => this.handleAnswer(opt.tags, idx);
+                container.appendChild(btn);
+            });
+        },
+
+        handleAnswer: function(tags, optionIndex) {
+            this.answerHistory.push(optionIndex);
+            KNIGHTS.forEach(knight => {
+                let matchCount = 0;
+                tags.forEach(tag => {
+                    if (knight.keywords.some(k => k.toLowerCase() === tag.toLowerCase())) matchCount += 3;
+                    else if (knight.keywords.some(k => k.toLowerCase().includes(tag.toLowerCase()))) matchCount += 1;
+                });
+                this.scores[knight.name] += matchCount;
+            });
+            this.currentQuestion++;
+            if (this.currentQuestion < QUESTIONS.length) {
+                setTimeout(() => this.renderQuestion(), 50);
+            } else {
+                this.generateProfile();
+            }
+        },
+
+        generateProfile: function() {
+            let maxScore = -1;
+            let winners = [];
+            for (const [name, score] of Object.entries(this.scores)) {
+                if (score > maxScore) { maxScore = score; winners = [name]; }
+                else if (score === maxScore) winners.push(name);
+            }
+            let winnerName = winners[0];
+            if (winners.length > 1) {
+                const hash = this.answerHistory.reduce((acc, val, idx) => acc + (val + 1) * (idx + 1), 0);
+                winners.sort(); 
+                winnerName = winners[hash % winners.length];
+            }
+            const knightData = KNIGHTS.find(k => k.name === winnerName);
+            
+            if (!knightData) {
+                console.error("Error: Winner not found in KNIGHTS data:", winnerName);
+                return;
+            }
+
+            const inventory = getKnightItems(winnerName);
+            const totalArmor = inventory.reduce((sum, item) => sum + (item.armor || 0), 0);
+            
+            const stats = {
+                vigour: Dice.parse("d12+d6"),
+                clarity: Dice.parse("d12+d6"),
+                spirit: Dice.parse("d12+d6"),
+                guard: Dice.parse("d6"),
+                armor: totalArmor
+            };
+
+            const actors = getKnightActors(winnerName);
+            const knightTypeItem = getKnightTypeItem(winnerName);
+            const tables = getKnightTables(winnerName);
+
+            let flavorText = [];
+            if (tables) {
+                tables.forEach(table => {
+                    const roll = Dice.parse(table.formula || "d6");
+                    const result = table.results.find(r => roll >= r[0] && roll <= r[1]);
+                    if (result) {
+                        const txt = cleanText(result[2]);
+                        // REMOVED determineAssociation logic call
+                        flavorText.push({ label: table.name, text: txt });
+                    }
+                });
+            }
+
+            this.renderResult(knightData, stats, inventory, actors, flavorText);
+        },
+
+        renderResult: function(knight, stats, inventory, actors, flavorText) {
+            document.getElementById('screen-quiz').classList.add('hidden');
+            const resScreen = document.getElementById('screen-result');
+            resScreen.classList.remove('hidden');
+            resScreen.classList.add('fade-in');
+
+            // Logic Fix: Get the header dynamically based on the winner (knight.name)
+            const detailsHeader = getKnightFlavorHeader(knight.name);
+
+            let html = `
+                <div class="sheet-header">
+                    <h1>${knight.name}</h1>
+                    <div class="sheet-archetype">${knight.archetype}</div>
+                    <p>"${knight.description}"</p>
+                </div>
+
+                <div class="stat-grid">
+                    <div class="stat-box"><span class="stat-label">Vigour</span><span class="stat-value">${stats.vigour}</span></div>
+                    <div class="stat-box"><span class="stat-label">Clarity</span><span class="stat-value">${stats.clarity}</span></div>
+                    <div class="stat-box"><span class="stat-label">Spirit</span><span class="stat-value">${stats.spirit}</span></div>
+                    <div class="stat-box"><span class="stat-label">Guard</span><span class="stat-value">${stats.guard}</span></div>
+                    <div class="stat-box"><span class="stat-label">Armour</span><span class="stat-value">${stats.armor}</span></div>
+                </div>
+
+                <div class="sheet-columns">
+                    <div class="col-left">
+                        <h4>Features</h4>
+                        <p><strong>Passion:</strong></p>
+                        <p>${cleanText(knight.passion).replace("Passion:", "")}</p>
+                        <p><strong>Ability:</strong></p>
+                        <p>${cleanText(knight.ability).replace("Ability:", "")}</p>
+
+                        <h4>Inventory</h4>
+                        ${inventory.map(item => `
+                            <div class="item-row">
+                                <span class="item-name">${item.name}</span>
+                                <span class="item-meta">${item.damage ? `(${cleanText(item.damage)})` : ''} ${item.armor ? `(Armor ${item.armor})` : ''}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div class="col-right">
+                         <h4>Companions & Steeds</h4>
+                        ${actors.length > 0 ? actors.map(actor => `
+                            <div class="steed-box">
+                                <strong>${actor.name}</strong> <em style="font-size:0.9em">(${actor.type})</em>
+                                <div style="font-size: 0.9em; margin: 0.3rem 0;">${actor.biography || ""}</div>
+                                <div class="steed-stats">
+                                    <span>VIG: ${actor.vigour || "-"}</span>
+                                    <span>CLA: ${actor.clarity || "-"}</span>
+                                    <span>SPI: ${actor.spirit || "-"}</span>
+                                    <span>GRD: ${actor.guard || "-"}</span>
+                                </div>
+                            </div>
+                        `).join('') : '<p>No steed or companion.</p>'}
+
+                        <h4>${detailsHeader}</h4>
+                        ${flavorText.length > 0 ? flavorText.map(f => `
+                            <div class="flavor-item">
+                                <span class="flavor-label">${f.label}</span>
+                                <div class="flavor-text">${f.text}</div>
+                            </div>
+                        `).join('') : '<p>No specific details.</p>'}
+
+                         <div class="sheet-footer-quote">
+                            SEEK THE MYTHS<br>
+                            HONOUR THE SEERS<br>
+                            PROTECT THE REALM
+                        </div>
+                    </div>
+                </div>
+
+                <div class="save-controls">
+                    <button class="btn" onclick="game.saveAsHTML()">Save HTML</button>
+                    <button class="btn" onclick="game.saveAsMarkdown()">Save Markdown</button>
+                    <button class="btn" onclick="window.print()">Print / PDF</button>
+                </div>
+
+                <button class="btn btn-hero" onclick="game.reset()">Swear New Oath</button>
+            `;
+
+            resScreen.innerHTML = html;
+        },
+        
+        saveAsHTML: function() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], {type: "text/html"});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "my-knight.html";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        },
+
+        saveAsMarkdown: function() {
+           
+           let text = "# " + document.querySelector('.sheet-header h1').innerText + "\n\n";
+           text += document.querySelector('.sheet-archetype').innerText + "\n\n";
+           text += "> " + document.querySelector('.sheet-header p:last-child').innerText + "\n\n";
+           
+           const stats = document.querySelectorAll('.stat-box');
+           text += "## Stats\n";
+           stats.forEach(box => {
+               text += `* **${box.querySelector('.stat-label').innerText}:** ${box.querySelector('.stat-value').innerText}\n`;
+           });
+           
+           text += "\n## Features\n";
+           const features = document.querySelectorAll('.col-left p');
+           features.forEach(p => text += p.innerText + "\n");
+           
+           text += "\n## Inventory\n";
+           const items = document.querySelectorAll('.item-row');
+           items.forEach(item => {
+               text += `* ${item.querySelector('.item-name').innerText} ${item.querySelector('.item-meta').innerText}\n`;
+           });
+
+           // Add Details (Flavor Text)
+           const flavorItems = document.querySelectorAll('.flavor-item');
+           if (flavorItems.length > 0) {
+                // Get the dynamic header if possible, or default to "Details"
+                const detailsHeader = document.querySelector('.col-right h4:nth-of-type(2)')?.innerText || "Details";
+                text += `\n## ${detailsHeader}\n`;
+                
+                flavorItems.forEach(item => {
+                    const label = item.querySelector('.flavor-label').innerText;
+                    const val = item.querySelector('.flavor-text').innerText;
+                    text += `* **${label}** ${val}\n`;
+                });
+           }
+
+           const blob = new Blob([text], {type: "text/markdown"});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "my-knight.md";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        },
+
+        reset: function() {
+            this.currentQuestion = 0;
+            this.scores = {};
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-intro').classList.remove('hidden');
+            document.getElementById('screen-intro').classList.add('fade-in');
+        }
+    };
+
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+</script>
+</body>
+</html>

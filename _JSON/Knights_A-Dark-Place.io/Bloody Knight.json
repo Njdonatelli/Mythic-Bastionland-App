@@ -1,0 +1,70 @@
+{
+    "id": "04",
+    "table": {
+      "title": "RAGE FUEL",
+      "columns": [
+        "Alcohol",
+        "Hatred"
+      ],
+      "rows": [
+        [
+          "Burning wine",
+          "The rich"
+        ],
+        [
+          "Strong mead",
+          "Knights"
+        ],
+        [
+          "Spiced ale",
+          "The poor"
+        ],
+        [
+          "Sour milk",
+          "Seers"
+        ],
+        [
+          "Fermented vegetable",
+          "The sea"
+        ],
+        [
+          "Blood brew",
+          "The sun"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Slaughter Echo",
+      "text": "Use immediately after defeating an opponent. Your next melee Attack in this combat gains Blast."
+    },
+    "passion": {
+      "name": "Justice",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you restore the balance of justice."
+    },
+    "property": [
+      "Longaxe ([[/r d10]] long), mail (A1), brutal plate (A1 only when Wounded), helm (A1)",
+      "Sacks of strong alcohol, to which you're largely resistant (see below, restock each new Season)",
+      "Bullish warhorse (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 3\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, [[/r d6]] trample)"
+    ],
+    "title": "Bloody Knight",
+    "poem": [
+      "Some were born to fight and fall, forged beneath blade's clash",
+      "This one birthed from blood of war, stained with corpses' ash"
+    ],
+    "idx": "04",
+    "_id": "04d079fb-fbd3-45c8-8be1-e32e7cf3a586",
+    "type": "knight",
+    "seer": {
+      "id": "04",
+      "title": "Reed Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 10, 4\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Knows they will lose their sight if they pass over a river.",
+        "Sees the near future in the patterns of reeds chopped in a very specific way.",
+        "Wants to live in the protection of a worthy master, serving a righteous cause."
+      ],
+      "idx": "04",
+      "_id": "be727438-c9dd-41da-a7fb-282b702a793f",
+      "type": "seer"
+    }
+  }

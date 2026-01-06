@@ -1,0 +1,70 @@
+ {
+    "id": "10",
+    "table": {
+      "title": "MOON FORM",
+      "columns": [
+        "Body",
+        "Visage"
+      ],
+      "rows": [
+        [
+          "Muscular ([[/r d8]] grasp)",
+          "Elderly"
+        ],
+        [
+          "Shrunken ([[/r d6]] bite)",
+          "Youthful"
+        ],
+        [
+          "Stretched ([[/r d6]] strike)",
+          "Hideous"
+        ],
+        [
+          "Skeletal ([[/r d6]] slash)",
+          "Amorphous"
+        ],
+        [
+          "Canine ([[/r d8]] jaws)",
+          "Horned"
+        ],
+        [
+          "Feline ([[/r d6]] claws)",
+          "Regal"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Layered Words",
+      "text": "Speak, but choose two different meanings, as different as you wish, even total opposites. Choose which meaning each listener takes from the words."
+    },
+    "passion": {
+      "name": "Integrity",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you discredit somebody unworthy of their position."
+    },
+    "property": [
+      "Twisted bow ([[/r d6]] long), light mail (A1) with embroidered cloak",
+      "Moon pendant (grants the wearer a false form under moonlight, see below, rolling each night)",
+      "Shadowy horse (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, very quiet)"
+    ],
+    "title": "Riddle Knight",
+    "poem": [
+      "A careful word can rise or fade",
+      "Within each ear a truth remade"
+    ],
+    "idx": "10",
+    "_id": "033b7182-f064-4e9c-9508-a72806a3bb74",
+    "type": "knight",
+    "seer": {
+      "id": "10",
+      "title": "Jawbone Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 3, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Hunched, pale, huge jawbone grafted onto their own, speaks like a wolf.",
+        "Sees with the senses of a beast while clutching an object made from the bone or horn of their species.",
+        "Wants to return the land to the beasts."
+      ],
+      "idx": "10",
+      "_id": "1984acd0-f8a6-4af2-9be8-27e094a322c7",
+      "type": "seer"
+    }
+  }

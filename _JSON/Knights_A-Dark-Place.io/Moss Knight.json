@@ -1,0 +1,70 @@
+{
+    "id": "05",
+    "table": {
+      "title": "FULL BODY TATTOOS",
+      "columns": [
+        "Design",
+        "Effect"
+      ],
+      "rows": [
+        [
+          "Faded spirals",
+          "Points to water"
+        ],
+        [
+          "Blue thorns",
+          "Burns before an ambush"
+        ],
+        [
+          "Silver stars",
+          "A1 in saltwater"
+        ],
+        [
+          "Colourful snakes",
+          "A1 under moonlight"
+        ],
+        [
+          "Red bones",
+          "A1 in rivers or streams"
+        ],
+        [
+          "Burnt rings",
+          "Conceals a third eye"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Mosstongue",
+      "text": "Speak with uncut stones and particularly old trees. If you push them for too much knowledge they rebuke you, shunning you for the rest of the day."
+    },
+    "passion": {
+      "name": "Naturality",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you reject an opportunity to sleep indoors, sleeping in nature instead."
+    },
+    "property": [
+      "Branch cudgel ([[/r d8]] hefty), buckler ([[/r d4]], A1), mail coif (A1)",
+      "Tattoos (see below)",
+      "Pale steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 12, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 3\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "Moss Knight",
+    "poem": [
+      "No need for lessons, tree or stone",
+      "The wisest seek what soil has shown"
+    ],
+    "idx": "05",
+    "_id": "302c3ef3-dac1-4330-87fc-7f675a5aa4cb",
+    "type": "knight",
+    "seer": {
+      "id": "05",
+      "title": "Loathed Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 11, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 6\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Long, twisted face and body, like she's been pulled around a cart wheel.",
+        "Sees into a person's hate with a touch, sharing and fuelling their contempt.",
+        "Physically pained by admiration or love. Wants to become even more loathed."
+      ],
+      "idx": "05",
+      "_id": "ef9903ba-a3ce-4880-8a6e-185c4508c67b",
+      "type": "seer"
+    }
+  }

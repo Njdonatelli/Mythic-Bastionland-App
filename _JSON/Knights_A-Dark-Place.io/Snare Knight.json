@@ -1,0 +1,70 @@
+{
+    "id": "02",
+    "table": {
+      "title": "KNIGHT & COMPANION",
+      "columns": [
+        "History",
+        "Type"
+      ],
+      "rows": [
+        [
+          "Exiled",
+          "Otter"
+        ],
+        [
+          "Feral",
+          "Hare"
+        ],
+        [
+          "Vengeful",
+          "Rat"
+        ],
+        [
+          "Shamed",
+          "Weasel"
+        ],
+        [
+          "Jovial",
+          "Ferret"
+        ],
+        [
+          "Artistic",
+          "Squirrel"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "Wild Eye",
+      "text": "Observe a beast in secret. Learn a useful truth about their habitat."
+    },
+    "passion": {
+      "name": "Empathy",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you spare the life of a hostile animal."
+    },
+    "property": [
+      "Handaxe ([[/r d6]]) attached to wildrope (strong rope that blends perfectly into foliage), gambeson (A1)",
+      "Companion (see below) (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 7, 4\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, partially understands human speech)",
+      "Tattered steed (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 10, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 2\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E)"
+    ],
+    "title": "Snare Knight",
+    "poem": [
+      "Immersed within the woods adeep",
+      "A sheriff rides from nature's keep"
+    ],
+    "idx": "02",
+    "_id": "3e67e686-0329-4d31-aaf8-240f31153454",
+    "type": "knight",
+    "seer": {
+      "id": "02",
+      "title": "Swollen Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 15, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 5, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 4, 1\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "Can only be moved by feats of engineering usually reserved for siegery.",
+        "Sees within the minds of huge beings.",
+        "Wants to grow ever bigger."
+      ],
+      "idx": "02",
+      "_id": "68f62bf0-55fd-4483-80e7-f2e7b2e95fd5",
+      "type": "seer"
+    }
+  }

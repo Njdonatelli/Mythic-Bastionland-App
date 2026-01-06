@@ -1,0 +1,70 @@
+{
+    "id": "12",
+    "table": {
+      "title": "BAD REPUTATION",
+      "columns": [
+        "Begrudging Ally",
+        "Hated Enemy"
+      ],
+      "rows": [
+        [
+          "Eccentric alchemist",
+          "Rich merchant"
+        ],
+        [
+          "Humble chronicler",
+          "Master blacksmith"
+        ],
+        [
+          "Surly brewer",
+          "Admired Knight"
+        ],
+        [
+          "Horse breeder",
+          "Bandit leader"
+        ],
+        [
+          "Elderly innkeeper",
+          "Retired general"
+        ],
+        [
+          "Petty burglar",
+          "Mercenary captain"
+        ]
+      ]
+    },
+    "ability": {
+      "name": "The Red Hunt",
+      "text": "Infuse a target’s blood into an arrow to give it +[[/r d12]] against the target. You can also taste a small amount of the blood to get a glimpse of their location."
+    },
+    "passion": {
+      "name": "Apathy",
+      "text": "Restore \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E when you reject a call for comfort."
+    },
+    "property": [
+      "Jagged spear ([[/r d8]] hefty, +[[/r d8]] against a target you have Wounded or Scarred), red cloaked mail (A1)",
+      "Hunting bow ([[/r d6]] long)",
+      "Vicious charger (\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 12, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 8, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 5, 3\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E, [[/r d6]] trample)"
+    ],
+    "title": "Barbed Knight",
+    "poem": [
+      "Stone and spikes split into flowers",
+      "Cruelty is delicious power"
+    ],
+    "idx": "12",
+    "_id": "79962312-1939-4e6d-ae87-b56dfeb52398",
+    "type": "knight",
+    "seer": {
+      "id": "12",
+      "title": "Serpent Seer",
+      "attributes": "\u003Cspan class=\"virtue\"\u003EVIG\u003C/span\u003E 16, \u003Cspan class=\"virtue\"\u003ECLA\u003C/span\u003E 14, \u003Cspan class=\"virtue\"\u003ESPI\u003C/span\u003E 14, 3\u003Cspan class=\"virtue\"\u003EGD\u003C/span\u003E",
+      "traits": [
+        "A writhing pile of serpents, speaking as one through a choir of hisses.",
+        "Grants visions of dangerous beasts in the wilderness nearby.",
+        "Wants more unusual serpents for their pile, or even just a snack."
+      ],
+      "idx": "12",
+      "_id": "6bb977a8-d6e7-4511-8161-b5f42fdcfc62",
+      "type": "seer"
+    }
+  }

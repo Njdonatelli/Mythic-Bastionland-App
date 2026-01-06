@@ -1,0 +1,1018 @@
+[
+    {
+        "_id": "U0cRZvrvdyQCKHy8",
+        "name": "Action Procedure",
+        "system": {
+            "description": "<p>When the players take action the Referee works down this list:</p><ol><li><p>Intent: What are you trying to do?</p></li><li><p>Leverage: What makes it possible?</p></li><li><p>Cost: Would it use a resource, cause Virtue Loss, or have a side-effect?</p></li><li><p>Risk: What's at risk? No risk, no roll. Otherwise make a Save or a Luck Roll.</p></li><li><p>Impact: Show the consequences, honour the established risk, and move forward.</p></li></ol><h3>SUCCESS</h3><p>When the players succeed at a significant action the Referee does one of the following:</p><ul><li><p>Advance: Move in a good direction.</p></li><li><p>Disrupt: Lessen a threat.</p></li><li><p>Resolve: Put a problem to rest.</p></li></ul><h3>FAILURE</h3><p>When the players fail at a risky action they might still complete the action, but always suffer negative consequences:</p><ul><li><p>Threaten: Create a new problem.</p></li><li><p>Escalate: Make a problem worse.</p></li><li><p>Execute: Deliver on a threat.</p></li></ul><h3>IMPACT</h3><p>Whether a success or a failure, ensure that the players’ actions have an observable impact on the world. The best types of impact have both immediate and lasting consequences, always moving things forward.</p>"
+        },
+        "type": "Rule",
+        "pg": 16
+    },
+    {
+        "_id": "dTFXxMAWosNhSU3i",
+        "name": "Advancing Time",
+        "system": {
+            "description": "<p>At the end of each session, or during a natural break in their journey, the group decides how much time will reasonably pass:</p><ul><li><p><strong>None</strong>: Pick up where you left off.</p></li><li><p><strong>Weeks</strong>: Continue on to the next significant seasonal event.</p></li><li><p><strong>Months</strong>: Move to the next Season.</p></li><li><p><strong>Years</strong>: Begin a new Age in Spring.</p></li></ul><p></p><p>If uncertain, roll:</p><table><tbody><tr><td><p>[[/r 1d6]]</p></td><td><h3>PASSAGE OF TIME</h3></td></tr><tr><td><p>1</p></td><td><p>@UUID[Compendium.celestus.rules.BuleIJa3bFxPopzQ]{Season} or @UUID[Compendium.celestus.rules.9btBt0rE5AvXw3mt]{Age} turns <strong>now.</strong></p></td></tr><tr><td><p>2-3</p></td><td><p>@UUID[Compendium.celestus.rules.BuleIJa3bFxPopzQ]{Season} or @UUID[Compendium.celestus.rules.9btBt0rE5AvXw3mt]{Age} turns <strong>after next session.</strong></p></td></tr><tr><td><p>4-6</p></td><td><p>@UUID[Compendium.celestus.rules.BuleIJa3bFxPopzQ]{Season} or @UUID[Compendium.celestus.rules.9btBt0rE5AvXw3mt]{Age} <strong>continues.</strong></p></td></tr></tbody></table><p></p><h3>BETWEEN SEASONS</h3><p>Restore @UUID[Compendium.celestus.rules.a3wuqgFMQEMjrm0S]{Virtues}and choose one:</p><ul><li><p><strong>Pilgrimage</strong>: Learn about an unknown part of the Realm.</p></li><li><p><strong>Courtesy</strong>: Establish a new contact or earn a favour.</p></li><li><p><strong>Service</strong>: Make a small improvement to the Realm.</p></li></ul><p></p><h3>BETWEEN AGES</h3><p>Restore @UUID[Compendium.celestus.rules.a3wuqgFMQEMjrm0S]{Virtues}, gain 1 @UUID[Compendium.celestus.rules.p1BbrqwB3IL5KnsP]{Glory}, choose one:</p><ul><li><p><strong>Duty</strong>: Make a significant improvement to the Realm.</p></li><li><p><strong>Succession</strong>: Establish a successor and/or have them Knighted.</p></li><li><p><strong>Legacy</strong>: Your successor gains half of your current Glory.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 17
+    },
+    {
+        "_id": "9btBt0rE5AvXw3mt",
+        "name": "Ages",
+        "system": {
+            "description": "<p>Each <strong>Life</strong> has 3 <strong>Ages</strong>:</p><ul><li><p><strong>Young:</strong> Green, always learning.</p></li><li><p><strong>Mature:</strong> Seasoned, in their golden years.</p></li><li><p><strong>Old:</strong> Grey, considering their legacy.</p></li></ul><p>When a character becomes <strong>Mature</strong> they reroll each Virtue on [[/r d12+d6]] and keep the result if higher.</p><p>When a character becomes <strong>Old</strong> they reroll each Virtue on [[/r d12+d6]] and keep the result if lower. Old characters lose [[/r d12]] <span class=\"virtue\">VIG</span> at the end of each Age. If this takes them to VIG 0 they die peacefully.</p>"
+        },
+        "type": "Rule",
+        "pg": 10
+    },
+    {
+        "_id": "BmeUt7Yesk8hRT73",
+        "name": "Attacks",
+        "system": {
+            "description": "<p>Take the Attack dice noted on your weapon(s), shield, and granted by bonuses.</p><p>Go through the following steps in order:</p><ol><li><p>All combatants attacking the same target roll their dice at the same time.</p></li><li><p>If the target or their nearby allies can @UUID[Compendium.celestus.rules.G4QYjtCVWeZP6YIA]{Deny}they may use it.</p></li><li><p>Attackers may perform @UUID[Compendium.celestus.rules.U8Vl83tcDkRYLmpZ]{Gambits}.</p></li><li><p>Take the highest die remaining.</p></li><li><p>Add any extra Damage from attackers who are @UUID[Compendium.celestus.rules.U8Vl83tcDkRYLmpZ]{Bolstering} the Attack.</p></li><li><p>Subtract the target’s total Armour score.</p></li><li><p>The Attack causes that much Damage.</p></li></ol><p>So a Knight with a mace (d8) and shield (d4) is aided by an ally with 2 daggers (d6 each). They roll d8 and d4, and 2d6 respectively. The dice show 7, 3, 1, and 5. The highest die is 7. The 5 is spent on a @UUID[Compendium.celestus.rules.U8Vl83tcDkRYLmpZ]{Gambit} to Bolster the Damage to 8. The target has Armour 2 (helm and shield), reducing the Damage to 6.</p><p><strong>Impaired</strong> attacks roll d4 only and cannot gain bonus dice or benefit from Feats.</p><p><strong>Blast</strong> attacks target everybody in their area, rolling each separately.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "CapdrFIR5fQTiMqQ",
+        "name": "Barriers",
+        "system": {
+            "description": "<p>Travel through a Barrier is not normally possible, though locals might know a way. Attempting to travel through a Barrier wastes that Phase of the day, but still causes a @UUID[Compendium.celestus.rules.PxSDkx5wU6kRX5V3]{Wilderness Roll}.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "wth6UnvG7N5dmqeQ",
+        "name": "Between Ages",
+        "system": {
+            "description": "<p>Restore @UUID[Compendium.celestus.rules.a3wuqgFMQEMjrm0S]{Virtues}, gain 1 @UUID[Compendium.celestus.rules.p1BbrqwB3IL5KnsP]{Glory}, choose one:</p><ul><li><p><strong>Duty</strong>: Make a significant improvement to the Realm.</p></li><li><p><strong>Succession</strong>: Establish a successor and/or have them Knighted.</p></li><li><p><strong>Legacy</strong>: Your successor gains half of your current Glory.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 17
+    },
+    {
+        "_id": "KrrH14Q3jHr5CGMt",
+        "name": "Between Seasons",
+        "system": {
+            "description": "<p>Restore Virtues and choose one:</p><ul><li><p><strong>Pilgrimage</strong>: Learn about an unknown part of the Realm.</p></li><li><p><strong>Courtesy</strong>: Establish a new contact or earn a favour.</p></li><li><p><strong>Service</strong>: Make a small improvement to the Realm.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 17
+    },
+    {
+        "_id": "Q84GshhKtznJytyY",
+        "name": "Blast",
+        "system": {
+            "description": "<p><strong>Blast</strong> attacks target everybody in their area, rolling each separately.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "P2f6vJkFqnxeT07b",
+        "name": "Bonus Attack Dice",
+        "system": {
+            "description": "<p>These are gained from useful information, shrewd preparations, or a tactical advantage. +[[/r d8]] is a typical bonus.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "sVtJ8E9xvI1n5yAY",
+        "name": "Camping",
+        "system": {
+            "description": "<p>When sleeping outdoors make a  @UUID[Compendium.celestus.rules.PxSDkx5wU6kRX5V3]{Wilderness Roll} as normal, ignoring Landmarks. Hostile Omens prevent proper sleep, while others may not occur at all if they are improbable as nighttime activity.</p>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "XM3smSOyDUeVgMWz",
+        "name": "Claiming a Seat of Power",
+        "system": {
+            "description": "<p>A @UUID[Compendium.celestus.rules.ml5gCjU1JAnzXajw]{Seat of Power} carries similar problems to a @UUID[Compendium.celestus.rules.dJeZTvmudZnjrS96]{Holding}, elevated to a larger scale. Threats arise from within your @UUID[Compendium.celestus.rules.X1lghTTFxdKGH1z4]{Court}, within your @UUID[Compendium.celestus.rules.3hsMdqsglAWNjUQu]{Realm}, and from @UUID[Compendium.celestus.rules.ehLtyf20u7JwlsrK]{beyond your borders}.</p>"
+        },
+        "type": "Rule",
+        "pg": 20
+    },
+    {
+        "_id": "huwiNNXfDFVEkVan",
+        "name": "Conquest",
+        "system": {
+            "description": "<p>Knights live between two worlds. One of rank, oath, and rule of the worthy. The other of chaos, brutality, and rule of the strong.</p><p>Often, having the audacity to seat yourself in a Holding is enough to make you the ruler.</p><p>Holdings and Realms seized by force and left unchallenged tend to have a period of turmoil before adapting to the new status quo.</p>"
+        },
+        "type": "Rule",
+        "pg": 21
+    },
+    {
+        "_id": "jao8p4SpbPMN1KyH",
+        "name": "Courtly Conflict",
+        "system": {
+            "description": "<p>Courtiers breed problems, especially when they hold leverage over their ruler, whether family influence, dark secrets, or military might. Here a ruler must tread carefully, as obvious solutions always leave at least one party feeling mistreated.</p><p>Every Season brings some drama. Spark Tables can help to describe this.<br />Roll to see how you’re involved:</p><p></p><table><tbody><tr><td data-colwidth=\"376\"><p>[[/r d6]]</p></td><td><h3>DRAMA IN COURT</h3></td></tr><tr><td data-colwidth=\"376\"><p>1</p></td><td><p>You are <strong>personally involved</strong>.</p></td></tr><tr><td data-colwidth=\"376\"><p>2-3</p></td><td><p>You are involved <strong>by association</strong>.</p></td></tr><tr><td data-colwidth=\"376\"><p>4-6</p></td><td><p>You are <strong>not involved</strong>.</p></td></tr></tbody></table>"
+        },
+        "type": "Rule",
+        "pg": 21
+    },
+    {
+        "_id": "47edfac2-5fe9-4679-8b0b-dcbf300b7c29",
+        "system": {
+            "description": "<h3>BREAKING THE RULES</h3><p>The guidelines on this page make for a typical Realm, but they can be bent or broken in creating your own Realms.</p><h3>THE HEX MAP</h3><p>A Realm is mapped on a hexagonal grid covering the loose rule of a Seat of Power. A 12x12 grid is typical, whether the Realm is landlocked, coastal, or an island chain.</p><p>Typically, players get a copy of the map with Holdings and general terrain marked. They cannot see Myths, Landmarks, and Barriers.</p><p>The distance covered by each hexagon is a <strong>Hecksleague</strong>, commonly called a Hex.</p><p>This distance represents a few loose factors:</p><ol><li><span></span>The area a hill fort can overlook</li><li><span></span>The area that guards can patrol in a day</li><li><span></span>A return hike to a neighbouring Hex gets you home before dark</li></ol><h3>WILDERNESS</h3><p>Most Hexes are Wilderness, with a variety of terrain types. <a>Spark Tables</a> can help with this. As a general guide create clusters of [[/r d12]] hexes of the same terrain type.</p><p>Some Hexes have a Barrier on one or more of their edges, typically a sudden altitude change or impassible feature. These cannot normally be travelled through. For a typical Realm, place a number of Barriers equal to one sixth of your total Hexes.</p><p>Most Realms have a navigable river passing through and a few large lakes spanning whole or multiple Hexes.</p><h3>HOLDINGS</h3><p>Place 4 Holdings a good distance apart, typically castles, walled towns, fortresses, or towers, held by Knights or influential Vassals. Most of the Realm lives within their walls or the surrounding Hex.</p><p>Designate one Holding as the Seat of Power. This is the Holding of the ruler of the whole Realm, commonly a Knight.</p><h3>MYTH HEXES</h3><p>Place 6 <a href=\"/browse/myths\">Myths</a> in remote places. Number them as 1-6. The Hexes are clearly affected by the presence of their Myth.</p><h3>LANDMARKS</h3><p>Some Wilderness Hexes contain a Landmark. These are discovered when travellers roll 4-6 on the Wilderness roll. A typical Realm has 3 or 4 of each type of Landmark. Mark them with their initial or an icon.</p><p>Even characters who know a Landmark’s location must still make a Wilderness Roll to check for Omens as they travel there.</p><p>Each Landmark type covers a range of specific features, with prompts provided on Knight and Myth pages later in the book.</p><p>The course of the game may create new Landmarks or remove or alter existing ones.</p><p>The 6 types of landmarks are:</p><ul><li><span></span>@UUID[Compendium.celestus.rules.gEhHqMT5ciuQNZXm]{Dwellings}</li><li><span></span>@UUID[Compendium.celestus.rules.QWZ5Xsa3vuo5Bf69]{Sanctums}</li><li><span></span>@UUID[Compendium.celestus.rules.lBdvsLmaxCzXExnv]{Monuments}</li><li><span></span>@UUID[Compendium.celestus.rules.UuZ3UFDChYMN7gTh]{Hazards}</li><li><span></span>@UUID[Compendium.celestus.rules.ihrxnfnNnK4x8KPd]{Curses}</li><li><span></span>@UUID[Compendium.celestus.rules.TuBkbx1jAFCmrp19]{Ruins}</li></ul><h3>ADDING DETAILS</h3><p><a>Spark Tables</a> can add detail to significant locations and people in the Realm.</p><h3>DISTANT REALMS</h3><p>Realms are usually bordered by water, mountains, or wasteland, though claims are often disputed. Travelling to a distant Realm normally sees you arrive in the next Season.</p>"
+        },
+        "name": "Creating a Realm",
+        "pg": 14
+    },
+    {
+        "_id": "VKF3X9roMxCO2nPp",
+        "name": "Crises",
+        "system": {
+            "description": "<p>@UUID[Compendium.celestus.rules.Ht6YdS1x8Va8s16q]{Ruling a Domain} is an exercise in ongoing disaster management.</p><p>At the start of a Season or when returning from a long absence, roll:</p><table><tbody><tr><td><p>[[/r d6]]</p></td><td><h3>CRISIS ROLL</h3></td></tr><tr><td><p>1</p></td><td><p><strong>Calamity</strong>: Immediately gain 2 Crises.</p></td></tr><tr><td><p>2-3</p></td><td><p><strong>Dilemma</strong>: Choose between 2 Crises.</p></td></tr><tr><td><p>4-6</p></td><td><p><strong>Prosperity</strong>: Times are good.</p></td></tr></tbody></table><p>Crises apply to the whole Domain, not a single character, and remain until resolved.</p><p>They can be chosen by the Referee, or rolled:</p><ol><li><p><strong>Chaos</strong> - Lawlessness in the land Resolution: Enforce a sense of justice.</p></li><li><p><strong>Debt</strong> - Dire need of coffer and coin Resolution: Restock the treasury.</p></li><li><p><strong>Famine</strong> - Empty plates, empty fields Resolution: Get food into the stores.</p></li><li><p><strong>Misery</strong> - Vassals question why they toil Resolution: Raise the spirits of the people.</p></li><li><p><strong>Panic</strong> - The weak tremble with unease Resolution: Ensure the Vassals feel safe.</p></li><li><p><strong>Doubt</strong> - Seeds of betrayal against you Resolution: Assert your authority to rule.</p></li></ol><p>If a season ends with 3 or more unresolved Crises then the Domain goes into @UUID[Compendium.celestus.rules.T74kT3xY6yPC3MK2]{Misrule}.</p>"
+        },
+        "type": "Rule",
+        "pg": 20
+    },
+    {
+        "_id": "ihrxnfnNnK4x8KPd",
+        "name": "Curses",
+        "system": {
+            "description": "<p>Blights on the land that throw you off course. If you travel in the next Phase it counts as @UUID[Compendium.celestus.rules.730Af1FmIdloG4vY]{Travelling Blind}.</p>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "Uk3I1q1ontYnrY2A",
+        "name": "Damage",
+        "system": {
+            "description": "<p>The attack’s Damage is deducted from the target’s <span class=\"virtue\">GD</span>.</p><p>If they have at least 1GD remaining then they Evade the Attack.</p><p>If it leaves them with exactly 0GD then they gain a @UUID[Compendium.celestus.rules.sc76aTlM7OLBPigZ]{Scar}.</p><p>If it exceeds the target’s GD, the excess is deducted from <span class=\"virtue\">VIG</span> and they are Wounded.</p><p>If they lose half or more of their remaining VIG it is a @UUID[Compendium.celestus.rules.Kkozior5c3JbSn39]{Mortal Wound}. Mortally Wounded targets are down and dying. They die if left untended for an hour, but can be patched up</p><p>in a few moments.</p><p>If Damage reduces the target’s VIG to 0, they are @UUID[Compendium.celestus.rules.277DeX9r1AioelSw]{Slain}.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "277DeX9r1AioelSw",
+        "name": "Death",
+        "system": {
+            "description": "<p>Even the boldest Knight can die a sudden or ignoble death. Prepare yourself for this.</p><p>When a Knight dies the player creates a new Knight and they are added to the Company as quickly as possible. Alternatively they may assume control of a Squire or follower.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "G4QYjtCVWeZP6YIA",
+        "name": "Deny",
+        "system": {
+            "description": "<p><em>Rebuff an attack before it lands</em></p><ul><li><p>Use after an Attack roll against you or an ally within arm’s reach.</p></li><li><p>Discard one Attack die from the roll.</p></li><li><p>Pass a <span class=\"virtue\">SPI</span> Save or become Fatigued.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "1awKBfGuG7xMbNIx",
+        "name": "Dire Weather",
+        "system": {
+            "description": "<p>When travelling in lands at the mercy of dire weather, roll at the start of each Phase.</p><p></p><table><tbody><tr><td data-colwidth=\"64\"><p>[[/r 1d6]]</p></td><td><h3>DIRE WEATHER</h3></td></tr><tr><td data-colwidth=\"64\"><p>1</p></td><td><p><strong>Dire weather. </strong>You can’t leave the Hex and can’t get proper sleep.</p></td></tr><tr><td data-colwidth=\"64\"><p>2-3</p></td><td><p><strong>Looming threat</strong>. If this is rolled a second consecutive time, treat as dire weather.</p></td></tr><tr><td data-colwidth=\"64\"><p>4-6</p></td><td><p><strong>Fine weather</strong> for travel.</p></td></tr></tbody></table>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "ehLtyf20u7JwlsrK",
+        "name": "Distant Realms",
+        "system": {
+            "description": "<p>@UUID[Compendium.celestus.rules.3hsMdqsglAWNjUQu]{Realms} are usually bordered by water, mountains, or wasteland, though claims are often disputed. Travelling to a distant Realm normally sees you arrive in the next Season.</p>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "M7caQ5muj7rvEfh3",
+        "name": "Duels & Jousts",
+        "system": {
+            "description": "<p>Two combatants can mutually agree to engage in a duel, or joust if mounted.</p><p>They fight as normal but their attacks are rolled and resolved simultaneously, including the effects of Gambits. Both combatants can use Feats before the attacks are resolved.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "gEhHqMT5ciuQNZXm",
+        "name": "Dwellings",
+        "system": {
+            "description": "<p>Sets of humble homes amidst the wilds.</p>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "Lq3J9OOZ8F1DhFXq",
+        "name": "Ending A Session",
+        "system": {
+            "description": "<p>At the end of each session:</p><ul><li><p>Discuss if it would feel right for a @UUID[Compendium.celestus.rules.BuleIJa3bFxPopzQ]{Season} or @UUID[Compendium.celestus.rules.9btBt0rE5AvXw3mt]{Age} to pass between now and the next session.</p></li><li><p>If a Season or Age passes, then follow the procedure detailed.</p></li><li><p>Ask the players if they have any plans or ambitions for the next session. This gives you a direction for any preparation you do before then.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 16
+    },
+    {
+        "_id": "KVv0zNVXVsh9Qquy",
+        "name": "Exploration Actions",
+        "system": {
+            "description": "<p>When ruling exploration actions, follow the standard @UUID[Compendium.celestus.rules.U0cRZvrvdyQCKHy8]{Action Procedure}. In particular, consider whether the action will take a whole Phase of the day to carry out.</p><p>As with other Actions, the players should know the risks before they commit to it.</p><p>If the Action calls for a Save the Company decides who rolls, using their Virtue.</p><p>Even if they fail the Save, the goal might still be achievable, but now faces an obstacle, a hostile encounter, or an additional cost.</p><p>While the cause and consequence of failure can be personal, they also represent the whims of nature, bad weather, shifting land.</p><p>If it is unclear which Virtue to use, consider the main activity involved in the risky part:</p><ul><li><p><strong>Vigour</strong>: Strength or physical stamina.</p></li><li><p><strong>Clarity</strong>: Senses or mental quickness.</p></li><li><p><strong>Spirit</strong>: Social or emotional influence.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 19
+    },
+    {
+        "_id": "h9e6V7nLciONrfTO",
+        "name": "Exposed",
+        "system": {
+            "description": "<p>Characters who are caught with their guard down or otherwise defenceless are <em>Exposed</em> and act as if they have 0<span class=\"virtue\">GD</span>. If they remedy their situation then they are no longer <em>Exposed</em>. Traps and ambushes typically catch victims <em>Exposed</em>.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "WgapBijp9UUG9CWT",
+        "name": "Faith",
+        "system": {
+            "description": "<ul><li><p>Some believe there is truth in the sky: the stars, moon, sun, positions, and motions.</p></li><li><p>Some look to nature: the turn of seasons, the sound of trees, the wisdom of beasts.</p></li><li><p>Some believe the sacred stories that weave into Myths, guiding us to the City.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 13
+    },
+    {
+        "_id": "h4ATNWH8WwUmQNdC",
+        "name": "Fatigue",
+        "system": {
+            "description": "<p>A <em>Fatigued</em> character is unable to use <strong>@UUID[Compendium.celestus.rules.Ii4ZqGwzc3qZWA8B]{Feats}</strong> until they rest.</p>"
+        },
+        "type": "Rule",
+        "pg": 10
+    },
+    {
+        "_id": "Ii4ZqGwzc3qZWA8B",
+        "name": "Feats",
+        "system": {
+            "description": "<p>These special actions known by Knights can be performed as described. Using Feats risks the Knight becoming Fatigued which prevents them from using further Feats until they rest.</p><p>After using a Feat the user must pass a Save or become <em>Fatigued</em>, unable to perform Feats until they rest. Each Feat can only be used once per Attack by each combatant involved.</p><p><strong>SMITE</strong> - <em>Release your righteous fury</em></p><ul><li><p>Use before rolling a melee Attack.</p></li><li><p>The Attack gains either +[[/r d12]]or @UUID[Compendium.celestus.rules.Q84GshhKtznJytyY]{Blast}.</p></li><li><p>Pass a <span class=\"virtue\">VIG</span> Save or become Fatigued.</p></li></ul><p><strong>FOCUS</strong> - <em>Create an opening to exploit</em></p><ul><li><p>Use after rolling an Attack.</p></li><li><p>Perform a Gambit without using a die.</p></li><li><p>Pass a <span class=\"virtue\">CLA</span> Save or become Fatigued.</p></li></ul><p><strong>DENY </strong>- <em>Rebuff an attack before it lands</em></p><ul><li><p>Use after an Attack roll against you or an ally within arm’s reach.</p></li><li><p>Discard one Attack die from the roll.</p></li><li><p>Pass a <span class=\"virtue\">SPI</span> Save or become Fatigued.</p></li></ul><p></p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "OVaEls1kihdxQT3g",
+        "name": "Focus",
+        "system": {
+            "description": "<p><em>Create an opening to exploit</em></p><ul><li><p>Use after rolling an Attack.</p></li><li><p>Perform a Gambit without using a die.</p></li><li><p>Pass a <span class=\"virtue\">CLA</span> Save or become Fatigued</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "U8Vl83tcDkRYLmpZ",
+        "name": "Gambits",
+        "system": {
+            "description": "<p>Attackers may discard any number of Attack dice of 4 or higher to perform Gambits, each causing one of the effects below. The affected foe must be a target of the original attack.</p><p>For Gambits other than <em>Bolster</em> and <em>Move</em> the target receives a <span class=\"virtue\">VIG</span> Save to ignore the effect.</p><ul><li><p><strong>Bolster</strong> the Attack for +1 total Damage</p></li><li><p><strong>Move</strong> after the Attack, even if you already moved or are unable to move</p></li><li><p><strong>Repel</strong> a foe away from you</p></li><li><p><strong>Stop</strong> a foe from moving next turn</p></li><li><p><strong>@UUID[Compendium.celestus.rules.w0AdMBWGQLWhQHd8]{Impair} </strong>a weapon on their next turn</p></li><li><p><strong>Trap</strong> a shield until your next turn</p></li><li><p><strong>@UUID[Compendium.celestus.rules.arw6LSD4H5hvFDS3]{Dismount} </strong>a foe</p></li><li><p><strong>Other</strong> <strong>effect</strong> of a similar level of impact</p></li></ul><p>If a die of 8 or higher is used in melee then a <strong>Strong Gambit</strong> is performed and the attacker chooses one of the following:</p><ul><li><p><strong>No Save</strong> is granted to the target</p></li><li><p><strong>Greater effect</strong> such as disarming an item, breaking a wooden shield or weapon, or removing a helm. This does not increase the Damage from Bolster.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "i8dUaR1tAtVnnkTd",
+        "name": "Gathering Folklore",
+        "system": {
+            "description": "<p>Everybody knows something about @UUID[Compendium.celestus.rules.zR5oyR4ZccCyWZg2]{Myths}. How much depends on who they are.</p><p>Vassals know about their nearest Myth, and its general direction. If it is adjacent to their home then they know its precise location.</p><p>They know Landmarks in their home and neighbouring Hexes.</p><p>@UUID[Compendium.celestus.rules.GaN0dPf1jqeQ8utO]{Knights}<strong> </strong>and <strong>Vagabonds</strong> have roamed enough to know about a random Myth of the Realm and its rough direction. They also know of the nearest @UUID[Compendium.celestus.rules.Fy9hueqdKhEX0zYj]{Landmarks}.</p><p>All of the above know <strong>rumours</strong> that warn of dangers, but not how to avoid or undo them.</p><p>@UUID[Compendium.celestus.rules.XD4dA6vKjurF4VsY]{Seers} know the <strong>rules</strong> of all Myths, their secrets, and their locations. They know their weaknesses, and cures to their maladies. They know all Landmarks in the Realm. Such vast knowledge isn’t given freely.</p>"
+        },
+        "type": "Rule",
+        "pg": 19
+    },
+    {
+        "_id": "y6kKETT9xRDyK2qW",
+        "name": "Getting Started",
+        "system": {
+            "description": "<p>One player is the Referee. They should read through to the end of the rules section.</p><p>The other players can go straight to the @UUID[Compendium.celestus.rules.Md0zQN9AtzRsos3i]{Knighthood} page and need not read any further unless curious.</p><p></p><p>Next: @UUID[Compendium.celestus.rules.hkdvxbEDAI7rM6wc]{Start &amp; Scope}</p>"
+        },
+        "type": "Rule",
+        "pg": 6
+    },
+    {
+        "_id": "uRBBp89wHoJbxHCD",
+        "name": "Giving Information",
+        "system": {
+            "description": "<p>The players can only make interesting choices when they are presented with difficult situations and given all of the information needed to engage with them.</p>"
+        },
+        "type": "Rule",
+        "pg": 16
+    },
+    {
+        "_id": "p1BbrqwB3IL5KnsP",
+        "name": "Glory",
+        "system": {
+            "description": "<p>All Knights seek Glory, that they might one day be deemed worthy of the City Quest.</p><h3>GLORY THROUGH MYTHS</h3><p>When the group feels that a Myth has been resolved, reaching a conclusion of any type, all Knights who played a part in that Myth gain 1 Glory.</p><h3>GLORY BY OTHER MEANS</h3><p>In a public duel or joust, Knights may stake Glory against a willing opponent. The victor gains 1 Glory, the loser loses 1 Glory.</p><p>Tournaments may also grant 1 Glory to the winning Knight, provided there are significant spectators and spectacle.</p><p>If a battle is large enough to be remembered in history, all Knights on the victorious side gain 1 Glory.</p><p>When the game moves to a new Age all Knights gain 1 Glory through serving the Realm and manoeuvring in Court.</p><h3>RANK</h3><p>A Knight’s Glory dictates their rank:</p><p>0 Glory - Knight-Errant<br />Worthy of leading a Warband</p><p>3 Glory - Knight-Gallant<br />Worthy of a seat in Council or Court</p><p>6 Glory - Knight-Tenant<br />Worthy of ruling a Holding</p><p>9 Glory - Knight-Dominant<br />Worthy of ruling a Seat of Power</p><p>12 Glory - Knight-Radiant<br />Worthy of the City Quest</p>"
+        },
+        "type": "Rule",
+        "pg": 6
+    },
+    {
+        "_id": "knKOaTnN5txOVdIh",
+        "name": "Grand Designs",
+        "system": {
+            "description": "<p>Work on existing buildings or infrastructure is generally completed by the next @UUID[Compendium.celestus.rules.BuleIJa3bFxPopzQ]{Season}.</p><p>New buildings or infrastructure can be completed in a @UUID[Compendium.celestus.rules.BuleIJa3bFxPopzQ]{Season}.</p><p>Grand projects such as castles and roads require an entire @UUID[Compendium.celestus.rules.9btBt0rE5AvXw3mt]{Age} of work.</p>"
+        },
+        "type": "Rule",
+        "pg": 21
+    },
+    {
+        "_id": "oY1Asu19v9iHa8zw",
+        "name": "Guard (GD)",
+        "system": {
+            "description": "<p><b>Guard</b> (<span class=\"virtue\">GD</span>) is your skill at avoiding Wounds.</p><p>When a target is damaged, the damage is first deducted from their GD.</p>"
+        },
+        "type": "Rule",
+        "pg": 7
+    },
+    {
+        "_id": "UuZ3UFDChYMN7gTh",
+        "name": "Hazards",
+        "system": {
+            "description": "<p>Nature fights every step. Devise a solution, push through (lose [[/r d6]] in a @UUID[Compendium.celestus.rules.a3wuqgFMQEMjrm0S]{Virtue}, usually <span class=\"virtue\">VIG</span>), or go back the way you came.</p>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "xClo9CbpoanGqoav",
+        "name": "Hefty",
+        "system": {
+            "description": "<p>Hefty weapons require one hand. Only one Hefty item can be wielded at once.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "dJeZTvmudZnjrS96",
+        "name": "Holdings",
+        "system": {
+            "description": "<p>Holdings are typically castles, walled towns, fortresses, or towers, held by Knights or influential Vassals. Most of the @UUID[Compendium.celestus.rules.3hsMdqsglAWNjUQu]{Realm} lives within their walls or the surrounding Hex.</p><p>One holding in each realm is @UUID[Compendium.celestus.rules.ml5gCjU1JAnzXajw]{The Seat of Power}. This is the Holding of the ruler of the whole Realm, commonly a Knight.</p>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "LF2qgzMQLIFvnyy4",
+        "name": "Hospitality",
+        "system": {
+            "description": "<p>When sleeping indoors, do not make a Wilderness Roll. Manners dictate that hospitality be granted to travelling Knights. Longer stays warrant a favour in return.</p>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "w0AdMBWGQLWhQHd8",
+        "name": "Impaired",
+        "system": {
+            "description": "<p><strong>Impaired</strong> attacks roll d4 only and cannot gain bonus dice or benefit from Feats.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "JowbBiXQHAfcJjy9",
+        "name": "Improvisation",
+        "system": {
+            "description": "<p>When faced with a question not answered by rules, notes, or procedures, you improvise.</p><p>Anything too beneficial or too harmful creates the feeling of an arbitrary world. Instead, describe something that does at least one of the following:</p><ul><li><p><strong>Evokes</strong> the flavour and themes of the area and its inhabitants.</p></li><li><p><strong>Indulges</strong> their senses. Vision, hearing, touch, smell, and taste.</p></li><li><p><strong>Reinforces</strong> something that they've already learned about this place.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 16
+    },
+    {
+        "_id": "Md0zQN9AtzRsos3i",
+        "name": "Knighthood",
+        "system": {
+            "description": "<p>You are Knights, united by a common Oath and visions of the City. You may have dreams of glory, but every Knight must accept the risk of death.</p><p>The Seers who knighted you have deemed that you travel as a Company. While some of you may rest, roam, or die, your collective journey will be as one.</p><p>Knights have 3 @UUID[Compendium.celestus.rules.a3wuqgFMQEMjrm0S]{Virtues}. Roll a value for each in order. The Start that you chose for your Company determines the dice you roll. If unsure, roll [[/r d12+d6]].</p><p><strong><span class=\"virtue\">VIG</span>OUR</strong><br />Strong limbs, firm hands, powerful lungs.</p><p><strong><span class=\"virtue\">CLA</span>RITY</strong><br />Keen instinct, lucid mind, shrewd eyes.</p><p><strong><span class=\"virtue\">SPI</span>RIT</strong><br />Charming tongue, iron will, fierce heart.</p><p>Roll for @UUID[Compendium.celestus.rules.oY1Asu19v9iHa8zw]{Guard (<span class=\"virtue\">GD</span>)}, your skill at avoiding Wounds. The Start that you chose for your Company determines the dice you roll. If unsure, roll [[/r d6]].</p><p>Roll ([[/r 1d6+1d12]]) or choose a Knight.</p><p>This gives:</p><p><strong>Property</strong>: Items brought with you.</p><p><strong>Ability</strong>: A special talent unique to you.</p><p><strong>Passion</strong>: A special means you have to restore your Spirit.</p><p>Every Knight has a @UUID[Compendium.celestus.items.QCO3X6n1tHqez2DV]{Dagger} ([[/r d6]]), torches, rope, dry rations, and camping gear.</p><p>Every Knight knows the three @UUID[Compendium.celestus.rules.Ii4ZqGwzc3qZWA8B]{Feats}.</p><p></p><p>Every Knight has sworn the Oath:</p><p><strong>SEEK THE MYTHS</strong></p><p><strong>HONOUR THE SEERS</strong></p><p><strong>PROTECT THE REALM</strong></p>"
+        },
+        "type": "Rule",
+        "pg": 7
+    },
+    {
+        "_id": "GaN0dPf1jqeQ8utO",
+        "name": "Knights",
+        "system": {
+            "description": "<ul><li><p>Those who take the Oath are held in esteem, but expectations burden them.</p></li><li><p>They rely on their arms, but are expected to know the customs of peace.</p></li><li><p>Usually one Knight holds each title, passed on in retirement or death</p></li></ul><p>Each Knight can be used for a player character or non-player Knights who are encountered wandering or ruling. Generally each player should have a different type of Knight.</p><p>Some Realms refer to Knights by honorific titles and ranks, others their given name and home, while most use their full knightly title or simply &ldquo;Knight.&rdquo;</p>"
+        },
+        "type": "Rule",
+        "pg": "13 and 26"
+    },
+    {
+        "_id": "Fy9hueqdKhEX0zYj",
+        "name": "Landmarks",
+        "system": {
+            "description": "<p>Some Wilderness Hexes contain a Landmark. These are discovered when travellers roll 4-6 on the Wilderness roll. A typical Realm has 3 or 4 of each type of Landmark.</p><p>Even characters who know a Landmark’s location must still make a Wilderness Roll to check for Omens as they travel there.</p><p>Each Landmark type covers a range of specific features, with prompts provided on Knight and Myth pages in the book.</p><p>The course of the game may create new Landmarks or remove or alter existing ones.</p><p></p><p>The 6 types of landmarks are:</p><ul><li><p>@UUID[Compendium.celestus.rules.gEhHqMT5ciuQNZXm]{Dwellings}</p></li><li><p>@UUID[Compendium.celestus.rules.QWZ5Xsa3vuo5Bf69]{Sanctums}</p></li><li><p>@UUID[Compendium.celestus.rules.lBdvsLmaxCzXExnv]{Monuments}</p></li><li><p>@UUID[Compendium.celestus.rules.UuZ3UFDChYMN7gTh]{Hazards}</p></li><li><p>@UUID[Compendium.celestus.rules.ihrxnfnNnK4x8KPd]{Curses}</p></li><li><p>@UUID[Compendium.celestus.rules.TuBkbx1jAFCmrp19]{Ruins}</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "WulWegthfVVDtzTM",
+        "name": "Lay of the Land",
+        "system": {
+            "description": "<p>Each Hex is large and diverse, a land within the land. Some may spend their whole lives within one. A forest Hex might have cliffs, streams, clearings, and caves.</p><p>Use Spark Tables and the prompts at the base of each Knight and Myth spread to help fill the blanks in your Hexes.</p>"
+        },
+        "type": "Rule",
+        "pg": 19
+    },
+    {
+        "_id": "CgKQNnZcpB6U2J3K",
+        "name": "Local Mood",
+        "system": {
+            "description": "<p>When arriving in a Holding, roll to gauge the local mood.</p><p></p><table><tbody><tr><td data-colwidth=\"64\"><p>[[/r 1d6]]</p></td><td><h3>LOCAL MOOD</h3></td></tr><tr><td data-colwidth=\"64\"><p>1</p></td><td><p>Occupied by a looming or recent <strong>woe</strong>.</p></td></tr><tr><td data-colwidth=\"64\"><p>2-3</p></td><td><p>There is a sense of things in <strong>decline</strong>.</p></td></tr><tr><td data-colwidth=\"64\"><p>4-6</p></td><td><p>A <strong>fine mood</strong> and all seems well enough.</p></td></tr></tbody></table>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "zs2bGjpkII2Etmnv",
+        "name": "Long",
+        "system": {
+            "description": "<p>Long weapons require both hands and are @UUID[Compendium.celestus.rules.w0AdMBWGQLWhQHd8]{Impaired} in confined environments.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "N33evafMmtu93930",
+        "name": "Luck Rolls",
+        "system": {
+            "description": "<p>If you need to consult the whims of fate, make a Luck Roll on a d6. A high roll favours the players, a low one does not.</p><p>In general, use these guidelines:</p><p></p><table><tbody><tr><td><p>[[/r 1d6]]</p></td><td><h3>LUCK ROLL</h3></td></tr><tr><td><p>1</p></td><td><p><strong>Crisis:</strong> Something immediately bad.</p></td></tr><tr><td><p>2-3</p></td><td><p><strong>Problem:</strong> Something potentially bad.</p></td></tr><tr><td><p>4-6</p></td><td><p><strong>Blessing: </strong>A welcome result.</p></td></tr></tbody></table>"
+        },
+        "type": "Rule",
+        "pg": 16
+    },
+    {
+        "_id": "88tV0IZ35JoGJ2bt",
+        "name": "Minor Actions",
+        "system": {
+            "description": "<p>Changing weapons, dismounting, and similar actions do not count as a combatant’s action for the turn.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "T74kT3xY6yPC3MK2",
+        "name": "Misrule",
+        "system": {
+            "description": "<p>If a season ends with 3 or more unresolved @UUID[Compendium.celestus.rules.VKF3X9roMxCO2nPp]{Crises} then the @UUID[Compendium.celestus.rules.Ht6YdS1x8Va8s16q]{Domain} goes into misrule. Vassals revolt, Knights leave, and pretenders move in on their claims.</p>"
+        },
+        "type": "Rule",
+        "pg": 20
+    },
+    {
+        "_id": "lBdvsLmaxCzXExnv",
+        "name": "Monuments",
+        "system": {
+            "description": "<p>Sites of inspiration. Travellers may spend a Phase to restore <span class=\"virtue\">SPI</span> here as if they were consuming a @UUID[Compendium.celestus.items.B2owmLXQ62SX30oD]{Sacrament}.</p>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "Kkozior5c3JbSn39",
+        "name": "Mortal Wounds",
+        "system": {
+            "description": "<p>If a character is struck and loses half or more of their remaining <span class=\"virtue\">VIG</span> it is a mortal wound</p><p>Mortally Wounded targets are down and dying. They die if left untended for an hour, but can be patched up in a few moments.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "arw6LSD4H5hvFDS3",
+        "name": "Mounted Combat",
+        "system": {
+            "description": "<p>Mounted combatants use their steed’s trample Damage in addition to their own weapons when charging enemies on foot. This doesn’t work against spearwalls. Steeds can be targeted separately by attacks.</p><p>Being dismounted causes [[/r 1d6]] Damage. If this occurs in combat, add it to the existing dice.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "fugS9PjneIggcHrs",
+        "name": "Mustering Troops",
+        "system": {
+            "description": "<p>A typical @UUID[Compendium.celestus.rules.ml5gCjU1JAnzXajw]{Seat of Power} can muster 3 @UUID[Compendium.celestus.rules.IemxfFfJIeEBZp2e]{Warbands}, other Holdings 2. The @UUID[Compendium.celestus.rules.cQMFWOJXOBNZTa5w]{The Marshal} determines their training and armament.</p>"
+        },
+        "type": "Rule",
+        "pg": 21
+    },
+    {
+        "_id": "UkLl5Nh8ALo2rOgs",
+        "name": "Myth Hexes",
+        "system": {
+            "description": "<p>Ending a phase in the Hex containing a @UUID[Compendium.celestus.rules.zR5oyR4ZccCyWZg2]{Myth} always reveals its next @UUID[Compendium.celestus.rules.T3loxnAcV5W8mGZz]{Omen} without making a @UUID[Compendium.celestus.rules.PxSDkx5wU6kRX5V3]{Wilderness Roll}. When possible, the Knights also get the drop on the Omen.</p>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "zR5oyR4ZccCyWZg2",
+        "name": "Myths",
+        "system": {
+            "description": "<ul><li><p>Stories that became truths, or are destined to come to pass.</p></li><li><p>Nobody agrees on the details, but every version is true in some way.</p></li><li><p>There’s no such thing as “just a myth”.</p></li></ul><p>Each Myth lists its Omens and the cast of beings who are associated with it.</p><p>Entering or exploring the Myth's Hex always reveals its next Omen, remembering @UUID[Compendium.celestus.rules.XNvXhLKSGgqDI8uD]{Primacy of Action}.</p><p>The Hex itself is visually tied to the Myth</p><p>When the group feels that a Myth is resolved the Knights each gain 1 Glory and a new Myth replaces it in the next Season.</p><p>Myths may appear at odds with their Realm, such as The Sea in a desert.</p><p>Still, these Myths must be brought to pass, so Realm and Myth can shift as needed.</p>"
+        },
+        "type": "Rule",
+        "pg": "13 and 27"
+    },
+    {
+        "_id": "T3loxnAcV5W8mGZz",
+        "name": "Omens",
+        "system": {
+            "description": "<p>Each Myth has 6 Omens, listed in the order in which they are encountered. The first encounter with a specific Myth is always Omen 1, the second Omen 2 etc.</p><p>Remember @UUID[Compendium.celestus.rules.XNvXhLKSGgqDI8uD]{Primacy of Action}. If the players want to hunt for the Wyvern’s nest they don’t have to wait for that Omen to appear if they take action themselves.</p>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "6xdhNEX7Ptw9GiO6",
+        "name": "Phases of the Day",
+        "system": {
+            "description": "<p>Each <strong>Day</strong> has 3 <strong>Phases</strong>:</p><ul><li><p><strong>Morning</strong>: Sunrise to Noon.</p></li><li><p><strong>Afternoon</strong>: Noon to Sunset.</p></li><li><p><strong>Night</strong>: Sunset to Sunrise.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 17
+    },
+    {
+        "_id": "XNvXhLKSGgqDI8uD",
+        "name": "Primacy of Action",
+        "system": {
+            "description": "<p>Even when using the rules for travel, exploration, and combat, remember this, the most important thing:</p><p>Past action taken by the players supersedes content generated by prompts or rules. Their deeds are reality.</p><p>Remember the core of giving players information, honouring their choices, and describing the impact of their actions.</p>"
+        },
+        "type": "Rule",
+        "pg": 16
+    },
+    {
+        "_id": "nnTyx6kp0UQOfZFa",
+        "name": "Prompts",
+        "system": {
+            "description": "<p>Every Knight and Myth spread has prompts across its base. These serve as cues for improvisation as needed. Spark Tables</p><p>are also useful for generating ideas.</p>"
+        },
+        "type": "Rule",
+        "pg": 16
+    },
+    {
+        "_id": "sC5DFwEuA3qy9sYa",
+        "name": "Ranged Combat",
+        "system": {
+            "description": "<p>Purely ranged weapons cannot be used if the attacker is engaged-in or began their turn in melee.</p><p>Protective cover grants an additional point of Armour against ranged attacks.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "ZIhAfEIJGxPSkupp",
+        "name": "Reaction",
+        "system": {
+            "description": "<p>Non-player characters react in a way that feels appropriate for the current context.</p><p>When uncertain, a character makes a <span class=\"virtue\">SPI</span> Save to avoid an unfavourable reaction.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "3hsMdqsglAWNjUQu",
+        "name": "Realms",
+        "system": {
+            "description": "<ul><li><p>The world is fractured into petty Realms, each ruled from a @UUID[Compendium.celestus.rules.ml5gCjU1JAnzXajw]{Seat of Power}.</p></li><li><p>Smaller @UUID[Compendium.celestus.rules.dJeZTvmudZnjrS96]{Holdings}are walled settlements tended by Vassals, guarded by Knights.</p></li><li><p>Most that lies between is wilderness.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 13
+    },
+    {
+        "_id": "bmaKPUz2FBGCgBIt",
+        "name": "Recovery",
+        "system": {
+            "description": "<p>@UUID[Compendium.celestus.rules.oY1Asu19v9iHa8zw]{Guard} is fully restored with just a moment of peace after the danger has passed.<br />@UUID[Compendium.celestus.rules.h4ATNWH8WwUmQNdC]{Fatigue} is also removed this way.</p><p></p><p><strong>Virtues</strong> can be fully restored by 3 means:</p><ul><li><p>Consuming a specific type of @UUID[Compendium.celestus.items.VwJ2aV2jxvFuXhL0]{Remedy}</p></li><li><p>Performing a specific Action</p></li><li><p>Skipping to a new Season</p></li></ul><p>Vigour is restored by consuming @UUID[Compendium.celestus.items.04y6tu0NjqOtOxHU]{Sustenance} or spending a full day in warm hospitality.</p><p>Clarity is restored by consuming @UUID[Compendium.celestus.items.m4eN8wzWx1wIP2mK]{Stimulant} or receiving guidance from a Seer.</p><p>Spirit is restored by consuming @UUID[Compendium.celestus.items.B2owmLXQ62SX30oD]{Sacrament}or indulging a Passion.</p>"
+        },
+        "type": "Rule",
+        "pg": 9
+    },
+    {
+        "_id": "AtE3VDow2oyGnBK7",
+        "name": "Roles",
+        "system": {
+            "description": "<ul><li><p>Most fall into one of four roles: Vassal, Vagabond, Knight, or Seer. A web of seniority exists within and between each.</p></li><li><p>Vassals serve a ruler, typically a Knight, in return for protection.</p></li><li><p>Vagabonds roam, working for and protecting only themselves.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 13
+    },
+    {
+        "_id": "TuBkbx1jAFCmrp19",
+        "name": "Ruins",
+        "system": {
+            "description": "<p>Remnants of the past echo the future. These hint at a random Myth not currently active in the Realm, though it may return.</p>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "Ht6YdS1x8Va8s16q",
+        "name": "Ruling a Domain",
+        "system": {
+            "description": "<p>In return for pledging loyalty to @UUID[Compendium.celestus.rules.ml5gCjU1JAnzXajw]{The Seat of Power}, a @UUID[Compendium.celestus.rules.dJeZTvmudZnjrS96]{Holding} might be granted to a Knight or influential Vassal. This forms a Domain. Wilderness Hexes and their @UUID[Compendium.celestus.rules.Fy9hueqdKhEX0zYj]{Landmarks} formally fall under the dominion of their nearest Holding.</p>"
+        },
+        "type": "Rule",
+        "pg": 20
+    },
+    {
+        "_id": "QWZ5Xsa3vuo5Bf69",
+        "name": "Sanctums",
+        "system": {
+            "description": "<p>Each Sanctum is the sacred home to a @UUID[Compendium.celestus.rules.XD4dA6vKjurF4VsY]{Seer}. Roll on the Knight table, consulting their page to discover which Seer.</p>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "gTEIj7A03CsV7ChK",
+        "name": "Saves",
+        "system": {
+            "description": "<p>To pass a Save, roll a [[/r d20]] equal or below the relevant @UUID[Compendium.celestus.rules.a3wuqgFMQEMjrm0S]{Virtue}. Failure means negative consequences, not always a failed action.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "sc76aTlM7OLBPigZ",
+        "name": "Scars",
+        "system": {
+            "description": "<p>Take the die that caused the Scar and roll it again, consulting the table below for the specific Scar caused.</p><p>Virtue Loss through Scars is not Damage, so cannot Mortally Wound or Slay the victim.</p><p>Scars are only gained through real, deadly combat, not training or bloodless duels.</p><h3>Scar</h3><table><tbody><tr><td data-colwidth=\"76\"><p>1</p></td><td><p><strong>Distress</strong> – <em>A lucky escape Lose d6 <span class=\"virtue\">SPI</span>.</em></p></td></tr><tr><td data-colwidth=\"76\"><p>2</p></td><td><p><strong>Disfigurement</strong> – <em>A permanent mark<br /></em>Roll [[/r 1d6]]:<br />1: Eye, 2: Cheek, 3: Neck,<br />4: Torso, 5: Nose, 6: Jaw.<br />If your max <span class=\"virtue\">GD</span> is 2 or less, increase it by [[/r d6]].</p></td></tr><tr><td data-colwidth=\"76\"><p>3</p></td><td><p><strong>Smash</strong> – <em>A sudden spray of blood<br /></em>Lose [[/r d6]] <span class=\"virtue\">VIG</span>.</p></td></tr><tr><td data-colwidth=\"76\"><p>4</p></td><td><p><strong>Stun</strong> – <em>Pain drowns the senses<br /></em>Lose [[/r d6]] <span class=\"virtue\">CLA</span><br />If your max GD is 4 or less, increase it by [[/r d6]].</p></td></tr><tr><td data-colwidth=\"76\"><p>5</p></td><td><p><strong>Rupture</strong> – <em>Innards pierced and compressed<br /></em>Lose [[/r 2d6]] VIG.</p></td></tr><tr><td data-colwidth=\"76\"><p>6</p></td><td><p><strong>Gouge</strong> – <em>Flesh torn from bone<br /></em>When you get stitched up, if your max GD is 6 or less, increase it by [[/r d6]].</p></td></tr><tr><td data-colwidth=\"76\"><p>7</p></td><td><p><strong>Concussion</strong> – <em>A heavy blow numbs the mind</em><br />Lose [[/r 2d6]] CLA.</p></td></tr><tr><td data-colwidth=\"76\"><p>8</p></td><td><p><strong>Tear</strong> – <em>Something taken in violent struggle<br /></em>Roll [[/r 1d6]]:<br />1: Nose, 2: Ear, 3: Finger,<br />4: Thumb, 5: Eye, 6: Chunk of Scalp.<br />When you get patched up, if your max GD is 8 or less, increase it by [[/r 1d6]].</p></td></tr><tr><td data-colwidth=\"76\"><p>9</p></td><td><p><strong>Agony</strong> – <em>With a crack, a torturous break<br /></em>Lose [[/r 2d6]] SPI.</p></td></tr><tr><td data-colwidth=\"76\"><p>10</p></td><td><p><strong>Mutilation</strong> – <em>A limb rendered lost or useless<br /></em>Roll [[/r 1d6]]:<br />1-2: Leg, 3-4: Shield Arm, 5-6: Sword Arm.<br />By next Season you have a prosthetic or have learned to get by, and if your max GD is 10 or less, increase it by [[/r d6]].</p></td></tr><tr><td data-colwidth=\"76\"><p>11</p></td><td><p><strong>Doom</strong> – <em>A cheated death haunts you</em></p><p>If you take a Mortal Wound this Season you are Slain instead.</p></td></tr><tr><td data-colwidth=\"76\"><p>12</p></td><td><p><strong>Humiliation</strong> – <em>A most dolorous stroke</em></p><p>When you achieve revenge, if your max GD is 12 or less, increase it by [[/r d6]].</p></td></tr></tbody></table>"
+        },
+        "type": "Rule",
+        "pg": 9
+    },
+    {
+        "_id": "NHGNkjkhMijIw4C0",
+        "name": "Scopes",
+        "system": {
+            "description": "<p><strong>Adventure</strong> - One session. Here it can save time to generate a few Knights ahead of the game and let the players choose one each.</p><p><strong>Chronicle</strong> - A known number of sessions. Season and Age turns are planned out ahead of time. For six sessions this might be a Season turn at the end of each session, and an Age turn at the end of each Winter.</p><p><strong>Saga</strong> - An indeterminate number of sessions. Here you can let the players guide the scope as they explore the world.</p>"
+        },
+        "type": "Rule",
+        "pg": 6
+    },
+    {
+        "_id": "sTvugWMrpC0o4dpF",
+        "name": "Searching",
+        "system": {
+            "description": "<p>It takes a whole @UUID[Compendium.celestus.rules.6xdhNEX7Ptw9GiO6]{Phase} to carry out a surface level sweep of an entire Hex, thoroughly search for something known to exist there, or find a vantage point.</p>"
+        },
+        "type": "Rule",
+        "pg": 19
+    },
+    {
+        "_id": "BuleIJa3bFxPopzQ",
+        "name": "Seasons",
+        "system": {
+            "description": "<p>Each <strong>Year</strong> has 3 <strong>Seasons</strong>:</p><p><strong>Spring</strong> - <em>The Green Season</em></p><ul><li><p>Begins with the Feast of the Sun, a day of excess and revelry to strengthen both the people and the land.</p></li><li><p>Midspring sees Sceptremass, where @UUID[Compendium.celestus.rules.ml5gCjU1JAnzXajw]{The Seat of Power} gathers local rulers to renew their vows of loyalty.</p></li><li><p>Ends with the Tax, a share of coins collected by the Realm.</p></li></ul><p><strong>Harvest</strong> - <em>The Gold Season</em></p><ul><li><p>Begins with the Feast of the Stars, a night of honours, unions, and contests.</p></li><li><p>Midharvest sees Eldermass, a secretive assembly of Seers and trusted associates.</p></li><li><p>Ends with the Tithe, a share of food and drink collected by the Realm.</p></li></ul><p><strong>Winter</strong> - <em>The Grey Season</em></p><ul><li><p>Begins with the Feast of the Moon, a solemn reflection of mortality and history.</p></li><li><p>Midwinter sees Kindlemass, a sacred day of warmth and goodwill, where each home must open their doors to all.</p></li><li><p>Ends with the Levy, a share of materials and crafted goods collected by the Realm.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 17
+    },
+    {
+        "_id": "XD4dA6vKjurF4VsY",
+        "name": "Seers",
+        "system": {
+            "description": "<ul><li><p>Those who understand the nature of @UUID[Compendium.celestus.rules.zR5oyR4ZccCyWZg2]{Myth} enough to glimpse into our future.</p></li><li><p>Their visions grant legitimacy and direction to a Knight’s quest.</p></li><li><p>They know when a Squire is ready to become a Knight, and when a Knight is ready to seek the City.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 13
+    },
+    {
+        "_id": "pl9IZBYdgdk404En",
+        "name": "Services",
+        "system": {
+            "description": "<p>@UUID[Compendium.celestus.rules.dJeZTvmudZnjrS96]{Holdings} house a range of people who can be called on for service. The larger the Holding, the more likely that a particular service is being offered there.</p><p>Many will gladly offer their service to a Knight, but all have limits, after which they ask something in return or refuse entirely.</p><p>As with trade, the key question comes down to “What can I offer that they would value?”.</p><p><strong>Common</strong> services are offered everywhere.</p><p><strong>Uncommon</strong> services require training.</p><p><strong>Rare</strong> services require a lifetime dedication.</p><p></p><p>Roll their @UUID[Compendium.celestus.rules.a3wuqgFMQEMjrm0S]{Virtues} on [[/r d12+d6]]</p><h3>COMMON</h3><p><strong>Servant</strong>: 2<span class=\"virtue\">GD</span><br />Single duty with little expertise</p><p><strong>Guide</strong>: 4GD<br />@UUID[Compendium.celestus.items.xlZaXdsyxCP8E9XI]{Handaxe}([[/r d6]]), @UUID[Compendium.celestus.items.pFEsSqdFQyjEU1pN]{Javelin}([[/r d6]]), local knowledge</p><p>Sentry: 3GD<br />@UUID[Compendium.celestus.items.VE7vXdiy1TmoNMFH]{Billhook}([[/r d10]] long), little appetite for combat</p><h3>UNCOMMON</h3><p><strong>Herbalist</strong>: 2GD<br />Knows treatments, not cures</p><p><strong>Soldier-at-Arms</strong>: 6GD<br />A2 (@UUID[Compendium.celestus.items.UtHKYmeBDzrFdDXz]{Helm}, @UUID[Compendium.celestus.items.8QKLl6QqDFbxRwUf]{Shield})<br />@UUID[Compendium.celestus.items.bhH83HZyRwBOqLhd]{Spear}([[/r d6]] hefty), @UUID[Compendium.celestus.items.8QKLl6QqDFbxRwUf]{Shield}([[/r d4]]), battle worn</p><p><strong>Archer</strong>: 3GD<br />@UUID[Compendium.celestus.items.hjVEH81r0j5AZIqx]{Shortbow} ([[/r d6]] @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long})</p><h3>RARE</h3><p><strong>Sage</strong>: 2GD<br />Holds immense knowledge in a particular</p><p>area of expertise</p><p><strong>Alchemist</strong>: 2GD<br />Creates poisons or quasi-medicinal potions</p><p><strong>Sellsword</strong>: 7GD<br />A4 (@UUID[Compendium.celestus.items.AkIZO3pU7XrTzJK2]{Coat}, @UUID[Compendium.celestus.items.MgrxzDhulacjitl0]{Plates}, @UUID[Compendium.celestus.items.UtHKYmeBDzrFdDXz]{Helm}, @UUID[Compendium.celestus.items.8QKLl6QqDFbxRwUf]{Shield})<br />@UUID[Compendium.celestus.items.DJt25tLqpGviWbYn]{Longsword} ([[/r 2d8]] @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}), @UUID[Compendium.celestus.items.8QKLl6QqDFbxRwUf]{Shield} ([[/r d4]])<br />Generally only agrees to fights that they are confident they can win</p>"
+        },
+        "type": "Rule",
+        "pg": 13
+    },
+    {
+        "_id": "iTdwOrgq47EPbkJq",
+        "name": "Shieldwalls & Spearwalls",
+        "system": {
+            "description": "<p>3 or more allies may form a wall formation. If they all bear shields (not bucklers) then they gain an additional point of Armour. If they all bear spears (or similar) then enemies cannot Attack on the turn that they *charge.</p><p>*Charge means \"move into contact then attack in melee\" <a href=\"https://discord.com/channels/499193406828838922/1395010166856089683/1396764738687602790\"><br/>- Chris McDowell on Discord, 7/21/2025</a></p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "uPLF8utwanQWOLvz",
+        "name": "Ships & Structures",
+        "system": {
+            "description": "<h3>WOOD AND STONE</h3><p>Ships and structures are destroyed at 0<span class=\"virtue\">GD</span>.</p><p>Recovering GD takes a day of repairs.</p><p><strong>Wooden</strong> structures and ships ignore Attacks other than from fire, siege weapons, or suitably large creatures.</p><p><strong>Stone</strong> walls cannot be breached by conventional means, though their gates are usually a viable target.</p><p>Gate: 5GD, A2<br />Rampart: 10GD, A2<br />Castle Wall: 10GD, A3</p><p>Colliding ships take d12 Damage. If one ship is much larger it takes d6 Damage instead.</p><p>Rowboat: 4GD, carries 6 passengers<br />Longship: 7GD, A1, carries a @UUID[Compendium.celestus.rules.IemxfFfJIeEBZp2e]{Warband}<br />Warship: 10GD, A2, carries 2 @UUID[Compendium.celestus.rules.IemxfFfJIeEBZp2e]{Warbands}</p><h3>ARTILLERY AND SIEGERY</h3><p>Siege Tower: 7GD, A2<br />Battering Ram: [[/r d12]]<br />Stone Thrower: [[/r d12]] @UUID[Compendium.celestus.rules.Q84GshhKtznJytyY]{Blast}<br />Bolt Launcher: [[/r 2d12]]<br />Trebuchet: [[/r 3d12]] @UUID[Compendium.celestus.rules.Q84GshhKtznJytyY]{Blast}, immobile</p>"
+        },
+        "type": "Rule",
+        "pg": 11
+    },
+    {
+        "_id": "mTCLJfKpbMHmQUaN",
+        "name": "Sites",
+        "system": {
+            "description": "<p>A Knight’s journey largely focuses on travelling great distances to seek the guidance of Seers and uncover Myths.</p><p>However, on occasion there may be the need to zoom in on a single Hex, or a specific site within a Hex, in more detail.</p><p>Sites can be created as areas that warrant more detailed exploration, whether ancient tombs, hostile castles, twisting caverns, or misty woods spanning the entire Hex.</p><p>While they can be plotted out with any number of traditional methods, this is a quick Hex-based method.</p><h3>POINTS AND ROUTES</h3><ol><li><p>Draw 6 points as the corners of a hexagon, with a 7th in the centre.</p><ol><li><p>Mark 3 points with circles. These are <strong>features</strong> that give information or set the mood.</p></li><li><p>Mark 2 with triangles. These are <strong>dangers</strong> to be navigated carefully.</p></li><li><p>Mark 1 with a diamond. This is <strong>treasure</strong>, a useful or valuable find.</p></li><li><p>Erase the final point and assign numbers to the remaining points.</p></li></ol></li><li><p>Neighbouring points can be connected by three types of route.</p><ol><li><p>Draw 3 <strong>open</strong> routes with a solid line. These are straightforward paths between points.</p></li><li><p>Draw 2 <strong>closed</strong> routes with a crossed line. Here something blocks the way, so creative thinking is required.</p></li><li><p>Draw 1 <strong>hidden</strong> route with a dotted line. This path is only found through specific exploration of its connecting points or local knowledge.</p></li></ol></li><li><p>Make sure all points can be reached, even if one of the routes is closed or secret.</p></li><li><p>If applicable, place an entrance in any point, and an optional hidden entrance.</p></li></ol><h3>BREAKING THE RULES</h3><p>The guidelines on this page are just a starting point. Rearrange the distribution of the types of point, route, and entrance if it suits the theme of the site better.</p><p>So a sealed burial complex might have:</p><p>Points: 3 Treasures, 2 Dangers, 1 Feature<br />Routes: 3 Closed, 2 Secret, 1 Open<br />Entrances: 1 Entrance only</p>"
+        },
+        "type": "Rule",
+        "pg": 15
+    },
+    {
+        "_id": "V0M3WNBrV1pQB3Xi",
+        "name": "Sleep",
+        "system": {
+            "description": "<p>Each morning, all who did not get proper sleep the previous day lose [[/r d6]] <span class=\"virtue\">CLA</span>.</p>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "TL8avk3aIUjFozBV",
+        "name": "Slow",
+        "system": {
+            "description": "<p>Slow weapons cannot be used if the attacker has moved this turn. They are also @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "w5kp8Mu6RhZosdcq",
+        "name": "Smite",
+        "system": {
+            "description": "<p><em>Release your righteous fury</em></p><ul><li><p>Use before rolling a melee Attack.</p></li><li><p>The Attack gains either +[[/r d12]]or @UUID[Compendium.celestus.rules.Q84GshhKtznJytyY]{Blast}.</p></li><li><p>Pass a <span class=\"virtue\">VIG</span> Save or become Fatigued.</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "iErvWGTiHxk2AKKA",
+        "name": "Squires",
+        "system": {
+            "description": "<p>Small Companies (2 Knights or fewer) may give each Knight a Squire. They serve as apprentices, and are not yet Knights, so</p><p>cannot gain Glory or perform Feats.</p><p>[[/r 2d6]] for each Virtue, 1<span class=\"virtue\">GD</span>.</p><p>They ride a pony (<span class=\"virtue\">VIG</span> 7, <span class=\"virtue\">CLA</span> 7, <span class=\"virtue\">SPI</span> 2, 2GD) and</p><p>carry a @UUID[Compendium.celestus.items.QCO3X6n1tHqez2DV]{Dagger} ([[/r d6]]).</p><p>Roll d6 for their extra equipment.</p><p>1: @UUID[Compendium.celestus.items.t0GC5p3EBpIeQWFW]{Cudgel}([[/r d8]] @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}),<br />2: @UUID[Compendium.celestus.items.OaSMuVzXve86aFK2]{Axe}([[/r d8]] @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}),<br />3: @UUID[Compendium.celestus.items.miyMiAJhHRd1auM3]{Hatchet}([[/r d6]]),<br />4: @UUID[Compendium.celestus.items.hjVEH81r0j5AZIqx]{Shortbow}([[/r d6]] @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long}),<br />5: @UUID[Compendium.celestus.items.8QKLl6QqDFbxRwUf]{Shield} ([[/r d4]], A1)<br />6: Three @UUID[Compendium.celestus.items.pFEsSqdFQyjEU1pN]{Javelins}([[/r d6]]).</p><p>When Knighted they gain [[/r d6]]in each Virtue.</p>"
+        },
+        "type": "Rule",
+        "pg": 7
+    },
+    {
+        "_id": "aa0Sh1GxlbNwtO1p",
+        "name": "Start",
+        "system": {
+            "description": "<p><strong>Wanderer</strong> - Young Knights-Errant with d6<span class=\"virtue\">GD</span> (Guard) and [[/r d12+d6]] in each @UUID[Compendium.celestus.rules.a3wuqgFMQEMjrm0S]{Virtue}. They arrive in the Realm seeking Glory. If they lack direction, have them seek a Seer’s counsel.</p><p><strong>Courtier</strong> - Mature Knights-Gallant with [[/r 2d6]]GD and [[/r d12+6]] (six, not d6) in each @UUID[Compendium.celestus.rules.a3wuqgFMQEMjrm0S]{Virtue}. They have a place in Court at the Seat of Power. The first Omen of the nearest Myth is delivered as news to the Court.</p><p><strong>Ruler</strong> - Mature Knights-Tenant with [[/r d6+6]]GD and [[/r d12+6]] (six, not d6) in each @UUID[Compendium.celestus.rules.a3wuqgFMQEMjrm0S]{Virtue}. One Knight rules a Holding, the others are in their Circle. The Seat of Power is under a wicked influence.</p>"
+        },
+        "type": "Rule",
+        "pg": 6
+    },
+    {
+        "_id": "hkdvxbEDAI7rM6wc",
+        "name": "Start & Scope",
+        "system": {
+            "description": "<p>Every group that sits down to play the game is different, and you should consider the Start and Scope of a game before you begin.</p><p>The <strong>@UUID[Compendium.celestus.rules.aa0Sh1GxlbNwtO1p]{Start}</strong> is the opening situation in which the players find themselves. The <strong>@UUID[Compendium.celestus.rules.NHGNkjkhMijIw4C0]{Scope}</strong> is how long you expect the game to run for, both in and out of game.</p>"
+        },
+        "type": "Rule",
+        "pg": 6
+    },
+    {
+        "_id": "g0Pybiito1VevwT3",
+        "name": "Succession",
+        "system": {
+            "description": "<p>Typically a ruler names their successor, though some @UUID[Compendium.celestus.rules.3hsMdqsglAWNjUQu]{Realms} defer the decision to a conclave of @UUID[Compendium.celestus.rules.XD4dA6vKjurF4VsY]{Seers} or a group of specially chosen Knights-Elector.</p><p>Whoever the successor, they are sure to face at least some resistance, and should quickly establish their own authority.</p>"
+        },
+        "type": "Rule",
+        "pg": 21
+    },
+    {
+        "_id": "SM0nO3IJlpTHc9Ry",
+        "name": "Supplies",
+        "system": {
+            "description": "<p>When sleeping outdoors make a  @UUID[Compendium.celestus.rules.PxSDkx5wU6kRX5V3]{Wilderness Roll} as normal, ignoring @UUID[Compendium.celestus.rules.Fy9hueqdKhEX0zYj]{Landmarks}. Hostile Omens prevent proper sleep, while others may not occur at all if they are improbable as nighttime activity.</p><p></p><p></p>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "ve87kfCyVMdHYOXp",
+        "name": "Surprise",
+        "system": {
+            "description": "<p>Players normally take the first turn of combat, discussing their plan and acting in any order they wish.</p><p>Characters who were not readied for combat must pass a <span class=\"virtue\">CLA</span> Save or miss the first turn.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "CpEsC8mNtdQJspUw",
+        "name": "Taxes, Tithes & Levies",
+        "system": {
+            "description": "<p>Standard collections keep the @UUID[Compendium.celestus.rules.Ht6YdS1x8Va8s16q]{Domain}running without too much strain. A @UUID[Compendium.celestus.rules.cQMFWOJXOBNZTa5w]{Steward} can squeeze more from their Vassals for a war or great project, but must roll:</p><p></p><table><tbody><tr><td><p>[[/r d6]]</p></td><td><h3>INCREASED COLLECTIONS</h3></td></tr><tr><td><p>1</p></td><td><p>Immediate @UUID[Compendium.celestus.rules.T74kT3xY6yPC3MK2]{Misrule}.</p></td></tr><tr><td><p>2-3</p></td><td><p>Your coffers are filled, but take a @UUID[Compendium.celestus.rules.VKF3X9roMxCO2nPp]{Crisis}.</p></td></tr><tr><td><p>4-6</p></td><td><p>The Vassals <strong>pay willingly</strong>, mostly.</p></td></tr></tbody></table>"
+        },
+        "type": "Rule",
+        "pg": 21
+    },
+    {
+        "_id": "cQMFWOJXOBNZTa5w",
+        "name": "The Council",
+        "system": {
+            "description": "<p>Prestigious seats must be filled for a @UUID[Compendium.celestus.rules.Ht6YdS1x8Va8s16q]{Domain} to run smoothly. Though you may grant and revoke these roles, those who are scorned rarely go quietly.</p><p><strong>Steward</strong>: Ruling in your absence, carrying your authority and the key to the treasury.</p><p><strong>Marshal</strong>: Training and equipping soldiers, mustering them in times of war.</p><p><strong>Sheriff</strong>: Monitoring threats within your Realm and even within your walls.</p><p><strong>Envoy</strong>: Managing neighbours and providing hospitality to visitors.</p><p><strong>The Circle</strong>: Rulers often invite worthy visiting Knights to sit alongside the Council as equals, an ancient tradition.</p><p>Members of your Council can be assigned to tasks. Depending on the scope these could take a Phase, a Week, or a full Season. These are handled just as normal @UUID[Compendium.celestus.rules.U0cRZvrvdyQCKHy8]{Actions}, with failure typically causing a @UUID[Compendium.celestus.rules.VKF3X9roMxCO2nPp]{Crisis}.</p>"
+        },
+        "type": "Rule",
+        "pg": 20
+    },
+    {
+        "_id": "X1lghTTFxdKGH1z4",
+        "name": "The Court",
+        "system": {
+            "description": "<p><em>Those who serve outside the Council.</em></p><p><strong>Retainers</strong>: Vassals taken on by individual Council members to aid in their work.</p><p><strong>Courtiers</strong>: Commoners with lesser responsibilities or ceremonial honours, usually holding higher ambitions.</p><p><strong>Petitioners</strong>: Representatives from outside of the Court, granted an audience to seek aid, counsel, or justice.</p><p>@UUID[Compendium.celestus.rules.XD4dA6vKjurF4VsY]{Seers}: Although they live in their Sanctums they occasionally visit Court or send acolytes in their stead.</p>"
+        },
+        "type": "Rule",
+        "pg": 20
+    },
+    {
+        "_id": "dBonZyygROm4ueJN",
+        "name": "The Hex Map",
+        "system": {
+            "description": "<p>A @UUID[Compendium.celestus.rules.3hsMdqsglAWNjUQu]{Realm} is mapped on a hexagonal grid covering the loose rule of a Seat of Power. A 12x12 grid is typical, whether the Realm is landlocked, coastal, or an island chain.</p><p>Typically, players get a copy of the map with @UUID[Compendium.celestus.rules.dJeZTvmudZnjrS96]{Holdings} and general terrain marked. They cannot see @UUID[Compendium.celestus.rules.zR5oyR4ZccCyWZg2]{Myths}, @UUID[Compendium.celestus.rules.Fy9hueqdKhEX0zYj]{Landmarks}, and @UUID[Compendium.celestus.rules.CapdrFIR5fQTiMqQ]{Barriers}.</p><p>The distance covered by each hexagon is a Hecksleague, commonly called a Hex.</p><p></p><p>This distance represents a few loose factors:</p><ul><li><p>The area a hill fort can overlook</p></li><li><p>The area that guards can patrol in a day</p></li><li><p>A return hike to a neighbouring Hex gets you home before dark</p></li></ul>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "ml5gCjU1JAnzXajw",
+        "name": "The Seat of Power",
+        "system": {
+            "description": "<p>The Seat of Power is the @UUID[Compendium.celestus.rules.dJeZTvmudZnjrS96]{Holding} of the ruler of a @UUID[Compendium.celestus.rules.3hsMdqsglAWNjUQu]{Realm}, commonly a @UUID[Compendium.celestus.rules.GaN0dPf1jqeQ8utO]{Knight}.</p>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "O5I0nfb10MRtEujg",
+        "name": "Trade",
+        "system": {
+            "description": "<p>Only the rich deal in coins. Most trade is an exchange of raw materials, goods, or service. Frequent trades often grow into ongoing pledges of service, cooperation, or protection.</p><p>Simply, if you hope to trade you should have a good answer to the question “What can I offer that they would value?”.</p><p><strong>Common</strong> items are widely available.<br /><strong>Uncommon</strong> items require a specialist.<br /><strong>Rare</strong> items are truly treasured.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "F69orverAgbGvRAj",
+        "name": "Trample",
+        "system": {
+            "description": "<p>Mounted combatants use their steed’s trample Damage in addition to their own weapons when charging enemies on foot. This doesn’t work against spearwalls.</p>"
+        },
+        "type": "Rule",
+        "pg": 10
+    },
+    {
+        "_id": "mgiCvLsMUxnxtQRB",
+        "name": "Travel Supplies",
+        "system": {
+            "description": "<p>Knights gather food, water, and firewood as they travel, so these are not tracked. In situations where essential needs are deprived the Company each lose d6 <span class=\"virtue\">VIG</span> each morning.</p>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "PxSDkx5wU6kRX5V3",
+        "name": "Travelling",
+        "system": {
+            "description": "<p>Travelling consumes a whole Phase of the day and uses one of 3 methods:</p><ul><li><p><strong>Trek</strong>: 1 Hex on foot or steed.</p></li><li><p><strong>Gallop</strong>: 2 Hexes on a non-Exhausted steed. The steed loses [[/r d6]] <span class=\"virtue\">VIG</span>.</p></li><li><p><strong>Cruise</strong>: 3 Hexes by boat, or by steed on a rarely-found proper road.</p></li></ul><p>When ending a phase in Wilderness, roll:</p><table><tbody><tr><td><p>[[/r 1d6]]</p></td><td><h3>WILDERNESS ROLL</h3></td></tr><tr><td><p>1</p></td><td><p>Encounter the next Omen from a <strong>random Myth</strong> in this Realm.</p></td></tr><tr><td><p>2-3</p></td><td><p>Encounter the next Omen from the <strong>nearest Myth.</strong></p></td></tr><tr><td><p>4-6</p></td><td><p>Encounter the Hex’s <strong>Landmark</strong>. Otherwise <strong>all clear.</strong></p></td></tr></tbody></table><p></p>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "730Af1FmIdloG4vY",
+        "name": "Travelling Blind",
+        "system": {
+            "description": "<p>Travellers who find themselves roaming without a proper sense of direction, or shrouded by darkness or mist, must roll when they try to move to a new Hex.</p><p></p><table><tbody><tr><td data-colwidth=\"64\"><p>[[/r 1d6]]</p></td><td><h3>TRAVELLING BLIND</h3></td></tr><tr><td data-colwidth=\"64\"><p>1</p></td><td><p><strong>Circle back</strong> to where you started</p></td></tr><tr><td data-colwidth=\"64\"><p>2-3</p></td><td><p><strong>Drift</strong> a Hex to the Left (2) or Right (3)</p></td></tr><tr><td data-colwidth=\"64\"><p>4-6</p></td><td><p>Progress as <strong>planned</strong>.</p></td></tr></tbody></table>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "R05MWXx2HPz3edbL",
+        "name": "Travelling at Night",
+        "system": {
+            "description": "<p>Travelling or exploring at night causes the Company to lose [[/r d6]] <span class=\"virtue\">SPI</span> each. If they lack a guide and light they are also @UUID[Compendium.celestus.rules.730Af1FmIdloG4vY]{Travelling Blind}.</p>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "WvbLkPLFdRXNqUDg",
+        "name": "Travelling in Winter",
+        "system": {
+            "description": "<p>Anybody camping or travelling at night in Winter loses [[/r d6]] <span class=\"virtue\">VIG</span>. Most Realms also risk @UUID[Compendium.celestus.rules.1awKBfGuG7xMbNIx]{Dire Weather} during Winter.</p>"
+        },
+        "type": "Rule",
+        "pg": 18
+    },
+    {
+        "_id": "Qq1IJyI2gwt04hUc",
+        "name": "Turns",
+        "system": {
+            "description": "<p>A turn is enough time to Move and then perform an @UUID[Compendium.celestus.rules.U0cRZvrvdyQCKHy8]{Action}, always in that order.</p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "IIcwopNSELGLVF8y",
+        "name": "Unarmed Combat",
+        "system": {
+            "description": "<p>Unarmed attacks are @UUID[Compendium.celestus.rules.w0AdMBWGQLWhQHd8]{Impaired} unless the attacker has suitable natural weapons.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "KbYH76IbID8eQ2XP",
+        "name": "Unresolved Situations",
+        "system": {
+            "description": "<p>If an important situation is left unresolved before moving to the next @UUID[Compendium.celestus.rules.BuleIJa3bFxPopzQ]{Season} or @UUID[Compendium.celestus.rules.9btBt0rE5AvXw3mt]{Age}, roll [[/r d6]] to see how it changes:</p><table><tbody><tr><td data-colwidth=\"337\"><p>[[/r 1d6]]</p></td><td><h3>UNRESOLVED SITUATIONS</h3></td></tr><tr><td data-colwidth=\"337\"><p>1</p></td><td><p>It goes as <strong>bad as it could possibly go.</strong></p></td></tr><tr><td data-colwidth=\"337\"><p>2-3</p></td><td><p>It gets <strong>worse.</strong></p></td></tr><tr><td data-colwidth=\"337\"><p>4-6</p></td><td><p>It gets <strong>better.</strong></p></td></tr></tbody></table>"
+        },
+        "type": "Rule",
+        "pg": 17
+    },
+    {
+        "_id": "BGSDtZpzTaF6jhId",
+        "name": "Virtue Loss",
+        "system": {
+            "description": "<p>Virtues may be reduced by means other than Damage, typically referred to as Virtue Loss. In addition to the situations listed in the rules, characters may suffer Virtue Loss as the cost or consequence of an action. This is detailed in the @UUID[Compendium.celestus.rules.U0cRZvrvdyQCKHy8]{Action Procedure}.</p><p>Victims are only Slain or Mortally Wounded if the Virtue was reduced by Damage, never as a result of Virtue Loss.</p><p>At <span class=\"virtue\">VIG</span> 0 you are <em>Exhausted</em> and cannot Attack if you have moved this turn.</p><p>At <span class=\"virtue\">CLA</span> 0 you are <em>@UUID[Compendium.celestus.rules.h9e6V7nLciONrfTO]{Exposed} </em>and treated as having 0<span class=\"virtue\">GD</span>.</p><p>At <span class=\"virtue\">SPI</span> 0 your attacks are <em>@UUID[Compendium.celestus.rules.w0AdMBWGQLWhQHd8]{Impaired} </em>rolling a single d4 only.</p>"
+        },
+        "type": "Rule",
+        "pg": 9
+    },
+    {
+        "_id": "a3wuqgFMQEMjrm0S",
+        "name": "Virtues",
+        "system": {
+            "description": "<p>Knights have 3 <strong>Virtues</strong>. Roll a value for each in order. The Start that you chose for your Company determines the dice you roll. If unsure, roll [[/r d12+d6]].</p><p>Virtues can be reduced and raised in a number of ways, but can never go higher than 19 or lower than 0.</p><p><strong><span class=\"virtue\">VIG</span>OUR</strong><br />Strong limbs, firm hands, powerful lungs.</p><p><strong><span class=\"virtue\">CLA</span>RITY</strong><br />Keen instinct, lucid mind, shrewd eyes.</p><p><strong><span class=\"virtue\">SPI</span>RIT<br /></strong>Charming tongue, iron will, fierce heart.</p><p></p><p></p>"
+        },
+        "type": "Rule",
+        "pg": 8
+    },
+    {
+        "_id": "SCbu70lcnYlcIayd",
+        "name": "Vision",
+        "system": {
+            "description": "<p>From a vantage point it’s possible to get an overview of the current Hex and a general sense of what lies in neighbouring hexes, but not specific details.</p>"
+        },
+        "type": "Rule",
+        "pg": 19
+    },
+    {
+        "_id": "IemxfFfJIeEBZp2e",
+        "name": "Warbands",
+        "system": {
+            "description": "<p>Two-dozen or so combatants fighting together are treated as a single Warband.</p><ul><li><p>When they are @UUID[Compendium.celestus.rules.Kkozior5c3JbSn39]{Mortally Wounded} they are routed from the battle.</p></li><li><p>At <span class=\"virtue\">VIG</span> 0 they are wiped out entirely, at <span class=\"virtue\">SPI</span> 0 they are broken.</p></li><li><p>They are not harmed by individual attacks unless they are @UUID[Compendium.celestus.rules.Q84GshhKtznJytyY]{Blast} attacks or suitably large-scale.</p></li><li><p>Warband attacks against individuals receive +[[/r d12]] and cause @UUID[Compendium.celestus.rules.Q84GshhKtznJytyY]{Blast} Damage.</p></li></ul><h3>LEADING FROM THE FRONT</h3><p>One individual within a Warband can add their Attack dice to the Warband’s Attack Roll, leading from the front. If they do, they suffer the same Damage that the Warband does until their next turn.</p><h3>WARBANDS</h3><p><strong>Militia</strong>: VIG 10, <span class=\"virtue\">CLA</span> 10, SPI 7, 3<span class=\"virtue\">GD</span><br />Crude polearm ([[/r d8]] @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long})</p><p><strong>Skirmishers</strong>: VIG 10, CLA 13, SPI 10, 2GD<br />@UUID[Compendium.celestus.items.hjVEH81r0j5AZIqx]{Shortbow} ([[/r d6]] @UUID[Compendium.celestus.rules.zs2bGjpkII2Etmnv]{Long})</p><p><strong>Mercenaries</strong>: VIG 13, CLA 10, SPI 10, 4GD<br />A3 (mail, helm, shield) @UUID[Compendium.celestus.items.bhH83HZyRwBOqLhd]{Spear} ([[/r d8]] @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}), @UUID[Compendium.celestus.items.8QKLl6QqDFbxRwUf]{Shield} ([[/r d4]])</p><p><strong>Riders</strong>: VIG 10, CLA 13, SPI 10, 3GD<br />@UUID[Compendium.celestus.items.pFEsSqdFQyjEU1pN]{Javelins} ([[/r d6]]), @UUID[Compendium.celestus.items.xlZaXdsyxCP8E9XI]{Handaxe} ([[/r d6]]), steed</p><p><strong>Knights</strong>: VIG 13, CLA 10, SPI 13, 5GD A3 (mail, helm, shield)<br />@UUID[Compendium.celestus.items.vHG1rH2nEd3Har48]{Mace} ([[/r d8]] @UUID[Compendium.celestus.rules.xClo9CbpoanGqoav]{Hefty}), @UUID[Compendium.celestus.items.8QKLl6QqDFbxRwUf]{Shield} ([[/r d4]]), charger ([[/r d8]] @UUID[Compendium.celestus.rules.F69orverAgbGvRAj]{Trample})</p>"
+        },
+        "type": "Rule",
+        "pg": 11
+    },
+    {
+        "_id": "h5p2G4Q0lIzmtYqb",
+        "name": "Wavering Morale",
+        "system": {
+            "description": "<p>Individuals who are Wounded, or groups who lose half their number, must pass a <span class=\"virtue\">SPI</span> Save to avoid rout or surrender.</p><p>Organised groups roll once using their leader's SPI. Disorganised groups roll for each individual against their own SPI. This does not affect player characters.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "7N1238s8e5AItkxT",
+        "name": "Wearing Armour",
+        "system": {
+            "description": "<p>One of each armour type (coat, plates, helm, shield) can be worn at once, combining their armour scores together. Plates and helm are generally not worn outside of battle.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "YIrmFRycBX67jxoc",
+        "name": "Wielding Weapons",
+        "system": {
+            "description": "<p>If no type is noted, assume the weapon uses one hand and has no other restrictions.</p><p><strong>Hefty</strong> weapons require one hand. Only one Hefty item can be wielded at once.</p><p><strong>Long</strong> weapons require both hands and are @UUID[Compendium.celestus.rules.w0AdMBWGQLWhQHd8]{Impaired} in confined environments.</p><p><strong>Slow</strong> weapons cannot be used if the attacker has moved this turn. They are also Long.</p>"
+        },
+        "type": "Rule",
+        "pg": 12
+    },
+    {
+        "_id": "SrDvqsJ95Zpx1CzL",
+        "name": "Wilderness",
+        "system": {
+            "description": "<p>Most @UUID[Compendium.celestus.rules.dBonZyygROm4ueJN]{Hexes} are Wilderness, with a variety of terrain types. Spark Tables can help with this. As a general guide create clusters of d12 hexes of the same terrain type.</p><p>Some Hexes have a @UUID[Compendium.celestus.rules.CapdrFIR5fQTiMqQ]{Barrier} on one or more of their edges, typically a sudden altitude change or impassible feature. These cannot normally be travelled through. For a typical Realm, place a number of Barriers equal to one sixth of your total Hexes.</p><p>Most Realms have a navigable river passing through and a few large lakes spanning whole or multiple Hexes.</p>"
+        },
+        "type": "Rule",
+        "pg": 14
+    },
+    {
+        "_id": "b7M2GiRfch140yQx",
+        "name": "Worthiness",
+        "system": {
+            "description": "<p>Rank alone does not immediately grant the Knight a Council position or rule of a Holding. It merely proves their worthiness.</p><p>A Knight may find themselves in a position for which their rank is unworthy. They are sure to face initial opposition, but if this can be overcome then their worthiness is proven.</p>"
+        },
+        "type": "Rule",
+        "pg": 6
+    }
+]
